@@ -1,0 +1,131 @@
+   /* <--------- id ---------> */
+#grid{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+#grid #article{
+  padding-left: 25px;
+}
+#grid ol{
+  border-right:1px solid #ccb2da94;
+  width: 150px;
+  margin:0;
+  padding:20px;
+  padding-left: 33px;
+}
+#grid a:hover{
+  background-color:#d49466;
+  border-radius: 3px;
+}
+#active {
+  color: red;
+  text-decoration:underline;
+}
+#inlinebox{
+  border:3px solid hsl(180, 92%, 44%);
+  padding:5px;
+  margin:5px;
+}
+#growth_diary{
+  text-align:center;
+}
+#sub_list{
+  padding: 0;
+}
+
+  /* <--------- id ---------> */
+  /* <---------class---------> */
+.saw {
+  color:powderblue;
+}
+.button_night{
+  position: absolute;
+  right: 32px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button_night:hover{
+  opacity: 1
+}
+.h1_title {
+  font-size: 45px;
+  text-align:center;
+  border-bottom:1px solid #ccb2da94;
+  margin:0;
+  padding-bottom: 40px;
+  padding-top:0px;
+
+}
+.text_title {
+  font-size:150%;
+}
+.navbar {
+  display: flex;  /* 한줄에 나란히 */
+  justify-content: space-between;   /* 사이사이에 넣는다 */
+  align-items: center;              
+  background-color: var(--background-color);
+  padding: 8px 12px;
+}
+
+.navbar__logo{
+  font-size: 24px;
+  color:rgb(247, 242, 242);
+  margin-left: 20px;
+  margin-top: 10px;
+
+}
+.navbar__logo i {
+  color: #d49466;
+}
+  /* <---------class---------> */
+  /* <---------태그---------> */
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  color:powderblue;
+}
+h1 {
+  font-size: 45px;
+  text-align:center;
+  border-bottom:1px solid #ccb2da94;
+  margin:0;
+  padding:20px
+}
+body{
+  margin:0;
+  background-color:hsl(245deg 26% 55%);
+  color: #ffffff;
+}
+  /* <---------태그---------> */
+/* screen width < 800px */
+@media(max-width:800px){
+  #grid{
+    display: block;
+  }
+  #grid ol{  /* id뒤에 태그를 쓰므로 id에 포함되어 잇는 태그에한해 효과적용  */
+    border-right:none;
+  }
+  h1,.h1_title{
+    border-bottom:none;
+  }
+}
+
+
+/* 메뉴선택 컬러변경 */
+.selected {color:rgb(0, 0, 0)}
+.selected {background-color:#3c9}
+.selected {padding: left 10px}
+.selected {padding: right 100%}
+.selected {width: 150px;}
+.depth_0 {background-color:#3c9}
+
