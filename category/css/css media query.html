@@ -91,5 +91,34 @@
             </div>
         </div>
     </div>
+
+
+    <div>
+        <script> // 打字机
+           function text_daziji(str){
+           var arr=[];
+           var text_daziji=document.getElementsByClassName("text_daziji")[0];
+           for(var i=0;i<str.length;i++){arr[i]=str[i];}
+           var p=document.createElement("p");
+           text_daziji.appendChild(p);
+           var index=0;
+           var obj=setInterval(function(){
+               if(index<arr.length){
+               var text_daziji=document.createTextNode(arr[index]);
+               }
+               p.appendChild(text_daziji);
+               index++;
+               },200);
+           
+           }
+           window.onload=function(){
+           text_daziji("有时候  其实害怕寂寞  但又卟想去打扰别人的幸福    有时候  明明很想哭泣 却又怕眼泪从眼裏掉进心裏   有时候 很想像颗流星 即使生命只有一瞬   却我可以让爱我的和不爱我的人永远记起   其实我可以更加的勇敢  去接受那些曾经的回忆   只是那是时间的车轮底   被风一吹   留不下痕迹 却伤了心   踮起脚看到窗外的云   或许它一会儿也会被别人看见   只是 他们看到的只是云 却看不到云裏带走了某人的一段记忆   感伤於此  忧伤继续");
+           }
+           </script>
+           <style>
+           .text_daziji{ width: 200px; height: 400px; background-color: #ECECEC; margin: 10px 10px; padding: 20px; display:inline-flex;}
+           </style>
+           <div class="text_daziji"></div>
+       </div>
 </body>
 </html>
