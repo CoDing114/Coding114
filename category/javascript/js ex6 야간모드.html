@@ -126,7 +126,7 @@
           }
           ">
         <div> Night_Day Button v2</div>
-        <input type="button" class="button_night" style="font-size:medium;" value="Night" onclick="
+        <input type="button" class="button_night" style="font-size:medium;position: inherit;" value="Night" onclick="
           if(this.value==='Night'){
             document.querySelector('body').style.backgroundColor='black';
             document.querySelector('body').style.color='white';
@@ -138,7 +138,7 @@
           }
         ">
         <div> Night_Day Button v3</div>
-        <input type="button" class="button_night" style="font-size:xx-large;background-color: #f4511e;" value="Night" onclick="
+        <input type="button" class="button_night" style="font-size:xx-large;background-color: #f4511e;position: inherit;" value="Night" onclick="
           var night_day = document.querySelector('body') // night_day란 변수를 이용하여 중복제거
           if(this.value==='Night'){  // onclick이 소속되어있는 태그를 그르킨다 this를 사용하여 현재치로 대체가능
             night_day.style.backgroundColor='black';
