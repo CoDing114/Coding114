@@ -18,17 +18,18 @@
        node -v :node버전 확인 (정상 설치가 되엇다면 현재 설치된 버전을 확인할수잇다)
        Node    :노드 실행
        .exit   :노트 종료 (Ctrl+c *2 혹은 .exit 동일하다)
-       
-       <h3>Tools</h3>
-       pm2:auto startup
-       install:npm install pm2 -g
-       start:pm2 start '파일명'(pm2 start main.js)
-       list:pm2 list
-       stop:pm2 stop '파일명'(pm2 stop main)
-       watch:pm2 start '파일명' --watch (자동 재부팅 설정)
-       log: pm2 log(watch 사용시 에러 표시가안되므로 log를 활용하여 문제점 확인가능)
+   </pre>
+   <h3>Tools</h3>
+   <p style="font-size:larger;">pm2:auto startup</p>
+   <pre>
+      install:npm install pm2 -g
+      start:pm2 start '파일명'(pm2 start main.js)
+      list:pm2 list
+      stop:pm2 stop '파일명'(pm2 stop main)
+      watch:pm2 start '파일명' --watch (자동 재부팅 설정)
+      log: pm2 log(watch 사용시 에러 표시가안되므로 log를 활용하여 문제점 확인가능)
 
-</pre>
+   </pre>
 <h3>서버 자동 재부팅 #2 </h3>
 <pre>
    server에서 내용 변경후엔 재부팅을 해줘야하는데 nodemon을 사용하면 자동으로 재부팅 시켜준다.
