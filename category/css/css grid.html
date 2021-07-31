@@ -22,8 +22,23 @@
             display: grid; 
             grid-template-columns: 150px 1fr;/* 1fr은 화면의 1만큼 사용 */
         }
+        #article{
+          margin-left: 20px;
+        }
         div,span{
             border:5px solid gray;
+        }
+        .container{
+            background: beige;
+            height: 100vh; /* vh를 활용해 원하는 만큼 height를 줄수잇다 */
+            flex-direction: row;  /*왼쪽에서 오른쪽 방향으로 정렬*/
+            flex-wrap: nowrap;  /*지정하지 않는다 한줄에 붙어 잇는다*/
+            /* flex-wrap: row nowrap; */
+            
+        }
+        .item{
+          width: 40px;
+          height: 40px;
         }
     </style>
 </head>
@@ -39,7 +54,7 @@
   <h1 class="h1_title"><a href="./index.html">CSS GRID</a></h1>
   <div id="grid">
     <ol>
-      <li><a href="../html.html">HTML</a></li>
+      <li><a href="../html/">HTML</a></li>
       <li><a href="index.html" class="saw">CSS</a></li>
       <ul id="sub_list">
         <li><a href="./css box.html" class="saw">CSS BOX</a></li>
@@ -48,46 +63,50 @@
       </ul>
       <li><a href="../javascript/">JavaScript</a></li>
       <li><a href="../bootstrap/">Bootstrap</a></li>
-      <li><a href="../html실용편.html">HTML 실용편 </a></li>
-      <li><a href="../domain.html">Domain </a></li>
+      <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
+      <li><a href="../database/domain.html">Domain </a></li>
       <li><a href="../php/">PHP </a></li> 
-      <li><a href="../database.html">DataBase</a></li>
+      <li><a href="../database/database.html">DataBase</a></li>
       <li><a href="../damoa/"target="_blank">damoa </a></li>
     </ol>
     <div id="article">
       
-  <div id="grid">
-    <div>
-        <div>navigattion1</div>
-        <div>navigattion2</div>
-        <div>navigattion3</div>
-        <div>navigattion4</div>
-        <div>
-        navigattion4
-        navigattion4
-        navigattion4
-        navigattion4
-        navigattion4
-        navigattion4
-        navigattion4
-        navigattion4
-        navigattion4
-      </div>
-    </div>
+  <div id="grid_box">
+    <div>navigattion1</div>
+    <div>navigattion4</div>
+    <div>navigattion4</div>
+    <div>navigattion4</div>
+    <div>navigattion4</div>
+    <div>navigattion4</div>
     <div>
       <div>article1</div>
       <div>article2</div>
       <div>article3</div>
       <img src="../../img/analytics.png" width="50%">
     </div>
-  </div>
+  
+</div>
   <div>    
       <span>navigattion</span>
       <span>article1</span>
       <span>article2</span>
       <span>article3</span>
       <span>article4</span>
-      <span>article5</span>
+      <span>lorem</span>
   </div>  
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
+  </div>
+  </div>
+</div>
 </body>
 </html>

@@ -48,6 +48,45 @@
             padding:5px;
             margin:5px;
         }
+        .container{
+          background:cadetblue;
+          left: 20px;
+          top: 20px;
+        }
+        .container div{
+          height:50px;
+          margin-bottom: 20px;
+          background: rgb(204, 144, 144);
+        }
+        .container .relative{
+          background: rgb(167, 214, 165);
+          color: black;
+          left: 20px;
+          top: 20px;
+          position: relative;
+        }
+        .container .absolute{
+          background: rgb(135, 219, 0);
+          color: black;
+          left: 200px;
+          top: 300px;
+          position: absolute;
+        }
+        .container .fixed{
+          background: rgb(214, 197, 165);
+          color: black;
+          left: 200px;
+          top: 150px;
+          position: fixed;
+        }
+        .container .sticky{
+          background: rgb(218, 140, 176);
+          color: black;
+          left: 60px;
+          top: 60px;
+          position: sticky;
+        }
+      
     </style>
 </head>
 <body>
@@ -63,7 +102,7 @@
     <h1 class="h1_title"><a href="./index.html">CSS BOX MODEL</a></h1>
     <div id="grid">
         <ol>
-            <li><a href="../html.html">HTML</a></li>
+            <li><a href="../html/">HTML</a></li>
             <li><a href="index.html" class="saw">CSS</a></li>
             <ul id="sub_list">
               <li><a href="./css box.html" class="saw" id="active">CSS BOX</a></li>
@@ -72,10 +111,10 @@
             </ul>
             <li><a href="../javascript/">JavaScript</a></li>
             <li><a href="../bootstrap/">Bootstrap</a></li>
-            <li><a href="../html실용편.html">HTML 실용편 </a></li>
-            <li><a href="../domain.html">Domain </a></li>
+            <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
+            <li><a href="../database/domain.html">Domain </a></li>
             <li><a href="../php/">PHP </a></li> 
-            <li><a href="../database.html">DataBase</a></li>
+            <li><a href="../database/database.html">DataBase</a></li>
             <li><a href="../damoa/"target="_blank">damoa </a></li>
           </ol>
         <div id="article">
@@ -103,7 +142,27 @@
             Tip: display:none; 을 사용하여 text 숨길수도 잇음
         </div>
     </div>
-   
+    <div class="container">
+        <div class="sticky">sticky: 원래 잇어야하는 자리에 잇으면서 대신 스크롤링 되어도 사라지지않는다</div>
+        <div>sticky1</div>
+        <div>sticky2</div>
+        <div>sticky3</div>
+        <div>sticky4</div>
+        <div class="box_item">
+          <div>static: 기본적으로 가지고 잇고 HTML에 정의된 순서대로 브라우저 상에 자연스럽게 보여진다</div>
+          <div class="relative">relative: 원래 잇어야하는 자리에서 지정한 위치까지 이동</div>
+          <div  class="absolute">absolute:내 아이템이 담겨 잇는 박스 안에서 원하는 위치까지 이동한다</div>
+          <div class="fixed">fixed: 박스를 벗어나 윈도우 안에서 지정위치까지 이동</div>
+          <div>navigattion1</div>
+          <div>navigattion2</div>
+          <div>navigattion3</div>
+          <div>navigattion4</div>
+          <div>navigattion5</div>
+          <div>navigattion6</div>
+          <div>navigattion7</div>
+          <div>navigattion8</div>
+          <div>navigattion9</div>
+        </div>
 
 
 

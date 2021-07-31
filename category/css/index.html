@@ -47,7 +47,7 @@
   <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
   <div id="grid">
     <ol>
-      <li><a href="../html.html">HTML</a></li>
+      <li><a href="../html/">HTML</a></li>
       <li><a href="index.html" style="color:red;text-decoration:underline">CSS</a></li>
       <ul id="sub_list">
         <li><a href="./css box.html" class="saw">CSS BOX</a></li>
@@ -56,10 +56,10 @@
       </ul>
       <li><a href="../javascript/">JavaScript</a></li>
       <li><a href="../bootstrap/">Bootstrap</a></li>
-      <li><a href="../html실용편.html">HTML 실용편 </a></li>
-      <li><a href="../domain.html">Domain </a></li>
+      <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
+      <li><a href="../database/domain.html">Domain </a></li>
       <li><a href="../php/">PHP </a></li> 
-      <li><a href="../database.html">DataBase</a></li>
+      <li><a href="../database/database.html">DataBase</a></li>
       <li><a href="../damoa/"target="_blank">damoa </a></li>
     </ol>
     <div id="article">
@@ -70,6 +70,67 @@
         이를 보완하기 위해 만들어진 것이 스타일 시트이고 스타일 시트의 표준안이 바로 CSS이다.
         간단히 스타일 시트라고도 한다.
       </p>
+      <div id="inlinebox">
+        <h2>Display&Position</h2>
+        <ul>
+          <li>div:블럭 레벨이라 한줄에 하나씩 나온다</li>
+          <li>span: inline레벨이라 공간만되면 한줄에 여러개 나온다</li>
+          <li>display:레벨 기본값 변경이 가능하다</li>
+          <li>inline:한줄에 여러개가 들어갈수잇다</li>
+          <li>inline-block:한줄에 여러개가 들어갈수잇는 box</li>
+          <li>block:한줄에 하나만 들어가는 box</li>
+        </ul>
+        <h3>container box Position</h3>
+        <ul>
+          <li>static: 기본적으로 가지고 잇고 HTML에 정의된 순서대로 브라우저 상에 자연스럽게 보여진다</li>
+          <li>relative: 원래 잇어야하는 자리에서 지정한 위치까지 이동</li>
+          <li>absolute: 내 아이템이 담겨 잇는 박스 안에서 원하는 위치까지 이동한다</li>
+          <li>fixed: 박스를 벗어나 윈도우 안에서 지정위치까지 이동</li>
+          <ul>
+            <li>
+              flex-flow:아래 내용을 묶어서 사용가능 [flex-flow:column wrap;]
+            </li>
+            <ul>flex-direction:순서 바꾸기:
+              <li>row:왼쪽에서 오른쪽 방향 정렬</li>
+              <li>row-reverse:오른쪽에서 외쪽 정렬</li>
+              <li>column:위에서 아래 정렬</li>
+              <li>column-reverse:아래서 위 정렬</li>
+            </ul>
+            <ul> flex-wrap:한줄에 꽉찻을때의 동장 정의
+              <li>nowrap:지정하지 않는다 한줄에 붙어 잇는다</li>
+              <li>wrap:한줄에 꽉 차게 되면 자동으로 다음 라인으로 넘어간다</li>
+              <li>wrap-reverse:꺼꾸로 wraping된다</li>
+            </ul>
+          </ul>
+          <li>justify-content:중심축에서 아이템 들을 어떻게 배치할건지를 결정해준다</li>
+          <ul>justify-content:flex-start;
+            <li>flex-start:기본 값 왼쪽에서 오른쪽으로 정렬</li>
+            <li>flex-end:오른쪽 축으로 아이템 배치(순서는 유지) 
+              [여기서 flex-direction이 column이면 아래 축으로 배치 된다</li>
+            <li>center:아이템을 가운데로 맞춘다</li>
+            <li>space-around:매개 박스에 간격을 넣어 준다</li>
+            <li>space-evenly:박스 간격을 똑같이 넣어 준다</li>
+            <li>space-between:양옆에는 붙이고 중간에만 간격을 넣어 준다</li>
+          </ul>
+          <li>align-items:반대축에서 아이템들을 배치하는 속성 값</li>
+          <ul>align-items:center;
+            <li>align-items:center;상자들을 수직 적으로 중간에 배치</li>
+            <li>baseline:베이스 라인에 맞춰서 균등하게 보여준다</li>
+          </ul>
+          <li>align-content:반대축에 아이템을 지정하게 된다</li>
+          <ul>justify-content 나왓던 속성들을 다 쓸수잇다 
+            (*쓰기전 브라우저가 지원하는지 확인 필요)
+            <li>space-between:위 아래는 붙이고 중간에만 간격을 넣어 준다</li>
+            <li>center:아이템을 중간으로 맞춘다</li>
+          </ul>
+          <li>flex-grow:아이템이 커질때의 크기 정의</li>
+          <li>flex-shrink:아이템이 작아질때의 크기 정의</li>
+          <li>flex-basis:아이템들이 공간을 얼마나 차지할껀지 세부적 정의[flex-basis:60%]이런식으로 grow,shrink없이도 매개 박스의 크기를 설정할수잇다</li>
+          <li>align-self:아이템별로 아이템들을 정렬할수잇다</li>
+          <li>sticky: 원래 잇어야하는 자리에 잇으면서 대신 스크롤링 되어도 사라지지않는다</li>
+        <li>order:현재 아이템이 잇는 순서를 바꿀수잇다 [order:2;]</li>
+        </ul>
+      </div>
       <div id="inlinebox">
         <h2>그리드 컨테이너 display: grid;</h2>
         <div>

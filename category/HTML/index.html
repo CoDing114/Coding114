@@ -4,7 +4,7 @@
   <title> WEB - HTML</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
     <!-- font   awesome  Logo font -->
@@ -18,32 +18,32 @@
 
       gtag('config', 'UA-180336562-1');
     </script><!-- End jquery/3.5.1 -->
-    <script src="colors.js"> // 야간모드 jQuery 설치 필요 </script>
+    <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
 
 </head>
 <body>
   <nav class=".navbar"> 
     <div class="navbar__logo">
       <i class="fab fa-skyatlas"style="color:#d49466;"></i>
-      <a href="../index.html">DreamCoding</a>
+      <a href="../../index.html">DreamCoding</a>
     </div>
     </nav>
 
   <input type="button" class="button_night" value="Night" onclick=" 
   nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
   
-<h1 class="h1_title"><a href="./index.html">WEB</a></h1>
+<h1 class="h1_title"><a href="../index.html">WEB</a></h1>
 <div id="grid">
   <ol>
-    <li><a href="./html.html"class="saw" id="active">HTML</a></li>
-    <li><a href="./css/">CSS</a></li>
-    <li><a href="./javascript/">JavaScript</a></li>
-    <li><a href="./bootstrap/">Bootstrap</a></li>
+    <li><a href="./index.html"class="saw" id="active">HTML</a></li>
+    <li><a href="../css/">CSS</a></li>
+    <li><a href="../javascript/">JavaScript</a></li>
+    <li><a href="../bootstrap/">Bootstrap</a></li>
     <li><a href="./html실용편.html">HTML 실용편 </a></li>
-    <li><a href="./domain.html">Domain </a></li>
-    <li><a href="./php/">PHP </a></li> 
-    <li><a href="./database.html">DataBase</a></li>
-    <li><a href="./damoa/"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
+    <li><a href="../database/domain.html">Domain </a></li>
+    <li><a href="../php/">PHP </a></li> 
+    <li><a href="../database/database.html">DataBase</a></li>
+    <li><a href="../damoa/"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
   </ol>
 <!-- 
   <ul>
@@ -55,29 +55,16 @@
   <div id="article">
     <h2><a href="https://developer.mozilla.org/ko/docs/Web/HTML"target="_blank">HTML 자료</a></h2>
     <p><strong><u>[ Hypertext</u> Markup Language ]</strong></p>
-    <p style="margin-top:45px;"> 요약 웹 문서를 만들기 위하여 사용하는 기본적인 웹 언어의 한 종류이다. 하이퍼텍스트를 작성하기 위해 개발되었다.
-        인터넷 서비스의 하나인 월드 와이드 웹을 통해 볼 수 있는 문서를 만들 때 사용하는 웹 언어의 한 종류이다. 
-        특히 하이퍼텍스트를 작성하기 위해 개발되었으며, 인터넷에서 웹을 통해 접근되는 대부분의 웹 페이지들은 HTML로 작성된다.</p>
 
-    <p><a href="https://www.w3.org/"target="_blank">HTML</a>은 문서의 글자크기, 글자색, 글자모양, 그래픽, 
-      문서이동(하이퍼링크)등을 정의하는 명령어로서 홈페이지를 작성하는 데 쓰인다. 
-      HTML에서 사용하는 명령어는 태그(tag)라고 하는데 꺽쇠괄호"&IT>"를 사용하여 나타낸다. 
-      일반적으로 태그는 시작과 끝을 표시하는 2개의 쌍으로 이루어져 있으나 "img", "br"등의 태그와 같이 
-      시작태그만으로 그 영향을 나타내는 경우도 있으며, 종료 태그의 이름은 슬래시 문자[/]로 시작된다. 이와같이 
-      HTML로 작성된 문서를 HTML문서라 하며 이 HTML로 작성된 문서를 웹 브라우저가 해석하여 이용자에게 보여주게 된다. 
-      HTML에서는 문서가 별도의 코드(code)를 인식하여 완벽한 하이퍼텍스트를 만들 뿐만 아니라 단어 또는 단문을 인터넷의 
-      다른 장소나 파일로 연결시킬 수 있다.</p>
-
-    <p>HTML은 전자 문서의 서식을 정의하기 위해 만들어졌으며, 국제표준 SGML의 부분 집합으로 정의되었다. HTML은 SGML에서 특히 하이퍼텍스트를 강조하여 만들어진 언어이며,
-        아스키코드로 된 일반적인 텍스트로 구성되었다. 이 언어는 별도 컴파일러가 필요치 않으며, 웹 브라우저에서 해석이 가능한 사용하기 쉬운 언어로 각광을 받고 있다.
-        [네이버 지식백과] HTML [Hypertext Markup Language] (두산백과)</p>
-        <br>
         <h2>손쉬운 사용</h2>
     <div>
       <ul>
         <li>주석만들기 :  &lt!-- 주석 --></li>
+        <li>emmet : 에밋 을 사용하면 HTML & CSS의 작업 속도를 엄청나게 향상시킬 수 있다!!</li>
+        <li>p>lorem:간편 테스트 넣기 [p>lorem5 뒤에 숫자를 넣어서 단어 개수를 설정할수잇다</li>
+        </div>
+      </li>
       </ul>
-    </div>  
     <h2>줄바꿈(엔터) 하기</h2>
     <div>
       <ul>
@@ -100,7 +87,7 @@
       </ul>
     </div>
 
-    <img src="../img/coding.jpg" width="30%">
+    <img src="../../img/coding.jpg" width="30%">
     <h3>WEB1 소개</h3>
     <div><!-- width="560" height="315" -->
     <iframe width="30%" height="160" src="https://www.youtube.com/embed/tZooW6PritE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
