@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font   awesome  Logo font -->
+  <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
@@ -19,6 +21,12 @@
     </script><!-- jquery/3.5.1 -->
     <script src="../../colors.js"> // 야간모드 jQuery 설치 필요 </script>
 </head>
+<nav class=".navbar"> 
+  <div class="navbar__logo">
+    <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+    <a href="../index.html">DreamCoding</a>
+  </div>
+  </nav>
 <body>
 <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
 <input type="button" class="button_night" value="Night" onclick=" 
@@ -26,16 +34,17 @@ nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조�
 
 <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
 <div id="grid">
-    <ol>
-        <li><a href="../html/">HTML</a></li>
-        <li><a href="../css.html">CSS</a></li>
-        <li><a href="../javascript.html">JavaScript</a></li>
-        <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
-        <li><a href="./domain.html">Domain </a></li>
-        <li><a href="./damoa.html"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
-        <li><a href="../bootstrap/bootstrap.html">BootStrap</a></li>
-        <li><a href="./database.html"class="saw" id="active">DataBase</a></li>
-    </ol>
+  <ol>
+    <li><a href="../html/">HTML</a></li>
+    <li><a href="../css/index.html" >CSS</a></li>
+    <li><a href="../javascript/">JavaScript</a></li>
+    <li><a href="../bootstrap/">Bootstrap</a></li>
+    <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
+    <li><a href="../database/domain.html">Domain </a></li>
+    <li><a href="../php/">PHP </a></li> 
+    <li><a href="../database/database.html"style="color:red;text-decoration:underline">DataBase</a></li>
+    <li><a href="../damoa/"target="_blank">damoa </a></li>
+  </ol>
   <div id="article">
     <div>
         <h3>데이터 베이스 핵심작업 CRUD </h3>

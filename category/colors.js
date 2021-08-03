@@ -1,3 +1,4 @@
+// 'use strict';
 // 야간모드 버튼 관련
 var Links={ // Link 컬러 설정
     setColor:function (color) {
