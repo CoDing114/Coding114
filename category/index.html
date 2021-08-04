@@ -17,7 +17,6 @@
     <title> Welcome to Growth Diary </title>
 
     <link rel="stylesheet" href="./style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
-    <script src="../public.js"defer></script>
     <script src="./colors.js"defer> // 야간모드 </script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -212,5 +211,17 @@
       });
   </script>
   
+
+  <!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+// const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
 </body>
 </html>
