@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS BOX MODEL</title>
+
+    <!-- google fonts Source Sans Pro  -->
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- font   awesome  Logo font -->
     <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
     <style>
@@ -90,34 +93,39 @@
     </style>
 </head>
 <body>
+  <header>
     <nav class=".navbar"> 
-        <div class="navbar__logo">
-          <i class="fab fa-skyatlas"style="color:#d49466;"></i>
-          <a href="../../index.html">DreamCoding</a>
-        </div>
-        </nav>
-    <input type="button" class="button_night" value="Night" onclick=" 
-  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
-
-    <h1 class="h1_title"><a href="./index.html">CSS BOX MODEL</a></h1>
-    <div id="grid">
-        <ol>
-            <li><a href="../html/">HTML</a></li>
-            <li><a href="index.html" class="saw">CSS</a></li>
-            <ul id="sub_list">
-              <li><a href="./css box.html" class="saw" id="active">CSS BOX</a></li>
-              <li><a href="./css grid.html" class="saw">CSS GRID</a></li>
-              <li><a href="./css media query.html" class="saw">CSS Media Query</a></li>
-            </ul>
-            <li><a href="../javascript/">JavaScript</a></li>
-            <li><a href="../bootstrap/">Bootstrap</a></li>
-            <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
-            <li><a href="../database/domain.html">Domain </a></li>
-            <li><a href="../php/">PHP </a></li> 
-            <li><a href="../database//index.html">DataBase</a></li>
-            <li><a href="../damoa/"target="_blank">damoa </a></li>
-          </ol>
-        <div id="article">
+     <div class="navbar__logo">
+       <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+       <a href="../../index.html">Coding114</a>
+     </div>
+     </nav>
+   </header>
+   
+   
+   <h1 class="h1_title"><a href="./index.html">CSS BOX MODEL</a></h1>
+ <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+    <li class="has-submenu"><a href="index.html" >CSS</a></li>
+    <ul id="sub-menu">
+      <li><a href="./css box.html" class="saw"class="saw" id="active">CSS BOX</a></li>
+      <li><a href="./css grid.html" class="saw">CSS GRID</a></li>
+      <li><a href="./css media query.html" class="saw">CSS Media Query</a></li>
+    </ul>
+    <li><a href="../javascript/index.html">JavaScript</a></li>
+    <li><a href="../php/index.html">PHP </a></li> 
+    <li><a href="../database//index.html">DataBase</a></li>
+    <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+    <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
+   </ul>
+ <a href="#"class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+ </a>
+ </nav>
+ 
+    <div id="article">
 
            
     <div id="inline">
@@ -168,5 +176,21 @@
 
 <a href="../html.html" class="saw">HTML</a><a href="../css.html"class="saw" id="active">CSS</a><a href="../javascript.html">JavaScript</a><a href="../html실용편.html">HTML 실용편 </a><a href="../damoa.html">damoa </a>
 <img src="../../img/box model.png" width="30%">
+
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
 </body>
 </html>
