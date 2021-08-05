@@ -28,9 +28,7 @@
         #article{
           margin-left: 20px;
         }
-        div,span{
-            border:5px solid gray;
-        }
+        
         .container{
             background: beige;
             height: 100vh; /* vh를 활용해 원하는 만큼 height를 줄수잇다 */
@@ -46,70 +44,90 @@
     </style>
 </head>
 <body>
-  <nav class=".navbar"> 
-    <div class="navbar__logo">
-      <i class="fab fa-skyatlas"style="color:#d49466;"></i>
-      <a href="../../index.html">DreamCoding</a>
-    </div>
-    </nav>
-  <input type="button" class="button_night" value="Night" onclick=" 
-  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+       <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+       <a href="../../index.html">Coding114</a>
+     </div>
+     </nav>
+   </header>
+   
   <h1 class="h1_title"><a href="./index.html">CSS GRID</a></h1>
-  <div id="grid">
-    <ol>
-      <li><a href="../html/index.html">HTML</a></li>
-      <li><a href="index.html" class="saw">CSS</a></li>
-      <ul id="sub_list">
-        <li><a href="./css box.html" class="saw">CSS BOX</a></li>
-        <li><a href="./css grid.html" class="saw" id="active">CSS GRID</a></li>
-        <li><a href="./css media query.html" class="saw">CSS Media Query</a></li>
-      </ul>
-      <li><a href="../javascript/index.html">JavaScript</a></li>
-      <li><a href="../bootstrap/index.html">Bootstrap</a></li>
-      <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
-      <li><a href="../database/domain.html">Domain </a></li>
-      <li><a href="../php/index.html">PHP </a></li> 
-      <li><a href="../database//index.html">DataBase</a></li>
-      <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
-    </ol>
-    <div id="article">
-      
-  <div id="grid_box">
-    <div>navigattion1</div>
-    <div>navigattion4</div>
-    <div>navigattion4</div>
-    <div>navigattion4</div>
-    <div>navigattion4</div>
-    <div>navigattion4</div>
-    <div>
-      <div>article1</div>
-      <div>article2</div>
-      <div>article3</div>
-      <img src="../../img/analytics.png" width="50%">
+
+  <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+    <li class="has-submenu"><a href="index.html" >CSS</a></li>
+    <ul id="sub-menu">
+      <li><a href="./css box.html" class="saw">CSS_BOX</a></li>
+      <li><a href="./css grid.html" class="saw" id="active">CSS_GRID</a></li>
+      <li><a href="./css media query.html" class="saw">CSS_Media_Query</a></li>
+    </ul>
+    <li><a href="../javascript/index.html">JavaScript</a></li>
+    <li><a href="../php/index.html">PHP </a></li> 
+    <li><a href="../database//index.html">DataBase</a></li>
+    <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+    <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
+   </ul>
+  <a href="#"class="navbar__toogleBtn">
+      <i class="fas fa-bars"></i>
+  </a>
+ </nav>
+
+  <section id="section_1">
+    <div id="grid_box">
+      <div>navigattion1</div>
+      <div>navigattion4</div>
+      <div>navigattion4</div>
+      <div>navigattion4</div>
+      <div>navigattion4</div>
+      <div>navigattion4</div>
+      <div>
+        <div>article1</div>
+        <div>article2</div>
+        <div>article3</div>
+        <img src="../../img/analytics.png" width="50%">
+      </div>
+    
     </div>
-  
-</div>
-  <div>    
-      <span>navigattion</span>
-      <span>article1</span>
-      <span>article2</span>
-      <span>article3</span>
-      <span>article4</span>
-      <span>lorem</span>
-  </div>  
-  <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
-    <div class="item item3">3</div>
-    <div class="item item4">4</div>
-    <div class="item item5">5</div>
-    <div class="item item6">6</div>
-    <div class="item item7">7</div>
-    <div class="item item8">8</div>
-    <div class="item item9">9</div>
-    <div class="item item10">10</div>
+    <div>    
+        <span>navigattion</span>
+        <span>article1</span>
+        <span>article2</span>
+        <span>article3</span>
+        <span>article4</span>
+        <span>lorem</span>
+    </div>  
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+      <div class="item item9">9</div>
+      <div class="item item10">10</div>
+    </div>
   </div>
-  </div>
-</div>
+</section>
+<!-- script -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+
 </body>
 </html>

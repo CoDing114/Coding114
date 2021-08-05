@@ -31,7 +31,7 @@ h1 {
   font-size: 150%;
 }
 body {
-  margin: 20px;
+  margin: 0px;
   font-family: "Source Sans Pro";
   background-color: #8d9ca6;
   color: #ffffff;
@@ -50,6 +50,7 @@ section {
 }
 
 .navbar__logo {
+  margin: 1%;
   font-size: 24px;
   color: var(--text-color);
 }
@@ -61,6 +62,9 @@ section {
   display: flexbox;
   list-style: none;
   padding-left: 0px;
+}
+.navbar__menu li {
+  font-size: 120%;
 }
 
 .navbar__menu li:hover {
@@ -81,7 +85,7 @@ section {
   position: fixed;
   top: 15px;
   right: 15px;
-  font-size: 24;
+  font-size: 150%;
   color: var(--accent-color);
   display: none;
 }
@@ -130,7 +134,8 @@ footer p a:hover {
   border-radius: 0px; /* 둥근 테두리 */
 }
 #active {
-  color: red;
+  border: 2px solid #d98f07;
+  /* color: red; */
   text-decoration: underline;
 }
 #inlinebox {
@@ -171,9 +176,13 @@ footer p a:hover {
 @media (min-width: 768px) {
   #sub-menu {
     position: absolute;
-    left: 75px;
-    top: 26%;
+    display: -webkit-box;
+    left: -20px;
+    top: 12%;
     border: none;
+  }
+  #sub-menu li {
+    padding: 5%;
   }
 }
 /* screen width < 800px */
@@ -221,8 +230,8 @@ footer p a:hover {
   .navbar__menu.active,
   .navbar__icons.active {
     position: fixed;
-    right: 35px;
-    top: 20px;
+    right: 40px;
+    top: 26px;
     padding-left: 0px;
     display: flex;
   }

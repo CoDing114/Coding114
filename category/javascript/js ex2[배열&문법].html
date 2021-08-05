@@ -21,40 +21,44 @@
      </script>
 </head>
 <body>
-    <nav class=".navbar"> 
-        <div class="navbar__logo">
-          <i class="fab fa-skyatlas"style="color:#d49466;"></i>
-          <a href="../../index.html">DreamCoding</a>
-        </div>
-        </nav>
-    <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
-    <input type="button" class="button_night" value="Night" onclick=" 
-    nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+           <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+           <a href="../../index.html">Coding114</a>
+         </div>
+         </nav>
+       </header>
+       
+      <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
     
-    <h1 class="h1_title"><a href="./index.html">JavaScript ex2 배열&문법 </a></h1>
-    <div id="grid">
-        <ol>
-            <li><a href="../html/index.html">HTML</a></li>
-            <li><a href="../css/index.html">CSS</a></li>
-            <li><a href="./index.html"class="saw">JavaScript</a></li>
-            <ul id="sub_list">
-              <li><a href="./js ex1[연산자].html" class="saw">js ex1 연산자</a></li>
-              <li><a href="./js ex2[배열&문법].html" class="saw" id="active">js ex2 배열&문법</a></li>
-              <li><a href="./js ex3[반복문].html" class="saw">js ex3 반복문</a></li>
-              <li><a href="./js ex4[배열과 반복문].html" class="saw">js ex4 배열과 반복문</a></li>
-              <li><a href="./js ex5[함수function].html" class="saw">js ex5함수function</a></li>
-              <li><a href="./js ex6 야간모드.html" class="saw">js ex6 야간모드</a></li>
-              <li><a href="./js ex7 객체(object).html" class="saw">js ex7 객체(object)</a></li>
-            </ul>
-            <li><a href="../bootstrap/index.html">Bootstrap</a></li>
-            <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
-            <li><a href="../database/domain.html">Domain </a></li>
-            <li><a href="../php/index.html">PHP </a></li> 
-            <li><a href="../database/index.html">DataBase</a></li>
-            <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
-          </ol>
-
-        <div id="article">
+      <div  id="grid">
+       <nav class="navbar" >
+       <ul class="navbar__menu" >
+        <li><a href="../html/index.html">HTML</a></li>
+          <li><a href="../css/index.html">CSS</a></li>
+          <li class="has-submenu"><a href="./index.html">JavaScript</a></li>
+          <ul id="sub-menu">
+            <li><a href="./js ex1[연산자].html" class="saw">연산자</a></li>
+            <li><a href="./js ex2[배열&문법].html" class="saw" id="active">배열&문법</a></li>
+            <li><a href="./js ex3[반복문].html" class="saw">반복문</a></li>
+            <li><a href="./js ex4[배열과 반복문].html" class="saw">배열과 반복문</a></li>
+            <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
+            <li><a href="./js ex6 야간모드.html" class="saw">야간모드</a></li>
+            <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
+          </ul>
+          <li><a href="../php/index.html">PHP </a></li> 
+          <li><a href="../database/index.html">DataBase</a></li>
+          <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+          <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
+       </ul>
+     <a href="#"class="navbar__toogleBtn">
+         <i class="fas fa-bars"></i>
+     </a>
+     </nav>
+    
+    
+        <section id="section_1">
             <h2>배열 Array & 문법 Syntax</h1>
             <div id="inlinebox">
                 <!-- 배열은 대괄호[]로 시작해서 대괄호로 끝난다, 값과 값 사이는 콤마로 구분한다[,]-->
@@ -101,7 +105,25 @@
                     document.write(coworkers.length)
                 </script>
             </div>
-        </div>
+        </section>
     </div>
+
+<!-- script navbar__icons -->
+<script>
+    const toggleBtn = document.querySelector('.navbar__toogleBtn');
+  const menu = document.querySelector('.navbar__menu');
+  const icons = document.querySelector('.navbar__icons');
+  
+  toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      // icons.classList.toggle('active');
+  });
+  </script>
+  
+  <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+  <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+  </section>
+  
 </body>
 </html>
