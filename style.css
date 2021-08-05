@@ -1,54 +1,3 @@
-/* Color Theme Swatches in Hex */
-.Grey-and-yellow-studio-1-hex {
-  color: #1c2226;
-}
-.Grey-and-yellow-studio-2-hex {
-  color: #8d9ca6;
-}
-.Grey-and-yellow-studio-3-hex {
-  color: #f2d541;
-}
-.Grey-and-yellow-studio-4-hex {
-  color: #f2cb57;
-}
-.Grey-and-yellow-studio-5-hex {
-  color: #d98f07;
-}
-
-/* Color Theme Swatches in RGBA */
-.Grey-and-yellow-studio-1-rgba {
-  color: rgba(27, 34, 38, 1);
-}
-.Grey-and-yellow-studio-2-rgba {
-  color: rgba(140, 156, 165, 1);
-}
-.Grey-and-yellow-studio-3-rgba {
-  color: rgba(242, 212, 65, 1);
-}
-.Grey-and-yellow-studio-4-rgba {
-  color: rgba(242, 203, 87, 1);
-}
-.Grey-and-yellow-studio-5-rgba {
-  color: rgba(216, 143, 6, 1);
-}
-
-/* Color Theme Swatches in HSLA */
-.Grey-and-yellow-studio-1-hsla {
-  color: hsla(202, 16, 12, 1);
-}
-.Grey-and-yellow-studio-2-hsla {
-  color: hsla(202, 12, 60, 1);
-}
-.Grey-and-yellow-studio-3-hsla {
-  color: hsla(50, 87, 60, 1);
-}
-.Grey-and-yellow-studio-4-hsla {
-  color: hsla(45, 85, 64, 1);
-}
-.Grey-and-yellow-studio-5-hsla {
-  color: hsla(39, 94, 43, 1);
-}
-
 :root {
   --text-color: rgb(247, 242, 242);
   --background-color: #263343;
@@ -58,6 +7,7 @@
 body {
   margin: 0;
   font-family: "Source Sans Pro";
+  background-color: black;
 }
 
 a {
@@ -111,14 +61,13 @@ a {
   display: none;
 }
 
-footer .container .row .col-md-12 {
-  display: block;
-  position: fixed;
+footer {
+  position: absolute;
+  right: center;
+  left: 30%;
   bottom: 0px;
-  line-height: 1px;
   color: var(--text-color);
   font-family: "Montserrat", sans-serif;
-  text-align: center;
 }
 
 footer p a,

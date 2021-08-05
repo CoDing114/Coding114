@@ -133,11 +133,7 @@ footer p a:hover {
   background: #d98f07;
   border-radius: 0px; /* 둥근 테두리 */
 }
-#active {
-  border: 2px solid #d98f07;
-  /* color: red; */
-  text-decoration: underline;
-}
+
 #inlinebox {
   border: 3px solid hsl(180, 92%, 44%);
   padding: 5px;
@@ -149,10 +145,14 @@ footer p a:hover {
 #sub_list {
   padding: 0;
 }
-
-.saw {
-  color: powderblue;
+#active {
+  border: 2px solid #d98f07;
+  /* color: red; */
+  text-decoration: underline;
 }
+/* .saw {
+  color: powderblue;
+} */
 .button_night {
   position: fixed;
   left: 0px;
@@ -182,6 +182,15 @@ footer p a:hover {
     border: none;
   }
   #sub-menu li {
+    padding: 5%;
+  }
+  #sub-menu li a {
+    padding: 3px;
+  }
+  .navbar__menu > li {
+    padding: 5%;
+  }
+  .navbar__menu > li > a {
     padding: 5%;
   }
 }
