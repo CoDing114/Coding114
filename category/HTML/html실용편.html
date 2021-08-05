@@ -7,11 +7,7 @@
     <title>HTML 실용편</title> 
 
 <!-- #link 다른곳에 저장되어 잇는 파일을 불러오는 -->
-    <link href="../style.css" rel="stylesheet"
-    type="text/css" /> 
-
-<!-- #meta[link]가 어떤 정보를 담고 잇는지 더 자세한정보  -->
-    <meta name="description" content="테크보이 문서"> 
+    <link href="../style.css" rel="stylesheet"type="text/css" /> 
 
     <!-- 페이지 스타일 css코드 쓸수잇음  [.css를 사용하여 대체 가능]
     <style>
@@ -41,30 +37,37 @@
 
 </head>
 <body>
-    <nav class=".navbar"> 
-        <div class="navbar__logo">
-          <i class="fab fa-skyatlas"style="color:#d49466;"></i>
-          <a href="../../index.html">DreamCoding</a>
-        </div>
-        </nav>
-
-    <input type="button" class="button_night" value="Night" onclick=" 
-    nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
-    
-<h1 class="h1_title"><a href="../index.html">WEB</a></h1>
-<div id="grid">
-    <ol>
-        <li><a href="./index.html">HTML</a></li>
-        <li><a href="../css/index.html">CSS</a></li>
-        <li><a href="../javascript/index.html">JavaScript</a></li>
-        <li><a href="../bootstrap/index.html">Bootstrap</a></li>
-        <li><a href="../html실용편.html"class="saw" id="active">HTML 실용편 </a></li>
-        <li><a href="../database/domain.html">Domain </a></li>
-        <li><a href="../php/index.html">PHP </a></li> 
-        <li><a href="../database/index.html">DataBase</a></li>
-        <li><a href="../damoa/index.html"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
-      </ol>
-    <div id="article">
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+           <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+           <a href="../../index.html">Coding114</a>
+         </div>
+         </nav>
+       </header>
+       
+       
+     <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+     <div  id="grid">
+       <nav class="navbar" >
+       <ul class="navbar__menu" >
+         <li class="has-submenu"><a href="./index.html">HTML</a></li>
+           <ul id="sub-menu">
+             <li><a href="./html실용편.html"class="saw" id="active">HTML 실용편</a></li>
+           </ul>
+         <li><a href="../css/index.html">CSS</a></li>
+         <li><a href="../javascript/index.html">JavaScript</a></li>
+         <li><a href="../php/index.html">PHP </a></li> 
+         <li><a href="../database/index.html">DataBase</a></li>
+         <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+         <li><a href="../damoa/index.html"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
+       </ul>
+     <a href="#"class="navbar__toogleBtn">
+         <i class="fas fa-bars"></i>
+     </a>
+     </nav>
+     
+       <section id="section_1">
         <div>
             <h2>HTML 실용편</a></h2>
             <h3> 텍스트 관련 태그들 </h3>
@@ -102,7 +105,7 @@
             </table>
 
             <h3> 목록 태그 [ 숫자 목록 및 블랙 포인트 ] </h3>
-            <body>
+            <div>
                 <h4> ol 숫자 목록  </h4>
                 <ol>
                     <li>워니</li>
@@ -113,10 +116,10 @@
                     <li>워니</li>
                     <li>제니</li>  
                 </ul>
-            </body>
+            </div>
 
             <h3>구역 태그 "div & span " #div:한줄 전테 공간 차지 , #span:은 자기 내용물 만큼의 공간만 차지</h3>
-            <body>
+            <div>
             <h4> 문서를 여러 구역으로 만들고 싶을때 사용 </h4>
                 <div class="top">상단</div>
                 <div class="mid">중단</div>
@@ -125,7 +128,7 @@
                 <span class="sub">구독</span>
                 <span class="comment">댓글</span>
 
-            </body>
+            </div>
 
             <h3>- input 태그 </h3>
             텍스트<input type="text">
@@ -149,63 +152,27 @@
             <video src="http://ys-n.ys168.com/216503729/813531285/SLTNRHo336M3K436GM6ce/%E5%8D%95%E8%BA%AB%E7%9A%84%E5%A5%BD%E5%A4%84.MP4"width="100%" 
             controls >
         </div>
-        <div>
-            웹사이트 코딩할때 필요한 HTML 이 영상 하나로 끝<br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/50JOpxN0554" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div>
-            웹사이트 10초만에 만들기 (10분 걸려도 책임은 안 짐) - HTML / CSS 배우기<br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/RK5foxPm5GA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div>
-            코딩 초보가 앱, 웹사이트 만들고 싶으면 보세요.<br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ORI4-EXhgC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div> <!-- 댓글 및 실시간 대화 -->
-            <p><!-- 라이브리 시티 설치 코드 댓글 기능 활용 -->
-                <a href="https://livere.com/"target="_blank">라이브리 시티 설치</a>
-                <div id="lv-container" data-id="city" data-uid="MTAyMC81MTczMy8yODIxNA==">
-                <script type="text/javascript">
-                    (function(d, s) {
-                        var j, e = d.getElementsByTagName(s)[0];
-                
-                        if (typeof LivereTower === 'function') { return; }
-                
-                        j = d.createElement(s);
-                        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                        j.async = true;
-                
-                        e.parentNode.insertBefore(j, e);
-                    })(document, 'script');
-                </script>
-                <noscript>라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
-                </div>
-                </p> <!-- 라이브리 시티 설치 코드 끝 -->
-            <P>
-                <!--Start of Tawk.to Script-->
-                <a href="https://www.tawk.to/"target="_blank">실시간 대화 설치</a>
-                <img src="../IMG/tawk.png" width="20%">
-                <script type="text/javascript">
-                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-                (function(){
-                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                s1.async=true;
-                s1.src='https://embed.tawk.to/5f843adb4704467e89f6af36/default';
-                s1.charset='UTF-8';
-                s1.setAttribute('crossorigin','*');
-                s0.parentNode.insertBefore(s1,s0);
-                })();
-                </script>
-                <!--End of Tawk.to Script-->
-            </P><br>
-        
-            <!-- Global site tag (gtag.js) - Google Analytics [구글 분석기 헤드에 설치] -->
-            <p>
-                <a href="https://analytics.google.com/"target="_blank">애널리틱스 [구글 분석기]</a>
-            <img src="../IMG/analytics.png" width="50%">
-            </p>
-        </div> <!-- END 댓글 및 실시간 대화 -->
-    </div>
+
+    </section>
 </div>
+
+
+<!-- script navbar__icons -->
+<script>
+    const toggleBtn = document.querySelector('.navbar__toogleBtn');
+  const menu = document.querySelector('.navbar__menu');
+  const icons = document.querySelector('.navbar__icons');
+  
+  toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      // icons.classList.toggle('active');
+  });
+  </script>
+  
+  <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+  <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+  
+  
 </body>
 </html>
