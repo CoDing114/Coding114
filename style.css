@@ -62,8 +62,8 @@ a {
 }
 
 footer {
+  width: 100%;
   position: absolute;
-  right: center;
   left: 30%;
   bottom: 0px;
   color: var(--text-color);
@@ -102,5 +102,8 @@ footer p a:hover {
   .navbar__menu.active,
   .navbar__icons.active {
     display: flex;
+  }
+  footer {
+    left: 8%;
   }
 }
