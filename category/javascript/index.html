@@ -122,12 +122,14 @@
     </div>
     <h4>변수(variable) vs 상수(constant</h4>
     <ul>
-      <li>variable:변경가능 </li>
-      <li>constant:변경불가</li>
+      <li>variable:변경가능 rw(read/write) </li>
+      <li>constant:변경불가 r(read only) </li>
+      <ul> 메모리 값 저장되는 두가지 타입 
+        <li>primitive,single item:numer,sting,boolean,null,undefined,symbol</li>
+        <li>object:box container</li>
+      </ul>
     </ul>
-    <div>
-      x(variable) + 1(constant)
-    </div>
+   
     <h4>
       변수의 효용중 하나 
     </h4>
@@ -209,7 +211,7 @@
 \'	                  작은따옴표
 \"	                  큰따옴표
 \\	                  역슬래시
-\n	                  개행
+\n	                  줄바꿈
 \r	                  캐리지 리턴
 \v	                  세로 탭
 \t	                  탭

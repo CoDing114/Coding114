@@ -68,7 +68,357 @@
 
     <section id="section_1">
       <div id=inlinebox>
-        
+        <pre>
+          // 1. String concatenation
+          console.log('my'+'cat');
+          console.log('1'+2);
+          console.log(`string literals:1+2= ${1+2}`);
+        </pre>
+        <pre>
+          // 2. Numeric operators
+          console.log(1 + 1); //  Add             더하기
+          console.log(1 - 1); //  substract       덜기
+          console.log(1 / 1); //  divide          나누기
+          console.log(1 * 1); //  multiply        곱하기
+          console.log(5 % 2); //  remainder       나머지
+          console.log(2 ** 3); // exponentiation  승
+        </pre>
+        <pre>
+          // 3. Increment and decrement operators
+          let counter = 2;
+          const preIncrement = ++counter;
+          //counter = counter + 1;
+          //preIncrement = counter;
+          console.log(`preIncrement:${preIncrement},counter:${counter}`);
+
+          const postIncrement = counter++;
+          //postIncremnet = counter;
+          //counter = counter + 1;
+          console.log(`postIncrement:${postIncrement},counter:${counter}`);
+        </pre>
+        <script>
+          let counter = 2;
+          const preIncrement = ++counter;
+          //counter = counter + 1;
+          //preIncrement = counter;
+          console.log(`preIncrement:${preIncrement},counter:${counter}`);
+
+          const postIncrement = counter++;
+          //postIncremnet = counter;
+          //counter = counter + 1;
+          console.log(`postIncrement:${postIncrement},counter:${counter}`);
+        </script>
+        <pre>
+          // 4. Assignment operators 
+          let x = 3;
+          let y = 6;
+          x += y; // x = x + y;
+          x -+ y;
+          x *+ y;
+          x /+ y;
+        </pre>
+        <pre>
+          // 5. Comparison operators
+          console.log(10 &lt 6);  // less than 
+          console.log(10 &lt= 6); // less than or equal 
+          console.log(10 > 6);    // greater than
+          console.log(10 >= 6);   // greater than or equal
+        </pre>
+        <pre>
+          // 6. Logical operators: ||(or), &&(and),!(not)
+          const value1 = true;
+            const value2 = 4 &lt 2;
+
+            // ||(or),finds the first truthy value
+            console.log(`or: ${value1} || value2 || check()}`);
+            
+            // &&(and), finds the first falsy value
+            console.log(`and: ${value1} && value2 && check()}`);
+            // ofthe used to compress long if-statemen
+            // nullableObject && nullableObject.something
+            // if(nullableObject != null){
+            //   ullableObject.something;
+            // }
+
+            // !(not) 값을 반대로 바꿔준다
+              console.log(!value1);
+
+            function check(){
+              for (let i = 0; i &lt 10; i++){
+                //wasting time
+                console.log('😱')
+              }
+              return true;
+            }
+          
+          <script>
+            console.log('6. Logical operators: ||(or), &&(and),!(not)')
+            const value1 = true;
+            const value2 = 4 < 2;
+            console.log(`value1: ${value1} ||value2: ${value2} || check:${check()}`);
+
+            // ||(or),finds the first truthy value
+            console.log(`or: ${value1 || value2 || check()}`);
+            
+            // &&(and), finds the first falsy value
+            console.log(`and: ${value1 && value2 && check()}`);
+            // ofthe used to compress long if-statemen
+            // nullableObject && nullableObject.something
+            // if(nullableObject != null){
+            //   ullableObject.something;
+            // }
+
+            // !(not) 값을 반대로 바꿔준다
+              console.log(!value1);
+
+            function check(){
+              for (let i = 0; i < 10; i++){
+                //wasting time
+                console.log('😱')
+              }
+              return true;
+            }
+          </script>
+          </pre>
+          <pre>
+            // 7. Equality
+            const stringFive = '5';
+            const numberFive = 5;
+
+            // == loose equality, with type conversion
+            console.log(stringFive == numberFive);
+            console.log(numberFive != numberFive);
+
+            // === strict equality, no type conversion
+            console.log(stringFive === numberFive);
+            console.log(numberFive !== numberFive);
+            // object equality by reference
+            const miki1 = {name: 'miki'};
+            const miki2 = {name: 'miki'};
+            const miki3 = miki1;
+            console.log(miki1 == miki2);
+            console.log(miki1 === miki2);
+            console.log(miki1 === miki3);
+            
+            // euqlity - puzzler
+            console.log(0 == false);
+            console.log(0 === false);
+            console.log('' == false);
+            console.log('' === false);
+            console.log(null == undefined);
+            console.log(null === undefined);
+            <script>
+              console.log( '7. Equality')
+              const stringFive = '5';
+              const numberFive = 5;
+
+              // == loose equality, with type conversion
+              console.log(stringFive == numberFive);
+              console.log(numberFive != numberFive);
+
+              // === strict equality, no type conversion
+              console.log(stringFive === numberFive);
+              console.log(numberFive !== numberFive);
+              // object equality by reference
+              const miki1 = {name: 'miki'};
+              const miki2 = {name: 'miki'};
+              const miki3 = miki1;
+              console.log(miki1 == miki2);
+              console.log(miki1 === miki2);
+              console.log(miki1 === miki3);
+
+              // euqlity - puzzler
+              console.log('euqlity - puzzler')
+              console.log(0 == false);
+              console.log(0 === false);
+              console.log('' == false);
+              console.log('' === false);
+              console.log(null == undefined);
+              console.log(null === undefined);
+            </script>
+          </pre>
+          <pre>
+            // 8. Conditional operators: if
+            // if, else if, else
+            const names = 'miki';
+              if (names === 'miki'){
+                console.log('Welcome,Miki!');
+              }else if (names === 'coder'){
+                console.log('You are amazing coder')
+              }else{
+                console.log('unkwnon');
+              }
+            <script>
+              const names = 'miki';
+              if (names === 'miki'){
+                console.log('Welcome,Miki!');
+              }else if (names === 'coder'){
+                console.log('You are amazing coder')
+              }else{
+                console.log('unkwnon');
+              }
+            </script>
+          </pre>
+          <pre>
+            // 9. Ternary operator: ?
+            // condition ? value1 : value2;
+            console.log(names === 'miki' ? 'yess' : 'no')
+            <script>
+              console.log('9. Ternary operator: ?')
+              console.log(names === 'miki' ? 'yess' : 'no')
+            </script>
+          </pre>
+          <pre>
+            // 10. Switch statement 
+            // use for multiple if checks
+            // use for enum-like value check
+            // use for multiple type checks in TS
+            &ltscript>
+              const browser = 'IE'
+                switch (browser){
+                  case 'IE':
+                    console.log('go away!');
+                    break;
+                  // case 'Chrome':
+                  //   console.log('love you!');
+                  // break;
+                  case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
+                  case 'Firefox':
+                    console.log('love you!');
+                    break;
+                  default:
+                    console.log('same all!');
+                    break;
+              }
+            &lt/script>
+            <script>
+              console.log('10. Switch statement ')
+              const browser = 'IE'
+              switch (browser){
+                case 'IE':
+                  console.log('go away!');
+                  break;
+                // case 'Chrome':
+                // console.log('love you!');
+                // break;
+                case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
+                case 'Firefox':
+                  console.log('love you!');
+                  break;
+                default:
+                  console.log('same all!');
+                  break;
+              }
+            </script>
+          </pre>
+          <pre>
+            // 11. Loops
+            // 블록을 먼저 실행하고 싶다면 do while을 써야되고 
+            // 조건이 맞을때만 while쓰면된다
+            // while loop, while the condition is truthy,
+            // body code is executed. 
+            &ltscript>
+              let i = 3;
+              while (i > 0){
+                console.log(`while:${i}`);
+                i--;
+              }
+              // do while loop, body code is executed first,
+              // then check the condition
+              do {
+                console.log(`do while:${i}`);
+                i--;
+              }while (i > 0);
+            &lt/script>
+            <script>
+              console.log('11. Loops')
+              let i = 3;
+              while (i > 0){
+                console.log(`while:${i}`);
+                i--;
+              }
+              // do while loop, body code is executed first,
+              // then check the condition
+              do {
+                console.log(`do while:${i}`);
+                i--;
+              }while (i > 0);
+            </script>
+
+            // for loop, for(begin; condition; step)
+            &ltscript>
+              console.log('for loop, for(begin; condition; step');
+              for (i = 3; i > 0; i--){
+                console.log(`for:${i}`);
+              }
+
+              for (let i = 3; i > 0; i = i - 1){
+                //inline variable declaration
+                console.log(`inline variable for:${i}`);
+              }
+
+              // nested loops
+              for(let i = 0; i &lt 6; i++){
+                for (j = 0; j &lt 6; j++){
+                  console.log(`i: ${i},j:${j}`);
+                }
+              }
+            &lt/script>
+            <script>
+              console.log('for loop, for(begin; condition; step');
+              for (i = 3; i > 0; i--){
+                console.log(`for:${i}`);
+              }
+
+              for (let i = 3; i > 0; i = i - 1){
+                //inline variable declaration
+                console.log(`inline variable for:${i}`);
+              }
+
+              // nested loops
+              for(let i = 0; i < 6; i++){
+                for (j = 0; j < 6; j++){
+                  console.log(`i: ${i},j:${j}`);
+                }
+              }
+            </script>
+
+            // break, continue;
+            // Q1. iterate from 0 to 10 and print only even numbers(use continue)
+            &ltscript>
+              for (let i = 0; i &lt 11; i++){
+                if (i % 2 === 0 ){
+                  console.log(`Q1.${i}`);
+                }
+              }
+
+            // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
+            for (let i = 0; i &lt 11; i++){
+              if(i > 8){
+                break;
+              }
+              console.log(`Q2. ${i}`);
+            }  
+            &lt/script>
+
+            <script>
+              console.log('Q1. iterate from 0 to 10 and print only even numbers(use continue)')
+              for (let i = 0; i < 11; i++){
+                if (i % 2 === 0 ){
+                  console.log(`Q1.${i}`);
+                }
+              }
+
+            // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
+            console.log('Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)')
+            for (let i = 0; i < 11; i++){
+              if(i > 8){
+                break;
+              }
+              console.log(`Q2. ${i}`);
+            }  
+            </script>
+          </pre>
       </div>
       
       <div id=inlinebox>
