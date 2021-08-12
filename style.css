@@ -91,6 +91,9 @@ footer p a:hover {
     width: 100%;
     text-align: center;
   }
+  .navbar__menu li a {
+    padding: 8px 40%;
+  }
   .navbar__icons {
     display: none;
     justify-content: center;
