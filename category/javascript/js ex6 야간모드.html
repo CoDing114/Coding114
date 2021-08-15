@@ -80,6 +80,7 @@
         <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
         <li><a href="./js ex6 야간모드.html" class="saw" id="active">야간모드</a></li>
         <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
+        <li><a href="./json.html" class="saw">JSON</a></li>
       </ul>
       <li><a href="../php/index.html">PHP </a></li> 
       <li><a href="../database/index.html">DataBase</a></li>
@@ -124,10 +125,12 @@
         <input id="night_day1" type="button"  value="Night" onclick="
           if(document.querySelector('#night_day1').value==='Night'){
             document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.backgroundImage='none';
             document.querySelector('body').style.color='white';
             document.querySelector('#night_day1').value='Day';
           } else{
             document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.backgroundImage='none';
             document.querySelector('body').style.color='black';
             document.querySelector('#night_day1').value='Night';
           }
@@ -136,10 +139,12 @@
         <input type="button" class="button_night" style="font-size:medium;position: inherit;" value="Night" onclick="
           if(this.value==='Night'){
             document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.backgroundImage='none';
             document.querySelector('body').style.color='white';
             this.value='Day';
           } else{
             document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.backgroundImage='none';
             document.querySelector('body').style.color='black';
             this.value='Night';
           }
@@ -149,10 +154,12 @@
           var night_day = document.querySelector('body') // night_day란 변수를 이용하여 중복제거
           if(this.value==='Night'){  // onclick이 소속되어있는 태그를 그르킨다 this를 사용하여 현재치로 대체가능
             night_day.style.backgroundColor='black';
+            document.querySelector('body').style.backgroundImage='none';
             night_day.style.color='white'; // 중복 제거와 유지보수가 쉬워진다
             this.value='Day';
           } else{
             night_day.style.backgroundColor='white';
+            document.querySelector('body').style.backgroundImage='none';
             night_day.style.color='black';
             this.value='Night';
           }

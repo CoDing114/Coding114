@@ -19,19 +19,25 @@ var Links={ // Link 컬러 설정
     setbackgroundColor:function(color){
       // document.querySelector('body').style.backgroundColor=color; //'body' 배경 컬러 설정
       $('body').css('backgroundColor',color);
-    } 
+    }, 
+    setbackgroundImage:function(color){
+      // document.querySelector('body').style.backgroundImage='none';
+      $('body').css('backgroundImage',color);
+    }
   }
   
 function nightDayHandler(self) { // 야간모드 동작
     var target = document.querySelector('body') //target 이라는 프로퍼티에 "body'Element를 반환한다
     if(self.value === 'Night'){ // "self"의 값(value)이 "Night"일때 아래 명령실행
     Body.setbackgroundColor('black'); //'Body' 배경 컬러를 "블랙"으로 설정
+    Body.setbackgroundImage('none');
     Body.setColor('white'); //'Body' 폰트 컬러를 "화이트"으로 설정
     self.value = 'Day'; //self"의 값(value)을 "Day"로 바꾼다
 
     Links.setColor('powderblue'); //'Links.setColor' 폰트 컬러를 "파우더블루"로 설정
   } else { //if문 조건이 "참"이 아닌 "거짓"인 경우 아래 명령어 실행
     Body.setbackgroundColor('white');
+    Body.setbackgroundImage('none');
     Body.setColor('black');
     self.value = 'Night';
     

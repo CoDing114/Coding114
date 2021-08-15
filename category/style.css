@@ -33,7 +33,7 @@ h1 {
 body {
   margin: 0px;
   font-family: "Source Sans Pro";
-  background-color: #8d9ca6;
+  background-color: #263343;
   color: #ffffff;
   background-image: url(../IMG/choosing-bg.jpg);
 }
@@ -45,7 +45,7 @@ section {
   border-right: 1px solid #ccb2da94;
   justify-content: space-between; /* 사이사이에 넣는다 */
   /* align-items: center; */ /* 줄 간격 맞추기 */
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   padding: 8px 12px;
 }
 
