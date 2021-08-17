@@ -176,7 +176,24 @@ footer p a:hover {
 .button_night:hover {
   opacity: 1;
 }
-@media (min-width: 768px) {
+
+/* screen width < 800px */
+@media (max-width: 768px) {
+  #grid {
+    display: block;
+  }
+  #grid ol {
+    /* id뒤에 태그를 쓰므로 id에 포함되어 잇는 태그에한해 효과적용  */
+    border-right: none;
+  }
+  #grid .navbar {
+    border-right: none;
+  }
+
+  h1,
+  .h1_title {
+    border-bottom: none;
+  }
   #sub-menu {
     position: absolute;
     display: -webkit-box;
@@ -195,24 +212,6 @@ footer p a:hover {
   }
   .navbar__menu > li > a {
     padding: 5%;
-  }
-}
-/* screen width < 800px */
-@media (max-width: 768px) {
-  #grid {
-    display: block;
-  }
-  #grid ol {
-    /* id뒤에 태그를 쓰므로 id에 포함되어 잇는 태그에한해 효과적용  */
-    border-right: none;
-  }
-  #grid .navbar {
-    border-right: none;
-  }
-
-  h1,
-  .h1_title {
-    border-bottom: none;
   }
 }
 @media screen and (max-width: 768px) {
