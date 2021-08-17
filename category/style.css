@@ -9,9 +9,7 @@ a {
   text-decoration: none;
   color: powderblue;
 }
-ul {
-  /* list-style: none; */
-}
+
 h1 {
   font-size: 45px;
   text-align: center;
@@ -177,23 +175,8 @@ footer p a:hover {
   opacity: 1;
 }
 
-/* screen width < 800px */
-@media (max-width: 768px) {
-  #grid {
-    display: block;
-  }
-  #grid ol {
-    /* id뒤에 태그를 쓰므로 id에 포함되어 잇는 태그에한해 효과적용  */
-    border-right: none;
-  }
-  #grid .navbar {
-    border-right: none;
-  }
-
-  h1,
-  .h1_title {
-    border-bottom: none;
-  }
+/* screen width > 768px */
+@media (min-width: 768px) {
   #sub-menu {
     position: absolute;
     display: -webkit-box;
@@ -214,7 +197,23 @@ footer p a:hover {
     padding: 5%;
   }
 }
+/* screen width < 768px */
 @media screen and (max-width: 768px) {
+  #grid {
+    display: block;
+  }
+  #grid ol {
+    /* id뒤에 태그를 쓰므로 id에 포함되어 잇는 태그에한해 효과적용  */
+    border-right: none;
+  }
+  #grid .navbar {
+    border-right: none;
+  }
+
+  h1,
+  .h1_title {
+    border-bottom: none;
+  }
   .navbar {
     flex-direction: column; /* 아이템 떨어지게 만든다  */
     align-items: flex-start;
