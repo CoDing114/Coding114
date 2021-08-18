@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics [구글 분석기] -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <!-- google fonts Source Sans Pro  -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+
+    <title> Method </title>
+
+    <link rel="stylesheet" href="../../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <script src="../../colors.js"defer> // 야간모드 </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script>
+ 
+</head>
+<body>
+  <!--header-->
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+       <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+       <a href="../../index.html">Coding114</a>
+     </div>
+     </nav>
+   </header>
+    
+<h1 class="h1_title"><a href="./index.html">WEB</a></h1>
+<div  id="grid">
+  <nav class="navbar" >
+  <ul class="navbar__menu" >
+    <li class="saw"><a href="./html/index.html">HTML</a></li>
+    <li><a href="./css/index.html">CSS</a></li>
+    <li><a href="./javascript/index.html">JavaScript</a></li>
+    <li><a href="./php/index.html">PHP </a></li> 
+    <li><a href="./database/index.html">DataBase</a></li>
+    <li><a href="./bootstrap/index.html">Bootstrap</a></li>
+    <li><a href="./damoa/index.html"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
+  </ul>
+<a href="#"class="navbar__toogleBtn">
+    <i class="fas fa-bars"></i>
+</a>
+</nav>
+<div id="section_1">
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="section main-banner" id="top" data-section="section1">
+  <!-- ***** Main Banner Area End ***** -->
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+            <h2>Method</h2>
+            <h2><em>메소드</em></h2>
+            <div class="main-button">
+                <div class="scroll-to-section"><a href="#section2">get section2</a></div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+      
+
+      <section class="section why-us" data-section="section2">Section#2
+        <div class="scroll-to-section"><a href="#section3">get section3</a></div>
+        </section>
+
+      
+
+
+
+    
+    <section class="section coming-soon" data-section="section3">section#3
+        <div class="scroll-to-section"><a href="#section1">get section1</a></div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p><i class="fa fa-copyright"></i> Copyright 2021 by Coding114  
+            
+            | Design: <a href="./index.html" rel="sponsored" target="_parent">HUKE</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+      <input type="button"  class="button_night" value="Night" onclick=" 
+        nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+  </div>
+</div>
+<!-- Scripts --> 
+  <script>
+      //according to loftblog tut
+      $('.nav li:first').addClass('active');
+
+      var showSection = function showSection(section, isAnimate) {
+        var
+        direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $('body, html').animate({
+            scrollTop: reqSectionPos },
+          800);
+        } else {
+          $('body, html').scrollTop(reqSectionPos);
+        }
+
+      };
+
+      var checkSection = function checkSection() {
+        $('.section').each(function () {
+          var
+          $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var
+            currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+            reqLink.closest('li').addClass('active').
+            siblings().removeClass('active');
+          }
+        });
+      };
+
+      $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+        if($(e.target).hasClass('external')) {
+          return;
+        }
+        e.preventDefault();
+        $('#menu').removeClass('active');
+        showSection($(this).attr('href'), true);
+      });
+
+      $(window).scroll(function () {
+        checkSection();
+      });
+  </script>
+  
+
+  <!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+// const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+</body>
+</html>
