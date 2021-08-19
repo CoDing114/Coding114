@@ -96,7 +96,7 @@
         <img src="../img/pasted image 0.png" width="20%">
       </div>
 
-      <section class="section why-us" data-section="section2">Section#2
+      <section class="section" data-section="section2">Section#2
         <div class="scroll-to-section"><a href="#section3">get section3</a></div>
         </section>
 
@@ -139,7 +139,7 @@
 
 
     
-    <section class="section coming-soon" data-section="section3">section#3
+    <section class="section " data-section="section3">section#3
     <div class="scroll-to-section"><a href="#section1">get section1</a></div>
     </section>
 
@@ -159,58 +159,9 @@
         nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
   </div>
 </div>
+
 <!-- Scripts --> 
-  <script>
-      //according to loftblog tut
-      $('.nav li:first').addClass('active');
-
-      var showSection = function showSection(section, isAnimate) {
-        var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-          $('body, html').animate({
-            scrollTop: reqSectionPos },
-          800);
-        } else {
-          $('body, html').scrollTop(reqSectionPos);
-        }
-
-      };
-
-      var checkSection = function checkSection() {
-        $('.section').each(function () {
-          var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-            reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-          }
-        });
-      };
-
-      $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
-        if($(e.target).hasClass('external')) {
-          return;
-        }
-        e.preventDefault();
-        $('#menu').removeClass('active');
-        showSection($(this).attr('href'), true);
-      });
-
-      $(window).scroll(function () {
-        checkSection();
-      });
-  </script>
-  
+<script defer src="./src/js/BiaoQian.js"></script> <!-- according to loftblog tut 标签 -->
 
   <!-- script navbar__icons -->
 <script>
