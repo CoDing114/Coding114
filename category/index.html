@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="section" data-section="__HUKE">
 <head>
 
   <meta charset="UTF-8">
@@ -63,10 +63,10 @@
 
     <div class="video-overlay header-text">
         <div class="caption">
-            <h2>Welcome To Growth Diary</h2>
-            <h2><em>코린이의 성장 일기</em></h2>
+            <h2 style="text-align: center;">Welcome To Growth Diary</h2>
+            <h2 style="text-align: center;"><em>코린이의 성장 일기</em></h2>
             <div class="main-button">
-                <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
+                <div class="scroll-to-section" style="text-align: center;"><a href="#__footer">Discover more</a></div>
             </div>
         </div>
     </div>
@@ -95,10 +95,6 @@
         <h3>앞으로 열심히 해보도록 하겠습니다!</h3>
         <img src="../img/pasted image 0.png" width="20%">
       </div>
-
-      <section class="section" data-section="section2">Section#2
-        <div class="scroll-to-section"><a href="#section3">get section3</a></div>
-        </section>
 
       <div> <!-- 댓글 및 실시간 대화 -->
         <p><!-- 라이브리 시티 설치 코드 댓글 기능 활용 -->
@@ -137,23 +133,23 @@
       </div>
     </div>
 
-
-    
-    <section class="section " data-section="section3">section#3
-    <div class="scroll-to-section"><a href="#section1">get section1</a></div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p><i class="fa fa-copyright"></i> Copyright 2021 by Coding114  
-            
-            | Design: <a href="./index.html" rel="sponsored" target="_parent">HUKE</a></p>
+    <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+      <a id="__designed-by" href="../../index.html">
+          "홈페이지 바로가기"
+          <i class="fa fa-code" id="footer_icon"></i>
+      </a>
+      <div class="uk-navbar-right">
+          <div id="__theme-btn">
+              "테마 바꾸기"
+              <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
           </div>
-        </div>
+          <a id="__toTop" href="#__HUKE">
+              "제일 위로"
+              <i class="fa fa-chevron-up" id="footer_icon"></i>
+          </a>
       </div>
     </footer>
+  
 
       <input type="button"  class="button_night" value="Night" onclick=" 
         nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
@@ -161,7 +157,7 @@
 </div>
 
 <!-- Scripts --> 
-<script defer src="./src/js/BiaoQian.js"></script> <!-- according to loftblog tut 标签 -->
+<script defer src="./src/js/scroll.js"></script> <!-- according to loftblog tut 标签 -->
 
   <!-- script navbar__icons -->
 <script>
