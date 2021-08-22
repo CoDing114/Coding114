@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./category/assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="./category/assets/img/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+
+     <!-- google fonts Source Sans Pro  -->
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+     <!-- font   awesome  -->
+     <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+    <title>Coding114</title>
+    <!-- 기본 스크립트 링크 -->
+    <script src="public.js"defer></script>
+    <!-- p5js 그림그리기 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="../../index.html">
+            <img src="./../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./category/index.html">WEBn</a></li>
+            <li><a href="https://0433.tistory.com/">CoDing114</a></li>
+            <li><a href="https://huke.tistory.com/">HUKE</a></li>
+            <li><a href="./#.html">FAQ</a></li>
+        </ul>
+        
+        <ul class="navbar__icons">
+            <li><i class="fab fa-twitter">twitter</i></li>
+            <li><i class="fab fa-facebook-f">facebook</i></li>
+        </ul>
+        <a href="#"class="navbar__toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+    <div class="p5js_sketch_timebox"> 
+        <script>    //존재 와 시간
+            function setup() {
+  frameRate(144);
+  createCanvas(windowWidth, windowHeight, WEBGL);
+  background(0);
+
+    noFill();
+    strokeWeight(1);
+    rotateX(frameCount * 0.003);
+    rotateY(frameCount * 0.003);
+    rotateY(frameCount * 0.003);
+}
+
+function draw() {
+  if(mouseIsPressed){
+    smooth();
+    background(0);
+    stroke(random(255), random(255), random(255));
+    strokeWeight(random(1, 5));
+    fill(random(0, 255), random(0, 255));
+    noFill();
+    rotateX(frameCount * 0.04);
+    rotateY(frameCount * 0.04);
+    rotateY(frameCount * 0.04);
+    box(-mouseX / 5, -mouseY / 5);
+  } else {
+    smooth();
+    background(0);
+    stroke(255);
+    strokeWeight(1);
+    rotateX(frameCount * 0.002);
+    rotateY(frameCount * 0.002);
+    rotateY(frameCount * 0.002);
+    box(50, 50);
+  }
+}
+        </script>
+    </div>
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p><i class="fa fa-copyright"></i> Copyright 2021 by Coding114  
+              
+              | Design: <a href="./index.html" rel="sponsored" target="_parent">HUKE</a></p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+</body>
+</html>

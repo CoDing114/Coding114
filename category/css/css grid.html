@@ -41,14 +41,22 @@
           width: 40px;
           height: 40px;
         }
+        td{
+          min-width: 0;
+          padding: 10px 20px;
+          font-size: .85em;
+          border: 1px solid #4d4b4b;
+        }
+        
     </style>
 </head>
 <body>
   <header>
     <nav class=".navbar"> 
      <div class="navbar__logo">
-       <i class="fab fa-skyatlas"style="color:#d49466;"></i>
-       <a href="../../index.html">Coding114</a>
+        <a href="../index.html">
+            <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
      </div>
      </nav>
    </header>
@@ -77,41 +85,100 @@
  </nav>
 
   <section id="section_1">
-    <div id="grid_box">
-      <div>navigattion1</div>
-      <div>navigattion4</div>
-      <div>navigattion4</div>
-      <div>navigattion4</div>
-      <div>navigattion4</div>
-      <div>navigattion4</div>
-      <div>
-        <div>article1</div>
-        <div>article2</div>
-        <div>article3</div>
-        <img src="../../img/analytics.png" width="50%">
-      </div>
+    <h1>CSS Grid 완벽 가이드</h1>
+    <p>CSS Grid(그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공합니다.<br>Flexible Box도 훌륭하지만 비교적 단순한 1차원 레이아웃을 위하며, 좀 더 복잡한 레이아웃을 위해 우리는 CSS Grid를 사용할 수 있습니다.</p>
+    <blockquote>
+      <p>CSS Grid는 예전부터 핵(Hack)으로 불린 다양한 레이아웃 대체 방식들을 해결하기 위해 만들어진 특별한 CSS 모듈입니다.</p>
+    </blockquote>
+    <h2>CSS Grid Container Properties</h2>
+    <p>Grid Container를 위한 속성들은 다음과 같습니다.</p>
+    <div>
+      <table>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>의미</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>display</td>
+                <td>그리드 컨테이너(Container)를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-template-rows</td>
+                <td>명시적 행(Track)의 크기를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-template-columns</td>
+                <td>명시적 열(Track)의 크기를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-template-areas</td>
+                <td>영역(Area) 이름을 참조해 템플릿 생성</td>
+            </tr>
+            <tr>
+                <td>grid-template</td>
+                <td><code>grid-template-xxx</code>의 단축 속성</td>
+            </tr>
+            <tr>
+                <td>row-gap(grid-row-gap)</td>
+                <td>행과 행 사이의 간격(Line)을 정의</td>
+            </tr>
+            <tr>
+                <td>column-gap(grid-column-gap)</td>
+                <td>열과 열 사이의 간격(Line)을 정의</td>
+            </tr>
+            <tr>
+                <td>gap(grid-gap)</td>
+                <td><code>xxx-gap</code>의 단축 속성</td>
+            </tr>
+            <tr>
+                <td>grid-auto-rows</td>
+                <td>암시적인 행(Track)의 크기를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-auto-columns</td>
+                <td>암시적인 열(Track)의 크기를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-auto-flow</td>
+                <td>자동 배치 알고리즘 방식을 정의</td>
+            </tr>
+            <tr>
+                <td>grid</td>
+                <td><code>grid-template-xxx</code>과 <code>grid-auto-xxx</code>의 단축 속성</td>
+            </tr>
+            <tr>
+                <td>align-content</td>
+                <td>그리드 콘텐츠(Grid Contents)를 수직(열 축) 정렬</td>
+            </tr>
+            <tr>
+                <td>justify-content</td>
+                <td>그리드 콘텐츠를 수평(행 축) 정렬</td>
+            </tr>
+            <tr>
+                <td>place-content</td>
+                <td><code>align-content</code>와 <code>justify-content</code>의 단축 속성</td>
+            </tr>
+            <tr>
+                <td>align-items</td>
+                <td>그리드 아이템(Items)들을 수직(열 축) 정렬</td>
+            </tr>
+            <tr>
+                <td>justify-items</td>
+                <td>그리드 아이템들을 수평(행 축) 정렬</td>
+            </tr>
+            <tr>
+                <td>place-items</td>
+                <td><code>align-items</code>와 <code>justify-items</code>의 단축 속성</td>
+            </tr>
+        </tbody>
+    </table>
     
-    </div>
-    <div>    
-        <span>navigattion</span>
-        <span>article1</span>
-        <span>article2</span>
-        <span>article3</span>
-        <span>article4</span>
-        <span>lorem</span>
-    </div>  
-    <div class="container">
-      <div class="item item1">1</div>
-      <div class="item item2">2</div>
-      <div class="item item3">3</div>
-      <div class="item item4">4</div>
-      <div class="item item5">5</div>
-      <div class="item item6">6</div>
-      <div class="item item7">7</div>
-      <div class="item item8">8</div>
-      <div class="item item9">9</div>
-      <div class="item item10">10</div>
-    </div>
+    <h2>grid-auto-flow</h2>
+    <p>배치하지 않은 아이템(Item)을 어떤 방식의 ‘자동 배치 알고리즘’으로 처리할지 정의합니다.</p>
+    <blockquote><p>배치한 아이템은 <code>grid-area</code>(이하 개별 속성 포함)를 사용한 아이템을 의미합니다.</p></blockquote>
   </div>
 </section>
 <!-- script -->

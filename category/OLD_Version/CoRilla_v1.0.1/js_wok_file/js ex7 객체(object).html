@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 Object</title>
+    <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+          <a href="../../../index.html">
+            <img src="../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+         </div>
+         </nav>
+       </header>
+       
+  <!-- 야간모드 -->
+  <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+  
+  <h1 class="h1_title"><a href="../javascript.html">JavaScript ex7 객체(object) </a></h1>
+    <div id="grid">
+        <ol>
+          <li><a href="../html.html">HTML</a></li>
+          <li><a href="../css.html">CSS</a></li>
+          <li><a href="../javascript.html">JavaScript</a></li>
+          <ul id="ulpd">
+            <li><a href="js ex1[연산자].html" class="saw">js ex1 연산자</a></li>
+            <li><a href="js ex2[배열&문법].html" class="saw">js ex2배열&문법</a></li>
+            <li><a href="js ex3[반복문].html" class="saw">js ex3반복문</a></li>
+            <li><a href="js ex4[배열과 반복문].html" class="saw">js ex4배열과 반복문</a></li>
+            <li><a href="js ex5[함수function].html" class="saw">js ex5함수function</a></li>
+            <li><a href="js ex6 야간모드.html" class="saw">js ex6야간모드</a></li>
+            <li><a href="js ex7 객체(object).html" class="saw" id="active">js ex7객체(object)</a></li>
+          </ul>
+          <li><a href="../html실용편.html">HTML 실용편 </a></li>
+          <li><a href="../domain.html">Domain </a></li>
+        </ol>
+        <div id="article">
+
+            <h2>객체 Object</h2>
+            <pre>
+배열은 순서대로 데이터를 저장하지만 객체는 순서없이 저장한다.
+배열은 대괄호[] 객체는 중괄호{}를 사용한다 
+배열에선 인덱스라 부르고 객체에선 키값이라 한다.
+            </pre>
+            <div id="inlinebox">
+                <div>
+<div class="text_title">document.querySelector:</div>
+document는 객체이다, querySelector는 document객체에 속해잇는 함수이고 객체 안에 함수는 '메소드'라 부른다
+                </div>
+<pre>
+&ltscript>
+    var coworkers = {   //객체를 만들때 사용하는 기호'=' 오브젝트 리터럴  
+        "programmer":"egoing",  //객체를 만들땐 그냥 넣으면 안된다 반듯이 이름이 잇어야한다.
+        "designer":"leezche"    // '이름':'정보'
+    }
+    document.write("프로그래머 : "+coworkers.programmer+"&ltbr>");//coworkers.programmer 여기서 '.'은 오브젝트 액세스 오퍼레이터
+    document.write("디자이너 : "+coworkers.designer+"&ltbr>");    //객체에 접근하는 오퍼레이터 
+    //객체가 만들어진 이후에 정보를 추가하고 싶다면
+    coworkers.bookkeeper = "duru";  //변수뒤에'.'을 찍고 이름='정보'; 식으로 추가 하면된다
+    document.write("북키퍼 : "+coworkers.bookkeeper+"&ltbr>");
+    coworkers["data scientist"] = "miki" // 띄어쓰기를 해야할경우 '.'대신 대괄호로 같은 효가를 적용
+    document.write("data scientist : "+coworkers["data scientist"]+"&ltbr>");
+&lt/script>
+</pre>
+            
+            <div class="text_title"> program: </div>
+            <script>
+                var coworkers = {   //객체를 만들때 사용하는 기호'=' 오브젝트 리터럴  
+                    "programmer":"egoing",  //객체를 만들땐 그냥 넣으면 안된다 반듯이 이름이 잇어야한다.
+                    "designer":"leezche"    // '이름(키값)':'정보'
+                }
+                document.write("프로그래머 : "+coworkers.programmer+"<br>");//coworkers.programmer 여기서 '.'은 오브젝트 액세스 오퍼레이터
+                document.write("디자이너 : "+coworkers.designer+"<br>");    //객체에 접근하는 오퍼레이터 
+                //객체가 만들어진 이후에 정보를 추가하고 싶다면
+                coworkers.bookkeeper = "duru";  //변수뒤에'.'을 찍고 이름='정보'; 식으로 추가 하면된다
+                document.write("북키퍼 : "+coworkers.bookkeeper+"<br>");
+                coworkers["data scientist"] = "miki" // 띄어쓰기를 해야할경우 '.'대신 대괄호로 같은 효가를 적용
+                document.write("data scientist : "+coworkers["data scientist"]+"<br>"); 
+            </script>
+        </div>    
+        <div id="inlinebox">
+            <h2> Iterate 객체 불러오기 </h2>
+            coworkers에 들어잇는 key의 수만큼 중괄호에 잇는 코드를 실행시켜 준다
+            <pre>
+    //for는 coworkers라는 변수가 가르키느 객체에 잇는 키값들을 가져오는 반복문이다
+&ltscript>    
+    for (var key in coworkers){ 
+        document.write(key+' : '+coworkers[key]+'&ltbr>');
+    }
+&lt/script>
+            </pre>
+           Program:
+            <script>    
+                for (var key in coworkers){ //for은 coworkers라는 변수가 가르키느 객체에 잇는 키값들을 가져오는 반복문이다
+                    document.write(key+' : '+coworkers[key]+'<br>');
+                }
+            </script>
+
+            <h2> Property & Method </h2>
+            
+                <div>객체에 소속된 함수 와 변수를 만들수잇다.</div>
+                <div>객체에 소속된 함수를 메소드라 부르고</div>
+                <div>객체에 소속된 변수를 프로퍼티라 부른다.</div>
+        
+            <script>
+                coworkers.showall = function(){
+                    for (var key in this){
+                    document.write(key+' : '+this[key]+'<br>');
+                }
+                }
+                coworkers.showall();
+            </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

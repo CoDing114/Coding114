@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>연산자</title>
-  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript ex1[연산자]</title>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script>hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script>hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- <script> // 사용자 정의 사용
+    document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  });
+  </script> -->
+  <!-- highlight End -->
+    
      <!-- google fonts Source Sans Pro  -->
      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- font   awesome  Logo font -->
@@ -32,8 +46,9 @@
   <header>
     <nav class=".navbar"> 
      <div class="navbar__logo">
-       <i class="fab fa-skyatlas"style="color:#d49466;"></i>
-       <a href="../../index.html">Coding114</a>
+      <a href="../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
      </div>
      </nav>
    </header>
@@ -61,6 +76,19 @@
       <li><a href="../bootstrap/index.html">Bootstrap</a></li>
       <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
    </ul>
+   <ol style="position:fixed; top:400px; left:-10px;">
+    <li class="#"><a href="#String">String</a></li>
+    <li class="#"><a href="#Numeric">Numeric</a></li>
+    <li class="#"><a href="#decrement">decrement</a></li>
+    <li class="#"><a href="#Assignment">Assignment</a></li>
+    <li class="#"><a href="#Comparison">Comparison</a></li>
+    <li class="#"><a href="#Logical">Logical</a></li>
+    <li class="#"><a href="#Equality">Equality</a></li>
+    <li class="#"><a href="#Conditional">Conditional</a></li>
+    <li class="#"><a href="#Ternary">Ternary </a></li>
+    <li class="#"><a href="#Switch">Switch </a></li>
+    <li class="#"><a href="#Loops">Loops</a></li>
+  </ol>
  <a href="#"class="navbar__toogleBtn">
      <i class="fas fa-bars"></i>
  </a>
@@ -69,100 +97,166 @@
 
     <section id="section_1">
       <div id=inlinebox>
-        <pre>
-          // 1. String concatenation
-          console.log('my'+'cat');
-          console.log('1'+2);
-          console.log(`string literals:1+2= ${1+2}`);
-        </pre>
-        <code><pre>
-          // 2. Numeric operators
-          console.log(1 + 1); //  Add             더하기
-          console.log(1 - 1); //  substract       덜기
-          console.log(1 / 1); //  divide          나누기
-          console.log(1 * 1); //  multiply        곱하기
-          console.log(5 % 2); //  remainder       나머지
-          console.log(2 ** 3); // exponentiation  승
-        </pre></code>
-        <pre>
-          // 3. Increment and decrement operators
-          let counter = 2;
-          const preIncrement = ++counter;
-          //counter = counter + 1;
-          //preIncrement = counter;
-          console.log(`preIncrement:${preIncrement},counter:${counter}`);
+        <script>
+            document.write('Hello World');
+        </script>
+        <input type="button" class="button_Hello" style="font-size:medium;background-color:rgb(36, 216, 162);" value="Hi" onclick="alert('Heloo')"> 클릭
+        <h1> Comparison operator & Boolean 연산자 </h1>
+        <blockquote><p>===:동등연산자</p></blockquote>
+      <pre><code>
+        <script>
+          document.write(1===1);
+  //출력:
+        </script>
+        <script>
+          document.write(1===2);
+  //출력:
+        </script>
+        <script>
+          document.write("1,<br>");
+          document.write("2,<br>");
+          document.write("3,<br>");
+          document.write("4<br>");
+  //출력:
+        </script>
+        </code></pre>
+        <h2>조건문 Conditional Statements</h2>
+        <blockquote>
+          <p>if-true</p>
+        </blockquote>
+      <pre><code>
+        <script>
+          document.write("1<br>,");
+          if(true){
+            document.write("2<br>,");
+            
+          } else{
+            document.write("3<br>,");
+          }
+          document.write("4<br>");
+  //출력:
+        </script>
+        </code></pre>
+        <blockquote>
+          <p>if-false</p>
+        </blockquote>
+       <pre><code>
+          <script>
+            document.write("1<br>,");
+            if(false){
+              document.write("2<br>,");
+              
+            } else{
+              document.write("3<br>,");
+            }
+            document.write("4<br>");
+  //출력:
+          </script>
+        </code></pre>
+        </div>
+      
+    
+      <div id=inlinebox>
+          <h2> 로직 한줄 정렬. 아래 두개의 로직은 같다</h2>
+          <blockquote>
+          <p>false & true 정의:</p>
+          <p>// false: 0, -0 '', null, undefined</p>
+          <p>// true: -1, 'hello', 'false'</p>
+        </blockquote>
+        <pre><code class="language-javascript">
+  Program:
+        <script>  
+          let obj = {   
+            name:'HUKE',
+          };
 
-          const postIncrement = counter++;
-          //postIncremnet = counter;
-          //counter = counter + 1;
-          console.log(`postIncrement:${postIncrement},counter:${counter}`);
+          if (obj) {    //로직 #1
+            document.write(`<p> obj Name1:${obj.name}</p>,`);
+          };
+          
+          obj && document.write(`<p> obj Name2:${obj.name}</P>`); //로직 #2
+  //출력:
+        </script>
+      </code>
+    </pre>
+      </div>
+      
+      <div id=inlinebox>
+        <blockquote id="String"><p> 1. String concatenation</p></blockquote>
+        <pre><code>
+          <script>
+          document.write('my'+'cat',',');
+          document.write('1'+2,',');
+          document.write(`string literals:1+2= ${1+2}`);
+  //출력: 
+          </script>
+        </code>
         </pre>
+        <blockquote id="Numeric"><p> 2. Numeric operators</p></blockquote>
+        <pre><code>
+            <script>
+          document.write(1 + 1,','); //  Add             더하기
+          document.write(1 - 1,','); //  substract       덜기
+          document.write(1 / 1,','); //  divide          나누기
+          document.write(1 * 1,','); //  multiply        곱하기
+          document.write(5 % 2,','); //  remainder       나머지
+          document.write(2 ** 3); // exponentiation  승
+  //출력: 
+          </script>
+          </code>
+        </pre>
+        <blockquote id="decrement"><p> 3. Increment and decrement operators</p></blockquote>
+        <pre ><code>
         <script>
           let counter = 2;
           const preIncrement = ++counter;
           //counter = counter + 1;
           //preIncrement = counter;
-          console.log(`preIncrement:${preIncrement},counter:${counter}`);
+          document.write(`[ ++counter;preIncrement:${preIncrement},counter:${counter} ],`);
 
           const postIncrement = counter++;
           //postIncremnet = counter;
           //counter = counter + 1;
-          console.log(`postIncrement:${postIncrement},counter:${counter}`);
-        </script>
-        <pre>
-          // 4. Assignment operators 
+          document.write(`[ counter++;postIncrement:${postIncrement},counter:${counter} ],`);
+  //출력: 
+          </script>
+        </code>
+      </pre>
+      <blockquote id="Assignment"><p> 4. Assignment operators</p> </blockquote>
+        <pre><code><script>
           let x = 3;
           let y = 6;
-          x += y; // x = x + y;
-          x -+ y;
-          x *+ y;
-          x /+ y;
+          document.write(x += y,','); // x = x + y;
+          document.write(x -+ y,',');
+          document.write(x *+ y,',');
+          document.write(x /+ y,',');
+  //출력: 
+          </script>
+        </code>
         </pre>
-        <pre>
-          // 5. Comparison operators
-          console.log(10 &lt 6);  // less than 
-          console.log(10 &lt= 6); // less than or equal 
-          console.log(10 > 6);    // greater than
-          console.log(10 >= 6);   // greater than or equal
-        </pre>
-        <pre>
-          // 6. Logical operators: ||(or), &&(and),!(not)
-          const value1 = true;
-            const value2 = 4 &lt 2;
-
-            // ||(or),finds the first truthy value
-            console.log(`or: ${value1} || value2 || check()}`);
-            
-            // &&(and), finds the first falsy value
-            console.log(`and: ${value1} && value2 && check()}`);
-            // ofthe used to compress long if-statemen
-            // nullableObject && nullableObject.something
-            // if(nullableObject != null){
-            //   ullableObject.something;
-            // }
-
-            // !(not) 값을 반대로 바꿔준다
-              console.log(!value1);
-
-            function check(){
-              for (let i = 0; i &lt 10; i++){
-                //wasting time
-                console.log('😱')
-              }
-              return true;
-            }
-          
+        <blockquote id="Comparison"><p> 5. Comparison operators </p></blockquote>
+        <pre><code>
           <script>
-            console.log('6. Logical operators: ||(or), &&(and),!(not)')
+          document.write(10 < 6,',');  // less than 
+          document.write(10 <= 6,','); // less than or equal 
+          document.write(10 > 6,',');  // greater than
+          document.write(10 >= 6);     // greater than or equal
+  //출력: 
+          </script>
+        </code>
+        </pre>
+        <blockquote id="Logical"><p> 6. Logical operators: ||(or), &&(and),!(not)</p></blockquote>
+        <pre><code>
+          <script>
             const value1 = true;
             const value2 = 4 < 2;
-            console.log(`value1: ${value1} ||value2: ${value2} || check:${check()}`);
+            document.write(` [ Value1: ${value1} || Value2: ${value2} || Check:${check()} ], `);
 
             // ||(or),finds the first truthy value
-            console.log(`or: ${value1 || value2 || check()}`);
+            document.write(`[ Or: ${value1 || value2 || check()} ], `);
             
             // &&(and), finds the first falsy value
-            console.log(`and: ${value1 && value2 && check()}`);
+            document.write(`[ And: ${value1 && value2 && check()} ], `);
             // ofthe used to compress long if-statemen
             // nullableObject && nullableObject.something
             // if(nullableObject != null){
@@ -170,322 +264,182 @@
             // }
 
             // !(not) 값을 반대로 바꿔준다
-              console.log(!value1);
+              document.write('[ !(Not):',!value1,' ]');
 
             function check(){
-              for (let i = 0; i < 10; i++){
+              for (let i = 0; i < 3; i++){
                 //wasting time
-                console.log('😱')
+                document.write('😱')
               }
               return true;
             }
+    //출력: 
           </script>
+          </code>
           </pre>
-          <pre>
-            // 7. Equality
-            const stringFive = '5';
-            const numberFive = 5;
-
-            // == loose equality, with type conversion
-            console.log(stringFive == numberFive);
-            console.log(numberFive != numberFive);
-
-            // === strict equality, no type conversion
-            console.log(stringFive === numberFive);
-            console.log(numberFive !== numberFive);
-            // object equality by reference
-            const miki1 = {name: 'miki'};
-            const miki2 = {name: 'miki'};
-            const miki3 = miki1;
-            console.log(miki1 == miki2);
-            console.log(miki1 === miki2);
-            console.log(miki1 === miki3);
-            
-            // euqlity - puzzler
-            console.log(0 == false);
-            console.log(0 === false);
-            console.log('' == false);
-            console.log('' === false);
-            console.log(null == undefined);
-            console.log(null === undefined);
+          <blockquote id="Equality"><p> 7. Equality</p></blockquote>
+          <pre><code>
             <script>
-              console.log( '7. Equality')
               const stringFive = '5';
               const numberFive = 5;
 
               // == loose equality, with type conversion
-              console.log(stringFive == numberFive);
-              console.log(numberFive != numberFive);
-
+              document.write(stringFive == numberFive,',');
+              document.write(numberFive != numberFive,',');
+    //출력: 
+          </script>
+            <script>
               // === strict equality, no type conversion
-              console.log(stringFive === numberFive);
-              console.log(numberFive !== numberFive);
+              document.write(stringFive === numberFive,',');
+              document.write(numberFive !== numberFive,',');
+    //출력: 
+          </script>
+            <script>
               // object equality by reference
               const miki1 = {name: 'miki'};
               const miki2 = {name: 'miki'};
               const miki3 = miki1;
-              console.log(miki1 == miki2);
-              console.log(miki1 === miki2);
-              console.log(miki1 === miki3);
-
+              document.write(miki1 == miki2,',');
+              document.write(miki1 === miki2,',');
+              document.write(miki1 === miki3,',');
+    //출력: 
+          </script>
+            <script>
               // euqlity - puzzler
-              console.log('euqlity - puzzler')
-              console.log(0 == false);
-              console.log(0 === false);
-              console.log('' == false);
-              console.log('' === false);
-              console.log(null == undefined);
-              console.log(null === undefined);
-            </script>
+              document.write('euqlity - puzzler',',')
+              document.write(0 == false,',');
+              document.write(0 === false,',');
+              document.write('' == false,',');
+              document.write('' === false,',');
+              document.write(null == undefined,',');
+              document.write(null === undefined);
+    //출력: 
+          </script>
+            </code>
           </pre>
-          <pre>
-            // 8. Conditional operators: if
-            // if, else if, else
-            const names = 'miki';
-              if (names === 'miki'){
-                console.log('Welcome,Miki!');
-              }else if (names === 'coder'){
-                console.log('You are amazing coder')
-              }else{
-                console.log('unkwnon');
-              }
+          <blockquote id="Conditional"><p> 8. Conditional operators: if </p></blockquote>
+          <pre><code>
             <script>
               const names = 'miki';
               if (names === 'miki'){
-                console.log('Welcome,Miki!');
+                document.write('Welcome,Miki!');
               }else if (names === 'coder'){
-                console.log('You are amazing coder')
+                document.write('You are amazing coder')
               }else{
-                console.log('unkwnon');
+                document.write('unkwnon');
               }
-            </script>
+    //출력: 
+          </script>         
+ 
+            </code>
           </pre>
-          <pre>
-            // 9. Ternary operator: ?
-            // condition ? value1 : value2;
-            console.log(names === 'miki' ? 'yess' : 'no')
+          <blockquote id="Ternary"><p> 9. Ternary operator: ? </p></blockquote>
+          <pre><code>
             <script>
-              console.log('9. Ternary operator: ?')
-              console.log(names === 'miki' ? 'yess' : 'no')
-            </script>
-          </pre>
-          <pre>
-            // 10. Switch statement 
+              document.write(names === 'miki' ? 'Yess' : 'No')
+    //출력: 
+          </script>
+          </code>
+        </pre>
+          <blockquote id="Switch"><p> 10. Switch statement </p></blockquote>
+          <pre><code>
             // use for multiple if checks
             // use for enum-like value check
             // use for multiple type checks in TS
-            &ltscript>
-              const browser = 'IE'
-                switch (browser){
-                  case 'IE':
-                    console.log('go away!');
-                    break;
-                  // case 'Chrome':
-                  //   console.log('love you!');
-                  // break;
-                  case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
-                  case 'Firefox':
-                    console.log('love you!');
-                    break;
-                  default:
-                    console.log('same all!');
-                    break;
-              }
-            &lt/script>
             <script>
-              console.log('10. Switch statement ')
               const browser = 'IE'
               switch (browser){
                 case 'IE':
-                  console.log('go away!');
+                  document.write('go away!');
                   break;
                 // case 'Chrome':
-                // console.log('love you!');
+                // document.write('love you!');
                 // break;
                 case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
                 case 'Firefox':
-                  console.log('love you!');
+                  document.write('love you!');
                   break;
                 default:
-                  console.log('same all!');
+                  document.write('same all!');
                   break;
               }
-            </script>
-          </pre>
-          <pre>
-            // 11. Loops
+    //출력: 
+          </script>
+          </code>
+        </pre>
+          <blockquote id="Loops"><p> 11. Loops </p></blockquote>
+          <pre> <code>
             // 블록을 먼저 실행하고 싶다면 do while을 써야되고 
             // 조건이 맞을때만 while쓰면된다
             // while loop, while the condition is truthy,
             // body code is executed. 
-            &ltscript>
+          <script>
               let i = 3;
               while (i > 0){
-                console.log(`while:${i}`);
+                document.write(`while:${i},`);
                 i--;
               }
-              // do while loop, body code is executed first,
-              // then check the condition
+            // do while loop, body code is executed first,
+            // then check the condition
               do {
-                console.log(`do while:${i}`);
+                document.write(`do while:${i},`);
                 i--;
               }while (i > 0);
-            &lt/script>
+    //출력: 
+          </script></code></pre>
+          <pre> <code>
+    // for loop, for(begin; condition; step)
             <script>
-              console.log('11. Loops')
-              let i = 3;
-              while (i > 0){
-                console.log(`while:${i}`);
-                i--;
-              }
-              // do while loop, body code is executed first,
-              // then check the condition
-              do {
-                console.log(`do while:${i}`);
-                i--;
-              }while (i > 0);
-            </script>
-
-            // for loop, for(begin; condition; step)
-            &ltscript>
-              console.log('for loop, for(begin; condition; step');
+              document.write('for loop, for(begin; condition; step,');
               for (i = 3; i > 0; i--){
-                console.log(`for:${i}`);
+                document.write(`for:${i},`);
               }
 
               for (let i = 3; i > 0; i = i - 1){
-                //inline variable declaration
-                console.log(`inline variable for:${i}`);
+              //inline variable declaration
+                document.write(`inline variable for:${i},`);
               }
-
-              // nested loops
-              for(let i = 0; i &lt 6; i++){
-                for (j = 0; j &lt 6; j++){
-                  console.log(`i: ${i},j:${j}`);
-                }
-              }
-            &lt/script>
-            <script>
-              console.log('for loop, for(begin; condition; step');
-              for (i = 3; i > 0; i--){
-                console.log(`for:${i}`);
-              }
-
-              for (let i = 3; i > 0; i = i - 1){
-                //inline variable declaration
-                console.log(`inline variable for:${i}`);
-              }
-
-              // nested loops
-              for(let i = 0; i < 6; i++){
-                for (j = 0; j < 6; j++){
-                  console.log(`i: ${i},j:${j}`);
-                }
-              }
+    //출력: 
             </script>
-
-            // break, continue;
-            // Q1. iterate from 0 to 10 and print only even numbers(use continue)
-            &ltscript>
-              for (let i = 0; i &lt 11; i++){
-                if (i % 2 === 0 ){
-                  console.log(`Q1.${i}`);
+             </code></pre>
+            <pre> <code>
+              <script>
+    // nested loops
+              for(let i = 0; i < 2; i++){
+                for (j = 0; j < 2; j++){
+                  document.write(`i: ${i},j:${j},`);
                 }
               }
-
-            // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
-            for (let i = 0; i &lt 11; i++){
-              if(i > 8){
-                break;
-              }
-              console.log(`Q2. ${i}`);
-            }  
-            &lt/script>
-
-            <script>
-              console.log('Q1. iterate from 0 to 10 and print only even numbers(use continue)')
+      //출력: 
+              </script>
+            </code>
+          </pre>
+          <blockquote><p> Break, continue;</p><br>
+            <p>// Q1. iterate from 0 to 10 and print only even numbers(use continue)</p>
+          </blockquote>
+          <pre id="break"><code>
+            <script >
               for (let i = 0; i < 11; i++){
                 if (i % 2 === 0 ){
-                  console.log(`Q1.${i}`);
+                  document.write(`Q1:${i}, `);
                 }
               }
 
             // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
-            console.log('Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)')
             for (let i = 0; i < 11; i++){
               if(i > 8){
                 break;
               }
-              console.log(`Q2. ${i}`);
+              document.write(`Q2:${i}`);
             }  
-            </script>
-          </pre>
-      </div>
-      
-      <div id=inlinebox>
-      <script>
-          document.write('Hello World');
-      </script>
-      <input type="button" class="button_night" style="font-size:medium;background-color:tomato;" value="Hi" onclick="alert('Heloo')"> 클릭
-      <div>Console에서 텍스트 글자수 구하기</div>
-      <div>alert('구하고자 하는 내용'.length)</div>
-
-      <h3> Comparison operator & Boolean 연산자 </h3>
-      <div>===:동등연산자</div>
-      <div>1===1 true</div>
-      <script>
-          document.write(1===1);
-      </script>
-      <div>1===2 false</div>
-      <script>
-          document.write(1===2);
-      </script>
-      <h2>조건문 conditional statements</h2>
-      <h2>program if </h2>
-      <script>
-        document.write("1<br>");
-        document.write("2<br>");
-        document.write("3<br>");
-        document.write("4<br>");
-      </script>
-      <h2>IF-true</h2>
-      <script>
-        document.write("1<br>");
-        if(true){
-          document.write("2<br>");
-          
-        } else{
-          document.write("3<br>");
-        }
-        document.write("4<br>");
-      </script>
-      <h2>IF-false</h2>
-      <script>
-        document.write("1<br>");
-        if(false){
-          document.write("2<br>");
-          
-        } else{
-          document.write("3<br>");
-        }
-        document.write("4<br>");
-      </script>
-
-      <input id="night_day1" type="button" value="Night" onclick="
-        if(document.querySelector('#night_day1').value==='Night'){
-          document.querySelector('body').style.backgroundColor='black';
-          document.querySelector('body').style.color='white';
-          document.querySelector('#night_day1').value='Day';
-        } else{
-          document.querySelector('body').style.backgroundColor='white';
-          document.querySelector('body').style.color='black';
-          document.querySelector('#night_day1').value='Night';
-        }
-        ">
-      <h2>Night_Day button Test</h2>
+      //출력: 
+              </script>
+              </code>
+            </pre>
       </div>
     </section>
-
+      
+  
 <!-- script navbar__icons -->
 <script>
   const toggleBtn = document.querySelector('.navbar__toogleBtn');
@@ -498,10 +452,11 @@ toggleBtn.addEventListener('click', () => {
 });
 </script>
 
+
 <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
 <input type="button" class="button_night" value="Night" onclick=" 
 nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
 </section>
-
+</div>
 </body>
 </html>

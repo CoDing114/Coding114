@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> WEB - HTML</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+     <!-- google fonts Source Sans Pro  -->
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-180336562-1');
+    </script><!-- End jquery/3.5.1 -->
+    <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../../index.html">
+        <img src="../../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+     </div>
+     </nav>
+   </header>
+  
+  
+<h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+<div  id="grid">
+  <nav class="navbar" >
+  <ul class="navbar__menu" >
+    <li class="has-submenu"><a href="./index.html"class="saw" id="active">HTML</a></li>
+      <ul id="sub-menu">
+        <li><a href="./html실용편.html">HTML 실용편</a></li>
+      </ul>
+    <li><a href="../css/index.html">CSS</a></li>
+    <li><a href="../javascript/index.html">JavaScript</a></li>
+    <li><a href="../php/index.html">PHP </a></li> 
+    <li><a href="../database/index.html">DataBase</a></li>
+  </ul>
+<a href="#"class="navbar__toogleBtn">
+    <i class="fas fa-bars"></i>
+</a>
+</nav>
+
+  <section id="section_1">
+    <h2><a href="https://developer.mozilla.org/ko/docs/Web/HTML"target="_blank">HTML 자료</a></h2>
+    <p><strong><u>[ Hypertext</u> Markup Language ]</strong></p>
+
+        <h2>손쉬운 사용</h2>
+    <div>
+      <ul>
+        <li>주석만들기 :  &lt!-- 주석 --></li>
+        <li>emmet : 에밋 을 사용하면 HTML & CSS의 작업 속도를 엄청나게 향상시킬 수 있다!!</li>
+        <li>p>lorem:간편 테스트 넣기 [p>lorem5 뒤에 숫자를 넣어서 단어 개수를 설정할수잇다</li>
+        </div>
+      </li>
+      </ul>
+    <h2>줄바꿈(엔터) 하기</h2>
+    <div>
+      <ul>
+        <li>br 태그는 'break'의 약자로 단순히 HTML에서 줄바꿈을 할 때 사용된다.
+          여러개의 br태그를 입력하면 입력된 갯수만큼 줄바꿈이 실행된다.
+          다른 태그들과 달리 열고br 닫는br태그가 존재하지 않고그냥 br 태그만 써 주어도 무방하다.</li>
+        <li>p 태그는 'paragraph'의 약자로, html에서 문단을 표현 할 때 사용된다.
+          p와  p태그로 내용을 감싸면, 내용의 위와 아래쪽에 일정 크기의 공백이 생긴다.</li>
+        <li>pre는 'preformatted' 약자로,태그 내에 있는 엔터와 스페이스가 그대로 웹 브라우저에 적용되어 보여지게 된다.</li>
+      </ul>
+    </div>
+    <h2> 특수 문자 사용법 </h2>
+    <div>
+      <ul>
+        <li>& nbsp :&nbsp공백 문자 하나 표현</li>
+        <li>& lt   :&lt 을 표현 </li>
+        <li>& gt   :&gt 을 표현 </li>
+        <li>& quot :&quot을 표현</li>
+        <li>& amp  :&amp을 표현</li>
+      </ul>
+    </div>
+
+    <img src="../../img/coding.jpg" width="30%">
+    <h3>WEB1 소개</h3>
+    <div><!-- width="560" height="315" -->
+    <iframe width="30%" height="160" src="https://www.youtube.com/embed/tZooW6PritE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+</div>
+
+<input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+  <!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+// const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+</body>
+</html>

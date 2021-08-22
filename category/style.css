@@ -2,6 +2,7 @@
   --text-color: rgb(powderblue);
   --background-color: rgb(23, 35, 58);
   --accent-color: #d49466;
+  --Logo-color: chocolate;
   --navbar-color: rgb(4, 207, 92);
 }
 
@@ -39,6 +40,38 @@ section {
   margin: 3%;
   border-bottom: 1px solid #ddd;
 }
+blockquote {
+  margin: 1em 0;
+  padding: 15px 20px;
+  border-left: 4px solid #e96900;
+  background: #263343;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  position: relative;
+}
+blockquote ::before {
+  content: "";
+  background-color: #e96900;
+  background-image: url(./assets/img/blockquote.png);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 40%;
+  left: -12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+p code {
+  background-color: #263343;
+  color: #e96900;
+  padding: 3px 5px;
+  margin: 0 2px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
 #grid .navbar {
   display: flex; /* 한줄에 나란히 */
   border-right: 1px solid #ccb2da94;
@@ -53,8 +86,13 @@ section {
   font-size: 24px;
   color: var(--text-color);
 }
-.navbar__logo i {
-  color: var(--accent-color);
+.navbar__logo i,
+.navbar__logo a {
+  color: var(--Logo-color);
+}
+
+.navbar__logo img {
+  width: 5em;
 }
 
 .navbar__menu {
@@ -88,7 +126,7 @@ section {
   top: 15px;
   right: 15px;
   font-size: 150%;
-  color: var(--accent-color);
+  color: var(--Logo-color);
   display: none;
 }
 
@@ -260,6 +298,9 @@ section a {
     flex-direction: column; /* 아이템 떨어지게 만든다  */
     align-items: flex-start;
     padding: 8px 24px;
+  }
+  .navbar__logo {
+    padding: 1px;
   }
   .navbar__menu {
     display: none;

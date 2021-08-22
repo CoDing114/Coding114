@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> WEB1 - CSS</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-180336562-1');
+    </script>
+    <script src="colors.js"> // 야간모드 </script>
+    <!--
+      style 태그 컬러변경 [중복제거];
+      [.]을 붙이면 페이지의 class를 의미, class 값은 여러개가 들어갈수잇고 띄어쓰기로 구분한다;
+      [#]을 붙이면 페이지의 id를 의미,id 값은 한번만 사용가능 중복불가;
+      id > class > 태그, 포괄적인것보다 구체적인것의 우선순위를 높엿다
+    -->
+    <style>
+      /* 
+      link 태그를 이용하여 중복제거
+      예:<link rel="stylesheet" href="style.css"> 
+      */
+    </style>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../index.html">
+        <img src="../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+     </div>
+     </nav>
+   </header>
+
+<h1><a href="index.html">WEB</a></h1>
+<input type="button" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */
+">
+<div id="grid">
+  <ol>
+    <li><a href="html.html">HTML</a></li>
+    <li><a href="css.html">CSS</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="html실용편.html">HTML 실용편 </a></li>
+    <li><a href="domain.html">Domain </a></li>
+    <li><a href="css box.html" class="saw">CSS BOX</a></li>
+    <li><a href="css grid.html"class="saw" id="active">CSS GRID</a></li>
+  </ol>
+  <div id="article">
+    <h2>CSS</h2>
+    <p>웹 문서의 전반적인 스타일을 미리 저장해 둔 스타일시트
+    CSS [cascading style sheets] 두산백과
+    웹 문서의 전반적인 스타일을 미리 저장해 둔 스타일시트이다. 문서 전체의 일관성을 유지할 수 있고, 세세한 스타일 지정의 필요를 줄어들게 하였다. 기존의 HTML은 웹 문서를 다양하게 설계하고 수시로 변경하는데 많은 제약이 따르는데, 이를 보완하기 위해 만들어진 것이 스타일 시트이고 스타일 시트의 표준안이 바로 CSS이다. 간단히 스타일 시트라고도 한다. HTML...
+
+    관련정보링크, 인터넷, HTML, 홈페이지, 월드와이드웹
+    <div>color = 글자 색</div>
+    <div>background color = 배경색</div>
+    </p>
+    <h4>Property,속성</h4>
+    <ul>
+      <li><font color="red">a = Selector 선택자</font></li>
+      <li><font color="red">color:red= declaration,선언,효과</font></li>
+      <li><font color="red">color=Property,속성</font></li>
+      <li><font color="red">red= Property Value,값</font></li>
+    </ul>
+        <img src="img/css declaration.jpg" width="30%">
+    <h4>반응형 디자인 Media Query</h4>
+  <div>
+    화면의 크기에 따라 웹 페이지의 각요소들이 반응하여동작하게 된다. </div>
+
+    <br><br>
+
+    <p><!-- 라이브리 시티 설치 코드 댓글 기능 활용 -->
+      <a href="https://livere.com/"target="_blank">라이브리 시티 설치</a>
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81MTczMy8yODIxNA==">
+        <script type="text/javascript">
+          (function(d, s) {
+              var j, e = d.getElementsByTagName(s)[0];
+        
+              if (typeof LivereTower === 'function') { return; }
+        
+              j = d.createElement(s);
+              j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+              j.async = true;
+        
+              e.parentNode.insertBefore(j, e);
+          })(document, 'script');
+        </script>
+        <noscript>라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+        </div>
+      </p> <!-- 라이브리 시티 설치 코드 끝 -->
+  </div>
+</div>
+</body>
+</html>

@@ -8,6 +8,10 @@
   line-height: 1.5rem;
   padding: 0;
 }
+.navbar__logo img {
+  width: 7em;
+  margin: 3px;
+}
 .navbar > div {
   display: none;
   flex-basis: 100%;

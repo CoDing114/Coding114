@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>연산자</title>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ex1[연산자]</title>
+     <!-- google fonts Source Sans Pro  -->
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+     <!-- jquery/3.5.1 -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'UA-180336562-1');
+     </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-180336562-1');
+      </script>
+      <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../../index.html">
+        <img src="../../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+     </div>
+     </nav>
+   </header>
+   
+  <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+
+  <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+      <li><a href="../css/index.html">CSS</a></li>
+      <li class="has-submenu"><a href="./index.html">JavaScript</a></li>
+      <ul id="sub-menu">
+        <li><a href="./js ex1[연산자].html" class="saw" id="active">연산자</a></li>
+        <li><a href="./js ex2[배열&문법].html" class="saw">배열&문법</a></li>
+        <li><a href="./js ex3[반복문].html" class="saw">반복문</a></li>
+        <li><a href="./js ex4[배열과 반복문].html" class="saw">배열과 반복문</a></li>
+        <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
+        <li><a href="./js ex6 야간모드.html" class="saw">야간모드</a></li>
+        <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
+      </ul>
+      <li><a href="../php/index.html">PHP </a></li> 
+      <li><a href="../database/index.html">DataBase</a></li>
+   </ul>
+ <a href="#"class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+ </a>
+ </nav>
+
+
+    <section id="section_1">
+      <div id=inlinebox>
+        <pre>
+          // 1. String concatenation
+          console.log('my'+'cat');
+          console.log('1'+2);
+          console.log(`string literals:1+2= ${1+2}`);
+        </pre>
+        <pre>
+          // 2. Numeric operators
+          console.log(1 + 1); //  Add             더하기
+          console.log(1 - 1); //  substract       덜기
+          console.log(1 / 1); //  divide          나누기
+          console.log(1 * 1); //  multiply        곱하기
+          console.log(5 % 2); //  remainder       나머지
+          console.log(2 ** 3); // exponentiation  승
+        </pre>
+        <pre>
+          // 3. Increment and decrement operators
+          let counter = 2;
+          const preIncrement = ++counter;
+          //counter = counter + 1;
+          //preIncrement = counter;
+          console.log(`preIncrement:${preIncrement},counter:${counter}`);
+
+          const postIncrement = counter++;
+          //postIncremnet = counter;
+          //counter = counter + 1;
+          console.log(`postIncrement:${postIncrement},counter:${counter}`);
+        </pre>
+        <script>
+          let counter = 2;
+          const preIncrement = ++counter;
+          //counter = counter + 1;
+          //preIncrement = counter;
+          console.log(`preIncrement:${preIncrement},counter:${counter}`);
+
+          const postIncrement = counter++;
+          //postIncremnet = counter;
+          //counter = counter + 1;
+          console.log(`postIncrement:${postIncrement},counter:${counter}`);
+        </script>
+        <pre>
+          // 4. Assignment operators 
+          let x = 3;
+          let y = 6;
+          x += y; // x = x + y;
+          x -+ y;
+          x *+ y;
+          x /+ y;
+        </pre>
+        <pre>
+          // 5. Comparison operators
+          console.log(10 &lt 6);  // less than 
+          console.log(10 &lt= 6); // less than or equal 
+          console.log(10 > 6);    // greater than
+          console.log(10 >= 6);   // greater than or equal
+        </pre>
+        <pre>
+          // 6. Logical operators: ||(or), &&(and),!(not)
+          const value1 = true;
+            const value2 = 4 &lt 2;
+
+            // ||(or),finds the first truthy value
+            console.log(`or: ${value1} || value2 || check()}`);
+            
+            // &&(and), finds the first falsy value
+            console.log(`and: ${value1} && value2 && check()}`);
+            // ofthe used to compress long if-statemen
+            // nullableObject && nullableObject.something
+            // if(nullableObject != null){
+            //   ullableObject.something;
+            // }
+
+            // !(not) 값을 반대로 바꿔준다
+              console.log(!value1);
+
+            function check(){
+              for (let i = 0; i &lt 10; i++){
+                //wasting time
+                console.log('😱')
+              }
+              return true;
+            }
+          
+          <script>
+            console.log('6. Logical operators: ||(or), &&(and),!(not)')
+            const value1 = true;
+            const value2 = 4 < 2;
+            console.log(`value1: ${value1} ||value2: ${value2} || check:${check()}`);
+
+            // ||(or),finds the first truthy value
+            console.log(`or: ${value1 || value2 || check()}`);
+            
+            // &&(and), finds the first falsy value
+            console.log(`and: ${value1 && value2 && check()}`);
+            // ofthe used to compress long if-statemen
+            // nullableObject && nullableObject.something
+            // if(nullableObject != null){
+            //   ullableObject.something;
+            // }
+
+            // !(not) 값을 반대로 바꿔준다
+              console.log(!value1);
+
+            function check(){
+              for (let i = 0; i < 10; i++){
+                //wasting time
+                console.log('😱')
+              }
+              return true;
+            }
+          </script>
+          </pre>
+          <pre>
+            // 7. Equality
+            const stringFive = '5';
+            const numberFive = 5;
+
+            // == loose equality, with type conversion
+            console.log(stringFive == numberFive);
+            console.log(numberFive != numberFive);
+
+            // === strict equality, no type conversion
+            console.log(stringFive === numberFive);
+            console.log(numberFive !== numberFive);
+            // object equality by reference
+            const miki1 = {name: 'miki'};
+            const miki2 = {name: 'miki'};
+            const miki3 = miki1;
+            console.log(miki1 == miki2);
+            console.log(miki1 === miki2);
+            console.log(miki1 === miki3);
+            
+            // euqlity - puzzler
+            console.log(0 == false);
+            console.log(0 === false);
+            console.log('' == false);
+            console.log('' === false);
+            console.log(null == undefined);
+            console.log(null === undefined);
+            <script>
+              console.log( '7. Equality')
+              const stringFive = '5';
+              const numberFive = 5;
+
+              // == loose equality, with type conversion
+              console.log(stringFive == numberFive);
+              console.log(numberFive != numberFive);
+
+              // === strict equality, no type conversion
+              console.log(stringFive === numberFive);
+              console.log(numberFive !== numberFive);
+              // object equality by reference
+              const miki1 = {name: 'miki'};
+              const miki2 = {name: 'miki'};
+              const miki3 = miki1;
+              console.log(miki1 == miki2);
+              console.log(miki1 === miki2);
+              console.log(miki1 === miki3);
+
+              // euqlity - puzzler
+              console.log('euqlity - puzzler')
+              console.log(0 == false);
+              console.log(0 === false);
+              console.log('' == false);
+              console.log('' === false);
+              console.log(null == undefined);
+              console.log(null === undefined);
+            </script>
+          </pre>
+          <pre>
+            // 8. Conditional operators: if
+            // if, else if, else
+            const names = 'miki';
+              if (names === 'miki'){
+                console.log('Welcome,Miki!');
+              }else if (names === 'coder'){
+                console.log('You are amazing coder')
+              }else{
+                console.log('unkwnon');
+              }
+            <script>
+              const names = 'miki';
+              if (names === 'miki'){
+                console.log('Welcome,Miki!');
+              }else if (names === 'coder'){
+                console.log('You are amazing coder')
+              }else{
+                console.log('unkwnon');
+              }
+            </script>
+          </pre>
+          <pre>
+            // 9. Ternary operator: ?
+            // condition ? value1 : value2;
+            console.log(names === 'miki' ? 'yess' : 'no')
+            <script>
+              console.log('9. Ternary operator: ?')
+              console.log(names === 'miki' ? 'yess' : 'no')
+            </script>
+          </pre>
+          <pre>
+            // 10. Switch statement 
+            // use for multiple if checks
+            // use for enum-like value check
+            // use for multiple type checks in TS
+            &ltscript>
+              const browser = 'IE'
+                switch (browser){
+                  case 'IE':
+                    console.log('go away!');
+                    break;
+                  // case 'Chrome':
+                  //   console.log('love you!');
+                  // break;
+                  case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
+                  case 'Firefox':
+                    console.log('love you!');
+                    break;
+                  default:
+                    console.log('same all!');
+                    break;
+              }
+            &lt/script>
+            <script>
+              console.log('10. Switch statement ')
+              const browser = 'IE'
+              switch (browser){
+                case 'IE':
+                  console.log('go away!');
+                  break;
+                // case 'Chrome':
+                // console.log('love you!');
+                // break;
+                case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
+                case 'Firefox':
+                  console.log('love you!');
+                  break;
+                default:
+                  console.log('same all!');
+                  break;
+              }
+            </script>
+          </pre>
+          <pre>
+            // 11. Loops
+            // 블록을 먼저 실행하고 싶다면 do while을 써야되고 
+            // 조건이 맞을때만 while쓰면된다
+            // while loop, while the condition is truthy,
+            // body code is executed. 
+            &ltscript>
+              let i = 3;
+              while (i > 0){
+                console.log(`while:${i}`);
+                i--;
+              }
+              // do while loop, body code is executed first,
+              // then check the condition
+              do {
+                console.log(`do while:${i}`);
+                i--;
+              }while (i > 0);
+            &lt/script>
+            <script>
+              console.log('11. Loops')
+              let i = 3;
+              while (i > 0){
+                console.log(`while:${i}`);
+                i--;
+              }
+              // do while loop, body code is executed first,
+              // then check the condition
+              do {
+                console.log(`do while:${i}`);
+                i--;
+              }while (i > 0);
+            </script>
+
+            // for loop, for(begin; condition; step)
+            &ltscript>
+              console.log('for loop, for(begin; condition; step');
+              for (i = 3; i > 0; i--){
+                console.log(`for:${i}`);
+              }
+
+              for (let i = 3; i > 0; i = i - 1){
+                //inline variable declaration
+                console.log(`inline variable for:${i}`);
+              }
+
+              // nested loops
+              for(let i = 0; i &lt 6; i++){
+                for (j = 0; j &lt 6; j++){
+                  console.log(`i: ${i},j:${j}`);
+                }
+              }
+            &lt/script>
+            <script>
+              console.log('for loop, for(begin; condition; step');
+              for (i = 3; i > 0; i--){
+                console.log(`for:${i}`);
+              }
+
+              for (let i = 3; i > 0; i = i - 1){
+                //inline variable declaration
+                console.log(`inline variable for:${i}`);
+              }
+
+              // nested loops
+              for(let i = 0; i < 6; i++){
+                for (j = 0; j < 6; j++){
+                  console.log(`i: ${i},j:${j}`);
+                }
+              }
+            </script>
+
+            // break, continue;
+            // Q1. iterate from 0 to 10 and print only even numbers(use continue)
+            &ltscript>
+              for (let i = 0; i &lt 11; i++){
+                if (i % 2 === 0 ){
+                  console.log(`Q1.${i}`);
+                }
+              }
+
+            // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
+            for (let i = 0; i &lt 11; i++){
+              if(i > 8){
+                break;
+              }
+              console.log(`Q2. ${i}`);
+            }  
+            &lt/script>
+
+            <script>
+              console.log('Q1. iterate from 0 to 10 and print only even numbers(use continue)')
+              for (let i = 0; i < 11; i++){
+                if (i % 2 === 0 ){
+                  console.log(`Q1.${i}`);
+                }
+              }
+
+            // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
+            console.log('Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)')
+            for (let i = 0; i < 11; i++){
+              if(i > 8){
+                break;
+              }
+              console.log(`Q2. ${i}`);
+            }  
+            </script>
+          </pre>
+      </div>
+      
+      <div id=inlinebox>
+      <script>
+          document.write('Hello World');
+      </script>
+      <input type="button" class="button_night" style="font-size:medium;background-color:tomato;" value="Hi" onclick="alert('Heloo')"> 클릭
+      <div>Console에서 텍스트 글자수 구하기</div>
+      <div>alert('구하고자 하는 내용'.length)</div>
+
+      <h3> Comparison operator & Boolean 연산자 </h3>
+      <div>===:동등연산자</div>
+      <div>1===1 true</div>
+      <script>
+          document.write(1===1);
+      </script>
+      <div>1===2 false</div>
+      <script>
+          document.write(1===2);
+      </script>
+      <h2>조건문 conditional statements</h2>
+      <h2>program if </h2>
+      <script>
+        document.write("1<br>");
+        document.write("2<br>");
+        document.write("3<br>");
+        document.write("4<br>");
+      </script>
+      <h2>IF-true</h2>
+      <script>
+        document.write("1<br>");
+        if(true){
+          document.write("2<br>");
+          
+        } else{
+          document.write("3<br>");
+        }
+        document.write("4<br>");
+      </script>
+      <h2>IF-false</h2>
+      <script>
+        document.write("1<br>");
+        if(false){
+          document.write("2<br>");
+          
+        } else{
+          document.write("3<br>");
+        }
+        document.write("4<br>");
+      </script>
+
+      <input id="night_day1" type="button" value="Night" onclick="
+        if(document.querySelector('#night_day1').value==='Night'){
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          document.querySelector('#night_day1').value='Day';
+        } else{
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='black';
+          document.querySelector('#night_day1').value='Night';
+        }
+        ">
+      <h2>Night_Day button Test</h2>
+      </div>
+    </section>
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+</section>
+
+</body>
+</html>

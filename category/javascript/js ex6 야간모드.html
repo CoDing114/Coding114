@@ -4,6 +4,12 @@
     <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+
     <title>야간모드 설정</title>
 
      <!-- google fonts Source Sans Pro  -->
@@ -58,8 +64,9 @@
   <header>
     <nav class=".navbar"> 
      <div class="navbar__logo">
-       <i class="fab fa-skyatlas"style="color:#d49466;"></i>
-       <a href="../../index.html">Coding114</a>
+      <a href="../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
      </div>
      </nav>
    </header>
@@ -116,8 +123,10 @@
       </ul>
 
       <div>
-      var name = 'sung'
+      <pre><code>
+        var name = 'sung'
       alert("variable, "+name+",mutable, changeable, "+name+", unsettled, fickle, "+name+",mobile")
+      </code></pre>
       </div>
       <div id=inlinebox>
         <h3>야간모드 중복 제거  Refactoring  </h3>

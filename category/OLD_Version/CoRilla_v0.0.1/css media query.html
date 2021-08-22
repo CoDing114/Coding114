@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        div{
+            border:10px solid green;
+            font-size: 60px;
+        }
+        /* screen width >800px min[초소값],max[최대값]*/
+        @media(min-width: 800px){
+        div{
+            display:none;
+        }
+    }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+          <a href="../../index.html">
+            <img src="../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+          <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+         </div>
+         </nav>
+       </header>
+
+    <div>
+        Responsive
+    </div>
+</body>
+</html>

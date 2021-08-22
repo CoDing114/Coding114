@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Navbar.js is a modern, mobile first navigation component for the modern web.">
   <meta name="author" content="thednp">
-  <link rel="shortcut icon" href="./assets/img/256.ico">
-  <link rel="apple-touch-icon" href="./assets/img/logo.png">
+  <link rel="shortcut icon" href="../../category/assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="../../category/assets/img/favicon.ico">
   
   <title>Navbar.js Main Demo</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,800|Roboto+Condensed:400,800" rel="stylesheet">
@@ -23,7 +23,9 @@
   <div class="content-wrapper">
     <div class="container">
       <nav class="navbar navigation" data-function="navbar">
-        <a class="brand" href="../../index.html" title="Navbar.js">Coding114</a>
+        <a class="navbar__logo" href="../index.html">
+          <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+        </a>
         <button class="navbar-toggle">
           <svg class="menu-icon" viewBox="0 0 1024 1024">
             <path d="M896.876 319.65h-768.751c-14.152 0-25.625-11.473-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.473 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z" />
@@ -33,7 +35,7 @@
         <div>
           <ul class="nav">
             <li class="active">
-              <a href="#">Home
+              <a href="#">Demos
                 <svg class="parent-icon" viewBox="0 0 1024 1024">
                   <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
                 </svg>
@@ -65,12 +67,6 @@
               <div class="subnav">
                 <ul class="row nomargin">
                   <li class='col-4'>
-                    <span class="column-title">
-                      Locations
-                      <svg class="parent-toggle" viewBox="0 0 1024 1024">
-                        <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
-                      </svg>
-                    </span>
                     <ul class="">
                       <li>
                         <a href="../html/index.html">
@@ -140,25 +136,6 @@
                       <li><a href="../damoa/index.html">damoa</a></li>
                     </ul>
                   </li>
-                  <li class='col-4'>
-                    <span class="column-title">
-                      Hidden Text Box
-                      <svg class="parent-toggle" viewBox="0 0 1024 1024">
-                        <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
-                      </svg>
-                    </span>
-                    <div class="subnav-content">
-                      <p>The content of this demo text box is hidden on mobile view, but can be toggled visible.</p>
-                      <p>Features a nice <a href="#">link anchor</a> affected by navbar styling.</p>
-                    </div>
-                  </li>
-                  <li class="col-4">
-                    <div class="subnav-content">
-                      <span class="column-title" style="display: flex; margin-bottom: 1rem">Visible Text Box</span>
-                      <p>This text box is fully visible on all views and is featuring a custom button unaffected by navbar styling.</p>
-                      <p><a class="btn btn-brand" href="#">Read More</a></p>
-                    </div>
-                  </li>
                 </ul>
               </div>
             </li>
@@ -197,25 +174,7 @@
           </div>
         </div>
       </nav>
-
       <div class="content">
-        <div class="hero">
-          <div class="row" style="align-items: center">
-            <div class="col-6">
-              <img class="hidden-md" src="assets/img/navbar.png" alt="Navbar.js">
-            </div>
-            <div class="col-6">
-              <h1>Navbar.js <small>Modern Navigation Component</small></h1>
-              <div class="install">npm install navbar.js</div>
-              <p class="lead">The mobile first menu navigation for today's modern web, developed
-                with native JavaScript and packed with lots of features.</p>
-              <p>
-                <a class="btn btn-brand" href="https://github.com/CoDing114/Coding114/archive/refs/heads/main.zip">Download</a>
-                <a class="btn" href="https://github.com/CoDing114/Coding114">Fork</a>
-              </p>
-            </div>
-          </div>
-        </div>
         <div class="content-inner main">
           <h1>Meet Navbar.js</h1>
           <div class="row boxes">

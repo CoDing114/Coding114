@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> WEB - JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+     <!-- google fonts Source Sans Pro  -->
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script><!-- jquery/3.5.1 -->
+    <script defer src="../colors.js"> // 야간모드 jQuery 설치 필요 </script> <!-- a -->
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../../index.html">
+        <img src="../../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+     </div>
+     </nav>
+   </header>
+   
+  <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+
+  <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+      <li><a href="../css/index.html">CSS</a></li>
+      <li class="has-submenu"><a href="./index.html"class="saw" id="active">JavaScript</a></li>
+      <ul id="sub-menu">
+        <li><a href="./js ex1[연산자].html" class="saw">연산자</a></li>
+        <li><a href="./js ex2[배열&문법].html" class="saw">배열&문법</a></li>
+        <li><a href="./js ex3[반복문].html" class="saw">반복문</a></li>
+        <li><a href="./js ex4[배열과 반복문].html" class="saw">배열과 반복문</a></li>
+        <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
+        <li><a href="./js ex6 야간모드.html" class="saw">야간모드</a></li>
+        <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
+      </ul>
+      <li><a href="../php/index.html">PHP </a></li> 
+      <li><a href="../database/index.html">DataBase</a></li>
+   </ul>
+ <a href="#"class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+ </a>
+ </nav>
+
+
+    <section id="section_1">
+
+    <h2><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript"target="_blank">Javascript 자료</a></h2>
+    <h2>손쉬운 사용</h2>
+    <div>주석처리: Ctrl+? </div>
+
+    
+    <div> <h3>DOMContentLoaded async&defer</h3>
+      <ul>
+        <li>async:비동기 스크립트는 HTML 문서가 완전히 다운로드되지 않은 상태라도 로드 및 실행될 수 있습니다. 스크립트 크기가 작거나 캐싱 처리 되어있을 때 혹은 HTML 문서 길이가 아주 길 때 이런 일이 발생합니다.</li>
+        <li>defer:지연 스크립트는 문서 다운로드와 파싱이 완료된 후에, DOMContentLoaded 이벤트 발생 전에 실행됩니다.</li>
+      </ul>
+    </div>
+    <h2> JavaScript 추천 검색어</h2>
+    <div>
+      <ul>
+        <li>document: 웹페이지 태그 삭제 혹은 자식태그 추가 </li>
+        <li>DOM:document객체에서 찾을수 없다면 DOM으로 수색범위 넓혀 보세요 document객체는 DOM객체의 일부</li>
+        <li>window객체:웹페이지가 아니라 웹브라우저 자체를 제어해야할때"현재 열려잇는 웹주소가 뭔지 알아내야 될수 잇고 생창을 열어야 한수도잇고 웹브라우저의 크기를 자바스크립트를 통해 알아야한다면 윈도우 객체에 속해잇는 프로퍼티나 메소드가 여러분을 도울수잇을거에요 </li>
+        <li>ajax:웹페이지를 리로드하지않고 정보를 변경하고 싶다면 ajax가 필요, 현대적인 웹앱을 만드는데 필수적인 테크닉입니다.</li>
+        <li>cookie:웹페이지가 리로드되어도 현재 상태를 유지하고 싶다면 cookie를 배우세요 cookie와 함께라면 사용자를 위한 개인화된 서비스를 제공할수 잇습니다.</li>
+        <li>offline web Application: 인터넷이 끊겨도 웹을 하고싶다면</li>
+        <li>webRTC:화상 통신 웹 앱을 만들고싶다면</li>
+        <li>speech: 사용자의 음성을 인식하고 음성으로 정보를 전달하고 싶다면 </li>
+        <li>webGL: 3차원 그래픽으로 게임과 같은 것을 만들고 싶다면</li>
+        <li>webVR: 가상현실에 관심이 많으시다구요? </li>
+      </ul>
+    </div>
+
+
+    <h2>JavaScript</h2>
+    <div>첫째:자바스크립트는 사용자와 상호작용하는 언어다.</div>
+    <div>둘째:웹브라우저는 한번 화면에 출력되면 가기 자신을 바꿀수 없다</div>
+    <div>셋째:자바스크립트는 HTML위에서 동작하는 언어다.</div>
+      
+    <h3>library(도서관) & framework(반제품)</h3>
+    <div>공통점:다른사람의 도움을 받아 소프트웨어를 만든다</div>
+    <h3>UI VS API</h3>
+    <div>UI : User Interface 의 약자이다</div>
+    <div>API: Application Programming Interface</div>
+
+    <h4>Console에서 텍스트 글자수 구하기</h4>
+    alert-경고창('구하고자 하는 내용'.length)
+    <h4>
+      JavaScript Data types
+    </h4>
+    <ul>
+      <li>기본 자료형 (Primitive) 인 여섯가지 데이터 타입</li>
+        <li>Boolean(연산자true&false)</li>
+        <li>Null</li>
+        <li>Undefined</li>
+        <li>Number(숫자)</li>
+        <li>String(문자)</li>
+        <li>Symbol (ECMAScript 6 에 추가됨)</li>
+        <li>별도로 Object 도 있음</li>
+    </ul>
+    <h3>등장 문법:</h3>
+    <div>
+      while: while문은 조건문이 참일 때 실행되는 반복문이다. 조건은 문장안이 실행되기 전에 참, 거짓을 판단한다.
+    </div>
+    <h4>변수(variable) vs 상수(constant</h4>
+    <ul>
+      <li>variable:변경가능 rw(read/write) </li>
+      <li>constant:변경불가 r(read only) </li>
+      <ul> 메모리 값 저장되는 두가지 타입 
+        <li>primitive,single item:numer,sting,boolean,null,undefined,symbol</li>
+        <li>object:box container</li>
+      </ul>
+    </ul>
+   
+    <h4>
+      변수의 효용중 하나 
+    </h4>
+    <div> 변수
+    let:선언한 변수에 한해 사용가능하다 
+    var: 선언 하기 전에 사용가능하다,또한 블럭을 무시한다.  그러므로 위험하다
+    var hoisting-어디에 선언햇는지에 관계없이 맨위로 끌어 올려준다
+    let name = 'sung';
+    var name = 'sung';
+    alert("variable, "+name+",mutable, changeable, "+name+", unsettled, fickle, "+name+",mobile")
+    변수를 사용할땐 앞에 var 을 붙여준다 var = Variable
+  </div>
+    <script>
+      document.write('hello world');
+    </script>
+  <div id=inlinebox>
+    <h3>문자열에서 가장 많이 사용되는 작업들</h3>
+    <pre>
+      .length    : 문자열의 길이를 확인하는 (length), 
+      + 와 +=    : 문자열을 생성하고 연결하는 + 와 += 문자열 연산자, 
+      substring  :서브문자열(substring)이 있는지 확인하고, 
+      indexOf()  :있으면 위치를 확인하는 indexOf() 메서드, 
+      substring():서브문자열(substring)을 추출해내는 substring() 메서드가 있습니다.
+    <h3>Template literals(string)</h3>
+    "`${}`"을 이용해 간결하게 만들수잇다
+    
+      const char ='c';
+      const brendan = 'brendan';
+      const greeting = 'hello' + brendan;
+      console.log(`value: ${greeting},type: ${typeof greeting}`);
+      const helloBob = `hi ${brendan}!`; //template literals (string)
+     -> console.log(`value: ${helloBob},type: ${typeof helloBob}`); //template 사용시
+     -> console.log('value:' +helloBob + 'type: '+typeof helloBob); //template 미사용시
+    </pre>
+
+    <div>    <h3>boolean</h3>
+      <ul>
+        <li>false:0,null,undefined,NaN,''</li>
+        <ul>
+          <li>null:비어잇는 값</li>
+          <li>undefined:선언은 되엇지만 지정된 값이 없다</li>
+        </ul>  
+        <li>true:any other value</li>
+      </ul>
+    </div>
+    <div>    <h3>symbol</h3>
+        <ul>
+          <li>symbol: 고유의 식별자가 필요할때 할당(내용이 같으며도 불구하구 false로 판단하다)</li>
+        </ul>
+    </div>
+  </div>
+  <div id=inlinebox>
+    <h1>Javascript 체험기 내용 바꾸기</h3>
+    <pre>
+      <h3 id="hello">안녕하세요</h3>
+      <h3 id="hi">올때메로나</h3>
+      <script>
+        document.getElementById('hello').innerHTML = '안녕';
+        document.getElementById('hi').innerHTML = '올때바밤바';
+        document.getElementById('hi').style.fontSize='30px';
+      </script>
+      document웹문서  
+      .의   
+      get:가져오다  
+      Element:요소
+      ById:id에 의해서
+      innerHTML:내부 HTML , 내부 요소   
+      = : 대입     
+      웹문서 ID=hello인 HTML요소 가져와 내부 글자 안녕으로 바꿔줘    
+    </pre>
+  </div>
+  <div id=inlinebox>
+    <h3>이스케이프 표현</h3>
+    <pre>
+일반적인 출력 문자 외의 특수 문자는 이스케이프 표현을 사용해 적을 수 있습니다.
+
+코드	                출력
+\XXX	                8진수 Latin-1 문자
+\'	                  작은따옴표
+\"	                  큰따옴표
+\\	                  역슬래시
+\n	                  줄바꿈
+\r	                  캐리지 리턴
+\v	                  세로 탭
+\t	                  탭
+\b	                  백 스페이스
+\f    	              폼 피드
+\uXXXX	              유니코드 코드포인트
+\u{X} ... \u{XXXXXX}	유니코드 코드포인트 
+\xXX	Latin-1         문자
+일부 다른 프로그래밍 언어와 달리, JavaScript는 작은따옴표와 큰따옴표 문자열을 구분하지 않습니다. 
+따라서 위의 이스케이프 문자는 작은따옴표나 큰따옴표에서 상관 없이 작동합니다.
+      </pre>
+      <div id=inlinebox>
+        <h3>주의 사항</h3>
+        <ul>
+          <li>조작하고 싶은 html이 있으면 그아래에 조작하는 코드를 작성해야 한다. </li>
+        </ul>
+      </div>
+    </div>
+    <div id=inlinebox>
+      <h3>알람메시지</h3> 
+      //'use strict'; 를 사용하면 유저 에러를 잡아준다
+      <ul>
+        <li>of Null: Null로 표시한 데이터의 왼쪽 값을 못찾앗다. 비엇다고 보면된다.</li>
+        <li>is not a function:함수가 아닌데요~ 맞춤법확인.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+
+
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+
+</body>
+</html>
