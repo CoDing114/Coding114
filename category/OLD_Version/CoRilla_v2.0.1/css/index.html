@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="section" data-section="__HUKE" id="__HUKE">
+
+<head>
+  <title> WEB - CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- highlight End -->
+  <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+  <script> // <!-- Start Google Analytics -->
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-180336562-1');
+  </script><!-- End Global Google Analytics -->
+  <script src="../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+  <!--
+      style 태그 컬러변경 [중복제거];
+      [.]을 붙이면 페이지의 class를 의미, class 값은 여러개가 들어갈수잇고 띄어쓰기로 구분한다;
+      [#]을 붙이면 페이지의 id를 의미,id 값은 한번만 사용가능 중복불가;
+      id > class > 태그, 포괄적인것보다 구체적인것의 우선순위를 높엿다
+    -->
+  <style>
+    /* 
+      link 태그를 이용하여 중복제거
+      예:<link rel="stylesheet" href="style.css"> 
+      */
+  </style>
+</head>
+
+<body >
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+  <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+
+  <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+    <li class="has-submenu"><a href="index.html" class="saw" id="active">CSS</a></li>
+    <ul id="sub-menu">
+      <li><a href="./css box.html" class="saw">CSS_BOX</a></li>
+      <li><a href="./css grid.html" class="saw">CSS_GRID</a></li>
+      <li><a href="./css media query.html" class="saw">CSS_Media_Query</a></li>
+    </ul>
+    <li><a href="../javascript/index.html">JavaScript</a></li>
+    <li><a href="../php/index.html">PHP </a></li> 
+    <li><a href="../database/index.html">DataBase</a></li>
+   </ul>
+ <a href="#"class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+ </a>
+ </nav>
+
+
+    <section id="section_1">
+      <h2><a href="https://developer.mozilla.org/ko/docs/Web/CSS" target="_blank">CSS 자료</a></h2>
+      <div id="inlinebox">
+        <h2>Display&Position</h2>
+        <ul>
+          <li>div:블럭 레벨이라 한줄에 하나씩 나온다</li>
+          <li>span: inline레벨이라 공간만되면 한줄에 여러개 나온다</li>
+          <li>display:레벨 기본값 변경이 가능하다</li>
+          <li>inline:한줄에 여러개가 들어갈수잇다</li>
+          <li>inline-block:한줄에 여러개가 들어갈수잇는 box</li>
+          <li>block:한줄에 하나만 들어가는 box</li>
+        </ul>
+        <h2>container box Position</h2>
+        <ul>
+          <li>static: 기본적으로 가지고 잇고 HTML에 정의된 순서대로 브라우저 상에 자연스럽게 보여진다</li>
+          <li>relative: 원래 잇어야하는 자리에서 지정한 위치까지 이동</li>
+          <li>absolute: 내 아이템이 담겨 잇는 박스 안에서 원하는 위치까지 이동한다</li>
+          <li>fixed: 박스를 벗어나 윈도우 안에서 지정위치까지 이동</li>
+          <ul>
+            <li>
+              flex-flow:아래 내용을 묶어서 사용가능 [flex-flow:column wrap;]
+            </li>
+            <ul>flex-direction:순서 바꾸기:
+              <li>row:왼쪽에서 오른쪽 방향 정렬</li>
+              <li>row-reverse:오른쪽에서 외쪽 정렬</li>
+              <li>column:위에서 아래 정렬</li>
+              <li>column-reverse:아래서 위 정렬</li>
+            </ul>
+            <ul> flex-wrap:한줄에 꽉찻을때의 동장 정의
+              <li>nowrap:지정하지 않는다 한줄에 붙어 잇는다</li>
+              <li>wrap:한줄에 꽉 차게 되면 자동으로 다음 라인으로 넘어간다</li>
+              <li>wrap-reverse:꺼꾸로 wraping된다</li>
+            </ul>
+          </ul>
+          <li>justify-content:중심축에서 아이템 들을 어떻게 배치할건지를 결정해준다</li>
+          <ul>justify-content: space-between;[양옆에는 붙이고 중간에만 간격을 넣어 준다]
+            <li>flex-start:기본 값 왼쪽에서 오른쪽으로 정렬</li>
+            <li>flex-end:오른쪽 축으로 아이템 배치(순서는 유지) 
+              [여기서 flex-direction이 column이면 아래 축으로 배치 된다</li>
+            <li>center:아이템을 가운데로 맞춘다</li>
+            <li>space-around:매개 박스에 간격을 넣어 준다</li>
+            <li>space-evenly:박스 간격을 똑같이 넣어 준다</li>
+            <li>space-between:양옆에는 붙이고 중간에만 간격을 넣어 준다</li>
+          </ul>
+          <li>align-items:반대축에서 아이템들을 배치하는 속성 값</li>
+          <ul>align-items:center;
+            <li>align-items:center;상자들을 수직 적으로 중간에 배치</li>
+            <li>baseline:베이스 라인에 맞춰서 균등하게 보여준다</li>
+          </ul>
+          <li>align-content:반대축에 아이템을 지정하게 된다</li>
+          <ul>justify-content 나왓던 속성들을 다 쓸수잇다 
+            (*쓰기전 브라우저가 지원하는지 확인 필요)
+            <li>space-between:위 아래는 붙이고 중간에만 간격을 넣어 준다</li>
+            <li>center:아이템을 중간으로 맞춘다</li>
+          </ul>
+            <li>flex-grow:아이템이 커질때의 크기 정의</li>
+            <li>flex-shrink:아이템이 작아질때의 크기 정의</li>
+            <li>flex-basis:아이템들이 공간을 얼마나 차지할껀지 세부적 정의[flex-basis:60%]이런식으로 grow,shrink없이도 매개 박스의 크기를 설정할수잇다</li>
+            <li>align-self:아이템별로 아이템들을 정렬할수잇다</li>
+            <li>sticky: 원래 잇어야하는 자리에 잇으면서 대신 스크롤링 되어도 사라지지않는다</li>
+          <li>order:현재 아이템이 잇는 순서를 바꿀수잇다 [order:2;]</li>
+          <h3>Units</h3>
+          <ul>Absolute length units [고정형]
+            <li>cm:Centimeteers</li>
+            <li>mm:Millimeters</li>
+            <li>Q:Quarter-millimeters</li>
+            <li>in:Inches</li>
+            <li>pc:Picas</li>
+            <li>pt:Points-</li>
+            <li>px:Pixels-</li>
+          </ul>
+          <ul>Relative length units [상대적 유닛]
+            <li>em:현재 지정된 포인트 사이즈를 나타내는 단위,부모의 폰트 사이즈를 곱한 값 으로 계산된다</li>
+            <li>ex:</li>
+            <li>ch:</li>
+            <li>rem:루트에 지정된 폰트 사이지에 따라서 크기가 결정된다</li>
+            <li>lh:</li>
+            <li>vw:뷰폴트(브라우저) 너비의 지정 크기 만큼 쓴다</li>
+            <li>vh:뷰폴트(브라우저) 높이의 지정 크기 만큼 쓴다</li>
+            <li>vmin:뷰폴트(브라우저) 너비 와 높이 중 작은 값의 지정 크기 만큼 쓴다</li>
+            <li>vmax:뷰폴트(브라우저) 너비 와 높이 중 큰은 값의 지정 크기 만큼 쓴다</li>
+            <li>%:부모요소의 상대적 퍼센트 값</li>
+            <li>*%는 부모 요소의 영향을 받지만 v는 부모요소와 상관없이 브라우저 크기에 따라 변한다</li>
+          </ul>
+        </ul>
+      </div>
+      <div id="inlinebox">
+        <h2><a href="./css grid.html">그리드 컨테이너 display: grid;</a></h2>
+        <div>
+          유연한 트랙을 만들수잇다.
+          그리드 컨테이너는 요소에 display: grid 또는 display: inline-grid를 선언하여 만듭니다.
+          이렇게 하면 해당 요소 바로 밑에 있는 모든 자식 요소는 그리드 아이템이 됩니다.
+        </div>
+      </div>
+      <div id="inlinebox">
+        <h2>자주 쓰틑 속성</h2>
+        <ul>
+          <li>transform: 좌표공간을 변형</li>
+          <li>opacity: 투명도 설정 0.8 = 80%</li>
+          <li>color: 글자 색</li>
+          <li>background color: 배경색</li>
+          <li>decoration: 꾸미다.</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div id="inlinebox">
+        <h2>CSS선택자(css selector):</h2>
+        <blockquote><p> 우선순위: <code>id</code> > <code>class</code> > <code>태그(element)</code> ;</p></blockquote>
+        <pre>
+          <code>
+  id = " # "  
+  class = " . "
+  element = " a,q,h1,h2 " 
+          </code>
+        </pre>
+      </div>
+      <div id="inlinebox">
+        <h4>Property,속성</h4>
+        <pre><code>
+  a = Selector 선택자
+  color:red= declaration,선언,효과
+  color = Property,속성
+  red = Property Value,값
+        </code></pre>
+        <img src="../assets/img/css declaration.jpg" width="30%">
+      </div>
+      <div id="inlinebox">
+        <h2>반응형 디자인 Media Query</h2>
+  <blockquote><p>화면의 크기에 따라 웹 페이지의 각요소들이 반응하여동작하게 된다.</p></blockquote>
+        <pre>
+          <code>
+  /* screen width >800px min[초소값],max[최대값]*/
+  @media(min-width: 800px){#grid{
+  display: block;
+  }}
+          </code>
+        </pre>
+      </div>
+    </section>
+  </div>
+
+  <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+    <a id="__designed-by" href="../../index.html">
+        "홈페이지 바로가기"
+        <i class="fa fa-code" id="footer_icon"></i>
+    </a>
+    <div class="uk-navbar-right" >
+        <div id="__theme-btn">
+            "테마 바꾸기"
+            <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+        </div>
+        <a id="__toTop" href="#__HUKE">
+            "제일 위로"
+            <i class="fa fa-chevron-up" id="footer_icon"></i>
+        </a>
+    </div>
+  </footer>
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+</body>
+</html>

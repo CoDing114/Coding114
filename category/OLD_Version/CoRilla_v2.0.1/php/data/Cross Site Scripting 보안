@@ -1,0 +1,26 @@
+XSS
+htmlspecialchars 와 strip_tags 는 기능이 다릅니다.
+
+htmlspecialchars() 는 특수 문자를 HTML 엔티티로 변환 합니다.
+
+<?php
+ $new = htmlspecialchars("<a href='test'>Test</a>", ENT_QUOTES);
+
+ echo $new; 
+ //출력 결과 :  &lt;a href=&#039;test&#039;&gt;TEST&lt;/a&gt;
+?>
+
+
+strip_tags()는 말 그대로 태그를 제거(허가된 태크는 제외)하고 텍스트만 반환합니다.
+
+<?php
+ $text = '<p>테스트 문단.</p><!-- 주석 --> <a 
+ href="#fragment">다른 텍스트</a>';
+ echo strip_tags($text); // 출력 결과: 테스트 문단. 다른 텍스트
+ echo "\n";
+
+ // <p>와 <a>를 허용
+ echo strip_tags($text, '<p><a>'); 
+ // 출력 결과: <p>테스트 문단.</p> <a href="#fragment">다른 텍스트</a>
+?>
+근데 strip_tags()는 HTML의 유효성을 검사하지 않기 때문에, 부분적이거나 깨진 태크는 예상 외로 텍스트/데이터를 제거할 수 없습니다. 예를 들어 strip_tags('<br>줄바꿈<br/>새줄<br />새줄2', '<br>'); 경우 제대로 <br>요소를 거르지 못합니다.

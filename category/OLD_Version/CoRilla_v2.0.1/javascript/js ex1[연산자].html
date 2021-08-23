@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="section" data-section="__HUKE" id="__HUKE">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ex1[연산자]</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+    <!-- highlight Start -->
+    <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+    <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+    <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+    <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+    <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+    <!-- highlight End -->
+    <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+    <script> // <!-- Start Google Analytics -->
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-180336562-1');
+    </script><!-- End Global Google Analytics -->
+    <script src="../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+  <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+
+  <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+      <li><a href="../css/index.html">CSS</a></li>
+      <li class="has-submenu"><a href="./index.html">JavaScript</a></li>
+      <ul id="sub-menu">
+        <li><a href="./js ex1[연산자].html" class="saw" id="active">연산자</a></li>
+        <li><a href="./js ex2[배열&문법].html" class="saw">배열&문법</a></li>
+        <li><a href="./js ex3[반복문].html" class="saw">반복문</a></li>
+        <li><a href="./js ex4[배열과 반복문].html" class="saw">배열과 반복문</a></li>
+        <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
+        <li><a href="./js ex6 야간모드.html" class="saw">야간모드</a></li>
+        <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
+        <li><a href="./json.html" class="saw">JSON</a></li>
+      </ul>
+      <li><a href="../php/index.html">PHP </a></li> 
+      <li><a href="../database/index.html">DataBase</a></li>
+      <ol id="side-nav" >
+        <li class="#"><a href="#String">String</a></li>
+        <li class="#"><a href="#Numeric">Numeric</a></li>
+        <li class="#"><a href="#decrement">decrement</a></li>
+        <li class="#"><a href="#Assignment">Assignment</a></li>
+        <li class="#"><a href="#Comparison">Comparison</a></li>
+        <li class="#"><a href="#Logical">Logical</a></li>
+        <li class="#"><a href="#Equality">Equality</a></li>
+        <li class="#"><a href="#Conditional">Conditional</a></li>
+        <li class="#"><a href="#Ternary">Ternary </a></li>
+        <li class="#"><a href="#Switch">Switch </a></li>
+        <li class="#"><a href="#Loops">Loops</a></li>
+      </ol>
+   </ul>
+ <a href="#"class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+ </a>
+ </nav>
+
+
+    <section id="section_1">
+      <div id=inlinebox>
+        <script>
+            document.write('Hello World');
+        </script>
+        <input type="button" class="button_Hello" style="font-size:medium;background-color:rgb(36, 216, 162);" value="Hi" onclick="alert('Heloo')"> 클릭
+        <h1> Comparison operator & Boolean 연산자 </h1>
+        <h2>===:동등연산자</h2>
+      <pre><code><script>
+  document.write(1===1);
+//출력:
+       </script>
+  <script>
+  document.write(1===2);
+//출력:
+       </script>
+  <script>
+  document.write("1,<br>");
+  document.write("2,<br>");
+  document.write("3,<br>");
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  <h2>조건문 Conditional Statements</h2>
+  <blockquote>
+    <p>if-true</p>
+  </blockquote>
+<pre><code><script>
+  document.write("1<br>,");
+  if(true){
+    document.write("2<br>,");
+    
+  } else{
+    document.write("3<br>,");
+  }
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  <blockquote>
+    <p>if-false</p>
+  </blockquote>
+  <pre><code><script>
+  document.write("1<br>,");
+  if(false){
+    document.write("2<br>,");
+    
+  } else{
+    document.write("3<br>,");
+  }
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  </div>
+
+
+<div id=inlinebox>
+    <h2> 로직 한줄 정렬. 아래 두개의 로직은 같다</h2>
+    <blockquote>
+    <p>false & true 정의:</p>
+    <p>// false: 0, -0 '', null, undefined</p>
+    <p>// true: -1, 'hello', 'false'</p>
+  </blockquote>
+  <pre><code class="language-javascript">
+Program:
+  <script>  
+  let obj = {   
+    name:'HUKE',
+  };
+
+  if (obj) {    //로직 #1
+    document.write(`<p> obj Name1:${obj.name}</p>,`);
+  };
+    
+  obj && document.write(`<p> obj Name2:${obj.name}</P>`); //로직 #2
+//출력:
+      </script>
+</code>
+</pre>
+</div>
+
+<div id=inlinebox>
+  <blockquote id="String"><p> 1. String concatenation</p></blockquote>
+  <pre><code><script>
+  document.write('my'+'cat',',');
+  document.write('1'+2,',');
+  document.write(`string literals:1+2= ${1+2}`);
+//출력: 
+      </script>
+  </code>
+  </pre>
+  <blockquote id="Numeric"><p> 2. Numeric operators</p></blockquote>
+  <pre><code><script>
+  document.write(1 + 1,','); //  Add             더하기
+  document.write(1 - 1,','); //  substract       덜기
+  document.write(1 / 1,','); //  divide          나누기
+  document.write(1 * 1,','); //  multiply        곱하기
+  document.write(5 % 2,','); //  remainder       나머지
+  document.write(2 ** 3); // exponentiation  승
+//출력: 
+        </script>
+    </code>
+  </pre>
+  <blockquote id="decrement"><p> 3. Increment and decrement operators</p></blockquote>
+  <pre ><code><script>
+  let counter = 2;
+  const preIncrement = ++counter;
+    //counter = counter + 1;
+    //preIncrement = counter;
+  document.write(`[ ++counter;preIncrement:${preIncrement},counter:${counter} ],`);
+
+  const postIncrement = counter++;
+    //postIncremnet = counter;
+    //counter = counter + 1;
+  document.write(`[ counter++;postIncrement:${postIncrement},counter:${counter} ],`);
+//출력: 
+      </script>
+  </code>
+</pre>
+<blockquote id="Assignment"><p> 4. Assignment operators</p> </blockquote>
+  <pre><code><script>
+    let x = 3;
+    let y = 6;
+  document.write(x += y,','); // x = x + y;
+  document.write(x -+ y,',');
+  document.write(x *+ y,',');
+  document.write(x /+ y,',');
+//출력: 
+       </script>
+  </code>
+  </pre>
+  <blockquote id="Comparison"><p> 5. Comparison operators </p></blockquote>
+  <pre><code><script>
+  document.write(10 < 6,',');  // less than 
+  document.write(10 <= 6,','); // less than or equal 
+  document.write(10 > 6,',');  // greater than
+  document.write(10 >= 6);     // greater than or equal
+//출력: 
+      </script>
+  </code>
+  </pre>
+  <blockquote id="Logical"><p> 6. Logical operators: ||(or), &&(and),!(not)</p></blockquote>
+  <pre><code><script>
+  const value1 = true;
+  const value2 = 4 < 2;
+  document.write(` [ Value1: ${value1} || Value2: ${value2} || Check:${check()} ], `);
+
+  // ||(or),finds the first truthy value
+  document.write(`[ Or: ${value1 || value2 || check()} ], `);
+  
+  // &&(and), finds the first falsy value
+  document.write(`[ And: ${value1 && value2 && check()} ], `);
+  // ofthe used to compress long if-statemen
+  // nullableObject && nullableObject.something
+  // if(nullableObject != null){
+  //   ullableObject.something;
+  // }
+
+  // !(not) 값을 반대로 바꿔준다
+    document.write('[ !(Not):',!value1,' ]');
+
+  function check(){
+    for (let i = 0; i < 3; i++){
+      //wasting time
+      document.write('😱')
+    }
+    return true;
+  }
+//출력: 
+      </script>
+    </code>
+    </pre>
+    <blockquote id="Equality"><p> 7. Equality</p></blockquote>
+    <pre><code><script>
+  const stringFive = '5';
+  const numberFive = 5;
+
+  // == loose equality, with type conversion
+  document.write(stringFive == numberFive,',');
+  document.write(numberFive != numberFive,',');
+//출력: 
+      </script>
+<script>
+  // === strict equality, no type conversion
+  document.write(stringFive === numberFive,',');
+  document.write(numberFive !== numberFive,',');
+//출력: 
+      </script>
+<script>
+  // object equality by reference
+  const miki1 = {name: 'miki'};
+  const miki2 = {name: 'miki'};
+  const miki3 = miki1;
+  document.write(miki1 == miki2,',');
+  document.write(miki1 === miki2,',');
+  document.write(miki1 === miki3,',');
+//출력: 
+      </script>
+<script>
+  // euqlity - puzzler
+  document.write('euqlity - puzzler',',')
+  document.write(0 == false,',');
+  document.write(0 === false,',');
+  document.write('' == false,',');
+  document.write('' === false,',');
+  document.write(null == undefined,',');
+  document.write(null === undefined);
+//출력: 
+      </script>
+      </code>
+    </pre>
+    <blockquote id="Conditional"><p> 8. Conditional operators: if </p></blockquote>
+    <pre><code><script>
+  const names = 'miki';
+  if (names === 'miki'){
+    document.write('Welcome,Miki!');
+  }else if (names === 'coder'){
+    document.write('You are amazing coder')
+  }else{
+    document.write('unkwnon');
+  }
+//출력: 
+      </script>         
+
+      </code>
+    </pre>
+    <blockquote id="Ternary"><p> 9. Ternary operator: ? </p></blockquote>
+    <pre><code><script>
+  document.write(names === 'miki' ? 'Yess' : 'No')
+//출력: 
+      </script>
+    </code>
+  </pre>
+    <blockquote id="Switch"><p> 10. Switch statement </p></blockquote>
+    <pre><code>
+  // use for multiple if checks
+  // use for enum-like value check
+  // use for multiple type checks in TS
+  <script>
+  const browser = 'IE'
+  switch (browser){
+    case 'IE':
+      document.write('go away!');
+      break;
+    // case 'Chrome':
+    // document.write('love you!');
+    // break;
+    case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
+    case 'Firefox':
+      document.write('love you!');
+      break;
+    default:
+      document.write('same all!');
+      break;
+  }
+//출력: 
+    </script>
+    </code>
+  </pre>
+    <blockquote id="Loops"><p> 11. Loops </p></blockquote>
+    <pre> <code>
+  // 블록을 먼저 실행하고 싶다면 do while을 써야되고 
+  // 조건이 맞을때만 while쓰면된다
+  // while loop, while the condition is truthy,
+  // body code is executed. 
+<script>
+    let i = 3;
+    while (i > 0){
+      document.write(`while:${i},`);
+      i--;
+    }
+  // do while loop, body code is executed first,
+  // then check the condition
+    do {
+      document.write(`do while:${i},`);
+      i--;
+    }while (i > 0);
+//출력: 
+    </script></code></pre>
+    <pre> <code>
+// for loop, for(begin; condition; step)
+  <script>
+    document.write('for loop, for(begin; condition; step,');
+    for (i = 3; i > 0; i--){
+      document.write(`for:${i},`);
+    }
+
+    for (let i = 3; i > 0; i = i - 1){
+    //inline variable declaration
+      document.write(`inline variable for:${i},`);
+    }
+//출력: 
+      </script>
+        </code></pre>
+      <pre> <code>
+      <script>
+// nested loops
+  for(let i = 0; i < 2; i++){
+    for (j = 0; j < 2; j++){
+      document.write(`i: ${i},j:${j},`);
+    }
+  }
+//출력: 
+      </script>
+    </code>
+  </pre>
+  <blockquote><p> Break, continue;</p><br>
+    <p>// Q1. iterate from 0 to 10 and print only even numbers(use continue)</p>
+  </blockquote>
+  <pre id="break"><code>
+    <script >
+  for (let i = 0; i < 11; i++){
+    if (i % 2 === 0 ){
+      document.write(`Q1:${i}, `);
+    }
+  }
+
+  // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
+  for (let i = 0; i < 11; i++){
+    if(i > 8){
+      break;
+    }
+    document.write(`Q2:${i}`);
+  }  
+//출력: 
+      </script>
+              </code>
+            </pre>
+      </div>
+    </section>
+      
+    <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+      <a id="__designed-by" href="../../index.html">
+          "홈페이지 바로가기"
+          <i class="fa fa-code" id="footer_icon"></i>
+      </a>
+      <div class="uk-navbar-right" >
+          <div id="__theme-btn">
+              "테마 바꾸기"
+              <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+          </div>
+          <a id="__toTop" href="#__HUKE">
+              "제일 위로"
+              <i class="fa fa-chevron-up" id="footer_icon"></i>
+          </a>
+      </div>
+    </footer>
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+</section>
+</div>
+</body>
+</html>

@@ -110,7 +110,7 @@
             </ul>
           </ul>
           <li>justify-content:중심축에서 아이템 들을 어떻게 배치할건지를 결정해준다</li>
-          <ul>justify-content:flex-start;
+          <ul>justify-content: space-between;[양옆에는 붙이고 중간에만 간격을 넣어 준다]
             <li>flex-start:기본 값 왼쪽에서 오른쪽으로 정렬</li>
             <li>flex-end:오른쪽 축으로 아이템 배치(순서는 유지) 
               [여기서 flex-direction이 column이면 아래 축으로 배치 된다</li>
@@ -170,15 +170,25 @@
         </div>
       </div>
       <div id="inlinebox">
-        손쉬운 사용:
-        <div> color = 글자 색</div>
-        <div>background color = 배경색</div>
-        <div>decoration 꾸미다.</div>
+        <h2>자주 쓰틑 속성</h2>
+        <ul>
+          <li>transform: 좌표공간을 변형</li>
+          <li>opacity: 투명도 설정 0.8 = 80%</li>
+          <li>color: 글자 색</li>
+          <li>background color: 배경색</li>
+          <li>decoration: 꾸미다.</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
 
       <div id="inlinebox">
         <h2>CSS선택자(css selector):</h2>
-        <blockquote><p> 우선순위- <code>id</code> > <code>class</code> > <code>태그(element)</code> ;</p></blockquote>
+        <blockquote><p> 우선순위: <code>id</code> > <code>class</code> > <code>태그(element)</code> ;</p></blockquote>
         <pre>
           <code>
   id = " # "  
@@ -195,7 +205,7 @@
   color = Property,속성
   red = Property Value,값
         </code></pre>
-        <img src="../../img/css declaration.jpg" width="30%">
+        <img src="../assets/img/css declaration.jpg" width="30%">
       </div>
       <div id="inlinebox">
         <h2>반응형 디자인 Media Query</h2>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="../../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 Object</title>
+
+     <!-- google fonts Source Sans Pro  -->
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+     <!-- jquery/3.5.1 -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'UA-180336562-1');
+     </script>
+    <script src="../../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+           <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+           <a href="../../index.html">Coding114</a>
+         </div>
+         </nav>
+       </header>
+       
+      <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+    
+      <div  id="grid">
+       <nav class="navbar" >
+       <ul class="navbar__menu" >
+        <li><a href="../html/index.html">HTML</a></li>
+          <li><a href="../css/index.html">CSS</a></li>
+          <li class="has-submenu"><a href="./index.html">JavaScript</a></li>
+          <ul id="sub-menu">
+            <li><a href="./js ex1[연산자].html" class="saw">연산자</a></li>
+            <li><a href="./js ex2[배열&문법].html" class="saw">배열&문법</a></li>
+            <li><a href="./js ex3[반복문].html" class="saw">반복문</a></li>
+            <li><a href="./js ex4[배열과 반복문].html" class="saw">배열과 반복문</a></li>
+            <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
+            <li><a href="./js ex6 야간모드.html" class="saw">야간모드</a></li>
+            <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
+            <li><a href="./json.html" class="saw"  id="active">JSON</a></li>
+          </ul>
+          <li><a href="../php/index.html">PHP </a></li> 
+          <li><a href="../database/index.html">DataBase</a></li>
+          <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+          <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
+       </ul>
+     <a href="#"class="navbar__toogleBtn">
+         <i class="fas fa-bars"></i>
+     </a>
+     </nav>
+    
+    
+        <section id="section_1">              
+            <div id="inlinebox">
+                <h2> callback </h2>
+                
+                
+
+            
+                </script>
+            </div>
+        </section>
+    </div>
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+</section>
+
+
+<!-- <script defer src="./callback.js"> </script>  -->
+<script defer src="./callback1.js"> </script> 
+</body>
+</html>

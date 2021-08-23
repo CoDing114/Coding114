@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html class="section" data-section="__HUKE" id="__HUKE">
+<head >
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX MODEL</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+    <!-- highlight Start -->
+    <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+    <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+    <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+    <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+    <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+    <!-- highlight End -->
+    <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+    <script> // <!-- Start Google Analytics -->
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-180336562-1');
+    </script><!-- End Global Google Analytics -->
+    <script src="../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+    <style>
+        h1{
+            font-size: 45px;
+            text-align:center;
+            border-bottom:1px solid #ccb2da94;
+            margin:0;
+            padding:20px;
+            padding-bottom: 40px;
+            padding-top:0px;
+        }
+        h2 {
+            /* block level element 화면 전체를 쓴다 
+            border-width:5px;     - 폭, 너비
+            border-color:red;     - 컬러
+            border-style:solid;   - 선형
+            display:block         - 표시형식
+            */
+            border:5px solid red; /* widty,color,style을 간단하게 변경 가능 */
+            padding:10px; /* 속,부피크기 */
+            margin:5px; /* 줄간 간격 */
+        }
+        h3 {
+            display:inline
+
+        }
+            /* 
+                inline element 자기 자신의 부피만큼 차지한다
+            */
+   
+        #inline{
+            border:3px solid hsl(180, 92%, 44%);
+            padding:5px;
+            margin:5px;
+        }
+        .container{
+          background:cadetblue;
+          left: 20px;
+          top: 20px;
+        }
+        .container div{
+          height:50px;
+          margin-bottom: 20px;
+          background: rgb(204, 144, 144);
+        }
+        .container .relative{
+          background: rgb(167, 214, 165);
+          color: black;
+          left: 20px;
+          top: 200px;
+          position: relative;
+        }
+        .container .absolute{
+          background: rgb(135, 219, 0);
+          color: black;
+          left: 100px;
+          top: 237px;
+          position: absolute;
+        }
+        .container .fixed{
+          background: rgb(214, 197, 165);
+          color: black;
+          left: 10px;
+          top: 150px;
+          position: fixed;
+        }
+        .container .sticky{
+          background: rgb(218, 140, 176);
+          color: black;
+          left: 60px;
+          top: 60px;
+          position: sticky;
+        }
+      
+    </style>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+   
+   <h1 class="h1_title"><a href="./index.html">CSS BOX MODEL</a></h1>
+ <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+    <li class="has-submenu"><a href="index.html" >CSS</a></li>
+    <ul id="sub-menu">
+      <li><a href="./css box.html" class="saw"class="saw" id="active">CSS_BOX</a></li>
+      <li><a href="./css grid.html" class="saw">CSS_GRID</a></li>
+      <li><a href="./css media query.html" class="saw">CSS_Media_Query</a></li>
+    </ul>
+    <li><a href="../javascript/index.html">JavaScript</a></li>
+    <li><a href="../php/index.html">PHP </a></li> 
+    <li><a href="../database/index.html">DataBase</a></li>
+   </ul>
+ <a href="#"class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+ </a>
+ </nav>
+ 
+    <div id="article">
+
+           
+    <div id="inline">
+        <h1>h1 Block level element</h1> 
+        <h2>h2 Block level element</h2>
+        Block level element: 화면 전체를 사용한다
+    </div>
+    <div id="inline">
+        <a>Inline element "a"</a>
+        <div>Inline element: 자기 자신의 부피만큼 차지한다</div>
+    </div>
+    <div id="inline">
+        <h3>h3 display:inline </h3> 
+        -display 를 inline으로 변경함으로 자기 자신의 부피만 사용하도록 변경
+        <div>
+            h3{
+                display: inline;
+            }
+            
+        </div>
+        <div>
+            Tip: display:none; 을 사용하여 text 숨길수도 잇음
+        </div>
+    </div>
+    <div class="container">
+        <div class="sticky">sticky: 원래 잇어야하는 자리에 잇으면서 대신 스크롤링 되어도 사라지지않는다</div>
+        <div>sticky1</div>
+        <div>sticky2</div>
+        <div>sticky3</div>
+        <div>sticky4</div>
+        <div class="box_item">
+          <div>static: 기본적으로 가지고 잇고 HTML에 정의된 순서대로 브라우저 상에 자연스럽게 보여진다</div>
+          <div class="relative">relative: 원래 잇어야하는 자리에서 지정한 위치까지 이동</div>
+          <div  class="absolute">absolute:내 아이템이 담겨 잇는 박스 안에서 원하는 위치까지 이동한다</div>
+          <div class="fixed">fixed: 박스를 벗어나 윈도우 안에서 지정위치까지 이동</div>
+          <div>navigattion1</div>
+          <div>navigattion2</div>
+          <div>navigattion3</div>
+          <div>navigattion4</div>
+          <div>navigattion5</div>
+          <div>navigattion6</div>
+          <div>navigattion7</div>
+          <div>navigattion8</div>
+          <div>navigattion9</div>
+        </div>
+
+        <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+          <a id="__designed-by" href="../../index.html">
+              "홈페이지 바로가기"
+              <i class="fa fa-code" id="footer_icon"></i>
+          </a>
+          <div class="uk-navbar-right">
+              <div id="__theme-btn">
+                  "테마 바꾸기"
+                  <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+              </div>
+              <a id="__toTop" href="#__HUKE">
+                  "제일 위로"
+                  <i class="fa fa-chevron-up" id="footer_icon"></i>
+              </a>
+          </div>
+        </footer>
+        
+<a href="../html.html" class="saw">HTML</a><a href="../css.html"class="saw" id="active">CSS</a><a href="../javascript.html">JavaScript</a><a href="../html실용편.html">HTML 실용편 </a><a href="../damoa.html">damoa </a>
+<img src="../assets/img/box model.png" width="30%">
+
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+</body>
+</html>

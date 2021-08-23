@@ -1,0 +1,151 @@
+<!DOCTYPE html >
+<html class="section" data-section="__HUKE" id="__HUKE">
+<head>
+  <title>WEB - PHP</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- highlight End -->
+  <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+  <script> // <!-- Start Google Analytics -->
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-180336562-1');
+  </script><!-- End Global Google Analytics -->
+  <script src="../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+ <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+ <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+     <li ><a href="../html/index.html">HTML</a>
+     <li><a href="../css/index.html">CSS</a></li>
+     <li><a href="../javascript/index.html">JavaScript</a></li>
+     <li class="has-submenu"><a href="./index.html"class="saw" id="active">PHP </a></li> 
+     <li><a href="../database/index.html">DataBase</a></li>
+   </ul>
+ <a href="#"class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+ </a>
+ </nav>
+ 
+   <section id="section_1">
+    <h2><a href="https://developer.mozilla.org/ko/docs/Glossary/PHP"target="_blank">PHP 자료</a></h2>
+      <div> <h3>자주 사용하는 함수</h3>
+        <ul>
+          <li>var_dump:데이터 타입 과 동시에 문자 출력</li>
+          <li>if:비교 연산자</li>
+          <li>while:반복문</li>
+          <li>isset:변수가 설정되었는지 확인할 수 있습니다.</li>
+
+        </ul>
+      </div>
+
+      <div>
+        <h3>PHP환경구축</h3>
+        <pre>
+      php가 제대로 깔렷는지 확인.
+    php파인을 만들고 아래 내용을 넣는다, 웹으로 열엇을때 php화면이 뜨면 정상이다
+    &lt?php
+    phpinfo();
+    ?> 
+    
+    Bitnami개발자환경 설정
+      c:\Bitnami\wampstack-8.0.7-1\php\php.ini,
+    -display_errors = Off 를 display_errors = On 으로 변경.
+    error Off이유: 우리한테 에러가 보인다는 것은 방문자한테도 에러 메세지가 보인다는 것이다.
+    그 에러메시지엔 중요한 내용이 포함될수있다.디렉토리 경로,패스워드등.
+    이것을 악용할수도 있기에 OFF한다. 
+    나중에 실제로 서비스 할땐 꺼야한다.
+
+    opcache.enable=1을 opcache.enable=0 으로 변경
+    성능을 높이기 위한 설정 이다 
+    켜져잇으면 php가 만들어 지는데 지연이 잇을수잇으니 꺼놓고 개발한느것이 좋다. 
+        </pre>
+      </div>
+      <div>
+        <h3>php </h3>
+        <pre>
+    PHP는 &lt?php 로 시작해서 ?>로 끝난다. 
+    이사이에 잇는 부분을 php문법으로 계산해서 웹을 만들고
+    그 이후에 내용은 그대로 유지된다
+    데이터 표현 방식엔 echo가 잇다
+    php는 반듯이 하나의 구문이 끝나면 새미콜론;을 찍어야 한다,
+        </pre>
+      </div>
+
+      <div> <h3>데이터 타입</h3>
+        <ul>
+          <li>Integers:정수</li>
+          <li>Float:부동소수(소수점이잇는 실수)</li>
+          <li>Strings:문자</li>
+          <li>Variable:변수"&" </li>
+          <li>Booleans:비교 연산자 TRUE/FALSE</li>
+          <li>Array:배열</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="section scroll-to-section" id="__footer" data-section="__footer">
+  <a id="__designed-by" href="../../index.html">
+      "홈페이지 바로가기"
+      <i class="fa fa-code" id="footer_icon"></i>
+  </a>
+  <div class="uk-navbar-right" >
+      <div id="__theme-btn">
+          "테마 바꾸기"
+          <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+      </div>
+      <a id="__toTop" href="#__HUKE">
+          "제일 위로"
+          <i class="fa fa-chevron-up" id="footer_icon"></i>
+      </a>
+  </div>
+</footer>
+
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+// const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+</body>
+</html>
