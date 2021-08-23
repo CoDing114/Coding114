@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html class="section" data-section="__HUKE" id="__HUKE">
 
 <head>
   <title> WEB - CSS</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script>hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script>hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- <script> // 사용자 정의 사용
+    document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  });
+  </script> -->
+<!-- highlight End -->
 
   <!-- google fonts Source Sans Pro  -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -37,7 +52,7 @@
   </style>
 </head>
 
-<body>
+<body >
   <header>
     <nav class=".navbar"> 
      <div class="navbar__logo">
@@ -62,7 +77,7 @@
     </ul>
     <li><a href="../javascript/index.html">JavaScript</a></li>
     <li><a href="../php/index.html">PHP </a></li> 
-    <li><a href="../database//index.html">DataBase</a></li>
+    <li><a href="../database/index.html">DataBase</a></li>
     <li><a href="../bootstrap/index.html">Bootstrap</a></li>
     <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
    </ul>
@@ -74,12 +89,6 @@
 
     <section id="section_1">
       <h2><a href="https://developer.mozilla.org/ko/docs/Web/CSS" target="_blank">CSS 자료</a></h2>
-      <p>
-        문서 전체의 일관성을 유지할 수 있고, 세세한 스타일 지정의 필요를 줄어들게 하였다.
-        기존의 HTML은 웹 문서를 다양하게 설계하고 수시로 변경하는데 많은 제약이 따르는데,
-        이를 보완하기 위해 만들어진 것이 스타일 시트이고 스타일 시트의 표준안이 바로 CSS이다.
-        간단히 스타일 시트라고도 한다.
-      </p>
       <div id="inlinebox">
         <h2>Display&Position</h2>
         <ul>
@@ -90,7 +99,7 @@
           <li>inline-block:한줄에 여러개가 들어갈수잇는 box</li>
           <li>block:한줄에 하나만 들어가는 box</li>
         </ul>
-        <h3>container box Position</h3>
+        <h2>container box Position</h2>
         <ul>
           <li>static: 기본적으로 가지고 잇고 HTML에 정의된 순서대로 브라우저 상에 자연스럽게 보여진다</li>
           <li>relative: 원래 잇어야하는 자리에서 지정한 위치까지 이동</li>
@@ -165,7 +174,7 @@
         </ul>
       </div>
       <div id="inlinebox">
-        <h2>그리드 컨테이너 display: grid;</h2>
+        <h2><a href="./css grid.html">그리드 컨테이너 display: grid;</a></h2>
         <div>
           유연한 트랙을 만들수잇다.
           그리드 컨테이너는 요소에 display: grid 또는 display: inline-grid를 선언하여 만듭니다.
@@ -180,46 +189,59 @@
       </div>
 
       <div id="inlinebox">
-        css선택자(css selector): 우선순위- id > class > 태그(element) ;
-        <div> id= # </div>
-        <div> class= . </div>
-        <div> 태그(element)= a,q,h1,h2 </div>
+        <h2>CSS선택자(css selector):</h2>
+        <blockquote><p> 우선순위- <code>id</code> > <code>class</code> > <code>태그(element)</code> ;</p></blockquote>
+        <pre>
+          <code>
+  id = " # "  
+  class = " . "
+  element = " a,q,h1,h2 " 
+          </code>
+        </pre>
       </div>
       <div id="inlinebox">
         <h4>Property,속성</h4>
-        <ul>
-          <li>
-            <font color="red">a = Selector 선택자</font>
-          </li>
-          <li>
-            <font color="red">color:red= declaration,선언,효과</font>
-          </li>
-          <li>
-            <font color="red">color=Property,속성</font>
-          </li>
-          <li>
-            <font color="red">red= Property Value,값</font>
-          </li>
-        </ul>
+        <pre><code>
+  a = Selector 선택자
+  color:red= declaration,선언,효과
+  color = Property,속성
+  red = Property Value,값
+        </code></pre>
         <img src="../../img/css declaration.jpg" width="30%">
       </div>
       <div id="inlinebox">
-        <h4>반응형 디자인 Media Query</h4>
-        <div>
-          화면의 크기에 따라 웹 페이지의 각요소들이 반응하여동작하게 된다.
-          /* screen width >800px min[초소값],max[최대값]*/
-          @media(min-width: 800px){#grid{
-          display: block;
-          }}
-        </div>
+        <h2>반응형 디자인 Media Query</h2>
+  <blockquote><p>화면의 크기에 따라 웹 페이지의 각요소들이 반응하여동작하게 된다.</p></blockquote>
+        <pre>
+          <code>
+  /* screen width >800px min[초소값],max[최대값]*/
+  @media(min-width: 800px){#grid{
+  display: block;
+  }}
+          </code>
+        </pre>
       </div>
     </section>
   </div>
 
-  <input type="button" class="button_night" value="Night" onclick=" 
-  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+  <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+    <a id="__designed-by" href="../../index.html">
+        "홈페이지 바로가기"
+        <i class="fa fa-code" id="footer_icon"></i>
+    </a>
+    <div class="uk-navbar-right" >
+        <div id="__theme-btn">
+            "테마 바꾸기"
+            <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+        </div>
+        <a id="__toTop" href="#__HUKE">
+            "제일 위로"
+            <i class="fa fa-chevron-up" id="footer_icon"></i>
+        </a>
+    </div>
+  </footer>
 
-<!-- script -->
+<!-- script navbar__icons -->
 <script>
   const toggleBtn = document.querySelector('.navbar__toogleBtn');
 const menu = document.querySelector('.navbar__menu');
@@ -230,5 +252,9 @@ toggleBtn.addEventListener('click', () => {
     // icons.classList.toggle('active');
 });
 </script>
+
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="section" data-section="__HUKE" id="__HUKE">
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,20 +75,20 @@
       <li><a href="../database/index.html">DataBase</a></li>
       <li><a href="../bootstrap/index.html">Bootstrap</a></li>
       <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
+      <ol id="side-nav" >
+        <li class="#"><a href="#String">String</a></li>
+        <li class="#"><a href="#Numeric">Numeric</a></li>
+        <li class="#"><a href="#decrement">decrement</a></li>
+        <li class="#"><a href="#Assignment">Assignment</a></li>
+        <li class="#"><a href="#Comparison">Comparison</a></li>
+        <li class="#"><a href="#Logical">Logical</a></li>
+        <li class="#"><a href="#Equality">Equality</a></li>
+        <li class="#"><a href="#Conditional">Conditional</a></li>
+        <li class="#"><a href="#Ternary">Ternary </a></li>
+        <li class="#"><a href="#Switch">Switch </a></li>
+        <li class="#"><a href="#Loops">Loops</a></li>
+      </ol>
    </ul>
-   <ol style="position:fixed; top:400px; left:-10px;">
-    <li class="#"><a href="#String">String</a></li>
-    <li class="#"><a href="#Numeric">Numeric</a></li>
-    <li class="#"><a href="#decrement">decrement</a></li>
-    <li class="#"><a href="#Assignment">Assignment</a></li>
-    <li class="#"><a href="#Comparison">Comparison</a></li>
-    <li class="#"><a href="#Logical">Logical</a></li>
-    <li class="#"><a href="#Equality">Equality</a></li>
-    <li class="#"><a href="#Conditional">Conditional</a></li>
-    <li class="#"><a href="#Ternary">Ternary </a></li>
-    <li class="#"><a href="#Switch">Switch </a></li>
-    <li class="#"><a href="#Loops">Loops</a></li>
-  </ol>
  <a href="#"class="navbar__toogleBtn">
      <i class="fas fa-bars"></i>
  </a>
@@ -102,344 +102,349 @@
         </script>
         <input type="button" class="button_Hello" style="font-size:medium;background-color:rgb(36, 216, 162);" value="Hi" onclick="alert('Heloo')"> 클릭
         <h1> Comparison operator & Boolean 연산자 </h1>
-        <blockquote><p>===:동등연산자</p></blockquote>
-      <pre><code>
-        <script>
-          document.write(1===1);
-  //출력:
-        </script>
-        <script>
-          document.write(1===2);
-  //출력:
-        </script>
-        <script>
-          document.write("1,<br>");
-          document.write("2,<br>");
-          document.write("3,<br>");
-          document.write("4<br>");
-  //출력:
-        </script>
-        </code></pre>
-        <h2>조건문 Conditional Statements</h2>
-        <blockquote>
-          <p>if-true</p>
-        </blockquote>
-      <pre><code>
-        <script>
-          document.write("1<br>,");
-          if(true){
-            document.write("2<br>,");
-            
-          } else{
-            document.write("3<br>,");
-          }
-          document.write("4<br>");
-  //출력:
-        </script>
-        </code></pre>
-        <blockquote>
-          <p>if-false</p>
-        </blockquote>
-       <pre><code>
-          <script>
-            document.write("1<br>,");
-            if(false){
-              document.write("2<br>,");
-              
-            } else{
-              document.write("3<br>,");
-            }
-            document.write("4<br>");
-  //출력:
-          </script>
-        </code></pre>
-        </div>
-      
+        <h2>===:동등연산자</h2>
+      <pre><code><script>
+  document.write(1===1);
+//출력:
+       </script>
+  <script>
+  document.write(1===2);
+//출력:
+       </script>
+  <script>
+  document.write("1,<br>");
+  document.write("2,<br>");
+  document.write("3,<br>");
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  <h2>조건문 Conditional Statements</h2>
+  <blockquote>
+    <p>if-true</p>
+  </blockquote>
+<pre><code><script>
+  document.write("1<br>,");
+  if(true){
+    document.write("2<br>,");
     
-      <div id=inlinebox>
-          <h2> 로직 한줄 정렬. 아래 두개의 로직은 같다</h2>
-          <blockquote>
-          <p>false & true 정의:</p>
-          <p>// false: 0, -0 '', null, undefined</p>
-          <p>// true: -1, 'hello', 'false'</p>
-        </blockquote>
-        <pre><code class="language-javascript">
-  Program:
-        <script>  
-          let obj = {   
-            name:'HUKE',
-          };
+  } else{
+    document.write("3<br>,");
+  }
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  <blockquote>
+    <p>if-false</p>
+  </blockquote>
+  <pre><code><script>
+  document.write("1<br>,");
+  if(false){
+    document.write("2<br>,");
+    
+  } else{
+    document.write("3<br>,");
+  }
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  </div>
 
-          if (obj) {    //로직 #1
-            document.write(`<p> obj Name1:${obj.name}</p>,`);
-          };
-          
-          obj && document.write(`<p> obj Name2:${obj.name}</P>`); //로직 #2
-  //출력:
+
+<div id=inlinebox>
+    <h2> 로직 한줄 정렬. 아래 두개의 로직은 같다</h2>
+    <blockquote>
+    <p>false & true 정의:</p>
+    <p>// false: 0, -0 '', null, undefined</p>
+    <p>// true: -1, 'hello', 'false'</p>
+  </blockquote>
+  <pre><code class="language-javascript">
+Program:
+  <script>  
+  let obj = {   
+    name:'HUKE',
+  };
+
+  if (obj) {    //로직 #1
+    document.write(`<p> obj Name1:${obj.name}</p>,`);
+  };
+    
+  obj && document.write(`<p> obj Name2:${obj.name}</P>`); //로직 #2
+//출력:
+      </script>
+</code>
+</pre>
+</div>
+
+<div id=inlinebox>
+  <blockquote id="String"><p> 1. String concatenation</p></blockquote>
+  <pre><code><script>
+  document.write('my'+'cat',',');
+  document.write('1'+2,',');
+  document.write(`string literals:1+2= ${1+2}`);
+//출력: 
+      </script>
+  </code>
+  </pre>
+  <blockquote id="Numeric"><p> 2. Numeric operators</p></blockquote>
+  <pre><code><script>
+  document.write(1 + 1,','); //  Add             더하기
+  document.write(1 - 1,','); //  substract       덜기
+  document.write(1 / 1,','); //  divide          나누기
+  document.write(1 * 1,','); //  multiply        곱하기
+  document.write(5 % 2,','); //  remainder       나머지
+  document.write(2 ** 3); // exponentiation  승
+//출력: 
         </script>
+    </code>
+  </pre>
+  <blockquote id="decrement"><p> 3. Increment and decrement operators</p></blockquote>
+  <pre ><code><script>
+  let counter = 2;
+  const preIncrement = ++counter;
+    //counter = counter + 1;
+    //preIncrement = counter;
+  document.write(`[ ++counter;preIncrement:${preIncrement},counter:${counter} ],`);
+
+  const postIncrement = counter++;
+    //postIncremnet = counter;
+    //counter = counter + 1;
+  document.write(`[ counter++;postIncrement:${postIncrement},counter:${counter} ],`);
+//출력: 
+      </script>
+  </code>
+</pre>
+<blockquote id="Assignment"><p> 4. Assignment operators</p> </blockquote>
+  <pre><code><script>
+    let x = 3;
+    let y = 6;
+  document.write(x += y,','); // x = x + y;
+  document.write(x -+ y,',');
+  document.write(x *+ y,',');
+  document.write(x /+ y,',');
+//출력: 
+       </script>
+  </code>
+  </pre>
+  <blockquote id="Comparison"><p> 5. Comparison operators </p></blockquote>
+  <pre><code><script>
+  document.write(10 < 6,',');  // less than 
+  document.write(10 <= 6,','); // less than or equal 
+  document.write(10 > 6,',');  // greater than
+  document.write(10 >= 6);     // greater than or equal
+//출력: 
+      </script>
+  </code>
+  </pre>
+  <blockquote id="Logical"><p> 6. Logical operators: ||(or), &&(and),!(not)</p></blockquote>
+  <pre><code><script>
+  const value1 = true;
+  const value2 = 4 < 2;
+  document.write(` [ Value1: ${value1} || Value2: ${value2} || Check:${check()} ], `);
+
+  // ||(or),finds the first truthy value
+  document.write(`[ Or: ${value1 || value2 || check()} ], `);
+  
+  // &&(and), finds the first falsy value
+  document.write(`[ And: ${value1 && value2 && check()} ], `);
+  // ofthe used to compress long if-statemen
+  // nullableObject && nullableObject.something
+  // if(nullableObject != null){
+  //   ullableObject.something;
+  // }
+
+  // !(not) 값을 반대로 바꿔준다
+    document.write('[ !(Not):',!value1,' ]');
+
+  function check(){
+    for (let i = 0; i < 3; i++){
+      //wasting time
+      document.write('😱')
+    }
+    return true;
+  }
+//출력: 
+      </script>
+    </code>
+    </pre>
+    <blockquote id="Equality"><p> 7. Equality</p></blockquote>
+    <pre><code><script>
+  const stringFive = '5';
+  const numberFive = 5;
+
+  // == loose equality, with type conversion
+  document.write(stringFive == numberFive,',');
+  document.write(numberFive != numberFive,',');
+//출력: 
+      </script>
+<script>
+  // === strict equality, no type conversion
+  document.write(stringFive === numberFive,',');
+  document.write(numberFive !== numberFive,',');
+//출력: 
+      </script>
+<script>
+  // object equality by reference
+  const miki1 = {name: 'miki'};
+  const miki2 = {name: 'miki'};
+  const miki3 = miki1;
+  document.write(miki1 == miki2,',');
+  document.write(miki1 === miki2,',');
+  document.write(miki1 === miki3,',');
+//출력: 
+      </script>
+<script>
+  // euqlity - puzzler
+  document.write('euqlity - puzzler',',')
+  document.write(0 == false,',');
+  document.write(0 === false,',');
+  document.write('' == false,',');
+  document.write('' === false,',');
+  document.write(null == undefined,',');
+  document.write(null === undefined);
+//출력: 
+      </script>
       </code>
     </pre>
-      </div>
-      
-      <div id=inlinebox>
-        <blockquote id="String"><p> 1. String concatenation</p></blockquote>
-        <pre><code>
-          <script>
-          document.write('my'+'cat',',');
-          document.write('1'+2,',');
-          document.write(`string literals:1+2= ${1+2}`);
-  //출력: 
-          </script>
-        </code>
-        </pre>
-        <blockquote id="Numeric"><p> 2. Numeric operators</p></blockquote>
-        <pre><code>
-            <script>
-          document.write(1 + 1,','); //  Add             더하기
-          document.write(1 - 1,','); //  substract       덜기
-          document.write(1 / 1,','); //  divide          나누기
-          document.write(1 * 1,','); //  multiply        곱하기
-          document.write(5 % 2,','); //  remainder       나머지
-          document.write(2 ** 3); // exponentiation  승
-  //출력: 
-          </script>
-          </code>
-        </pre>
-        <blockquote id="decrement"><p> 3. Increment and decrement operators</p></blockquote>
-        <pre ><code>
-        <script>
-          let counter = 2;
-          const preIncrement = ++counter;
-          //counter = counter + 1;
-          //preIncrement = counter;
-          document.write(`[ ++counter;preIncrement:${preIncrement},counter:${counter} ],`);
+    <blockquote id="Conditional"><p> 8. Conditional operators: if </p></blockquote>
+    <pre><code><script>
+  const names = 'miki';
+  if (names === 'miki'){
+    document.write('Welcome,Miki!');
+  }else if (names === 'coder'){
+    document.write('You are amazing coder')
+  }else{
+    document.write('unkwnon');
+  }
+//출력: 
+      </script>         
 
-          const postIncrement = counter++;
-          //postIncremnet = counter;
-          //counter = counter + 1;
-          document.write(`[ counter++;postIncrement:${postIncrement},counter:${counter} ],`);
-  //출력: 
-          </script>
-        </code>
-      </pre>
-      <blockquote id="Assignment"><p> 4. Assignment operators</p> </blockquote>
-        <pre><code><script>
-          let x = 3;
-          let y = 6;
-          document.write(x += y,','); // x = x + y;
-          document.write(x -+ y,',');
-          document.write(x *+ y,',');
-          document.write(x /+ y,',');
-  //출력: 
-          </script>
-        </code>
-        </pre>
-        <blockquote id="Comparison"><p> 5. Comparison operators </p></blockquote>
-        <pre><code>
-          <script>
-          document.write(10 < 6,',');  // less than 
-          document.write(10 <= 6,','); // less than or equal 
-          document.write(10 > 6,',');  // greater than
-          document.write(10 >= 6);     // greater than or equal
-  //출력: 
-          </script>
-        </code>
-        </pre>
-        <blockquote id="Logical"><p> 6. Logical operators: ||(or), &&(and),!(not)</p></blockquote>
-        <pre><code>
-          <script>
-            const value1 = true;
-            const value2 = 4 < 2;
-            document.write(` [ Value1: ${value1} || Value2: ${value2} || Check:${check()} ], `);
+      </code>
+    </pre>
+    <blockquote id="Ternary"><p> 9. Ternary operator: ? </p></blockquote>
+    <pre><code><script>
+  document.write(names === 'miki' ? 'Yess' : 'No')
+//출력: 
+      </script>
+    </code>
+  </pre>
+    <blockquote id="Switch"><p> 10. Switch statement </p></blockquote>
+    <pre><code>
+  // use for multiple if checks
+  // use for enum-like value check
+  // use for multiple type checks in TS
+  <script>
+  const browser = 'IE'
+  switch (browser){
+    case 'IE':
+      document.write('go away!');
+      break;
+    // case 'Chrome':
+    // document.write('love you!');
+    // break;
+    case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
+    case 'Firefox':
+      document.write('love you!');
+      break;
+    default:
+      document.write('same all!');
+      break;
+  }
+//출력: 
+    </script>
+    </code>
+  </pre>
+    <blockquote id="Loops"><p> 11. Loops </p></blockquote>
+    <pre> <code>
+  // 블록을 먼저 실행하고 싶다면 do while을 써야되고 
+  // 조건이 맞을때만 while쓰면된다
+  // while loop, while the condition is truthy,
+  // body code is executed. 
+<script>
+    let i = 3;
+    while (i > 0){
+      document.write(`while:${i},`);
+      i--;
+    }
+  // do while loop, body code is executed first,
+  // then check the condition
+    do {
+      document.write(`do while:${i},`);
+      i--;
+    }while (i > 0);
+//출력: 
+    </script></code></pre>
+    <pre> <code>
+// for loop, for(begin; condition; step)
+  <script>
+    document.write('for loop, for(begin; condition; step,');
+    for (i = 3; i > 0; i--){
+      document.write(`for:${i},`);
+    }
 
-            // ||(or),finds the first truthy value
-            document.write(`[ Or: ${value1 || value2 || check()} ], `);
-            
-            // &&(and), finds the first falsy value
-            document.write(`[ And: ${value1 && value2 && check()} ], `);
-            // ofthe used to compress long if-statemen
-            // nullableObject && nullableObject.something
-            // if(nullableObject != null){
-            //   ullableObject.something;
-            // }
+    for (let i = 3; i > 0; i = i - 1){
+    //inline variable declaration
+      document.write(`inline variable for:${i},`);
+    }
+//출력: 
+      </script>
+        </code></pre>
+      <pre> <code>
+      <script>
+// nested loops
+  for(let i = 0; i < 2; i++){
+    for (j = 0; j < 2; j++){
+      document.write(`i: ${i},j:${j},`);
+    }
+  }
+//출력: 
+      </script>
+    </code>
+  </pre>
+  <blockquote><p> Break, continue;</p><br>
+    <p>// Q1. iterate from 0 to 10 and print only even numbers(use continue)</p>
+  </blockquote>
+  <pre id="break"><code>
+    <script >
+  for (let i = 0; i < 11; i++){
+    if (i % 2 === 0 ){
+      document.write(`Q1:${i}, `);
+    }
+  }
 
-            // !(not) 값을 반대로 바꿔준다
-              document.write('[ !(Not):',!value1,' ]');
-
-            function check(){
-              for (let i = 0; i < 3; i++){
-                //wasting time
-                document.write('😱')
-              }
-              return true;
-            }
-    //출력: 
-          </script>
-          </code>
-          </pre>
-          <blockquote id="Equality"><p> 7. Equality</p></blockquote>
-          <pre><code>
-            <script>
-              const stringFive = '5';
-              const numberFive = 5;
-
-              // == loose equality, with type conversion
-              document.write(stringFive == numberFive,',');
-              document.write(numberFive != numberFive,',');
-    //출력: 
-          </script>
-            <script>
-              // === strict equality, no type conversion
-              document.write(stringFive === numberFive,',');
-              document.write(numberFive !== numberFive,',');
-    //출력: 
-          </script>
-            <script>
-              // object equality by reference
-              const miki1 = {name: 'miki'};
-              const miki2 = {name: 'miki'};
-              const miki3 = miki1;
-              document.write(miki1 == miki2,',');
-              document.write(miki1 === miki2,',');
-              document.write(miki1 === miki3,',');
-    //출력: 
-          </script>
-            <script>
-              // euqlity - puzzler
-              document.write('euqlity - puzzler',',')
-              document.write(0 == false,',');
-              document.write(0 === false,',');
-              document.write('' == false,',');
-              document.write('' === false,',');
-              document.write(null == undefined,',');
-              document.write(null === undefined);
-    //출력: 
-          </script>
-            </code>
-          </pre>
-          <blockquote id="Conditional"><p> 8. Conditional operators: if </p></blockquote>
-          <pre><code>
-            <script>
-              const names = 'miki';
-              if (names === 'miki'){
-                document.write('Welcome,Miki!');
-              }else if (names === 'coder'){
-                document.write('You are amazing coder')
-              }else{
-                document.write('unkwnon');
-              }
-    //출력: 
-          </script>         
- 
-            </code>
-          </pre>
-          <blockquote id="Ternary"><p> 9. Ternary operator: ? </p></blockquote>
-          <pre><code>
-            <script>
-              document.write(names === 'miki' ? 'Yess' : 'No')
-    //출력: 
-          </script>
-          </code>
-        </pre>
-          <blockquote id="Switch"><p> 10. Switch statement </p></blockquote>
-          <pre><code>
-            // use for multiple if checks
-            // use for enum-like value check
-            // use for multiple type checks in TS
-            <script>
-              const browser = 'IE'
-              switch (browser){
-                case 'IE':
-                  document.write('go away!');
-                  break;
-                // case 'Chrome':
-                // document.write('love you!');
-                // break;
-                case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
-                case 'Firefox':
-                  document.write('love you!');
-                  break;
-                default:
-                  document.write('same all!');
-                  break;
-              }
-    //출력: 
-          </script>
-          </code>
-        </pre>
-          <blockquote id="Loops"><p> 11. Loops </p></blockquote>
-          <pre> <code>
-            // 블록을 먼저 실행하고 싶다면 do while을 써야되고 
-            // 조건이 맞을때만 while쓰면된다
-            // while loop, while the condition is truthy,
-            // body code is executed. 
-          <script>
-              let i = 3;
-              while (i > 0){
-                document.write(`while:${i},`);
-                i--;
-              }
-            // do while loop, body code is executed first,
-            // then check the condition
-              do {
-                document.write(`do while:${i},`);
-                i--;
-              }while (i > 0);
-    //출력: 
-          </script></code></pre>
-          <pre> <code>
-    // for loop, for(begin; condition; step)
-            <script>
-              document.write('for loop, for(begin; condition; step,');
-              for (i = 3; i > 0; i--){
-                document.write(`for:${i},`);
-              }
-
-              for (let i = 3; i > 0; i = i - 1){
-              //inline variable declaration
-                document.write(`inline variable for:${i},`);
-              }
-    //출력: 
-            </script>
-             </code></pre>
-            <pre> <code>
-              <script>
-    // nested loops
-              for(let i = 0; i < 2; i++){
-                for (j = 0; j < 2; j++){
-                  document.write(`i: ${i},j:${j},`);
-                }
-              }
-      //출력: 
-              </script>
-            </code>
-          </pre>
-          <blockquote><p> Break, continue;</p><br>
-            <p>// Q1. iterate from 0 to 10 and print only even numbers(use continue)</p>
-          </blockquote>
-          <pre id="break"><code>
-            <script >
-              for (let i = 0; i < 11; i++){
-                if (i % 2 === 0 ){
-                  document.write(`Q1:${i}, `);
-                }
-              }
-
-            // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
-            for (let i = 0; i < 11; i++){
-              if(i > 8){
-                break;
-              }
-              document.write(`Q2:${i}`);
-            }  
-      //출력: 
-              </script>
+  // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
+  for (let i = 0; i < 11; i++){
+    if(i > 8){
+      break;
+    }
+    document.write(`Q2:${i}`);
+  }  
+//출력: 
+      </script>
               </code>
             </pre>
       </div>
     </section>
       
-  
+    <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+      <a id="__designed-by" href="../../index.html">
+          "홈페이지 바로가기"
+          <i class="fa fa-code" id="footer_icon"></i>
+      </a>
+      <div class="uk-navbar-right" >
+          <div id="__theme-btn">
+              "테마 바꾸기"
+              <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+          </div>
+          <a id="__toTop" href="#__HUKE">
+              "제일 위로"
+              <i class="fa fa-chevron-up" id="footer_icon"></i>
+          </a>
+      </div>
+    </footer>
+
 <!-- script navbar__icons -->
 <script>
   const toggleBtn = document.querySelector('.navbar__toogleBtn');

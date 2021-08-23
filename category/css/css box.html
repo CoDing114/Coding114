@@ -1,10 +1,26 @@
 
 <!DOCTYPE html>
-<html lang="ko">
-<head>
+<html class="section" data-section="__HUKE" id="__HUKE">
+<head >
     <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script>hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script>hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- <script> // 사용자 정의 사용
+    document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  });
+  </script> -->
+  <!-- highlight End -->
+
     <title>CSS BOX MODEL</title>
 
     <!-- google fonts Source Sans Pro  -->
@@ -59,20 +75,20 @@
           background: rgb(167, 214, 165);
           color: black;
           left: 20px;
-          top: 20px;
+          top: 200px;
           position: relative;
         }
         .container .absolute{
           background: rgb(135, 219, 0);
           color: black;
-          left: 200px;
-          top: 300px;
+          left: 100px;
+          top: 237px;
           position: absolute;
         }
         .container .fixed{
           background: rgb(214, 197, 165);
           color: black;
-          left: 200px;
+          left: 10px;
           top: 150px;
           position: fixed;
         }
@@ -111,7 +127,7 @@
     </ul>
     <li><a href="../javascript/index.html">JavaScript</a></li>
     <li><a href="../php/index.html">PHP </a></li> 
-    <li><a href="../database//index.html">DataBase</a></li>
+    <li><a href="../database/index.html">DataBase</a></li>
     <li><a href="../bootstrap/index.html">Bootstrap</a></li>
     <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
    </ul>
@@ -167,8 +183,23 @@
           <div>navigattion9</div>
         </div>
 
-
-
+        <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+          <a id="__designed-by" href="../../index.html">
+              "홈페이지 바로가기"
+              <i class="fa fa-code" id="footer_icon"></i>
+          </a>
+          <div class="uk-navbar-right">
+              <div id="__theme-btn">
+                  "테마 바꾸기"
+                  <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+              </div>
+              <a id="__toTop" href="#__HUKE">
+                  "제일 위로"
+                  <i class="fa fa-chevron-up" id="footer_icon"></i>
+              </a>
+          </div>
+        </footer>
+        
 <a href="../html.html" class="saw">HTML</a><a href="../css.html"class="saw" id="active">CSS</a><a href="../javascript.html">JavaScript</a><a href="../html실용편.html">HTML 실용편 </a><a href="../damoa.html">damoa </a>
 <img src="../../img/box model.png" width="30%">
 

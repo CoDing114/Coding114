@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="section" data-section="__HUKE" id="__HUKE">
 <head>
   <title> DataBase</title>
   <meta charset="UTF-8">
@@ -8,6 +8,21 @@
   <!-- font   awesome  Logo font -->
   <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script>hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script>hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- <script> // 사용자 정의 사용
+    document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  });
+  </script> -->
+<!-- highlight End -->
   
     <!-- google fonts Source Sans Pro  -->
    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -113,9 +128,24 @@
     </div>
   </div>
 </section>
-<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
-<input type="button" class="button_night" value="Night" onclick=" 
-nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+<footer class="section scroll-to-section" id="__footer" data-section="__footer">
+  <a id="__designed-by" href="../../index.html">
+      "홈페이지 바로가기"
+      <i class="fa fa-code" id="footer_icon"></i>
+  </a>
+  <div class="uk-navbar-right" >
+      <div id="__theme-btn">
+          "테마 바꾸기"
+          <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+      </div>
+      <a id="__toTop" href="#__HUKE">
+          "제일 위로"
+          <i class="fa fa-chevron-up" id="footer_icon"></i>
+      </a>
+  </div>
+</footer>
+
 
 <!-- script navbar__icons -->
 <script>
@@ -128,5 +158,11 @@ toggleBtn.addEventListener('click', () => {
     // icons.classList.toggle('active');
 });
 </script>
+
+
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
 </body>
 </html>

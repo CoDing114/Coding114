@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="section" data-section="__HUKE" id="__HUKE">
 <head>
     <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script>hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script>hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- <script> // 사용자 정의 사용
+    document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  });
+  </script> -->
+<!-- highlight End -->
+
     <title>CSS Media Query</title>
 
     <!-- google fonts Source Sans Pro  -->
@@ -70,7 +86,7 @@
                     </ul>
                     <li><a href="../javascript/index.html">JavaScript</a></li>
                     <li><a href="../php/index.html">PHP </a></li> 
-                    <li><a href="../database//index.html">DataBase</a></li>
+                    <li><a href="../database/index.html">DataBase</a></li>
                     <li><a href="../bootstrap/index.html">Bootstrap</a></li>
                     <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
                 </ul>
@@ -80,22 +96,26 @@
             </nav>
         
             <section id="section_1">
-                <h4>반응형 디자인 Media Query</h4>
+                <h2>반응형 디자인 Media Query</h2>
+                <blockquote>
+                    <p>화면의 크기에 따라 웹 페이지의 각요소들이 반응하여동작하게 된다. <br>
+                        /* screen width >800px min[초소값],max[최대값]*/<br></p>
+                </blockquote>
                 <div id="responsive">
                     Responsive
                 </div>
-                <div>
-                    화면의 크기에 따라 웹 페이지의 각요소들이 반응하여동작하게 된다. <br>
-                    /* screen width >800px min[초소값],max[최대값]*/<br>
-                    @media(max-width: 800px){<br>
-                        h1{<br>
-                            color:hsl(123, 89%, 45%);<br>
-                        }<br>
-                        #responsive{<br>
-                            display: none;<br>
-                        }<br>
-                }
-                </div>
+                <pre>
+                    <code>
+    @media(max-width: 800px){
+        h1{
+            color:hsl(123, 89%, 45%);
+        }
+        #responsive{
+            display: none;
+        }
+    }
+                    </code>
+                </pre>
                 <div id="responsive">
                     Responsive
                 </div>
@@ -129,7 +149,25 @@
            <div class="text_daziji"style="margin: 0px;"></div>
        </div>
 
-<!-- script -->
+<footer class="section scroll-to-section" id="__footer" data-section="__footer">
+  <a id="__designed-by" href="../../index.html">
+      "홈페이지 바로가기"
+      <i class="fa fa-code" id="footer_icon"></i>
+  </a>
+  <div class="uk-navbar-right">
+      <div id="__theme-btn">
+          "테마 바꾸기"
+          <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+      </div>
+      <a id="__toTop" href="#__HUKE">
+          "제일 위로"
+          <i class="fa fa-chevron-up" id="footer_icon"></i>
+      </a>
+  </div>
+</footer>
+
+
+<!-- script navbar__icons -->
 <script>
     const toggleBtn = document.querySelector('.navbar__toogleBtn');
   const menu = document.querySelector('.navbar__menu');
