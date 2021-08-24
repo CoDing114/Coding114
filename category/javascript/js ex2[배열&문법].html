@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
     <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <link href="../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
     <!-- highlight Start -->
     <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
@@ -14,6 +15,7 @@
     <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
     <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
     <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+    <script defer src="../src/js/navbar.es5.min.js"></script><!-- navbar js -->
     <!-- highlight End -->
     <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
@@ -25,126 +27,250 @@
       gtag('config', 'UA-180336562-1');
     </script><!-- End Global Google Analytics -->
     <script src="../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
-</head>
-<body>
-    <header>
-        <nav class=".navbar"> 
-         <div class="navbar__logo">
-            <a href="../index.html">
-                <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+
+  </head>
+  <body>
+  
+  <div class="content-wrapper">
+  <div class="container">
+    <nav class="navbar navigation" data-function="navbar">
+      <a class="navbar__logo" href="../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <button class="navbar-toggle">
+        <svg class="menu-icon" viewBox="0 0 1024 1024">
+          <path d="M896.876 319.65h-768.751c-14.152 0-25.625-11.473-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.473 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z" />
+        </svg>
+      </button>
+  
+      <div>
+        <ul class="nav">
+          <li>
+            <a href="../index.html">Home
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
             </a>
-         </div>
-         </nav>
-       </header>
-       
-      <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
-    
-      <div  id="grid">
-       <nav class="navbar" >
-       <ul class="navbar__menu" >
-        <li><a href="../html/index.html">HTML</a></li>
-          <li><a href="../css/index.html">CSS</a></li>
-          <li class="has-submenu"><a href="./index.html">JavaScript</a></li>
-          <ul id="sub-menu">
-            <li><a href="./js ex1[연산자].html" class="saw">연산자</a></li>
-            <li><a href="./js ex2[배열&문법].html" class="saw" id="active">배열&문법</a></li>
-            <li><a href="./js ex3[반복문].html" class="saw">반복문</a></li>
-            <li><a href="./js ex4[배열과 반복문].html" class="saw">배열과 반복문</a></li>
-            <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
-            <li><a href="./js ex6 야간모드.html" class="saw">야간모드</a></li>
-            <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
-            <li><a href="./json.html" class="saw">JSON</a></li>
-          </ul>
-          <li><a href="../php/index.html">PHP </a></li> 
-          <li><a href="../database/index.html">DataBase</a></li>
-          <li><a href="../bootstrap/index.html">Bootstrap</a></li>
-          <li><a href="../damoa/index.html"target="_blank">damoa </a></li>
-       </ul>
-     <a href="#"class="navbar__toogleBtn">
-         <i class="fas fa-bars"></i>
-     </a>
-     </nav>
-    
-    
-        <section id="section_1">
-            <h2>배열 Array & 문법 Syntax</h1>
-            <div id="inlinebox">
-                <!-- 배열은 대괄호[]로 시작해서 대괄호로 끝난다, 값과 값 사이는 콤마로 구분한다[,]-->
-
-                <div>문자는 "따옴표로 시작해서 따옴표로 끝난다 "</div>
-                <div>배열은 [대괄호로 시작해서 대괄호로 끝난다. 
-                    "그리고 이안에 값들을 적는데" "여러개의 값을 적을수잇다"["egoing","leezche"]등
-                    "값과 값 사이는 ,콤마로 구분한다 " ]</div>
-                <h3> var coworkers=["egoing","leezche"]; </h3>
-                <div>coworkers라는 변수에 이 ["egoing","leezche"] 배열이라고 하는 데이터 타입이 담긴것이다.
-                    또한 데이터 타입에 coworkers라는 이름을 붙인거라 이해해도 된다 
-                </div>
-                <h3>가져오기 get</h3>
-                <div>document.write(coworkers[0]); egoing라는 값을 불로온다</div>
-                <div>document.write(coworkers[1]); leezche라는 값을 불러온다</div>
-
-                <script>
-                    var coworkers=["egoing","leezche"];
-                </script>
-                <div>get</div>
-                <script>
-                    document.write(coworkers[0]);
-                    document.write(coworkers[1]);
-                </script>
-            </div>
-            <div id="inlinebox">
-                <h3>배열 추가 add</h3>
-                <div>
-                    coworkers.push('sung')
-                    coworkers.push('miki')
-                    .push를 사용하여 sung,miki라는 배열이 추가됨
-                </div>
-                <script>
-                    coworkers.push('sung')
-                    coworkers.push('miki')
-                </script>
-            </div>
-            <div id="inlinebox">
-                <h3>개수확인 count</h3>
-                <div>document.write(coworkers.length) 
-                    length를 이용하여 coworkers라는 변수에 담겨잇는 배열개수를 구한다  
-                </div>
-                <script>
-                    document.write(coworkers.length)
-                </script>
-            </div>
-        </section>
-    </div>
-
-    <footer class="section scroll-to-section" id="__footer" data-section="__footer">
-        <a id="__designed-by" href="../../index.html">
-            "홈페이지 바로가기"
-            <i class="fa fa-code" id="footer_icon"></i>
-        </a>
-        <div class="uk-navbar-right" >
-            <div id="__theme-btn">
-                "테마 바꾸기"
-                <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
-            </div>
-            <a id="__toTop" href="#__HUKE">
-                "제일 위로"
-                <i class="fa fa-chevron-up" id="footer_icon"></i>
+            <ul class="subnav">
+              <li><a href="../index.html">Main</a></li>
+              <li>
+                <a href="../index.html#old_version">
+                  OLD Version List
+                  <svg class="parent-icon" viewBox="0 0 1024 1024">
+                    <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                  </svg>
+                  <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                    <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                  </svg>
+                </a>
+                <ul class="subnav">
+                  <li><a href="../OLD_Version/CoRilla_v0.0.1/index.html">CoRilla v.0.0.1</a></li>
+              <li><a href="../OLD_Version/CoRilla_v1.0.1/index.html">CoRilla v.1.0.1</a></li>
+              <li><a href="../OLD_Version/CoRilla_v2.0.0/category/index.html">CoRilla v.2.0.0</a></li>
+              <li><a href="../OLD_Version/CoRilla_v2.0.1/index.html">CoRilla v.2.0.1</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <a href="#">
+              Navigate
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
             </a>
+  
+            <div class="subnav">
+              <ul class="row nomargin">
+                <li class='col-4'>
+                  <ul class="">
+                    <li>
+                      <a href="../html/index.html">
+                        HTML
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                          <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                        </svg>
+                        <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                          <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                        </svg>
+                      </a>
+                      <ul class="subnav">
+                        <li><a href="../HTML/html실용편.html">HTML 실용편</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="../css/index.html">CSS
+                      <svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li><a href="../css/css box.html">CSS_BOX</a></li>
+                    <li><a href="../css/css grid.html">CSS_GRID</a></li>
+                    <li><a href="../css/css media query.html">CSS_Media_Query</a></li>
+                  </ul></li>
+                    <li class="active"><a href="../javascript/index.html">JavaScript
+                      <svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li>
+                      <a href="#">
+                        Method
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                          <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                        </svg>
+                        <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                          <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                        </svg>
+                      </a>
+                      <ul class="subnav">
+                        <li><a href="../javascript/method/index.html">&lt/> JavaScript Code</a></li>
+                        <li><a href="#">Corporate</a></li>
+                        <li><a href="#">Industrial</a></li>
+                        <li><a href="#">Government</a></li>
+                      </ul>
+                    </li>
+                        <li><a href="../javascript/js ex1[연산자].html">연산자</a></li>
+                        <li class="active"><a href="../javascript/js ex2[배열&문법].html">배열&문법</a></li>
+                        <li><a href="../javascript/js ex3[반복문].html">반복문</a></li>
+                        <li><a href="../javascript/js ex4[배열과 반복문].html">배열과&반복문</a></li>
+                        <li><a href="../javascript/js ex5[함수function].html">함수Function</a></li>
+                        <li><a href="../javascript/js ex6 야간모드.html">야간모드</a></li>
+                        <li><a href="../javascript/js ex7 객체(object).html">객체(object)</a></li>
+                        <li><a href="../javascript/json.html">JSON</a></li>
+                  </ul>
+                </li>
+                    <li><a href="../php/index.html">PHP</a></li>
+                    <li><a href="../database/index.html">DataBase</a></li>
+                    <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+                    <li><a href="../damoa/index.html">damoa</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+  
+          <li>
+            <a href="#">Share
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+            <ul class="subnav">
+              <li>
+                <a target="_blank" href="#" title="Share Navbar.js on Facebook">
+                  <svg class="menu-icon" viewBox="0 0 1024 1024">
+                    <path d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="#" title="Share Navbar.js on Twitter">
+                  <svg class="menu-icon" viewBox="0 0 1024 1024">
+                    <path d="M731.429 348.571c-21.714 9.714-44.571 16-69.143 19.429 25.143-14.857 44-38.857 53.143-66.857-23.429 13.714-49.143 24-76.571 29.143-21.714-23.429-53.143-37.714-87.429-37.714-66.286 0-120 53.714-120 120 0 9.143 0.571 18.857 2.857 27.429-100-5.143-188.571-52.571-248-125.714-10.286 17.714-16.571 38.857-16.571 60.571 0 41.714 19.429 78.286 52 100-20-0.571-38.857-6.286-57.143-14.857v1.143c0 58.286 44 106.857 98.857 117.714-10.286 2.857-18.286 4.571-29.143 4.571-7.429 0-14.857-1.143-22.286-2.286 15.429 47.429 59.429 82.286 112 83.429-41.143 32-92.571 51.429-149.143 51.429-9.714 0-19.429-0.571-28.571-1.714 53.143 33.714 116 53.714 184 53.714 220.571 0 341.714-182.857 341.714-341.714 0-5.143 0-10.286-0.571-15.429 23.429-16.571 44-37.714 60-62.286zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z" />
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="copy navbar-content">
+          <span><a target="_blank" href="https://github.com/CoDing114">HUKE</a> &copy; 2030</span>
         </div>
-      </footer>
-
-<!-- script navbar__icons -->
-<script>
-    const toggleBtn = document.querySelector('.navbar__toogleBtn');
-  const menu = document.querySelector('.navbar__menu');
-  const icons = document.querySelector('.navbar__icons');
-  
-  toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('active');
-      // icons.classList.toggle('active');
-  });
-  </script>
-  
+      </div>
+    </nav>
+    <div class="content">
+      <div class="content-inner main">
+        <div  id="grid">
+            <section id="section_1">
+                <h2>배열 Array & 문법 Syntax</h1>
+                <div id="inlinebox">
+                    <!-- 배열은 대괄호[]로 시작해서 대괄호로 끝난다, 값과 값 사이는 콤마로 구분한다[,]-->
+    
+                    <div>문자는 "따옴표로 시작해서 따옴표로 끝난다 "</div>
+                    <div>배열은 [대괄호로 시작해서 대괄호로 끝난다. 
+                        "그리고 이안에 값들을 적는데" "여러개의 값을 적을수잇다"["egoing","leezche"]등
+                        "값과 값 사이는 ,콤마로 구분한다 " ]</div>
+                    <h3> var coworkers=["egoing","leezche"]; </h3>
+                    <div>coworkers라는 변수에 이 ["egoing","leezche"] 배열이라고 하는 데이터 타입이 담긴것이다.
+                        또한 데이터 타입에 coworkers라는 이름을 붙인거라 이해해도 된다 
+                    </div>
+                    <h3>가져오기 get</h3>
+                    <div>document.write(coworkers[0]); egoing라는 값을 불로온다</div>
+                    <div>document.write(coworkers[1]); leezche라는 값을 불러온다</div>
+    
+                    <script>
+                        var coworkers=["egoing","leezche"];
+                    </script>
+                    <div>get</div>
+                    <script>
+                        document.write(coworkers[0]);
+                        document.write(coworkers[1]);
+                    </script>
+                </div>
+                <div id="inlinebox">
+                    <h3>배열 추가 add</h3>
+                    <div>
+                        coworkers.push('sung')
+                        coworkers.push('miki')
+                        .push를 사용하여 sung,miki라는 배열이 추가됨
+                    </div>
+                    <script>
+                        coworkers.push('sung')
+                        coworkers.push('miki')
+                    </script>
+                </div>
+                <div id="inlinebox">
+                    <h3>개수확인 count</h3>
+                    <div>document.write(coworkers.length) 
+                        length를 이용하여 coworkers라는 변수에 담겨잇는 배열개수를 구한다  
+                    </div>
+                    <script>
+                        document.write(coworkers.length)
+                    </script>
+                </div>
+            </section>
+        </div>
+    
+        <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+            <a id="__designed-by" href="../index.html">
+                "홈페이지 바로가기"
+                <i class="fa fa-code" id="footer_icon"></i>
+            </a>
+            <div class="uk-navbar-right" >
+                <div id="__theme-btn">
+                    "테마 바꾸기"
+                    <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+                </div>
+                <a id="__toTop" href="#__HUKE">
+                    "제일 위로"
+                    <i class="fa fa-chevron-up" id="footer_icon"></i>
+                </a>
+            </div>
+          </footer>
+      </div>
+    </div>
+  </div>
+  </div>
+    
   <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
   <input type="button" class="button_night" value="Night" onclick=" 
   nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">

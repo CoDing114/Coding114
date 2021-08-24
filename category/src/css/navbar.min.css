@@ -8,6 +8,11 @@
   line-height: 1.5rem;
   padding: 0;
 }
+.navbar__logo img {
+  width: 9em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .navbar > div {
   display: none;
   flex-basis: 100%;
@@ -78,7 +83,7 @@
   }
 }
 .navbar {
-  background: #687c86;
+  background: #292a2d;
   color: rgba(255, 255, 255, 0.55);
 }
 .navbar .brand {
@@ -121,6 +126,7 @@
   overflow: hidden;
   font-size: 14px;
   line-height: 1.5rem;
+  font-weight: 700;
 }
 .nav li > a {
   text-decoration: none;
@@ -224,7 +230,7 @@ span > .parent-toggle {
     width: 200px;
   }
   div.subnav {
-    min-width: 600px;
+    min-width: 10em;
   }
   div.subnav > ul {
     margin: 0;
@@ -309,7 +315,7 @@ span > .parent-toggle {
   div.subnav {
     color: rgba(0, 0, 0, 0.55);
   }
-  .subnav-content a:not([class]),   /* :not()에 들간 값 제외 */
+  .subnav-content a:not([class]),
   .subnav-content b {
     color: rgba(0, 0, 0, 0.75);
   }
