@@ -204,50 +204,29 @@
             <section id="section_1">
                 <div id="inlinebox">
                     <h2>반복문 Loop</h1>
-                    <h3>List 만들기</h3>
-                        <pre> 
-        &ltscript>
-        document.write('&ltli>1&it/li>');
-        document.write('&ltli>2&it/li>');
-        document.write('&ltli>1&it/li>');
-        document.write('&ltli>2&it/li>');
-        document.write('&ltli>1&it/li>');
-        document.write('&ltli>2&it/li>');
-        &lt/script>  
-                        </pre>
-                        <h4>Program:</h4>
-                        <ul>
-                            <script>    
-                                document.write('<li>1</li>');
-                                document.write('<li>2</li>');
-                                document.write('<li>1</li>');
-                                document.write('<li>2</li>');
-                                document.write('<li>1</li>');
-                                document.write('<li>2</li>');     
-                            </script>
-                        </ul>
-                        <h3>반복제거 Refactoring</h3>
-                        <pre> 
-        &ltscript>
-        var i = 0; -변수 생성 :i
-        while(i &lt 3){ -반복문의 기본 문법:while(true/false)
-        document.write('&ltli>1&lt/li>') i의 값이 3보다 작을때 반복문을 실행한다;
-        document.write('&ltli>2&lt/li>');
-        i = i + 1; Loop 돌때마다 i값에 1씩 플러스 해준다
-        }
-        &ltscript>
-                        </pre>
-                        <h4>Program:</h4>
-                        <ul>
-                            <script>
-                                var i = 0;
-                                while(i < 3){
-                                document.write('<li>1</li>');
-                                document.write('<li>2</li>');
-                                i = i + 1;
-                            }
-                            </script>
-                        </ul>
+                    <blockquote><p>List 만들기</p></blockquote>
+                    <pre><code><script>    
+  document.write('<li>1</li>,');
+  document.write('<li>2</li>,');
+  document.write('<li>1</li>,');
+  document.write('<li>2</li>,');
+  document.write('<li>1</li>,');
+  document.write('<li>2</li>');     
+ //출력:
+        </script>
+                    </code></pre>
+                        <h2>반복제거 Refactoring</h2>
+                        <blockquote><p>반복적인 코드가 필요할때 Loop를 활용할수잇다</p></blockquote>
+                        <pre><code><script>
+    var i = 0;  // 변수 생성 :i
+    while(i < 3){ // 반복문의 기본 문법:while(true/false)
+    document.write('<li>1</li>,'); //i의 값이 3보다 작을때 반복문을 실행한다;
+    document.write('<li>2</li>,');
+    i = i + 1;  // Loop 돌때마다 i값에 1씩 플러스 해준다
+  }
+  //출력:
+         </script>
+                     </code></pre>
                 </div>
             </section>
         </div>

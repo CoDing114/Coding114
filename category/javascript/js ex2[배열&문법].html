@@ -204,48 +204,55 @@
                 <h2>배열 Array & 문법 Syntax</h1>
                 <div id="inlinebox">
                     <!-- 배열은 대괄호[]로 시작해서 대괄호로 끝난다, 값과 값 사이는 콤마로 구분한다[,]-->
-    
-                    <div>문자는 "따옴표로 시작해서 따옴표로 끝난다 "</div>
-                    <div>배열은 [대괄호로 시작해서 대괄호로 끝난다. 
-                        "그리고 이안에 값들을 적는데" "여러개의 값을 적을수잇다"["egoing","leezche"]등
-                        "값과 값 사이는 ,콤마로 구분한다 " ]</div>
-                    <h3> var coworkers=["egoing","leezche"]; </h3>
-                    <div>coworkers라는 변수에 이 ["egoing","leezche"] 배열이라고 하는 데이터 타입이 담긴것이다.
-                        또한 데이터 타입에 coworkers라는 이름을 붙인거라 이해해도 된다 
-                    </div>
-                    <h3>가져오기 get</h3>
-                    <div>document.write(coworkers[0]); egoing라는 값을 불로온다</div>
-                    <div>document.write(coworkers[1]); leezche라는 값을 불러온다</div>
-    
-                    <script>
-                        var coworkers=["egoing","leezche"];
-                    </script>
-                    <div>get</div>
-                    <script>
-                        document.write(coworkers[0]);
-                        document.write(coworkers[1]);
-                    </script>
+                  <h2>요약</h2>
+                  <blockquote>
+                    <p>문자는 " 따옴표로 시작해서 따옴표로 끝난다 "</p>
+                    <p>배열은 [ 대괄호로 시작해서 대괄호로 끝난다 ]</p>
+                    <p> 따옴표안엔 " " 여러개의 값을 적을수잇다</p>
+                    <p>["MIKI" , "HUKE"] 값 과 값 사이는 ,콤마로 구분한다 ]</p>
+                  </blockquote>
+                  <div>
+                      "["MIKI","HUKE"]등
+                      "값과 값 사이는 ,콤마로 구분한다 " ]</div>
+                  <pre><code>let coworkers=["MIKI","HUKE"];</code> </pre>
+                  <p>
+                    <code>coworkers</code>라는 변수에 이 <code>["MIKI","HUKE"]</code> 배열이라고 하는 데이터 타입이 담긴것이다.
+                      데이터 타입에 <code>coworkers</code>라는 이름을 붙인거라 이해해도 된다 
+                  </p>
+                  <h2>가져오기 get</h2>
+                  <pre><code><script>
+  let coworkers=["MIKI","HUKE"];
+  
+  document.write(coworkers[0],','); // MIKI 라는 값을 불로온다
+  document.write(coworkers[1]); // HUKE 라는 값을 불러온다
+  //출력:
+        </script>
+                  </code></pre>
                 </div>
                 <div id="inlinebox">
                     <h3>배열 추가 add</h3>
-                    <div>
-                        coworkers.push('sung')
-                        coworkers.push('miki')
-                        .push를 사용하여 sung,miki라는 배열이 추가됨
-                    </div>
-                    <script>
-                        coworkers.push('sung')
-                        coworkers.push('miki')
-                    </script>
+        <blockquote><p>.push를 활용해 king,joc 라는 배열이 추가됨</p></blockquote>
+        <pre><code><script>
+  coworkers.push('King');
+  coworkers.push('Joc');
+
+  document.write(coworkers[0],',');
+  document.write(coworkers[1],',')
+  document.write(coworkers[2],',')
+  document.write(coworkers[3])
+//출력:
+       </script>
+                    </code></pre>
                 </div>
                 <div id="inlinebox">
-                    <h3>개수확인 count</h3>
-                    <div>document.write(coworkers.length) 
-                        length를 이용하여 coworkers라는 변수에 담겨잇는 배열개수를 구한다  
-                    </div>
-                    <script>
-                        document.write(coworkers.length)
-                    </script>
+                  <h2>개수확인 Count</h2>
+                  <blockquote><p>length를 활용하여 coworkers라는 변수에 담겨잇는 배열개수를 구한다</p></blockquote>
+                  <pre><code>
+                  <script>
+  document.write(coworkers.length)
+ //출력:
+        </script>
+                  </code></pre>
                 </div>
             </section>
         </div>
