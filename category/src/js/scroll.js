@@ -3,22 +3,22 @@ $('.nav li:first').addClass('active');
 
 var showSection = function showSection(section, isAnimate) {
   var
-  direction = section.replace(/#/, ''),
-  reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-  reqSectionPos = reqSection.offset().top - 0;
+  direction = section.replace(/#/, ''), // /#/ 을 '공백' 으로 변경 해준다
+  reqSection = $('.section').filter('[data-section="' + direction + '"]'),  // 필터 활용 
+  reqSectionPos = reqSection.offset().top - 0;  // 좌표를 구한다
 
   if (isAnimate) {
-    $('body, html').animate({
-      scrollTop: reqSectionPos },
-    800);
+    $('body, html').animate({ // 애니메이션 호과를 넣는다
+      scrollTop: reqSectionPos }, // 원하는 위치로 부드럽게 이동시킨다
+    600); // 스크롤 타이밍 설정
   } else {
-    $('body, html').scrollTop(reqSectionPos);
+    $('body, html').scrollTop(reqSectionPos); // 원하는 위치로 바로 이동시킨다
   }
 
 };
 
 var checkSection = function checkSection() {
-  $('.section').each(function () {
+  $('.section').each(function () {  // .each 배열 관리
     var
     $this = $(this),
     topEdge = $this.offset().top - 80,
