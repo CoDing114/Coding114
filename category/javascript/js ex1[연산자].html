@@ -350,7 +350,7 @@ Program:
     document.write('[ !(Not):',!value1,' ]');
 
   function check(){
-    for (let i = 0; i < 3; i++){
+    for (let z = 0; z < 3; z++){
       //wasting time
       document.write('😱')
     }
@@ -454,30 +454,30 @@ Program:
   // while loop, while the condition is truthy,
   // body code is executed. 
 <script>
-    let i = 3;
-    while (i > 0){
-      document.write(`while:${i},`);
-      i--;
+    let z = 3;
+    while (z > 0){
+      document.write(`while:${z},`);
+      z--;
     }
   // do while loop, body code is executed first,
   // then check the condition
     do {
-      document.write(`do while:${i},`);
-      i--;
-    }while (i > 0);
+      document.write(`do while:${z},`);
+      z--;
+    }while (z > 0);
 //출력: 
     </script></code></pre>
     <pre class="snippet"><code>
 // for loop, for(begin; condition; step)
   <script>
     document.write('for loop, for(begin; condition; step,');
-    for (i = 3; i > 0; i--){
-      document.write(`for:${i},`);
+    for (i = 3; z > 0; z--){
+      document.write(`for:${z},`);
     }
 
-    for (let i = 3; i > 0; i = i - 1){
+    for (let z = 3; z > 0; z = z - 1){
     //inline variable declaration
-      document.write(`inline variable for:${i},`);
+      document.write(`inline variable for:${z},`);
     }
 //출력: 
       </script>
@@ -485,9 +485,9 @@ Program:
       <pre class="snippet"><code>
       <script>
 // nested loops
-  for(let i = 0; i < 2; i++){
+  for(let z = 0; z < 2; z++){
     for (j = 0; j < 2; j++){
-      document.write(`i: ${i},j:${j},`);
+      document.write(`i: ${z},j:${j},`);
     }
   }
 //출력: 
@@ -499,18 +499,18 @@ Program:
   </blockquote>
   <pre class="snippet" id="break"><code>
     &ltscript>
-  for (let i = 0; i &lt 11; i++){
+  for (let z = 0; z &lt 11; z++){
     if (i % 2 === 0 ){
-      document.write(`Q1:${i}, `);
+      document.write(`Q1:${z}, `);
     }
   }
 
   // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
-  for (let i = 0; i &lt 11; i++){
+  for (let z = 0; z &lt 11; z++){
     if(i > 8){
       break;
     }
-    document.write(`Q2:${i}`);
+    document.write(`Q2:${z}`);
   }  
   //출력: 
   Q1:0, Q1:2, Q1:4, Q1:6, Q1:8, Q1:10, Q2:0Q2:1Q2:2Q2:3Q2:4Q2:5Q2:6Q2:7Q2:8
