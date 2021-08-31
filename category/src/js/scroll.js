@@ -1,5 +1,5 @@
 //according to loftblog tut 标签
-$('.nav li:first').addClass('active');
+$('.navbar li:first').addClass('scroll_active');
 
 var showSection = function showSection(section, isAnimate) {
   var
@@ -28,8 +28,8 @@ var checkSection = function checkSection() {
       var
       currentId = $this.data('section'),
       reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-      reqLink.closest('li').addClass('active').
-      siblings().removeClass('active');
+      reqLink.closest('li').addClass('scroll_active').
+      siblings().removeClass('scroll_active');
     }
   });
 };
@@ -39,7 +39,7 @@ $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
     return;
   }
   e.preventDefault();
-  $('#menu').removeClass('active');
+  $('#menu').removeClass('scroll_active');
   showSection($(this).attr('href'), true);
 });
 

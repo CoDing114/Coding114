@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko" class="section" data-section="__HUKE" id="__HUKE">
 <head>
-  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>객체 Object</title>
-  <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
-  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
-  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
-  <link rel="stylesheet" href="../src/dist/css/clipboard.css"> <!-- Clipboard -->
-  <link href="../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
-  <!-- highlight Start -->
-  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 Object</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <link rel="stylesheet" href="../src/dist/css/clipboard.css"> <!-- Clipboard -->
+    <link href="../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+    <!-- highlight Start -->
+    <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
 
 </head>
 <body>
@@ -75,7 +74,7 @@
                 <ul class="row nomargin">
                   <li class='col-4'>
                     <ul class="">
-                      <li>
+                      <li class="active">
                         <a href="../html/index.html">
                           HTML
                           <svg class="parent-icon" viewBox="0 0 1024 1024">
@@ -87,7 +86,7 @@
                         </a>
                         <ul class="subnav">
                           <li><a href="../HTML/html실용편.html">HTML 실용편</a></li>
-                      <li><a href="../HTML/clipboard.html">클립보드</a></li>
+                          <li class="active"><a href="../HTML/clipboard.html">Clipboard</a></li>
                         </ul>
                       </li>
                       <li><a href="../css/index.html">CSS
@@ -103,8 +102,7 @@
                       <li><a href="../css/css grid.html">CSS_GRID</a></li>
                       <li><a href="../css/css media query.html">CSS_Media_Query</a></li>
                     </ul></li>
-                      <li class="active"><a href="../javascript/index.html">JavaScript
-                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <li><a href="../javascript/index.html">JavaScript<svg class="parent-icon" viewBox="0 0 1024 1024">
                         <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
                       </svg>
                       <svg class="parent-toggle" viewBox="0 0 1024 1024">
@@ -136,7 +134,7 @@
                           <li><a href="../javascript/js ex5[함수function].html">함수Function</a></li>
                           <li><a href="../javascript/js ex6 야간모드.html">야간모드</a></li>
                           <li><a href="../javascript/js ex7 객체(object).html">객체(object)</a></li>
-                          <li class="active"><a href="../javascript/json.html">JSON</a></li>
+                          <li><a href="../javascript/json.html">JSON</a></li>
                     </ul>
                   </li>
                       <li><a href="../php/index.html">PHP</a></li>
@@ -188,11 +186,67 @@
           <div  id="grid">
             <section id="section_1">              
                 <div id="inlinebox">
-                  <h2> json </h2>
+                  <h1> Clipboard </h1>
                     
-              
-                </div>
-              </section>
+                  <div>  <h2>Clipboard #1 Copy text from another element</h2>
+                    <!-- Target -->
+                    <input id="foo" value="https://github.com/zenorocha/clipboard.js.git" />
+
+                    <!-- Trigger -->
+                    <button class="btn" data-clipboard-target="#foo">
+                      <img style="width: 10px;" src="../assets/img/svg/clippy.svg" alt="Copy to clipboard">
+                    </button>
+                  </div>
+                  <div>  <h2>Clipboard #2 Cut text from another element</h2>
+                    <!-- Target -->
+                    <textarea id="bar">Mussum ipsum cacilds...</textarea>
+
+                    <!-- Trigger -->
+                    <button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
+                      Cut to clipboard
+                    </button>
+                  </div>
+                  <div>  <h2>Clipboard #3 Copy text from attribute</h2>
+                    <!-- Trigger -->
+                    <button
+                    class="btn"
+                    data-clipboard-text="Just because you can doesn't mean you should — clipboard.js"
+                    >
+                    Copy to clipboard
+                    </button>
+                  </div>
+                  <div>  <h2>Clipboard #4  Events</h2>
+                    <p>class="snippet" 를 추가하여 코드 복사 기능 실현 </p>
+                    <pre class="snippet"><code><script>
+  var clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+
+      e.clearSelection();
+    });
+
+    clipboard.on('error', function (e) {
+      console.error('Action:', e.action);
+      console.error('Trigger:', e.trigger);
+    });
+                  </script>
+                  </code></pre>
+                  </div>
+
+                  <div > <h2>Clipboard #5  Advanced Options</h2>
+  <pre class="snippet"><code><script>
+    new ClipboardJS('.btn', {
+    target: function (trigger) {
+      return trigger.nextElementSibling;
+    },
+  });
+
+  </script></code></pre>
+                  </div>
+
+            </section>
           </div>
         </div>
     
@@ -212,14 +266,15 @@
               </a>
           </div>
         </footer>
+        </div>
       </div>
     </div>
-  </div>
+    </div>
     
 </section>
 
+
 <!-- Scripts --> 
-<script src="./json.js"> </script> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
 <script src="../src/js/scroll.js"></script> <!-- scroll -->
 <script src="../src/js/nightBtn.js"></script> <!-- 야간모드 jQuery 설치 필요  -->

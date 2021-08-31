@@ -7,26 +7,11 @@
   <link rel="shortcut icon" href="../../assets/img/favicon.ico"><!-- icon Star -->
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png"><!-- icon End -->
   <link rel="stylesheet" href="../../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link rel="stylesheet" href="../../src/dist/css/clipboard.css"> <!-- Clipboard -->
+  <link href="../../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
   <!-- highlight Start -->
   <link rel="stylesheet" href="../../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
-  <script src="../../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
-  <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
-  <script src="../../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
-  <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
-  <!-- highlight End -->
-  <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
-  <script> // <!-- Start Google Analytics -->
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-180336562-1');
-  </script><!-- End Global Google Analytics -->
-  <script src="../../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
-  <link href="../../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
-  <script defer src="../../src/js/navbar.es5.min.js"></script><!-- navbar js -->
 
 </head>
 <body>
@@ -102,6 +87,7 @@
                       </a>
                       <ul class="subnav">
                         <li><a href="../../HTML/html실용편.html">HTML 실용편</a></li>
+                      <li><a href="../../HTML/clipboard.html">클립보드</a></li>
                       </ul>
                     </li>
                     <li><a href="../../css/index.html">CSS
@@ -286,7 +272,7 @@
                       <p>문서 전체에서 객체를 찾을 시에는 <code>document</code> 전역 변수를 사용합니다.</p>
                       <p>querySelector 함수와 querySelectorAll 함수는 <a href="#jQuery" tppabs="https://ofcourse.kr/js-course/jQuery">jQuery 강의</a>를 참고 바랍니다.</p>
                       <h3 id="사용법">사용법</h3>
-                      <pre><code class="language-javascript">
+                      <pre class="snippet"><code class="language-javascript">
   var mytext1 = document.getElementById('mytext1');
   var containers = document.getElementsByClassName('container');
   var images = document.getElementsByTagName('img');
@@ -295,7 +281,7 @@
         </code></pre>
                       <h2 class="section" data-section="getelementbyid">getElementById</h2>
                       <h3 id="예제">예제</h3>
-                      <pre><code class="language-html">  &lt;input id="mytext1" type="text"&gt;
+                      <pre class="snippet"><code class="language-html">  &lt;input id="mytext1" type="text"&gt;
   &lt;script type="text/javascript"&gt;
   var myText1 = document.getElementById('mytext1');
   myText1.value = Math.random();
@@ -303,7 +289,7 @@
         </code></pre>
                       <h2 class="section" data-section="getelementsbyclassname">getElementsByClassName</h2>
                       <h3 id="예제-1">예제</h3>
-                      <pre><code class="language-html">
+                      <pre class="snippet"><code class="language-html">
   &lt;input class="rand-text" type="text"&gt;
   &lt;input class="rand-text" type="text"&gt;
   &lt;input class="rand-text" type="text"&gt;
@@ -318,7 +304,7 @@
         </code></pre>
                       <h2 class="section" data-section="getelementsbytagname">getElementsByTagName</h2>
                       <h3 id="예제-2">예제</h3>
-                      <pre><code class="language-html">
+                      <pre class="snippet"><code class="language-html">
   &lt;select id="my-selector"&gt;
   &lt;option&gt;&lt;/option&gt;
   &lt;option&gt;&lt;/option&gt;
@@ -398,7 +384,7 @@
         </ul>
         <p>
           <p>예제</p>
-          <pre><code>
+          <pre class="snippet"><code>
         var user = document.getElementById("user");
         var monster = document.getElementById("monster");
         user.setAttribute("HP", 100);
@@ -421,7 +407,7 @@
                       <h2 id="개요">개요</h2>
                       <p><a href="#QuerySelector">QuerySelector</a>로 가져온 도큐먼트 오브젝트의 내용이나, 내부 HTML 코드를 JavaScript 코드에서 변경 할 수 있습니다.</p>
                       <h2 id="예제">예제</h2>
-                      <pre><code class="language-html">&lt;html&gt;
+                      <pre class="snippet"><code class="language-html">&lt;html&gt;
         &lt;head&gt;
         &lt;script type= "text/javascript"&gt;
         function innerHTMLTest(){
@@ -441,7 +427,7 @@
                       <h2 id="innertext--outertext">innerText &amp; outerText</h2>
                       <p><code>HTML</code> 코드가 그대로 입력되지 않으며, 텍스트로 입력됩니다.</p>
                       <h3 id="예제-1">예제</h3>
-                      <pre><code class="language-html">&lt;script type="text/javascript"&gt;
+                      <pre class="snippet"><code class="language-html">&lt;script type="text/javascript"&gt;
         function innerTextTest(target) {
         target.innerText = '&lt;strong&gt;click&lt;/strong&gt;';
         }
@@ -473,11 +459,11 @@
                           접근합니다. (ex. backgroundColor)
                       </p>
                       <h2 id="사용법">사용법</h2>
-                      <pre><code class="language-javascript">var box = document.getElementById("box");
+                      <pre class="snippet"><code class="language-javascript">var box = document.getElementById("box");
         box.style.backgroundColor = "red";
         </code></pre>
                       <h2 id="예제">예제</h2>
-                      <pre><code class="language-html">&lt;html&gt;
+                      <pre class="snippet"><code class="language-html">&lt;html&gt;
         &lt;head&gt;
         &lt;script type="text/javascript"&gt;
         function changeColor() {
@@ -531,7 +517,7 @@
                       </p>
                       <p>이 강의에서 상세하게 다루진 않을 예정이며, JavaScript 작업이 많이 필요한 홈페이지에는 jQuery 사용을 권장드립니다.</p>
                       <h2 id="사용법">사용법</h2>
-                      <pre><code class="language-javascript">var spans = $('span'); // 태그이름이 div인 객체 찾기
+                      <pre class="snippet"><code class="language-javascript">var spans = $('span'); // 태그이름이 div인 객체 찾기
         var box = $('#my-box'); // id가 'my-box'인 객체 찾기
         var cb = $('.common-button'); // class가 'common-button'인 객체 찾기
         
@@ -539,7 +525,7 @@
         box.css('background-color', '#ff3300'); // css 적용 (style 속성 유사)
         </code></pre>
                       <h2 id="예제">예제</h2>
-                      <pre><code class="language-html">&lt;html&gt;
+                      <pre class="snippet"><code class="language-html">&lt;html&gt;
         &lt;head&gt;
         &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
         &lt;script type="text/javascript"&gt;
@@ -573,24 +559,21 @@
           </section>
         
           
-          <footer class="scroll-to-section" id="__footer">
+          <footer id="__footer">
               <a id="__designed-by" href="../../index.html">
                 "홈페이지 바로가기"
                 <i class="fa fa-code" id="footer_icon"></i>
               </a>
-            <div class="uk-navbar-right ">
-              <div id="__theme-btn">"테마 바꾸기"
+            <div class="scroll-to-section uk-navbar-right ">
+              <a id="__theme-btn" onclick="nightDayHandler(this);">"테마 바꾸기"
                 <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
-              </div>
+              </a>
              <a id="__toTop" href="#__HUKE" >
                "제일 위로"
                <i class="fa fa-chevron-up" id="footer_icon"></i>
               </a>
             </div>
           </footer>
-        
-              <input type="button"  class="button_night" value="Night" onclick=" 
-                nightDayHandler(this); "> <!-- 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 -->  
           </div>
         </div>
       </div>
@@ -601,8 +584,26 @@
 
 
 <!-- Scripts --> 
-<script src="../../src/js/scroll.js"defer></script> <!-- scroll -->
-  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+<script src="../../src/js/scroll.js"></script> <!-- scroll -->
+<script src="../../src/js/nightBtn.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+<script src="../../src/dist/js/clipboard.min.js"></script>     <!-- Clipboard -->
+<script src="../../src/dist/js/clipboard/snippets.js"></script><!-- Clipboard -->
+<script src="../../src/dist/js/clipboard/tooltips.js"></script><!-- Clipboard -->
+<script>  new ClipboardJS('.btn');</script>                 <!-- Clipboard -->
+<script src="../../assets/patch/highlight/highlight.min.js"></script>      <!-- 코드 구문 강조 -->
+<script >hljs.highlightAll();</script>                                  <!-- 코드 구문 강조 호출 -->
+<script src="../../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+<script >hljs.initLineNumbersOnLoad();</script>                         <!-- 코드 줄 번호 호출 -->
+<script src="../../src/js/navbar.es5.min.js"></script><!-- navbar js -->
+<script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+<script> // <!-- Start Google Analytics -->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-180336562-1');
+</script><!-- End Global Google Analytics -->
 
 
 </body>
