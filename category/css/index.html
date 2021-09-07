@@ -259,7 +259,6 @@
                    <li>flex-basis:아이템들이 공간을 얼마나 차지할껀지 세부적 정의[flex-basis:60%]이런식으로 grow,shrink없이도 매개 박스의 크기를 설정할수잇다</li>
                    <li>align-self:아이템별로 아이템들을 정렬할수잇다</li>
                    <li>sticky: 원래 잇어야하는 자리에 잇으면서 대신 스크롤링 되어도 사라지지않는다</li>
-                 <li>order:현재 아이템이 잇는 순서를 바꿀수잇다 [order:2;]</li>
                  <h3>Units</h3>
                  <ul>Absolute length units [고정형]
                    <li>cm:Centimeteers</li>
@@ -304,6 +303,7 @@
                  <li>text-decoration:글씨의 장식(선) 색을 지정</li>
                  <li>list-style:목록 스타일 속성</li>
                  <li>transition:애니메이션 속도를 조절</li>
+                 <li>order:현재 아이템이 잇는 순서를 바꿀수잇다 [order:2;]</li>
                  <li>z-index: Z축 순서를 숫자로 지정  </li>
                  <li>overflow:요소의 콘텐츠가 너무 커서 요소의 블록 서식 맥락에 맞출 수 없을 때의 처리법</li>
                  <li>text-align: -webkit-center; 콘텐츠 센터 정렬</li>
@@ -348,12 +348,12 @@
            </section>
          </div>
        
-         <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+         <footer class="section" id="__footer" data-section="__footer">
            <a id="__designed-by" href="../index.html">
                "홈페이지 바로가기"
                <i class="fa fa-code" id="footer_icon"></i>
            </a>
-           <div class="uk-navbar-right" >
+           <div class="uk-navbar-right scroll-to-section" >
                <a id="__theme-btn" onclick="nightDayHandler(this);">
                    "테마 바꾸기"
                    <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>

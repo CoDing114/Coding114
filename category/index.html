@@ -189,7 +189,7 @@
         <div class="content-inner main">
           <div  id="grid">
             <ul class="navbar__menu" >
-              <ol class="old_versions" id="side-nav" >
+              <ol class="old_versions scroll-to-section" id="side-nav" >
                 <a href="#old_version"><p><code>Growth Version </code></p></a>
                 <li><a href="#CoRilla_v000">CoRilla v.0.0.1</a></li>
                 <li><a href="#CoRilla_v101">CoRilla v.1.0.1</a></li>
@@ -238,21 +238,23 @@
                 <h3>앞으로 열심히 해보도록 하겠습니다!</h3>
                 <img src="./assets/img/pasted image 0.png" width="20%">
               </div>
-        <section class="old_version"  id="old_version">
-          <h2>OLD Version List</h2>
-          <blockquote id="CoRilla_v000">
-            <p><code><a href="./OLD_Version/CoRilla_v0.0.1/index.html">CoRilla v.0.0.1</a></code></p>
-            <p>생활코딩 WEBn 교육중 WEB1-HTML 및 CSS 수업</p>
+        <section id="old_version" style="z-index: 1;">
+          <div class="old_version section" data-section="old_version">
+            <h2>OLD Version List</h2>
+          </div>
+          <blockquote class="section"  data-section="CoRilla_v000" id="CoRilla_v000">
+          <p><code><a href="./OLD_Version/CoRilla_v0.0.1/index.html">CoRilla v.0.0.1</a></code></p>
+          <p>생활코딩 WEBn 교육중 WEB1-HTML 및 CSS 수업</p>
           </blockquote>
-          <blockquote id="CoRilla_v101">
+          <blockquote class="section"  data-section="CoRilla_v101" id="CoRilla_v101">
             <p><code><a href="./OLD_Version/CoRilla_v1.0.1/index.html">CoRilla v.1.0.1</a></code></p>
             <p>생활코딩 WEBn 교육중 JavaScript 수업</p>
           </blockquote>
-          <blockquote id="CoRilla_v200">
+          <blockquote class="section"  data-section="CoRilla_v200" id="CoRilla_v200">
             <p><code><a href="./OLD_Version/CoRilla_v2.0.0/category/index.html">CoRilla v.2.0.0</a></code></p>
             <p>생활코딩 p5.js & 드림코딩 HTML기초강의</p>
           </blockquote>
-          <blockquote id="CoRilla_v201">
+          <blockquote class="section"  data-section="CoRilla_v201" id="CoRilla_v201">
             <p><code><a href="./OLD_Version/CoRilla_v2.0.1/index.html">CoRilla v.2.0.1</a></code></p>
             <p> 구문 강조 highlight 기능 추가</p>
           </blockquote>
@@ -294,12 +296,12 @@
         </div>
       </div>
         
-      <footer style=" justify-content: start; " id="__footer" data-section="__footer">
+      <footer class="section" style=" justify-content: start; " id="__footer" data-section="__footer">
         <a id="__designed-by" style="margin-right: 3px;" href="./index.html">
             "홈페이지 바로가기"
             <i class="fa fa-code" id="footer_icon"></i>
         </a>
-        <div class="uk-navbar-right">
+        <div class="uk-navbar-right scroll-to-section">
             <a id="__theme-btn" onclick="nightDayHandler(this);">
                 "테마 바꾸기"
                 <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>

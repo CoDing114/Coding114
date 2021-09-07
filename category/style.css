@@ -224,7 +224,10 @@ textarea:focus {
     list-style: none;
     position: fixed;
     top: 400px;
-    left: -10px;
+    padding-left: 0px;
+    right: 10px;
+    text-align: center;
+    z-index: 2;
   }
 }
 /* screen width < 768px */
