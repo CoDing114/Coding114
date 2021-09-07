@@ -131,6 +131,9 @@ print("Redd\b Aapple")
 # \t : Tap 탭
 print("Red\tApple")
 
+
+# ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
 # 5-1 리스트
 
 # subway1 = 10
@@ -212,8 +215,8 @@ print(cabinet.items())
 cabinet.clear()
 print(cabinet)
 
-# ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
+# 5-3
 # 튜플() : 데이터 추가 업데이트 되지 않은 반면 속도가 빠르다
 # name = "CoRilla"
 # age = 20
@@ -221,3 +224,77 @@ print(cabinet)
 # print(name, age, hobby)
 (name, age, hobby) = ("CoRilla", 20, "Coding")
 print(name, age, hobby)
+
+# 5-4 집합 (set)
+# 중복 안됨, 순서 없음
+java = {"rilla", "miki", "joker"}
+python = {"rilla", "huke"}
+
+# 교집합 (Java 와 Python을 모두 할수 잇는 개발자)
+print(java & python)
+print(java.intersection(python))
+
+# 합집합 (Java 혹은 Python 할수잇는 개발자)
+print(java | python)
+print(java.union(python))
+
+# 차집합 (Java 할수잇지만 python 못하는 개발자)
+print(java - python)
+print(java.difference(python))
+
+# 데이터 추가 python 할수 잇는 사람 늘어남
+python.add("joker")
+print(python)
+
+# 데이터 삭제
+java.remove("joker")
+print(java)
+
+# 5-5 자료 구조 변경
+menu = {"커피", "우유", "주스"}
+print(menu, type(menu))
+
+menu = list(menu)
+print(menu, type(menu))
+menu = tuple(menu)
+print(menu, type(menu))
+menu = set(menu)
+print(menu, type(menu))
+
+
+# ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+# 6 - 1 if 조건문
+temp = (-30)
+# temp = int(input("기온은어때요？"))
+if 30 <= temp:
+    print("너무더워요.나가지마세요")
+elif 10 <= temp and temp < 30:
+    print("괜찮은날씨에요")
+elif 0 <= temp < 10:
+    print("외투를챙기세요")
+else:
+    print("너무추워요.나가지마세요")
+
+# 6 - 2 for 반복문
+# print("대기번호 : 1")
+# print("대기번호 : 2")
+# print("대기번호 : 3")
+# print("대기번호 : 4")
+# print("대기번호 : 5")
+for waitiong_no in range(1, 6):  # [1,2,3,4,5]  # randrange()와 동일
+    print("대기번호: {0}".format(waitiong_no))
+
+starbucks = ["아이언맨", "토르", "그루트"]
+for customer_st in starbucks:
+    print("{0},커피가 준비 되었습니다.".format(customer_st))
+
+
+# 6 - 3 while 반복문 어떤 조건이 만족될때까지 반복 2:09:33
+customer_tr = "토르"
+index_TR = 5
+while index_TR >= 1:
+    print("{0},커피가준비되었습니다.{1}번 남았어요.".format(customer_tr, index_TR))
+    index_TR -= 1
+    if index_TR == 0:
+        print("커피는 폐기처분 되었습니다.")
