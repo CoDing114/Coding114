@@ -225,7 +225,66 @@
                     <li></li>
                     <li></li>
                   </ul>
-              
+                  <h2>함수</h2>
+                  <blockquote><code>
+                    <p>함수를 정의할땐 <code>def</code>로 시작하며 함수 이름을 적고, 괄호() 열고 닫고 나서, 콜론":"으로 정의 하고나서 함수내에서 실제로 수행되는 내용을 작성 하면된다 </p>
+                  <p>함수 생성후엔 호출해줘야 실행 될수잇다</p>
+                  </code></blockquote>
+                  <pre class="snippet"><code>
+  def open_account(): # 함수 정의
+      print("새로운 계좌가 생성되었습니다")
+
+  open_account() # 함수 호출
+                  </code></pre>
+
+                  <h2>긴코드 줄바꿈</h2>
+                  <blockquote><code>
+                    긴코드 사용중엔 "\"를 넣으면 코드에 영향없이 보기좋게 줄바꿈하여 사용할수잇다.
+                  </code></blockquote>
+                  <pre class="snippet"><code>
+  def profile(name, age=20, main_lang="python"):
+      print("이름:{0}\t나이:{1}\t언어:{2}" \
+        .format(name, age, main_lang))
+
+
+  profile("CoRilla")
+  profile("MIKI", 20, "Java")
+                  </code></pre>
+                  <h2># 4.5 탈출 문자</h2>
+                  <pre class="snippet"><code>
+  # \n :줄 바꿈
+  print("문장 \n 줄 바꿈")
+
+  # \": 문장내 \" \' 따옴표
+  print("저는 '코릴라' 입니다")
+  print("저는 \"코릴라\" 입니다")
+
+  # \\: 문장내 역슬러시 \
+  print("C:\\Bitnami\\wampstack-8.0.8-0\\apache2\\htdocs> ")  # 역슬러시 두개를 하나로 간주
+
+  # \r: 커서 맨 앞으로 이동
+  print("Red Apple\rPine")
+
+  # \b: 백스페이스 (한글자 삭제)
+  print("Redd\b Aapple")
+
+  # \t : Tap 탭
+  print("Red\tApple")
+                  </code></pre>
+                  <h2>print할때 뒤에 이어 프린터 하고 싶을때 ,end""활용</h2>
+                  <pre class="snippet"><code>
+  def profile(name, age, *languages):
+  print("이름:{0}\t나이:{1}\t".format(name, age), end="언어:")
+  for lang in languages:
+      print(lang, end=" ")
+  print()
+
+
+  profile("Corilla", 20, "python", "java", "C", "C++", "C#")
+  profile("MIKI", 20, "python", "Java")
+                  </code></pre>
+
+                  
                 </div>
               </section>
           </div>

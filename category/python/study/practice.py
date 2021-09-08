@@ -291,6 +291,7 @@ for customer_st in starbucks:
 
 
 # 6 - 3 while 반복문 어떤 조건이 만족될때까지 반복 2:09:33
+# 예제1
 customer_tr = "토르"
 index_TR = 5
 while index_TR >= 1:
@@ -298,3 +299,179 @@ while index_TR >= 1:
     index_TR -= 1
     if index_TR == 0:
         print("커피는 폐기처분 되었습니다.")
+# 예제2
+# customer_rl = "릴라"
+# person = "Unknown"
+# while person != customer_rl:
+#     print("{0}, 커피가 준비 되었습니다.".format(customer_rl))
+#     person = input("이름이 어떻게 되세요")
+
+# 6 - 4 Continue 와 break
+# continue는 계속해서 다음 반복을 진행, break는 반복문을 종료하고 끝낸다
+absent = [2, 5]  # 결석 2명
+no_book = [7]
+for student in range(1, 11):  # 1 부터 10
+    if student in absent:
+        continue
+    elif student in no_book:
+        print("오늘 수업 여기까지,{0}는 옥상으로 따라와".format(student))
+        break
+    print("{0},책을 읽어봐".format(student))
+
+# 한줄 for 문
+# 예제1:
+# 출석번호가 1,2,3,4, 앞에 100을 붙이기로 함 -> 101,102,103,104..
+students_for = [1, 2, 3, 4, 5]
+print(students_for)
+# i에 100을 더하는데, i에 students_for의 값을 불러온다
+students_for = [i+100 for i in students_for]
+print(students_for)
+
+# 예제2:
+# 학생 이름을 길이로 변환
+student_len = ["Iron man", "Thor", "I am groot"]
+# i값의 길이를 구하는데,i의 값은 student_len변수에서 가져온다
+student_len = [len(i) for i in student_len]
+print(student_len)
+
+# 예제3
+# 학생 이름을 대문자로 변환
+student_upper = ["Iron man", "Thor", "I am groot"]
+student_upper = [i.upper() for i in student_upper]
+print(student_upper)
+
+# ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+# 7 - 1 함수
+# 함수를 정의할땐 def로 시작하며 함수 이름을 적고, 괄호() 열고 닫고 나서, 콜론":"으로 정의 하고나서 함수내에서 실제로 수행되는 내용을 작성 하면된다
+# 함수 생성후엔 호출해줘야 실행 될수잇다
+
+
+def open_account():  # 함수 정의
+    print("새로운 계좌가 생성되었습니다")
+
+
+open_account()  # 함수 호출
+
+# 7 - 2 전달 값과 반환 값
+
+# 예제1:
+
+
+def deposit(balance, money):  # 입금
+    print("입금이 완료 되었습니다. 잔액은 {0}원 입니다".format(balance + money))
+    return balance + money
+
+# 예제2:
+
+
+def withdraw(balance, money):  # 출금
+    if balance >= money:  # 잔액이 출금보다 많을때
+        print("출금이 완료 되었습니다. 잔액은 {0}원 입니다".format(balance - money))
+        return balance - money
+    else:
+        print("출금이 완료되지 않았습니다.잔액은 {0}원 입니다".format(balance))
+        return balance
+# 예제3:
+
+
+def withdraw_night(balance, money):  # 야간 출금
+    commissin = 100  # 수수료 100원
+    return commissin, balance - money - commissin
+
+
+balance = 1000
+balance1 = deposit(balance, 1000)  # deposit의 계산 결과를 반환받는다
+balance2 = withdraw(balance, 5000)
+balance2 = withdraw(balance, 200)
+commissin, balance3 = withdraw_night(balance, 600)
+print("야간 수수료는 {0}원 이며, 잔액은 {1}원 입니다.".format(commissin, balance3))
+print(balance1)
+print(balance2)
+print(balance3)
+
+# 7 - 3 기본 값
+# 기본 값은 값이 있을땐 주어진값을 반환하지만 값이 없을땐 설정된 값을 반환한다
+# def profile(name, age, main_lang):
+#     print("이름:{0}\t나이:{1}\t언어:{2}"
+#           .format(name, age, main_lang))
+
+
+# profile("corilla", 20, "python")
+# profile("miki", 20, "python")
+
+def profile(name, age=20, main_lang="python"):
+    print("이름:{0}\t나이:{1}\t언어:{2}"
+          .format(name, age, main_lang))
+
+
+profile("CoRilla")
+profile("MIKI", 20, "Java")
+
+# 7 - 4 키워드 값
+# 키워드를 이용해서 함수를 호출해주면 순서와 상관없이 잘 전달 된다
+
+
+def profile(name, age=20, main_lang="python"):
+    print(name, age, main_lang)
+
+
+profile(name="CoRilla", age=20, main_lang="python")
+profile(age=20, main_lang="python", name="Miki")
+
+
+# 7 - 5 가변 인자 를 이용한 함수 호출
+# 가변인자 사용전:
+# def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+#     print("이름:{0}\t나이:{1}\t".format(name, age), end="언어:")
+#     print(lang1, lang2, lang3, lang4, lang5)
+
+
+# profile("Corilla", 20, "python", "java", "C", "C++", "C#")
+# profile("MIKI", 20, "python", "Java", " ", " ", " ")
+
+# 가변인자 사용후:
+def profile(name, age, *languages):
+    print("이름:{0}\t나이:{1}\t".format(name, age), end="언어:")
+    for lang in languages:
+        print(lang, end=" ")
+    print()
+
+
+profile("Corilla", 20, "python", "java", "C", "C++", "C#")
+profile("MIKI", 20, "python", "Java")
+
+# 7 - 6 지역변수 완 전역변수
+# 지역변수: 함수내에서만 쓸수잇다, 함수가 호출될때 만들어 졋다가 함수가 끝나면 사라진다
+# 전역변수: 프로그램 내 모든 공간에서 사용가능
+
+# 예제1: 지역변수만 사용
+
+
+def checkpoint(soldiers):
+    gun = 10  # 지역변수 사용
+    gun = gun - soldiers
+    print("[함수 내] 남은 총: {0}".format(gun))
+
+
+# 예제2: 전역변수인 글로벌 변수 불러오기
+gun = 10
+
+
+def checkpoint(soldiers):
+    global gun  # 전역공간에 잇는 gun 사용
+    gun = gun - soldiers
+    print("[함수 내] 남은 총: {0}".format(gun))
+
+
+# 예제3: 전역 변수 및 리턴 [추천]
+def checkpoint_ret(gun, soldiers):
+    gun = gun - soldiers
+    print("[함수 내] 남은 총: {0}".format(gun))
+    return gun
+
+
+print("전체 총:{0}".format(gun))
+checkpoint(2)  # 2명 경계 근무 나감
+gun = checkpoint_ret(gun, 2)
+print("남은 총: {0}".format(gun))
