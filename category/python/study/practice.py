@@ -53,7 +53,7 @@ print(sqrt(16))     # 4 제곱근.
 
 # 8. 랜덤 함수
 print("# 8. 랜덤 함수")
-#from random import *
+# from random import *
 print(random())  # 0.0 ~ 1.0
 print(random() * 10)  # 0.0 ~ 10.0
 print(int(random() * 10))  # 0.0 ~ 10.0
@@ -475,3 +475,88 @@ print("전체 총:{0}".format(gun))
 checkpoint(2)  # 2명 경계 근무 나감
 gun = checkpoint_ret(gun, 2)
 print("남은 총: {0}".format(gun))
+
+
+# ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+# 8 - 1 표준 입출력
+# sep="," 문단 구분기호
+# end="?" 뒤 문장과 현문장 한문장으로 표현
+
+# .items(): key 와 value를 불러온다
+# ljust: 공강확보 및 왼쪽 정렬
+# rjust: 공간확보 및 오른쪽 정렬
+scores = {"수학": 0, "영어": 50, "코딩": 100}
+for subject, score in scores.items():
+    # print(subject, score)
+    print(subject.ljust(4), str(score).rjust(4), sep=":")
+
+# .zfill(): 공간확보민 빈자리 0을 채운다
+# 예제: 은행 대기순번표 001,002,003,...
+for num in range(1, 21):
+    print("대기번호:" + str(num).zfill(3))
+
+# input: 사용자 입력(을 통해서 받게되면 항상 문자열 형식으로 저장된다)
+# answer = input("아무 값이나 입력하세요 : ")
+# print(type(answer))
+# print("입력하신 값은" + answer + "입니다")
+
+# 8 - 2 다양한 출력 포맷
+# 3자리 마다 콤마를 찍어주기, 부호도 붙이고, 자릿수 확보하기
+# 빈자리는 $로 채워주기
+print("{0:$>+18,}".format(2700000000))
+
+# 소수점 출력 및 소수점 둘째 자리까지만 출력
+print("{0:.2f}".format(5/3))    # 1.666667 > 1.67
+
+
+# 8 - 3 파일 입출력
+# 파일에 데이터 쓰기
+# score_file = open("score.txt", "w", encoding="utf8")
+# print("수학 : 0", file=score_file)
+# print("영어 : 60", file=score_file)
+# score_file.close()
+
+# score_file = open("score.txt", "a", encoding="utf-8")
+# score_file.write("과학 : 80")
+# score_file.write("\n코딩 : 100")
+# score_file.close()
+
+# 파일 데이터 읽기
+# 예1: 전체 데이터 읽어오기
+# score_file = open("score.txt","r",encoding="utf8")
+# print(score_file.read())
+# score_file.close()
+
+# 예2:한줄씩 읽어 오기
+# score_file = open("score.txt","r",encoding="utf8")
+# print(score_file.readline(),end=" ")
+# print(score_file.readline(),end=" ")
+# print(score_file.readline(),end=" ")
+# print(score_file.readline(),end=" ")
+# score_file.close()
+
+# 예3: while문으로 전체 데이터 불러오기
+# score_file = open("score.txt","r",encoding="utf8")
+# while True:
+#     line = score_file.readline()
+#     if not line:
+#         break
+#     print(line,end="")
+# score_file.close()
+
+# 예4: 리스트형태로 불러와서 출력할수있다
+score_file = open("score.txt", "r", encoding="utf8")
+lines = score_file.read()
+for line in lines:
+    print(line, end="")
+score_file.close()
+
+
+# 8 - 4 pickle
+
+
+
+
+# ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ

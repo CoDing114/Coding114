@@ -24,7 +24,7 @@ if req.status_code == requests.codes.ok:
 
 print('----')
 
-wb.save("kimp.xlsx")
+# wb.save("kimp.xlsx")
 #     for rank in stock_data["data"]:
 #         print(rank['korean_name'], rank['englisho_name'])
 
