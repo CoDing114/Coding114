@@ -199,6 +199,14 @@
                   <pre class="snippet"><code>
                     pip install some-package-name
                   </code></pre>
+                  <h2>설치list</h2>
+                  <pre class="snippet"><code>
+                    pip list
+                  </code></pre>
+                  <h2>패키지 정보</h2>
+                  <pre class="snippet"><code>
+                    pip show some-package-name
+                  </code></pre>
                   <h2>제거</h2>
                   <pre class="snippet"><code>
                     pip uninstall some-package-name
@@ -284,7 +292,27 @@
   profile("MIKI", 20, "python", "Java")
                   </code></pre>
 
-                  
+                  <h2>VSCODE 작업 디렉토리 설정 [파일 저장 위치 현위치로 변경]</h2>
+                  <blockquote><code>
+                    Ctrl + P 를 눌러  launch.json  파일을 찾는다<br>
+                    Python 구성에  "cwd": "${fileDirname}"  을 추가해준다 
+                  </code></blockquote>
+                  <pre class="snippet"><code>
+    {
+      "version": "0.2.0",
+      "configurations": [
+          {
+              "name": "Python: Current File (Integrated Terminal)",
+              "type": "python",
+              "request": "launch",
+              "program": "${file}",
+              "console": "integratedTerminal",
+              "cwd": "${fileDirname}" //  "Current File" 
+          },
+      ]
+  }
+                  </code></pre>
+
                 </div>
               </section>
           </div>
