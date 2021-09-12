@@ -1,4 +1,4 @@
-# DreamCoding
+# CoRilla
 
 <h3><a href="https://coding114.github.io/Coding114/index.html">코린이의 실습 필기<a/></h3>
 <ol>
