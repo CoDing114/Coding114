@@ -235,6 +235,9 @@
     response: 웹서버가 응답한 결과 값
                     </code></pre>   
                       
+                    <ol id="nav"></oL>
+                      <article id="contents"></article>
+                
                   </section>
                   </div>
                   <footer class="section" id="__footer" data-section="__footer">
@@ -279,5 +282,37 @@
   gtag('js', new Date());
   gtag('config', 'UA-180336562-1');
 </script><!-- End Global Google Analytics -->
+
+<script>
+  function fetchPage(name){
+  fetch(name).then(function(response){ 
+      response.text().then(function(text){
+      document.getElementById('contents').innerHTML=text;
+      })
+  });
+} 
+  if(location.hash){
+  fetchPage(location.hash.substr(2));
+} else{
+  fetchPage('data/welcome');
+} 
+  fetch('data/list_v2').then(function(response){
+  response.text().then(function(text){
+  var items=text.split(','); 
+  var i=0; 
+  var tags=''; 
+  while(i<items. length){
+      var item=items[i]; 
+      item=item.trim(); 
+      // var tag='<li><a href="'+item+'.html"onclick="fetchPage(\''+item+'\')">'+item+'</a></li>'; 
+      var tag='<li><a href="#!data/'+item+'"onclick="fetchPage(\'data/'+item+'\')">'+item+'</a></li>'; 
+      tags=tags+tag; 
+      i=i+1; 
+  }
+  document.getElementById('nav').innerHTML=tags;
+  })
+});
+</script>
+
 </body>
 </html>

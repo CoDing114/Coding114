@@ -10,52 +10,50 @@
     <h1><a href="./Ajax_fetch.html">WEB</a> </h1>
     <div></div>
     <pre><code>
-        fetch(name).then(function(response){ 
-            response.text().then(function(text){
-            document.queryselector('article').innerHTML=text;
-            })
-        });
-    } 
-
-    fetch() : 서버로 부터 요청한다
-    then()  : Asynchronous (비동기) 
-    response: 웹서버가 응답한 결과 값
-    </code></pre>
-    <ol id="nav"></oL>
-    <article id="contents"></article>
-    <script>
-        function fetchPage2(name){
+        function fetchPage(name){
             fetch(name).then(function(response){ 
                 response.text().then(function(text){
                 document.getElementById('contents').innerHTML=text;
                 })
             });
-        }
-        if(location.hash){
-            fetchPage2(location.hash.substr(2));
-        } else{
-            fetchPage2('data/welcome');
         } 
-        fetch('data/list').then(function(response){ 
+            if(location.hash){
+            fetchPage(location.hash.substr(2));
+        } else{
+            fetchPage('data/welcome');
+        } 
+            fetch('data/list_v2').then(function(response){
             response.text().then(function(text){
-            document.getElementById('nav').innerHTML=text;
+            var items=text.split(','); 
+            var i=0; 
+            var tags=''; 
+            while(i&ltitems. length){
+                var item=items[i]; 
+                item=item.trim(); 
+                var tag='&ltli>&lta href="#data/'+item+'"onclick="fetchPage(\'data/'+item+'\')">'+item+'&lt/a>&lt/li>'; 
+                tags=tags+tag; 
+                i=i+1; 
+            }
+            document.getElementById('nav').innerHTML=tags;
             })
         });
-    </script>
-    <!-- <script>
+    </code></pre>
+    <ol id="nav"></oL>
+    <article id="contents"></article>
+<script>
         function fetchPage(name){
         fetch(name).then(function(response){ 
             response.text().then(function(text){
-            document.getElementById('nav').innerHTML=text;
+            document.getElementById('contents').innerHTML=text;
             })
         });
     } 
         if(location.hash){
         fetchPage(location.hash.substr(2));
     } else{
-        fetchPage('welcome');
+        fetchPage('data/welcome');
     } 
-        fetch('list_v2').then(function(response){
+        fetch('data/list_v2').then(function(response){
         response.text().then(function(text){
         var items=text.split(','); 
         var i=0; 
@@ -64,14 +62,13 @@
             var item=items[i]; 
             item=item.trim(); 
             // var tag='<li><a href="'+item+'.html"onclick="fetchPage(\''+item+'\')">'+item+'</a></li>'; 
-            var tag='<li><a href="'+item+'"onclick="fetchPage(\''+item+'\')">'+item+'</a></li>'; 
+            var tag='<li><a href="#!data/'+item+'"onclick="fetchPage(\'data/'+item+'\')">'+item+'</a></li>'; 
             tags=tags+tag; 
             i=i+1; 
         }
-        document.getElementById('contents').innerHTML=tags;
+        document.getElementById('nav').innerHTML=tags;
         })
     });
-    // <li><a href="#!html" onclick="fetchPage("html")">html</a></li>
-    </script> -->
+    </script>
 </body>
 </html>
