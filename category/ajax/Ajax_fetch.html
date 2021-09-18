@@ -7,15 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    <ol id="nav">
-    </o1>
-    <article>
-    </article>
-    <script>
-        function fetchPage(name){
+    <h1><a href="./Ajax_fetch.html">WEB</a> </h1>
+    <div></div>
+    <pre><code>
         fetch(name).then(function(response){ 
             response.text().then(function(text){
             document.queryselector('article').innerHTML=text;
+            })
+        });
+    } 
+
+    fetch() : 서버로 부터 요청한다
+    then()  : Asynchronous (비동기) 
+    response: 웹서버가 응답한 결과 값
+    </code></pre>
+    <ol id="nav"></oL>
+    <article id="contents"></article>
+    <script>
+        function fetchPage2(name){
+            fetch(name).then(function(response){ 
+                response.text().then(function(text){
+                document.getElementById('contents').innerHTML=text;
+                })
+            });
+        }
+        if(location.hash){
+            fetchPage2(location.hash.substr(2));
+        } else{
+            fetchPage2('data/welcome');
+        } 
+        fetch('data/list').then(function(response){ 
+            response.text().then(function(text){
+            document.getElementById('nav').innerHTML=text;
+            })
+        });
+    </script>
+    <!-- <script>
+        function fetchPage(name){
+        fetch(name).then(function(response){ 
+            response.text().then(function(text){
+            document.getElementById('nav').innerHTML=text;
             })
         });
     } 
@@ -24,7 +55,7 @@
     } else{
         fetchPage('welcome');
     } 
-        fetch('list').then(function(response){
+        fetch('list_v2').then(function(response){
         response.text().then(function(text){
         var items=text.split(','); 
         var i=0; 
@@ -32,13 +63,15 @@
         while(i<items. length){
             var item=items[i]; 
             item=item.trim(); 
-            var tag='<li><a href="'+item+'.html"onclick="fetchPage(\''+item+'\')">'+item+'</a></li>'; 
+            // var tag='<li><a href="'+item+'.html"onclick="fetchPage(\''+item+'\')">'+item+'</a></li>'; 
+            var tag='<li><a href="'+item+'"onclick="fetchPage(\''+item+'\')">'+item+'</a></li>'; 
             tags=tags+tag; 
             i=i+1; 
         }
-        document.querySelector('#nav').innerHTML=tags;
+        document.getElementById('contents').innerHTML=tags;
         })
     });
-    </script>
+    // <li><a href="#!html" onclick="fetchPage("html")">html</a></li>
+    </script> -->
 </body>
 </html>
