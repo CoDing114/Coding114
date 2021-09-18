@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="section" data-section="__HUKE" id="__HUKE">
+
+<head>
+  <title> WEB - CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <link rel="stylesheet" href="../src/dist/css/clipboard.css"> <!-- Clipboard -->
+    <link href="../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+
+  <!--
+      style 태그 컬러변경 [중복제거];
+      [.]을 붙이면 페이지의 class를 의미, class 값은 여러개가 들어갈수잇고 띄어쓰기로 구분한다;
+      [#]을 붙이면 페이지의 id를 의미,id 값은 한번만 사용가능 중복불가;
+      id > class > 태그, 포괄적인것보다 구체적인것의 우선순위를 높엿다
+    -->
+  <style>
+    /* 
+      link 태그를 이용하여 중복제거
+      예:<link rel="stylesheet" href="style.css"> 
+      */
+  </style>
+
+</head>
+<body>
+
+<div class="content-wrapper">
+  <div class="container">
+    <nav class="navbar navigation" data-function="navbar">
+      <a class="navbar__logo" href="../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <button class="navbar-toggle">
+        <svg class="menu-icon" viewBox="0 0 1024 1024">
+          <path d="M896.876 319.65h-768.751c-14.152 0-25.625-11.473-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.473 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z" />
+        </svg>
+      </button>
+
+      <div>
+        <ul class="nav">
+          <li>
+            <a href="../index.html">Home
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+            <ul class="subnav">
+              <li><a href="../index.html">Main</a></li>
+              <li>
+                <a href="../index.html#old_version">
+                  OLD Version List
+                  <svg class="parent-icon" viewBox="0 0 1024 1024">
+                    <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                  </svg>
+                  <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                    <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                  </svg>
+                </a>
+                <ul class="subnav">
+                  <li><a href="../OLD_Version/CoRilla_v0.0.1/index.html">CoRilla v.0.0.1</a></li>
+              <li><a href="../OLD_Version/CoRilla_v1.0.1/index.html">CoRilla v.1.0.1</a></li>
+              <li><a href="../OLD_Version/CoRilla_v2.0.0/category/index.html">CoRilla v.2.0.0</a></li>
+              <li><a href="../OLD_Version/CoRilla_v2.0.1/index.html">CoRilla v.2.0.1</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li  class="active">
+            <a href="#">
+              Navigate
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+
+            <div class="subnav">
+              <ul class="row nomargin">
+                <li class='col-4'>
+                  <ul class="">
+                    <li>
+                      <a href="../html/index.html">
+                        HTML
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                          <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                        </svg>
+                        <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                          <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                        </svg>
+                      </a>
+                      <ul class="subnav">
+                        <li><a href="../html/html실용편.html">HTML 실용편</a></li>
+                      <li><a href="../html/clipboard.html">클립보드</a></li>
+                      </ul>
+                    </li>
+                    <li  class="active"><a href="../css/index.html">CSS
+                      <svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li><a href="../css/css box.html">CSS_BOX</a></li>
+                    <li><a href="../css/css grid.html">CSS_GRID</a></li>
+                    <li><a href="../css/css media query.html">CSS_Media_Query</a></li>
+                  </ul></li>
+                    <li><a href="../javascript/index.html">JavaScript<svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li>
+                      <a href="#">
+                        Method
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                          <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                        </svg>
+                        <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                          <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                        </svg>
+                      </a>
+                      <ul class="subnav">
+                        <li><a href="../javascript/method/index.html">&lt/> JavaScript Code</a></li>
+                        <li><a href="#">Corporate</a></li>
+                        <li><a href="#">Industrial</a></li>
+                        <li><a href="#">Government</a></li>
+                      </ul>
+                    </li>
+                        <li><a href="../javascript/js ex1[연산자].html">연산자</a></li>
+                        <li><a href="../javascript/js ex2[배열&문법].html">배열&문법</a></li>
+                        <li><a href="../javascript/js ex3[반복문].html">반복문</a></li>
+                        <li><a href="../javascript/js ex4[배열과 반복문].html">배열과&반복문</a></li>
+                        <li><a href="../javascript/js ex5[함수function].html">함수Function</a></li>
+                        <li><a href="../javascript/js ex6 야간모드.html">야간모드</a></li>
+                        <li><a href="../javascript/js ex7 객체(object).html">객체(object)</a></li>
+                        <li><a href="../javascript/json.html">JSON</a></li>
+                  </ul>
+                </li>
+                    <li><a href="../php/index.html">PHP</a></li>
+                    <li><a href="../database/index.html">DataBase</a></li>
+                    <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+                    <li><a href="../damoa/index.html">damoa</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">Share
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+            <ul class="subnav">
+              <li>
+                <a target="_blank" href="#" title="Share Navbar.js on Facebook">
+                  <svg class="menu-icon" viewBox="0 0 1024 1024">
+                    <path d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="#" title="Share Navbar.js on Twitter">
+                  <svg class="menu-icon" viewBox="0 0 1024 1024">
+                    <path d="M731.429 348.571c-21.714 9.714-44.571 16-69.143 19.429 25.143-14.857 44-38.857 53.143-66.857-23.429 13.714-49.143 24-76.571 29.143-21.714-23.429-53.143-37.714-87.429-37.714-66.286 0-120 53.714-120 120 0 9.143 0.571 18.857 2.857 27.429-100-5.143-188.571-52.571-248-125.714-10.286 17.714-16.571 38.857-16.571 60.571 0 41.714 19.429 78.286 52 100-20-0.571-38.857-6.286-57.143-14.857v1.143c0 58.286 44 106.857 98.857 117.714-10.286 2.857-18.286 4.571-29.143 4.571-7.429 0-14.857-1.143-22.286-2.286 15.429 47.429 59.429 82.286 112 83.429-41.143 32-92.571 51.429-149.143 51.429-9.714 0-19.429-0.571-28.571-1.714 53.143 33.714 116 53.714 184 53.714 220.571 0 341.714-182.857 341.714-341.714 0-5.143 0-10.286-0.571-15.429 23.429-16.571 44-37.714 60-62.286zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z" />
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="copy navbar-content">
+          <span><a target="_blank" href="https://github.com/CoDing114">HUKE</a> &copy; 2030</span>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="content-inner main">
+        <div  id="grid">
+           <section id="section_1">
+             <h2><a href="https://developer.mozilla.org/ko/docs/Web/CSS" target="_blank">CSS 자료</a></h2>
+             <div id="inlinebox">
+               <h2>Display&Position</h2>
+               <ul>
+                 <li>div:블럭 레벨이라 한줄에 하나씩 나온다</li>
+                 <li>span: inline레벨이라 공간만되면 한줄에 여러개 나온다</li>
+                 <li>display:레벨 기본값 변경이 가능하다</li>
+                 <li>inline:한줄에 여러개가 들어갈수잇다</li>
+                 <li>inline-block:한줄에 여러개가 들어갈수잇는 box</li>
+                 <li>block:한줄에 하나만 들어가는 box</li>
+               </ul>
+               <h2>container box Position</h2>
+               <ul>
+                 <li>static: 기본적으로 가지고 잇고 HTML에 정의된 순서대로 브라우저 상에 자연스럽게 보여진다</li>
+                 <li>relative: 원래 잇어야하는 자리에서 지정한 위치까지 이동</li>
+                 <li>absolute: 내 아이템이 담겨 잇는 박스 안에서 원하는 위치까지 이동한다</li>
+                 <li>fixed: 박스를 벗어나 윈도우 안에서 지정위치까지 이동</li>
+                 <ul>
+                   <li>
+                     flex-flow:아래 내용을 묶어서 사용가능 [flex-flow:column wrap;]
+                   </li>
+                   <ul>flex-direction:순서 바꾸기:
+                     <li>row:왼쪽에서 오른쪽 방향 정렬</li>
+                     <li>row-reverse:오른쪽에서 외쪽 정렬</li>
+                     <li>column:위에서 아래 정렬</li>
+                     <li>column-reverse:아래서 위 정렬</li>
+                   </ul>
+                   <ul> flex-wrap:한줄에 꽉찻을때의 동장 정의
+                     <li>nowrap:지정하지 않는다 한줄에 붙어 잇는다</li>
+                     <li>wrap:한줄에 꽉 차게 되면 자동으로 다음 라인으로 넘어간다</li>
+                     <li>wrap-reverse:꺼꾸로 wraping된다</li>
+                   </ul>
+                 </ul>
+                 <li>justify-content:중심축에서 아이템 들을 어떻게 배치할건지를 결정해준다</li>
+                 <ul>justify-content: space-between;[양옆에는 붙이고 중간에만 간격을 넣어 준다]
+                   <li>flex-start:기본 값 왼쪽에서 오른쪽으로 정렬</li>
+                   <li>flex-end:오른쪽 축으로 아이템 배치(순서는 유지) 
+                     [여기서 flex-direction이 column이면 아래 축으로 배치 된다</li>
+                   <li>center:아이템을 가운데로 맞춘다</li>
+                   <li>space-around:매개 박스에 간격을 넣어 준다</li>
+                   <li>space-evenly:박스 간격을 똑같이 넣어 준다</li>
+                   <li>space-between:양옆에는 붙이고 중간에만 간격을 넣어 준다</li>
+                 </ul>
+                 <li>align-items:반대축에서 아이템들을 배치하는 속성 값</li>
+                 <ul>align-items:center;
+                   <li>align-items:center;상자들을 수직 적으로 중간에 배치</li>
+                   <li>baseline:베이스 라인에 맞춰서 균등하게 보여준다</li>
+                 </ul>
+                 <li>align-content:반대축에 아이템을 지정하게 된다</li>
+                 <ul>justify-content 나왓던 속성들을 다 쓸수잇다 
+                   (*쓰기전 브라우저가 지원하는지 확인 필요)
+                   <li>space-between:위 아래는 붙이고 중간에만 간격을 넣어 준다</li>
+                   <li>center:아이템을 중간으로 맞춘다</li>
+                 </ul>
+                   <li>flex-grow:아이템이 커질때의 크기 정의</li>
+                   <li>flex-shrink:아이템이 작아질때의 크기 정의</li>
+                   <li>flex-basis:아이템들이 공간을 얼마나 차지할껀지 세부적 정의[flex-basis:60%]이런식으로 grow,shrink없이도 매개 박스의 크기를 설정할수잇다</li>
+                   <li>align-self:아이템별로 아이템들을 정렬할수잇다</li>
+                   <li>sticky: 원래 잇어야하는 자리에 잇으면서 대신 스크롤링 되어도 사라지지않는다</li>
+                 <h3>Units</h3>
+                 <ul>Absolute length units [고정형]
+                   <li>cm:Centimeteers</li>
+                   <li>mm:Millimeters</li>
+                   <li>Q:Quarter-millimeters</li>
+                   <li>in:Inches</li>
+                   <li>pc:Picas</li>
+                   <li>pt:Points-</li>
+                   <li>px:Pixels-</li>
+                 </ul>
+                 <ul>Relative length units [상대적 유닛]
+                   <li>em:현재 지정된 포인트 사이즈를 나타내는 단위,부모의 폰트 사이즈를 곱한 값 으로 계산된다</li>
+                   <li>ex:</li>
+                   <li>ch:</li>
+                   <li>rem:루트에 지정된 폰트 사이지에 따라서 크기가 결정된다</li>
+                   <li>lh:</li>
+                   <li>vw:뷰폴트(브라우저) 너비의 지정 크기 만큼 쓴다</li>
+                   <li>vh:뷰폴트(브라우저) 높이의 지정 크기 만큼 쓴다</li>
+                   <li>vmin:뷰폴트(브라우저) 너비 와 높이 중 작은 값의 지정 크기 만큼 쓴다</li>
+                   <li>vmax:뷰폴트(브라우저) 너비 와 높이 중 큰은 값의 지정 크기 만큼 쓴다</li>
+                   <li>%:부모요소의 상대적 퍼센트 값</li>
+                   <li>*%는 부모 요소의 영향을 받지만 v는 부모요소와 상관없이 브라우저 크기에 따라 변한다</li>
+                 </ul>
+               </ul>
+             </div>
+             <div id="inlinebox">
+               <h2><a href="../css grid.html">그리드 컨테이너 display: grid;</a></h2>
+               <div>
+                 유연한 트랙을 만들수잇다.
+                 그리드 컨테이너는 요소에 display: grid 또는 display: inline-grid를 선언하여 만듭니다.
+                 이렇게 하면 해당 요소 바로 밑에 있는 모든 자식 요소는 그리드 아이템이 됩니다.
+               </div>
+             </div>
+             <div id="inlinebox">
+               <h2>자주 쓰틑 속성</h2>
+               <ul>
+                 <li>transform: 좌표공간을 변형</li>
+                 <li>opacity: 투명도 설정 0.8 = 80%</li>
+                 <li>color: 글자 색</li>
+                 <li>background color: 배경색</li>
+                 <li>decoration: 꾸미다.</li>
+                 <li>text-decoration:글씨의 장식(선) 색을 지정</li>
+                 <li>list-style:목록 스타일 속성</li>
+                 <li>transition:애니메이션 속도를 조절</li>
+                 <li>order:현재 아이템이 잇는 순서를 바꿀수잇다 [order:2;]</li>
+                 <li>z-index: Z축 순서를 숫자로 지정  </li>
+                 <li>overflow:요소의 콘텐츠가 너무 커서 요소의 블록 서식 맥락에 맞출 수 없을 때의 처리법</li>
+                 <li>text-align: -webkit-center; 콘텐츠 센터 정렬</li>
+                 <li>vertical-align:속성은 인라인 또는 테이블 셀 상자로 도피합니다.</li>
+                 <ul><li>vertical-align:inline 또는 table-cell box에서의 수직 정렬을 지정합니다.</li></ul>
+                 <li>border-radius: 둥근 테두리 [원:50%;]</li>
+                 <li>element+element:"+"element 뒤에 따라오는 첫 element만 선택</li>
+               </ul>
+             </div>
+       
+             <div id="inlinebox">
+               <h2>CSS선택자(css selector):</h2>
+               <blockquote><p> 우선순위: <code>id</code> > <code>class</code> > <code>태그(element)</code> ;</p></blockquote>
+               <pre class="snippet"><code>
+         id = " # "  
+         class = " . "
+         element = " a,q,h1,h2 " 
+                 </code>
+               </pre>
+             </div>
+             <div id="inlinebox">
+               <h4>Property,속성</h4>
+               <pre class="snippet"><code>
+         a = Selector 선택자
+         color:red= declaration,선언,효과
+         color = Property,속성
+         red = Property Value,값
+               </code></pre>
+               <img src="../assets/img/css declaration.jpg" width="30%">
+             </div>
+             <div id="inlinebox">
+               <h2>반응형 디자인 Media Query</h2>
+         <blockquote><p>화면의 크기에 따라 웹 페이지의 각요소들이 반응하여동작하게 된다.</p></blockquote>
+               <pre class="snippet"><code>
+         /* screen width >800px min[초소값],max[최대값]*/
+         @media(min-width: 800px){#grid{
+         display: block;
+         }}
+                 </code>
+               </pre>
+             </div>
+           </section>
+         </div>
+       
+         <footer class="section" id="__footer" data-section="__footer">
+           <a id="__designed-by" href="../index.html">
+               "홈페이지 바로가기"
+               <i class="fa fa-code" id="footer_icon"></i>
+           </a>
+           <div class="uk-navbar-right scroll-to-section" >
+               <a id="__theme-btn" onclick="nightDayHandler(this);">
+                   "테마 바꾸기"
+                   <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+               </a>
+               <a id="__toTop" href="#__HUKE">
+                   "제일 위로"
+                   <i class="fa fa-chevron-up" id="footer_icon"></i>
+               </a>
+           </div>
+         </footer>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- Scripts --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+<script src="../src/js/scroll.js"></script> <!-- scroll -->
+<script src="../src/js/nightBtn.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+<script src="../src/dist/js/clipboard.min.js"></script>     <!-- Clipboard -->
+<script src="../src/dist/js/clipboard/snippets.js"></script><!-- Clipboard -->
+<script src="../src/dist/js/clipboard/tooltips.js"></script><!-- Clipboard -->
+<script>  new ClipboardJS('.btn');</script>                 <!-- Clipboard -->
+<script src="../assets/patch/highlight/highlight.min.js"></script>      <!-- 코드 구문 강조 -->
+<script >hljs.highlightAll();</script>                                  <!-- 코드 구문 강조 호출 -->
+<script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+<script >hljs.initLineNumbersOnLoad();</script>                         <!-- 코드 줄 번호 호출 -->
+<script src="../src/js/navbar.es5.min.js"></script><!-- navbar js -->
+<script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+<script> // <!-- Start Google Analytics -->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-180336562-1');
+</script><!-- End Global Google Analytics -->
+
+</body>
+</html>

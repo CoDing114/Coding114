@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1"> 
+    <!-- 기본적인 세팅
+        name="viewport":현재 접속한 디바이스 해상도에 맞게 보여주도록 설정
+        content="width=device-width": 장치의 너비와 일치하게 설정
+        initial-scale=1.0:일반적인 초기 비율 1.0으로 설정
+    -->
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- 
+        <rel="stylesheet": 외부적으로 만들어진 css디자인을 가져온다
+        href="css/bootstrap.css" css디자인을 가져오는 링크를 보여준다
+    -->
+    <!--bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--End bootstrap CSS -->
+    <!--bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--End bootstrap Js -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">홈페이지의 구성을 소개합니다</h1>
+            <p class="text-center">내비게이션 바는 홈페이지의 전체적인 구성을 보여주는 역할을 합니다.
+                내비게이션을 통해서 다른 페이지로 이동하게 하거나 사용자가 원하는 기능을 찾아서 스스로 이동할수 있도록 합니다.
+                내비게이션 바는 일반적으로 HTML소스코드의 가장 위쪽에 위치하며 자바스크립트가 함께 사용됩니다.</p>
+            <p class="text-center"><a class="btn btn-primary btn-lg" href="../index.html" role="button">홈페이지 보러 가기</a></p>
+        </div>
+    </div>
+    <div><h3>Navbar:</h3>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <h3>Components 자주 사용되는 UI</h3>
+      <ul>
+        <li>반응형 웹 Grid</li>
+        <li>Alerts:</li>
+        <li>Carousel:슬라이드</li>
+        <li>Collapse:누르면 나타나는</li>
+        <li>Dropdowns:눌럿을때 내려오는</li>
+        <li>Forms:자주쓰는 폼</li>
+        <li>Modal:팝업창</li>
+        <li>Navs:메뉴 링크</li>
+        <li>navbar:메뉴바</li>
+        <li>Pagination:페이지 바꾸는 기능</li>
+        <li>Popovers:버튼 팝오버</li>
+        <li>Tooltips:버튼 안내창</li>
+        <li>Spinners:Loding...</li>
+        <li>Toasts:안내창</li>
+        
+      </ul>
+    </div>
+    <div><h3>반응형 웹 Grid:</h3>
+      <ul>
+          <li>row는 하나의 행을 뜻하고 "col"은 열을 뜻한다."</li>
+          <li>"sm","md","lg"은 스몰,미듐,라지로 각각의 크기를 나타낸다</li>
+      </ul>
+      <pre>
+      규격:
+      .col-:auto,
+      .col-sm-:540px
+      .col-md-:720px
+      .col-lg:1140px
+  
+      &ltdiv class="row"> 
+      &ltdiv class="col-md-3">Text&lt/div> 
+      &lt/div>
+      </pre>
+      <div class="row"> <!--"row는 하나의 행을 뜻한다"-->
+        <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:teal;">Grid #1</div>
+        <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:thistle;">Grid #2</div>
+        <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:tomato;">Grid #3</div>
+        <div class="col-lg-3" style="background-color:yellow;">Grid $4</div>
+      </div>
+    </div>
+
+    <div><h3>Collapse:</h3>
+      <p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Button with data-bs-target
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+    </div> 
+
+    <div><h3>Dropdowns</h3>
+      <!-- Example split danger button -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger">Action</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div> <h3>Modal:</h3>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <div><h3>Pagination:</h3>
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+</nav>
+    </div>
+    
+    <div> <h3>Spinners:</h3>
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div> <h3>Toasts:</h3>
+      <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+        <div class="toast-header">
+          <img src="..." class="rounded me-2" alt="...">
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+      </div>
+    </div>
+
+    <div> <h3> Tooltips: </h3>
+      <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Disabled tooltip">
+        <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+      </span>
+    </div>
+    <h3>점보트론</h3>
+    <p>홈페이지를 소개할때 사용하는 컴포넌트</p>
+
+    <style type="text/css">
+        .jumbotron { /*jumbotron이란 클래스를 정한다 */
+            background-image: url('images/hacker-without-face-hood-dark_295303-1506.jpg');/*이미지 가져오기 */
+            background-size: cover; /*이미지가 작을때 커버할수잇도록 만든다*/
+            text-shadow: black 0.2em 0.2em 0.2em;
+            color: white;
+        }
+    </style>
+
+    <h2>내비게이션바</h2>
+    <h3>홈페이지의 구성</h3>
+    <p>
+        내비게이션 바는 홈페이지의 전체적인 구성을 보여주는 역할을 합니다.
+        내비게이션을 통해서 다른 페이지로 이동하게 하거나 사용자가 원하는 기능을 찾아서 스스로 이동할수 있도록 합니다.
+        내비게이션 바는 일반적으로 HTML소스코드의 가장 위쪽에 위치하며 자바스크립트가 함께 사용됩니다
+    </p>
+</body>
+</html>

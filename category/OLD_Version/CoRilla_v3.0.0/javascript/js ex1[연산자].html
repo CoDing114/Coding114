@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" class="section" data-section="__HUKE" id="__HUKE">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ex1[연산자]</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link rel="stylesheet" href="../src/dist/css/clipboard.css"> <!-- Clipboard -->
+  <link href="../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+    <!-- highlight Start -->
+    <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+    
+ 
+  </head>
+  <body>
+  
+  <div class="content-wrapper">
+  <div class="container">
+    <nav class="navbar navigation" data-function="navbar">
+      <a class="navbar__logo" href="../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <button class="navbar-toggle">
+        <svg class="menu-icon" viewBox="0 0 1024 1024">
+          <path d="M896.876 319.65h-768.751c-14.152 0-25.625-11.473-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.473 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z" />
+        </svg>
+      </button>
+  
+      <div>
+        <ul class="nav">
+          <li>
+            <a href="../index.html">Home
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+            <ul class="subnav">
+              <li><a href="../index.html">Main</a></li>
+              <li>
+                <a href="../index.html#old_version">
+                  OLD Version List
+                  <svg class="parent-icon" viewBox="0 0 1024 1024">
+                    <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                  </svg>
+                  <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                    <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                  </svg>
+                </a>
+                <ul class="subnav">
+                  <li><a href="../OLD_Version/CoRilla_v0.0.1/index.html">CoRilla v.0.0.1</a></li>
+              <li><a href="../OLD_Version/CoRilla_v1.0.1/index.html">CoRilla v.1.0.1</a></li>
+              <li><a href="../OLD_Version/CoRilla_v2.0.0/category/index.html">CoRilla v.2.0.0</a></li>
+              <li><a href="../OLD_Version/CoRilla_v2.0.1/index.html">CoRilla v.2.0.1</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <a href="#">
+              Navigate
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+  
+            <div class="subnav">
+              <ul class="row nomargin">
+                <li class='col-4'>
+                  <ul class="">
+                    <li>
+                      <a href="../html/index.html">
+                        HTML
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                          <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                        </svg>
+                        <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                          <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                        </svg>
+                      </a>
+                      <ul class="subnav">
+                        <li><a href="../html/html실용편.html">HTML 실용편</a></li>
+                      <li><a href="../html/clipboard.html">클립보드</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="../css/index.html">CSS
+                      <svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li><a href="../css/css box.html">CSS_BOX</a></li>
+                    <li><a href="../css/css grid.html">CSS_GRID</a></li>
+                    <li><a href="../css/css media query.html">CSS_Media_Query</a></li>
+                  </ul></li>
+                    <li class="active"><a href="../javascript/index.html">JavaScript<svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li>
+                      <a href="#">
+                        Method
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                          <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                        </svg>
+                        <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                          <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                        </svg>
+                      </a>
+                      <ul class="subnav">
+                        <li><a href="../javascript/method/index.html">&lt/> JavaScript Code</a></li>
+                        <li><a href="#">Corporate</a></li>
+                        <li><a href="#">Industrial</a></li>
+                        <li><a href="#">Government</a></li>
+                      </ul>
+                    </li>
+                        <li class="active"><a href="../javascript/js ex1[연산자].html">연산자</a></li>
+                        <li><a href="../javascript/js ex2[배열&문법].html">배열&문법</a></li>
+                        <li><a href="../javascript/js ex3[반복문].html">반복문</a></li>
+                        <li><a href="../javascript/js ex4[배열과 반복문].html">배열과&반복문</a></li>
+                        <li><a href="../javascript/js ex5[함수function].html">함수Function</a></li>
+                        <li><a href="../javascript/js ex6 야간모드.html">야간모드</a></li>
+                        <li><a href="../javascript/js ex7 객체(object).html">객체(object)</a></li>
+                        <li><a href="../javascript/json.html">JSON</a></li>
+                  </ul>
+                </li>
+                    <li><a href="../php/index.html">PHP</a></li>
+                    <li><a href="../database/index.html">DataBase</a></li>
+                    <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+                    <li><a href="../damoa/index.html">damoa</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+  
+          <li>
+            <a href="#">Share
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+            <ul class="subnav">
+              <li>
+                <a target="_blank" href="#" title="Share Navbar.js on Facebook">
+                  <svg class="menu-icon" viewBox="0 0 1024 1024">
+                    <path d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="#" title="Share Navbar.js on Twitter">
+                  <svg class="menu-icon" viewBox="0 0 1024 1024">
+                    <path d="M731.429 348.571c-21.714 9.714-44.571 16-69.143 19.429 25.143-14.857 44-38.857 53.143-66.857-23.429 13.714-49.143 24-76.571 29.143-21.714-23.429-53.143-37.714-87.429-37.714-66.286 0-120 53.714-120 120 0 9.143 0.571 18.857 2.857 27.429-100-5.143-188.571-52.571-248-125.714-10.286 17.714-16.571 38.857-16.571 60.571 0 41.714 19.429 78.286 52 100-20-0.571-38.857-6.286-57.143-14.857v1.143c0 58.286 44 106.857 98.857 117.714-10.286 2.857-18.286 4.571-29.143 4.571-7.429 0-14.857-1.143-22.286-2.286 15.429 47.429 59.429 82.286 112 83.429-41.143 32-92.571 51.429-149.143 51.429-9.714 0-19.429-0.571-28.571-1.714 53.143 33.714 116 53.714 184 53.714 220.571 0 341.714-182.857 341.714-341.714 0-5.143 0-10.286-0.571-15.429 23.429-16.571 44-37.714 60-62.286zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z" />
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="copy navbar-content">
+          <span><a target="_blank" href="https://github.com/CoDing114">HUKE</a> &copy; 2030</span>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="content-inner main">
+        <div  id="grid">
+          <section id="section_1">
+            <div id=inlinebox>
+              <script>
+                  document.write('Hello World');
+              </script>
+              <input type="button" class="button_Hello" style="font-size:medium;background-color:rgb(36, 216, 162);" value="Hi" onclick="alert('Heloo')"> 클릭
+              <h1> Comparison operator & Boolean 연산자 </h1>
+        <h2>===:동등연산자</h2>
+      <pre class="snippet"><code><script>
+  document.write(1===1);
+//출력:
+        </script>
+  <script>
+  document.write(1===2);
+//출력:
+        </script>
+  <script>
+  document.write("1,<br>");
+  document.write("2,<br>");
+  document.write("3,<br>");
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  <h2>조건문 Conditional Statements</h2>
+  <blockquote>
+    <p>if-true</p>
+  </blockquote>
+<pre class="snippet"><code><script>
+  document.write("1<br>,");
+  if(true){
+    document.write("2<br>,");
+    
+  } else{
+    document.write("3<br>,");
+  }
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  <blockquote>
+    <p>if-false</p>
+  </blockquote>
+  <pre class="snippet"><code><script>
+  document.write("1<br>,");
+  if(false){
+    document.write("2<br>,");
+    
+  } else{
+    document.write("3<br>,");
+  }
+  document.write("4<br>");
+//출력:
+      </script>
+  </code></pre>
+  </div>
+
+
+<div id=inlinebox>
+    <h2> 로직 한줄 정렬. 아래 두개의 로직은 같다</h2>
+    <blockquote>
+    <p>false & true 정의:</p>
+    <p>// false: 0, -0 '', null, undefined</p>
+    <p>// true: -1, 'hello', 'false'</p>
+  </blockquote>
+  <pre class="snippet"><code class="language-javascript">
+Program:
+  <script>  
+  let obj = {   
+    name:'HUKE',
+  };
+
+  if (obj) {    //로직 #1
+    document.write(`<p> obj Name1:${obj.name}</p>,`);
+  };
+    
+  obj && document.write(`<p> obj Name2:${obj.name}</P>`); //로직 #2
+//출력:
+      </script>
+</code>
+</pre>
+</div>
+
+<div id=inlinebox>
+  <blockquote id="String"><p> 1. String concatenation</p></blockquote>
+  <pre class="snippet"><code><script>
+  document.write('my'+'cat',',');
+  document.write('1'+2,',');
+  document.write(`string literals:1+2= ${1+2}`);
+//출력: 
+      </script>
+  </code>
+  </pre>
+  <blockquote id="Numeric"><p> 2. Numeric operators</p></blockquote>
+  <pre class="snippet"><code><script>
+  document.write(1 + 1,','); //  Add             더하기
+  document.write(1 - 1,','); //  substract       덜기
+  document.write(1 / 1,','); //  divide          나누기
+  document.write(1 * 1,','); //  multiply        곱하기
+  document.write(5 % 2,','); //  remainder       나머지
+  document.write(2 ** 3); // exponentiation  승
+//출력: 
+        </script>
+    </code>
+  </pre>
+  <blockquote id="decrement"><p> 3. Increment and decrement operators</p></blockquote>
+  <pre class="snippet"><code><script>
+  let counter = 2;
+  const preIncrement = ++counter;
+    //counter = counter + 1;
+    //preIncrement = counter;
+  document.write(`[ ++counter;preIncrement:${preIncrement},counter:${counter} ],`);
+
+  const postIncrement = counter++;
+    //postIncremnet = counter;
+    //counter = counter + 1;
+  document.write(`[ counter++;postIncrement:${postIncrement},counter:${counter} ],`);
+//출력: 
+      </script>
+  </code>
+</pre>
+<blockquote id="Assignment"><p> 4. Assignment operators</p> </blockquote>
+  <pre class="snippet"><code><script>
+    let x = 3;
+    let y = 6;
+  document.write(x += y,','); // x = x + y;
+  document.write(x -+ y,',');
+  document.write(x *+ y,',');
+  document.write(x /+ y,',');
+//출력: 
+        </script>
+  </code>
+  </pre>
+  <blockquote id="Comparison"><p> 5. Comparison operators </p></blockquote>
+  <pre class="snippet"><code><script>
+  document.write(10 < 6,',');  // less than 
+  document.write(10 <= 6,','); // less than or equal 
+  document.write(10 > 6,',');  // greater than
+  document.write(10 >= 6);     // greater than or equal
+//출력: 
+      </script>
+  </code>
+  </pre>
+  <blockquote id="Logical"><p> 6. Logical operators: ||(or), &&(and),!(not)</p></blockquote>
+  <pre class="snippet"><code><script>
+  const value1 = true;
+  const value2 = 4 < 2;
+  document.write(` [ Value1: ${value1} || Value2: ${value2} || Check:${check()} ], `);
+
+  // ||(or),finds the first truthy value
+  document.write(`[ Or: ${value1 || value2 || check()} ], `);
+  
+  // &&(and), finds the first falsy value
+  document.write(`[ And: ${value1 && value2 && check()} ], `);
+  // ofthe used to compress long if-statemen
+  // nullableObject && nullableObject.something
+  // if(nullableObject != null){
+  //   ullableObject.something;
+  // }
+
+  // !(not) 값을 반대로 바꿔준다
+    document.write('[ !(Not):',!value1,' ]');
+
+  function check(){
+    for (let z = 0; z < 3; z++){
+      //wasting time
+      document.write('😱')
+    }
+    return true;
+  }
+//출력: 
+      </script>
+    </code>
+    </pre>
+    <blockquote id="Equality"><p> 7. Equality</p></blockquote>
+    <pre class="snippet"><code><script>
+  const stringFive = '5';
+  const numberFive = 5;
+
+  // == loose equality, with type conversion
+  document.write(stringFive == numberFive,',');
+  document.write(numberFive != numberFive,',');
+//출력: 
+      </script>
+<script>
+  // === strict equality, no type conversion
+  document.write(stringFive === numberFive,',');
+  document.write(numberFive !== numberFive,',');
+//출력: 
+      </script>
+<script>
+  // object equality by reference
+  const miki1 = {name: 'miki'};
+  const miki2 = {name: 'miki'};
+  const miki3 = miki1;
+  document.write(miki1 == miki2,',');
+  document.write(miki1 === miki2,',');
+  document.write(miki1 === miki3,',');
+//출력: 
+      </script>
+<script>
+  // euqlity - puzzler
+  document.write('euqlity - puzzler',',')
+  document.write(0 == false,',');
+  document.write(0 === false,',');
+  document.write('' == false,',');
+  document.write('' === false,',');
+  document.write(null == undefined,',');
+  document.write(null === undefined);
+//출력: 
+      </script>
+      </code>
+    </pre>
+    <blockquote id="Conditional"><p> 8. Conditional operators: if </p></blockquote>
+    <pre class="snippet"><code><script>
+  const names = 'miki';
+  if (names === 'miki'){
+    document.write('Welcome,Miki!');
+  }else if (names === 'coder'){
+    document.write('You are amazing coder')
+  }else{
+    document.write('unkwnon');
+  }
+//출력: 
+      </script>         
+
+      </code>
+    </pre>
+    <blockquote id="Ternary"><p> 9. Ternary operator: ? </p></blockquote>
+    <pre class="snippet"><code><script>
+  document.write(names === 'miki' ? 'Yess' : 'No')
+//출력: 
+      </script>
+    </code>
+  </pre>
+    <blockquote id="Switch"><p> 10. Switch statement </p></blockquote>
+    <pre class="snippet"><code>
+  // use for multiple if checks
+  // use for enum-like value check
+  // use for multiple type checks in TS
+  <script>
+  const browser = 'IE'
+  switch (browser){
+    case 'IE':
+      document.write('go away!');
+      break;
+    // case 'Chrome':
+    // document.write('love you!');
+    // break;
+    case 'Chrome':  // 중복되는건 연달아 붙여 쓰면 된다.
+    case 'Firefox':
+      document.write('love you!');
+      break;
+    default:
+      document.write('same all!');
+      break;
+  }
+//출력: 
+    </script>
+    </code>
+  </pre>
+    <blockquote id="Loops"><p> 11. Loops </p></blockquote>
+    <pre class="snippet"><code>
+  // 블록을 먼저 실행하고 싶다면 do while을 써야되고 
+  // 조건이 맞을때만 while쓰면된다
+  // while loop, while the condition is truthy,
+  // body code is executed. 
+<script>
+    let z = 3;
+    while (z > 0){
+      document.write(`while:${z},`);
+      z--;
+    }
+  // do while loop, body code is executed first,
+  // then check the condition
+    do {
+      document.write(`do while:${z},`);
+      z--;
+    }while (z > 0);
+//출력: 
+    </script></code></pre>
+    <pre class="snippet"><code>
+// for loop, for(begin; condition; step)
+  <script>
+    document.write('for loop, for(begin; condition; step,');
+    for (i = 3; z > 0; z--){
+      document.write(`for:${z},`);
+    }
+
+    for (let z = 3; z > 0; z = z - 1){
+    //inline variable declaration
+      document.write(`inline variable for:${z},`);
+    }
+//출력: 
+      </script>
+        </code></pre>
+      <pre class="snippet"><code>
+      <script>
+// nested loops
+  for(let z = 0; z < 2; z++){
+    for (j = 0; j < 2; j++){
+      document.write(`i: ${z},j:${j},`);
+    }
+  }
+//출력: 
+      </script>
+    </code>
+  </pre>
+  <blockquote><p> Break, continue;</p><br>
+    <p>// Q1. iterate from 0 to 10 and print only even numbers(use continue)</p>
+  </blockquote>
+  <pre class="snippet" id="break"><code>
+    &ltscript>
+  for (let z = 0; z &lt 11; z++){
+    if (i % 2 === 0 ){
+      document.write(`Q1:${z}, `);
+    }
+  }
+
+  // Q2. iterate from 0 to 10 and print numbers untilreaching 8(use break)
+  for (let z = 0; z &lt 11; z++){
+    if(i > 8){
+      break;
+    }
+    document.write(`Q2:${z}`);
+  }  
+  //출력: 
+  Q1:0, Q1:2, Q1:4, Q1:6, Q1:8, Q1:10, Q2:0Q2:1Q2:2Q2:3Q2:4Q2:5Q2:6Q2:7Q2:8
+      &lt/script></code></pre>
+            </div>
+          </section>
+        </div>
+        <footer class="section " id="__footer" data-section="__footer">
+          <a id="__designed-by" href="../index.html">
+              "홈페이지 바로가기"
+              <i class="fa fa-code" id="footer_icon"></i>
+          </a>
+          <div class="uk-navbar-right scroll-to-section" >
+              <a id="__theme-btn" onclick="nightDayHandler(this);">
+                  "테마 바꾸기"
+                  <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+              </a>
+              <a id="__toTop" href="#__HUKE">
+                  "제일 위로"
+                  <i class="fa fa-chevron-up" id="footer_icon"></i>
+              </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+</div>
+
+<!-- Scripts --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+<script src="../src/js/scroll.js"></script> <!-- scroll -->
+<script src="../src/js/nightBtn.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+<script src="../src/dist/js/clipboard.min.js"></script>     <!-- Clipboard -->
+<script src="../src/dist/js/clipboard/snippets.js"></script><!-- Clipboard -->
+<script src="../src/dist/js/clipboard/tooltips.js"></script><!-- Clipboard -->
+<script>  new ClipboardJS('.btn');</script>                 <!-- Clipboard -->
+<script src="../assets/patch/highlight/highlight.min.js"></script>      <!-- 코드 구문 강조 -->
+<script >hljs.highlightAll();</script>                                  <!-- 코드 구문 강조 호출 -->
+<script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+<script >hljs.initLineNumbersOnLoad();</script>                         <!-- 코드 줄 번호 호출 -->
+<script src="../src/js/navbar.es5.min.js"></script><!-- navbar js -->
+<script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+<script> // <!-- Start Google Analytics -->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-180336562-1');
+</script><!-- End Global Google Analytics -->
+
+</body>
+</html>
