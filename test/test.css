@@ -1,0 +1,48 @@
+#container {
+  width: 400px; /* 너비 */
+  height: 500px; /* 높이 */
+  padding: 50px 20px 50px 20px; /* 안쪽 여백*/
+  background-color: #ffdfdf; /* 배경색 */
+}
+#top {
+  text-align: center; /* 가운데 정렬 */
+}
+#heart {
+  color: red; /* 글자색 */
+  vertical-align: 130%; /* 수직으로 여백 */
+}
+#startDay {
+  color: gray;
+}
+.days {
+  display: inline-block; /* 차지하는 영역을 inline-block으로 지정 */
+  width: 90px;
+  font-size: 2em; /* 글자 크기 */
+  font-weight: bold; /* 글자 굵게 */
+  padding-left: 10px;
+}
+.days2 {
+  display: inline-block;
+  width: 150px;
+  padding-left: 80px;
+  text-align: center;
+}
+ul {
+  list-style: none; /* ul태그의 불릿 제거 */
+  padding-left: 0px;
+}
+li {
+  height: 40px;
+  margin: 10px; /* 바깥쪽 여백 */
+  padding: 20px;
+  background-color: #f0b4b4;
+  border-radius: 7px; /* 모서리 둥글게 처리 */
+}
+img {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px; /* 사진 동그랗게 만들기 */
+}
+h3 {
+  margin: 4px;
+}

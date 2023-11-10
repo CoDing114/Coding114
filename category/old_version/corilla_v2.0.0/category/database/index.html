@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> DataBase</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font   awesome  Logo font -->
+  <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  
+    <!-- google fonts Source Sans Pro  -->
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script><!-- jquery/3.5.1 -->
+    <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../../index.html">
+        <img src="../../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+     </div>
+     </nav>
+   </header>
+   
+   
+  <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+  <div  id="grid">
+    <nav class="navbar" >
+    <ul class="navbar__menu" >
+      <li><a href="../html/index.html">HTML</a></li>
+      <li><a href="../css/index.html">CSS</a></li>
+      <li><a href="../javascript/index.html">JavaScript</a></li>
+      <li><a href="../php/index.html">PHP </a></li> 
+      <li class="has-submenu"><a href="./index.html"class="saw" id="active">DataBase</a></li>
+      <ul id="sub-menu">
+        <li><a href="./domain.html">Domain </a></li>
+      </ul>
+    </ul>
+  <a href="#"class="navbar__toogleBtn">
+      <i class="fas fa-bars"></i>
+  </a>
+  </nav>
+ 
+  <section id="section_1">
+    <h2><a href="https://developer.mozilla.org/en-US/docs/Glossary/Database"target="_blank">Database 자료</a></h2>
+      <div>
+          <h3>데이터 베이스 핵심작업 CRUD </h3>
+          <ul><h3>데이터 모델링 </h3>
+              <li>Create</li>
+              <li>Read</li>
+              <li>Update</li>
+              <li>Delete</li>
+          </ul>
+      </div>
+      <div>
+        <h3>자주 쓰는 명령어 </h3>
+        <ul> 수정중 WHERE문을 빼먹으면 재앙이 올수잇다!!!
+            <li>Create;생성</li>
+            <li>Drop;삭제</li>
+            <li>SHOW databases;데이터 베이스 확인</li>
+            <li>SUE;데이터 베이스 선택</li>
+            <li>DESC ;구조확인</li>
+            <li>SELECT * FROM topic;추가한 데이터 확인</li>
+            <li>ORDER BY id DESC;높은 값 부터 정렬</li>
+            <li>LIMIT 2;보이기 수량 설정가능</li>
+            <li>RENAME TABLE topic TO topic_backup;이름 변경</li>
+            <li>UPDATE topic SET description='Oracle is...',title='Oracle' WHERE id=2; 수정</li>
+            <LI>DELETE FROM topic WHERE id=5; 데이터 삭제</LI>
+        </ul>
+      </div>
+      <div>
+        <h3>자주 쓰는 용어 </h3>
+        <ul>
+            <li>Table:표</li>
+            <li>Row,record:행</li>
+            <li>column:열</li>
+            <li></li>
+        </ul>
+      </div>
+      <div>
+        <h3>표만들기</h3>
+        MariaDB [opentutorials]> create table topic( --입력후 ';'없이 Enter를 누르면 줄바꿈이된다
+      -> id INT(11) NOT null AUto_increment, --INT(11)[인티저(보이기수량)],NOT null[공백 비허용],AUto_increment[자동으로 1씩 추가 중복을 회피]
+      
+    
+      CREATE TABLE topic(
+  id INT(11)NOT NULL AUTO_INCREMENT, 
+  title VARCHAR(100)NOT NULL, 
+  description TEXT NULL, 
+  created DATETIME NOT NULL, 
+  author VARCHAR(30)NULL, 
+  profile VARCHAR(100)NULL,
+  PRIMARY KEY(id));
+    </div>
+      <img src="../../IMG/20210711_071528.png" width="30%">
+      C:\Bitnami\wampstack-8.0.8-0\mariadb\bin>mysql -uroot -p
+
+    </div>
+  </div>
+</section>
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+</body>
+</html>

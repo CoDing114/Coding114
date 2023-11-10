@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        h1{
+            font-size: 45px;
+            text-align:center;
+            border-bottom:1px solid #ccb2da94;
+            margin:0;
+            padding:20px;
+            padding-bottom: 40px;
+            padding-top:0px;
+        }
+        #grid{/* grid를 사용 하여 같은 컬러속에서 나눈다.*/
+            border:5px solid pink;
+            display: grid; 
+            grid-template-columns: 150px 1fr;/* 1fr은 화면의 1만큼 사용 */
+        }
+        div,span{
+            border:5px solid gray;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../index.html">
+        <img src="../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+  <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+  <h1>CSS GRID</h1>
+  <div id="grid">
+    <ol>
+      <li><a href="../html.html">HTML</a></li>
+      <li><a href="../css.html">CSS</a></li>
+      <ul id="ulpd">
+        <li><a href="css box.html" class="saw">CSS BOX</a></li>
+        <li><a href="css grid.html"class="saw" id="active">CSS GRID</a></li>
+        <li><a href="css media query.html"class="saw">CSS Query</a></li>
+      </ul>
+      <li><a href="../javascript.html">JavaScript</a></li>
+      <li><a href="../html실용편.html">HTML 실용편 </a></li>
+      <li><a href="../domain.html">Domain </a></li>
+    </ol>
+    <div id="article">
+      
+  <div id="grid">
+    <div>
+        <div>navigattion1</div>
+        <div>navigattion2</div>
+        <div>navigattion3</div>
+        <div>navigattion4</div>
+        <div>
+        navigattion4
+        navigattion4
+        navigattion4
+        navigattion4
+        navigattion4
+        navigattion4
+        navigattion4
+        navigattion4
+        navigattion4
+      </div>
+    </div>
+    <div>
+      <div>article1</div>
+      <div>article2</div>
+      <div>article3</div>
+      <img src="./../img/analytics.png" width="50%">
+      <img src="./../img/analytics.png" width="50%">
+
+
+    </div>
+  </div>
+  <div>    
+      <span>navigattion</span>
+      <span>article1</span>
+      <span>article2</span>
+      <span>article3</span>
+      <span>article4</span>
+      <span>article5</span>
+  </div>  
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> WEB - Domain Name System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <!-- Global site tag (gtag.js) - Google Analytics [구글 분석기] -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script>
+    <script src="colors.js"> // 야간모드 </script>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../index.html">
+        <img src="../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+<input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+<h1 class="h1_title"><a href="index.html">WEB</a></h1>
+<div id="grid">
+  <ol>
+    <li><a href="html.html">HTML</a></li>
+    <li><a href="css.html">CSS</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="html실용편.html">HTML 실용편 </a></li>
+    <li><a href="domain.html"class="saw" id="active">Domain </a></li>
+  </ol>
+  <div id="article">
+    <h2><a href="https://opentutorials.org/course/3276"target="_blank"> Domain 수업소개</a></h2>
+    <div>
+      <ul>
+        <li><a href="https://opentutorials.org/course/3276/20296"target="_blank"> 주소와 hosts </a></li>
+        <li><a href="https://opentutorials.org/course/3276/20297"target="_blank"> 도메인 이름과 보안</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20298"target="_blank"> DNS의 태동</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20299"target="_blank"> DNS의 원리</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20300"target="_blank"> public DNS의 사용</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20303"target="_blank"> 도메인 이름의 구조</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20307"target="_blank"> 도메인 이름 등록 과정과 원리</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20308"target="_blank"> nslookup 사용법</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20311"target="_blank"> 나의 도메인 이름 장만하기</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20313"target="_blank"> DNS record와 CNAME 레코드의 이해</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20315"target="_blank"> github pages에 도메인 연결하기</a></li>
+        <li><a href="https://opentutorials.org/course/3276/20316"target="_blank"> 수업을 마치며</a></li>
+    </div>
+  <div>
+    <div>
+    도메인 이름이 등록되는 과정은 꽤 복잡합니다. 이런 복잡성에 대한 이해가 없다면 여러가지 상황에 대처하는데 어려움을 겪기 마련입니다. 여기서는 DNS가 동작하는 원리와 도메인 이름을 등록하는 과정을 자세하게 살펴봅니다. 
+    </div>
+    <img src="./img/Domain-name.jpeg" width="50%">
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="section" data-section="__HUKE" id="__HUKE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> WEB - HTML</title>
+  <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link rel="stylesheet" href="../src/dist/css/clipboard.css"> <!-- Clipboard -->
+  <link href="../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  
+
+</head>
+<body>
+
+<div class="content-wrapper">
+<div class="container">
+  <nav class="navbar navigation" data-function="navbar">
+    <a class="navbar__logo" href="../index.html">
+      <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+    </a>
+    <button class="navbar-toggle">
+      <svg class="menu-icon" viewBox="0 0 1024 1024">
+        <path d="M896.876 319.65h-768.751c-14.152 0-25.625-11.473-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.473 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z" />
+      </svg>
+    </button>
+
+    <div>
+      <ul class="nav">
+        <li>
+          <a href="../index.html">Home
+            <svg class="parent-icon" viewBox="0 0 1024 1024">
+              <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+            </svg>
+            <svg class="parent-toggle" viewBox="0 0 1024 1024">
+              <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+            </svg>
+          </a>
+          <ul class="subnav">
+            <li><a href="../index.html">Main</a></li>
+            <li>
+              <a href="../index.html#old_version">
+                OLD Version List
+                <svg class="parent-icon" viewBox="0 0 1024 1024">
+                  <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                </svg>
+                <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                  <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                </svg>
+              </a>
+              <ul class="subnav">
+                <li><a href="../OLD_Version/CoRilla_v0.0.1/index.html">CoRilla v.0.0.1</a></li>
+            <li><a href="../OLD_Version/CoRilla_v1.0.1/index.html">CoRilla v.1.0.1</a></li>
+            <li><a href="../OLD_Version/CoRilla_v2.0.0/category/index.html">CoRilla v.2.0.0</a></li>
+            <li><a href="../OLD_Version/CoRilla_v2.0.1/index.html">CoRilla v.2.0.1</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="active">
+          <a href="#">
+            Navigate
+            <svg class="parent-icon" viewBox="0 0 1024 1024">
+              <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+            </svg>
+            <svg class="parent-toggle" viewBox="0 0 1024 1024">
+              <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+            </svg>
+          </a>
+
+          <div class="subnav">
+            <ul class="row nomargin">
+              <li class='col-4'>
+                <ul class="">
+                  <li class="active">
+                    <a href="../html/index.html">
+                      HTML
+                      <svg class="parent-icon" viewBox="0 0 1024 1024">
+                        <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                      </svg>
+                      <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                        <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                      </svg>
+                    </a>
+                    <ul class="subnav">
+                      <li><a href="../html/html실용편.html">HTML 실용편</a></li>
+                      <li><a href="../html/clipboard.html">클립보드</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../css/index.html">CSS
+                    <svg class="parent-icon" viewBox="0 0 1024 1024">
+                    <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                  </svg>
+                  <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                    <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                  </svg>
+                </a>
+                <ul class="subnav">
+                  <li><a href="../css/css box.html">CSS_BOX</a></li>
+                  <li><a href="../css/css grid.html">CSS_GRID</a></li>
+                  <li><a href="../css/css media query.html">CSS_Media_Query</a></li>
+                </ul></li>
+                  <li><a href="../javascript/index.html">JavaScript<svg class="parent-icon" viewBox="0 0 1024 1024">
+                    <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                  </svg>
+                  <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                    <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                  </svg>
+                </a>
+                <ul class="subnav">
+                  <li>
+                    <a href="#">
+                      Method
+                      <svg class="parent-icon" viewBox="0 0 1024 1024">
+                        <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                      </svg>
+                      <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                        <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                      </svg>
+                    </a>
+                    <ul class="subnav">
+                      <li><a href="../javascript/method/index.html">&lt/> JavaScript Code</a></li>
+                      <li><a href="#">Corporate</a></li>
+                      <li><a href="#">Industrial</a></li>
+                      <li><a href="#">Government</a></li>
+                    </ul>
+                  </li>
+                      <li><a href="../javascript/js ex1[연산자].html">연산자</a></li>
+                      <li><a href="../javascript/js ex2[배열&문법].html">배열&문법</a></li>
+                      <li><a href="../javascript/js ex3[반복문].html">반복문</a></li>
+                      <li><a href="../javascript/js ex4[배열과 반복문].html">배열과&반복문</a></li>
+                      <li><a href="../javascript/js ex5[함수function].html">함수Function</a></li>
+                      <li><a href="../javascript/js ex6 야간모드.html">야간모드</a></li>
+                      <li><a href="../javascript/js ex7 객체(object).html">객체(object)</a></li>
+                      <li><a href="../javascript/json.html">JSON</a></li>
+                </ul>
+              </li>
+                  <li><a href="../php/index.html">PHP</a></li>
+                  <li><a href="../database/index.html">DataBase</a></li>
+                  <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+                  <li><a href="../damoa/index.html">damoa</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">Share
+            <svg class="parent-icon" viewBox="0 0 1024 1024">
+              <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+            </svg>
+            <svg class="parent-toggle" viewBox="0 0 1024 1024">
+              <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+            </svg>
+          </a>
+          <ul class="subnav">
+            <li>
+              <a target="_blank" href="#" title="Share Navbar.js on Facebook">
+                <svg class="menu-icon" viewBox="0 0 1024 1024">
+                  <path d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z" />
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="#" title="Share Navbar.js on Twitter">
+                <svg class="menu-icon" viewBox="0 0 1024 1024">
+                  <path d="M731.429 348.571c-21.714 9.714-44.571 16-69.143 19.429 25.143-14.857 44-38.857 53.143-66.857-23.429 13.714-49.143 24-76.571 29.143-21.714-23.429-53.143-37.714-87.429-37.714-66.286 0-120 53.714-120 120 0 9.143 0.571 18.857 2.857 27.429-100-5.143-188.571-52.571-248-125.714-10.286 17.714-16.571 38.857-16.571 60.571 0 41.714 19.429 78.286 52 100-20-0.571-38.857-6.286-57.143-14.857v1.143c0 58.286 44 106.857 98.857 117.714-10.286 2.857-18.286 4.571-29.143 4.571-7.429 0-14.857-1.143-22.286-2.286 15.429 47.429 59.429 82.286 112 83.429-41.143 32-92.571 51.429-149.143 51.429-9.714 0-19.429-0.571-28.571-1.714 53.143 33.714 116 53.714 184 53.714 220.571 0 341.714-182.857 341.714-341.714 0-5.143 0-10.286-0.571-15.429 23.429-16.571 44-37.714 60-62.286zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z" />
+                </svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="copy navbar-content">
+        <span><a target="_blank" href="https://github.com/CoDing114">HUKE</a> &copy; 2030</span>
+      </div>
+    </div>
+  </nav>
+  <div class="content">
+    <div class="content-inner main">
+      <div  id="grid">
+        <section id="section_1">
+          <h2><a href="https://developer.mozilla.org/ko/docs/Web/HTML"target="_blank">HTML 자료</a></h2>
+          <p><strong><u>[ Hypertext</u> Markup Language ]</strong></p>
+      
+              <h2>손쉬운 사용</h2>
+          <div>
+            <ul>
+              <li>주석만들기 :  &lt!-- 주석 --></li>
+              <li>emmet : 에밋 을 사용하면 HTML & CSS의 작업 속도를 엄청나게 향상시킬 수 있다!!</li>
+              <li>p>lorem:간편 테스트 넣기 [p>lorem5 뒤에 숫자를 넣어서 단어 개수를 설정할수잇다</li>
+              </div>
+            </li>
+            </ul>
+          <h2>줄바꿈(엔터) 하기</h2>
+          <div>
+            <ul>
+              <li>br 태그는 'break'의 약자로 단순히 HTML에서 줄바꿈을 할 때 사용된다.
+                여러개의 br태그를 입력하면 입력된 갯수만큼 줄바꿈이 실행된다.
+                다른 태그들과 달리 열고br 닫는br태그가 존재하지 않고그냥 br 태그만 써 주어도 무방하다.</li>
+              <li>p 태그는 'paragraph'의 약자로, html에서 문단을 표현 할 때 사용된다.
+                p와  p태그로 내용을 감싸면, 내용의 위와 아래쪽에 일정 크기의 공백이 생긴다.</li>
+              <li>pre는 'preformatted' 약자로,태그 내에 있는 엔터와 스페이스가 그대로 웹 브라우저에 적용되어 보여지게 된다.</li>
+            </ul>
+          </div>
+          <h2> 특수 문자 사용법 </h2>
+          <div>
+            <ul>
+              <li>& nbsp :&nbsp공백 문자 하나 표현</li>
+              <li>& lt   :&lt 을 표현 </li>
+              <li>& gt   :&gt 을 표현 </li>
+              <li>& quot :&quot을 표현</li>
+              <li>& amp  :&amp을 표현</li>
+            </ul>
+          </div>
+      
+          <img src="../assets/img/coding.jpg" width="30%">
+          <h3>WEB1 소개</h3>
+          <div><!-- width="560" height="315" -->
+          <iframe width="30%" height="160" src="https://www.youtube.com/embed/tZooW6PritE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </section>
+      </div>
+      
+      <footer class="section" id="__footer" data-section="__footer">
+        <a id="__designed-by" href="../index.html">
+            "홈페이지 바로가기"
+            <i class="fa fa-code" id="footer_icon"></i>
+        </a>
+        <div class="uk-navbar-right scroll-to-section" >
+            <a id="__theme-btn" onclick="nightDayHandler(this);">
+                "테마 바꾸기"
+                <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+            </a>
+            <a id="__toTop" href="#__HUKE">
+                "제일 위로"
+                <i class="fa fa-chevron-up" id="footer_icon"></i>
+            </a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Scripts --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+<script src="../src/js/scroll.js"></script> <!-- scroll -->
+<script src="../src/js/nightBtn.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+<script src="../src/dist/js/clipboard.min.js"></script>     <!-- Clipboard -->
+<script src="../src/dist/js/clipboard/snippets.js"></script><!-- Clipboard -->
+<script src="../src/dist/js/clipboard/tooltips.js"></script><!-- Clipboard -->
+<script>  new ClipboardJS('.btn');</script>                 <!-- Clipboard -->
+<script src="../assets/patch/highlight/highlight.min.js"></script>      <!-- 코드 구문 강조 -->
+<script >hljs.highlightAll();</script>                                  <!-- 코드 구문 강조 호출 -->
+<script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+<script >hljs.initLineNumbersOnLoad();</script>                         <!-- 코드 줄 번호 호출 -->
+<script src="../src/js/navbar.es5.min.js"></script><!-- navbar js -->
+<script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+<script> // <!-- Start Google Analytics -->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-180336562-1');
+</script><!-- End Global Google Analytics -->
+</body>
+</html>

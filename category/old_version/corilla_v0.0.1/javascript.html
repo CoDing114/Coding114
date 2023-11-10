@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> WEB1 - JavaScript</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script>
+    <script src="colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../index.html">
+        <img src="../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+     </div>
+     </nav>
+   </header>
+
+<h1><a href="index.html">WEB</a></h1>
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */
+">
+<div id="grid">
+    <ol>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="html실용편.html">HTML 실용편 </a></li>
+      <li><a href="domain.html">Domain </a></li>
+    </ol>
+  <div id="article">
+    <h2>손쉬운 사용</h2>
+    <div>주석만들기 : Ctrl+L </div>
+
+    <h2> JavaScript 추천 검색어</h2>
+    <div>
+      <ul>
+        <li>document: 웹페이지 태그 삭제 혹은 자식태그 추가 </li>
+        <li>DOM:document객체에서 찾을수 없다면 DOM으로 수색범위 넓혀 보세요 document객체는 DOM객체의 일부</li>
+        <li>window객체:웹페이지가 아니라 웹브라우저 자체를 제어해야할때"현재 열려잇는 웹주소가 뭔지 알아내야 될수 잇고 생창을 열어야 한수도잇고 웹브라우저의 크기를 자바스크립트를 통해 알아야한다면 윈도우 객체에 속해잇는 프로퍼티나 메소드가 여러분을 도울수잇을거에요 </li>
+        <li>ajax:웹페이지를 리로드하지않고 정보를 변경하고 싶다면 ajax가 필요, 현대적인 웹앱을 만드는데 필수적인 테크닉입니다.</li>
+        <li>cookie:웹페이지가 리로드되어도 현재 상태를 유지하고 싶다면 cookie를 배우세요 cookie와 함께라면 사용자를 위한 개인화된 서비스를 제공할수 잇습니다.</li>
+        <li>offline web Application: 인터넷이 끊겨도 웹을 하고싶다면</li>
+        <li>webRTC:화상 통신 웹 앱을 만들고싶다면</li>
+        <li>speech: 사용자의 음성을 인식하고 음성으로 정보를 전달하고 싶다면 </li>
+        <li>webGL: 3차원 그래픽으로 게임과 같은 것을 만들고 싶다면</li>
+        <li>webVR: 가상현실에 관심이 많으시다구요? </li>
+      </ul>
+    </div>
+
+
+    <h2>JavaScript</h2>
+    <div>첫째:자바스크립트는 사용자와 상호작용하는 언어다.</div>
+    <div>둘째:웹브라우저는 한번 화면에 출력되면 가기 자신을 바꿀수 없다</div>
+    <div>셋째:자바스크립트는 HTML위에서 동작하는 언어다.</div>
+      우리가 매일 접속하는 웹사이트는 크게 3가지 요소로 구성된다. ‘HTML(Hyper Text Markup Language)’, ‘CSS(Cascading Style Sheets)’, ‘자바스크립트(Javascript)’다. HTML은 웹페이지의 큰 뼈대를 제공하고, CSS는 색깔이나 글씨체와 같은 디자인 요소를 관리한다. 자바스크립트는 크로스 플랫폼(cross platform), 객체지향 스크립트 언어로 웹페이지의 동작을 담당한다. 예를 들어 자바스크립트를 이용하면 ‘버튼을 클릭하면 밑에 날짜를 보여줘’라는 식의 명령을 내릴 수 있다.
+
+    자바스크립트를 이용하면 웹에 풍부한 효과를 넣을 수 있지만, 2000년대 초반만 해도 자바스크립트는 개발자들에게 무시당하는 언어였다. 별다른 기능도 없고, 성능도 별로 좋지 않았기 때문이다. 하지만 최근 몇 년 사이에 다양한 자바스크립트 프레임워크와 라이브러리가 생기면서 자바스크립트 생태계는 크게 확장되고 있으며, 그 위상도 점점 높아지고 있다.
+    [네이버 지식백과] 자바스크립트 [Javascript] - 웹을 풍부하게 만들어주는 작고 가벼운 언어 (용어로 보는 IT, 이지현)
+    </p>
+    <h3>library(도서관) & framework(반제품)</h3>
+    <div>공통점:다른사람의 도움을 받아 소프트웨어를 만든다</div>
+    <h3>UI VS API</h3>
+    <div>UI : User Interface 의 약자이다</div>
+    <div>API: Application Programming Interface</div>
+
+    <h4>Console에서 텍스트 글자수 구하기</h4>
+    alert('구하고자 하는 내용'.length)
+    <h4>
+      JavaScript Data types
+    </h4>
+    <ul>
+      <li>기본 자료형 (Primitive) 인 여섯가지 데이터 타입</li>
+        <li>Boolean(연산자true&false)</li>
+        <li>Null</li>
+        <li>Undefined</li>
+        <li>Number(숫자)</li>
+        <li>String(문자)</li>
+        <li>Symbol (ECMAScript 6 에 추가됨)</li>
+        <li>별도로 Object 도 있음</li>
+    </ul>
+    <h4>
+      변수(variable) vs 상수(constant)
+    </h4>
+    <div>
+      x(variable) + 1(constant)
+    </div>
+    <h4>
+      변수의 효용중 하나 
+    </h4>
+    <div>
+    var name = 'sung'
+    alert("variable, "+name+",mutable, changeable, "+name+", unsettled, fickle, "+name+",mobile")
+    </div>
+    <script>
+      document.write('hello world');
+    </script>
+  </div>
+</div>
+
+</body>
+</html>

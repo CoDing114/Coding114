@@ -1,0 +1,131 @@
+.navbar__logo {
+  margin: 1%;
+  font-size: 24px;
+  color: var(--text-color);
+}
+.navbar__logo i,
+.navbar__logo a {
+  color: var(--Logo-color);
+}
+
+.navbar__logo img {
+  width: 5em;
+}
+/* <--------- id ---------> */
+#grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+#grid #article {
+  padding-left: 25px;
+}
+#grid ol {
+  border-right: 1px solid #ccb2da94;
+  width: 150px;
+  margin: 0;
+  padding: 20px;
+  padding-left: 33px;
+}
+#active {
+  color: red;
+  text-decoration: underline;
+}
+#inlinebox {
+  border: 3px solid hsl(180, 92%, 44%);
+  padding: 5px;
+  margin: 5px;
+}
+#growth_diary {
+  text-align: center;
+}
+#ulpd {
+  padding: 0px;
+}
+/* <--------- id ---------> */
+/* <---------class---------> */
+.saw {
+  color: powderblue;
+}
+.button_night {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0px;
+}
+.button_night:hover {
+  opacity: 1;
+}
+.h1_title {
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 1px solid #ccb2da94;
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 0px;
+}
+.text_title {
+  font-size: 150%;
+}
+/* <---------class---------> */
+/* <---------태그---------> */
+a {
+  color: hsl(240, 100%, 50%);
+  text-decoration: none;
+}
+h1 {
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 1px solid #ccb2da94;
+  margin: 0;
+  padding: 20px;
+}
+body {
+  margin: 0;
+  background-color: hsl(245deg 26% 55%);
+  color: #ffffff;
+}
+/* <---------태그---------> */
+/* screen width < 800px */
+@media (max-width: 800px) {
+  #grid {
+    display: block;
+  }
+  #grid ol {
+    /* id뒤에 태그를 쓰므로 id에 포함되어 잇는 태그에한해 효과적용  */
+    border-right: none;
+  }
+  h1,
+  .h1_title {
+    border-bottom: none;
+  }
+}
+
+/* 메뉴선택 컬러변경 */
+.selected {
+  color: rgb(0, 0, 0);
+}
+.selected {
+  background-color: #3c9;
+}
+.selected {
+  padding: left 10px;
+}
+.selected {
+  padding: right 100%;
+}
+.selected {
+  width: 150px;
+}
+.depth_0 {
+  background-color: #3c9;
+}

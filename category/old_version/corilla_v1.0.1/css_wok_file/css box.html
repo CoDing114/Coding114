@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX MODEL</title>
+    <style>
+        h1{
+            font-size: 45px;
+            text-align:center;
+            border-bottom:1px solid #ccb2da94;
+            margin:0;
+            padding:20px;
+            padding-bottom: 40px;
+            padding-top:0px;
+        }
+        h2 {
+            /* block level element 화면 전체를 쓴다 
+            border-width:5px;     - 폭, 너비
+            border-color:red;     - 컬러
+            border-style:solid;   - 선형
+            display:block         - 표시형식
+            */
+            border:5px solid red; /* widty,color,style을 간단하게 변경 가능 */
+            padding:10px; /* 속,부피크기 */
+            margin:5px; /* 줄간 간격 */
+        }
+        h3 {
+            display:inline
+
+        }
+            /* 
+                inline element 자기 자신의 부피만큼 차지한다
+            */
+        a{
+            border-width:px;
+            border-color:red;
+            border-style:solid;
+            display: inline;
+            padding:0px;
+        }
+        #inline{
+            border:3px solid hsl(180, 92%, 44%);
+            padding:5px;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+          <a href="../../../index.html">
+            <img src="../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+         </div>
+         </nav>
+       </header>
+       
+    <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+
+    <h1>CSS BOX MODEL</h1>
+    <div id="grid">
+        <ol>
+          <li><a href="../html.html">HTML</a></li>
+          <li><a href="../css.html">CSS</a></li>
+          <ul id="ulpd">
+            <li><a href="css box.html" class="saw" id="active">CSS BOX</a></li>
+            <li><a href="css grid.html"class="saw">CSS GRID</a></li>
+            <li><a href="css media query.html"class="saw">CSS Query</a></li>
+          </ul>
+          <li><a href="../javascript.html">JavaScript</a></li>
+          <li><a href="../html실용편.html">HTML 실용편 </a></li>
+          <li><a href="../domain.html">Domain </a></li>
+        </ol>
+        <div id="article">
+
+           
+    <div id="inline">
+        <h1>h1 Block level element</h1> 
+        <h2>h2 Block level element</h2>
+        Block level element: 화면 전체를 사용한다
+    </div>
+    <div id="inline">
+        <a>Inline element "a"</a>
+        <div>Inline element: 자기 자신의 부피만큼 차지한다</div>
+    </div>
+    <div id="inline">
+        <h3>h3 display:inline </h3> 
+        -display 를 inline으로 변경함으로 자기 자신의 부피만 사용하도록 변경
+        <div>
+            h3{
+                display: inline;
+            }
+            
+        </div>
+        <div>
+            Tip: display:none; 을 사용하여 text 숨길수도 잇음
+        </div>
+    </div>
+   
+
+
+
+<a href="../html.html" class="saw">HTML</a><a href="../css.html"class="saw" id="active">CSS</a><a href="../javascript.html">JavaScript</a><a href="../html실용편.html">HTML 실용편 </a><a href="../damoa.html">damoa </a>
+<img src="./../img/box model.png" width="30%">
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <style>
+    body{
+      background-color: rgb(54, 119, 123);
+    }
+  </style> -->
+  <link rel="stylesheet" href="message_style.css" />
+  <script src="message_js.js"></script>
+</head>
+
+<body>
+  <div>
+    <h1>자바스크립트 활용</h1>
+    <hr>
+ </div>
+ 
+ <div>
+    <p>사용자 정의 객체 및 프로토타입을 활용한 자바스크립트 방명록</p>
+    
+    <div>
+       <form>
+          <!-- 입력 폼을 구성하는 레이아웃 테이블 -->
+          <table class="tbl">
+             <tr>
+                <th>작성자</th>
+                <td>
+                   <input type="text" id="uName" style="width: 150px;">
+                </td>
+             </tr>
+             <tr>
+                <th>내용</th>
+                <td>
+                   <input type="text" id="uContent" style="width: 560px;">
+                </td>
+             </tr>
+          </table>
+          
+          <br>
+          <input type="button" value="글쓰기" class="btn" style="width: 624px; height: 50px; font-size:18pt;" onclick="main()">
+          
+          <!-- 방명록의 내용이 리스트 형식으로 보여지는 레이아웃 테이블 -->
+          <table class="tbl" id="bbsTable">
+             <tr>
+                <th>번호</th>
+                <th>작성자</th>
+                <th>내용</th>
+                <th>작성일</th>
+             </tr>
+          </table>
+       </form>
+    </div>
+ </div>
+  
+
+</body>
+
+</html>

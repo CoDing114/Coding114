@@ -1,0 +1,115 @@
+:root {
+  --text-color: rgb(247, 242, 242);
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.navbar {
+  display: flex; /* 한줄에 나란히 */
+  justify-content: space-between; /* 사이사이에 넣는다 */
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 8px 12px;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  color: var(--text-color);
+}
+.navbar__logo img {
+  width: 5em;
+}
+.navbar__logo i {
+  color: var(--accent-color);
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+.navbar__menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+.navbar__icons {
+  list-style: none;
+  color: var(--text-color);
+  display: flex;
+  padding-left: 0;
+}
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+.navbar__toogleBtn {
+  position: absolute;
+  right: 32px;
+  font-size: 24;
+  color: var(--accent-color);
+  display: none;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  left: 30%;
+  bottom: 0px;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+footer p a,
+footer p a:hover {
+  color: #f5a425;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* 아이템 떨어지게 만든다  */
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__menu li a {
+    padding: 8px 40%;
+  }
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar__toogleBtn {
+    display: block;
+  }
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+  footer {
+    left: 8%;
+  }
+}

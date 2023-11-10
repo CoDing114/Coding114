@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko" class="section" data-section="__HUKE" id="__HUKE">
+<head>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>야간모드 설정</title>
+  <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link rel="stylesheet" href="../src/dist/css/clipboard.css"> <!-- Clipboard -->
+  <link href="../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="container">
+      <nav class="navbar navigation" data-function="navbar">
+        <a class="navbar__logo" href="../index.html">
+          <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+        </a>
+        <button class="navbar-toggle">
+          <svg class="menu-icon" viewBox="0 0 1024 1024">
+            <path d="M896.876 319.65h-768.751c-14.152 0-25.625-11.473-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.473 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z" />
+          </svg>
+        </button>
+    
+        <div>
+          <ul class="nav">
+            <li>
+              <a href="../index.html">Home
+                <svg class="parent-icon" viewBox="0 0 1024 1024">
+                  <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                </svg>
+                <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                  <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                </svg>
+              </a>
+              <ul class="subnav">
+                <li><a href="../index.html">Main</a></li>
+                <li>
+                  <a href="../index.html#old_version">
+                    OLD Version List
+                    <svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li><a href="../OLD_Version/CoRilla_v0.0.1/index.html">CoRilla v.0.0.1</a></li>
+                <li><a href="../OLD_Version/CoRilla_v1.0.1/index.html">CoRilla v.1.0.1</a></li>
+                <li><a href="../OLD_Version/CoRilla_v2.0.0/category/index.html">CoRilla v.2.0.0</a></li>
+                <li><a href="../OLD_Version/CoRilla_v2.0.1/index.html">CoRilla v.2.0.1</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="#">
+                Navigate
+                <svg class="parent-icon" viewBox="0 0 1024 1024">
+                  <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                </svg>
+                <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                  <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                </svg>
+              </a>
+    
+              <div class="subnav">
+                <ul class="row nomargin">
+                  <li class='col-4'>
+                    <ul class="">
+                      <li>
+                        <a href="../html/index.html">
+                          HTML
+                          <svg class="parent-icon" viewBox="0 0 1024 1024">
+                            <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                          </svg>
+                          <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                            <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                          </svg>
+                        </a>
+                        <ul class="subnav">
+                          <li><a href="../html/html실용편.html">HTML 실용편</a></li>
+                      <li><a href="../html/clipboard.html">클립보드</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="../css/index.html">CSS
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                        <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                      </svg>
+                      <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                        <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                      </svg>
+                    </a>
+                    <ul class="subnav">
+                      <li><a href="../css/css box.html">CSS_BOX</a></li>
+                      <li><a href="../css/css grid.html">CSS_GRID</a></li>
+                      <li><a href="../css/css media query.html">CSS_Media_Query</a></li>
+                    </ul></li>
+                      <li class="active"><a href="../javascript/index.html">JavaScript
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                        <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                      </svg>
+                      <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                        <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                      </svg>
+                    </a>
+                    <ul class="subnav">
+                      <li>
+                        <a href="#">
+                          Method
+                          <svg class="parent-icon" viewBox="0 0 1024 1024">
+                            <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                          </svg>
+                          <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                            <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                          </svg>
+                        </a>
+                        <ul class="subnav">
+                          <li><a href="../javascript/method/index.html">&lt/> JavaScript Code</a></li>
+                          <li><a href="#">Corporate</a></li>
+                          <li><a href="#">Industrial</a></li>
+                          <li><a href="#">Government</a></li>
+                        </ul>
+                      </li>
+                          <li><a href="../javascript/js ex1[연산자].html">연산자</a></li>
+                          <li><a href="../javascript/js ex2[배열&문법].html">배열&문법</a></li>
+                          <li><a href="../javascript/js ex3[반복문].html">반복문</a></li>
+                          <li><a href="../javascript/js ex4[배열과 반복문].html">배열과&반복문</a></li>
+                          <li><a href="../javascript/js ex5[함수function].html">함수Function</a></li>
+                          <li class="active"><a href="../javascript/js ex6 야간모드.html">야간모드</a></li>
+                          <li><a href="../javascript/js ex7 객체(object).html">객체(object)</a></li>
+                          <li><a href="../javascript/json.html">JSON</a></li>
+                    </ul>
+                  </li>
+                      <li><a href="../php/index.html">PHP</a></li>
+                      <li><a href="../database/index.html">DataBase</a></li>
+                      <li><a href="../bootstrap/index.html">Bootstrap</a></li>
+                      <li><a href="../damoa/index.html">damoa</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+    
+            <li>
+              <a href="#">Share
+                <svg class="parent-icon" viewBox="0 0 1024 1024">
+                  <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                </svg>
+                <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                  <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                </svg>
+              </a>
+              <ul class="subnav">
+                <li>
+                  <a target="_blank" href="#" title="Share Navbar.js on Facebook">
+                    <svg class="menu-icon" viewBox="0 0 1024 1024">
+                      <path d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z" />
+                    </svg>
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="#" title="Share Navbar.js on Twitter">
+                    <svg class="menu-icon" viewBox="0 0 1024 1024">
+                      <path d="M731.429 348.571c-21.714 9.714-44.571 16-69.143 19.429 25.143-14.857 44-38.857 53.143-66.857-23.429 13.714-49.143 24-76.571 29.143-21.714-23.429-53.143-37.714-87.429-37.714-66.286 0-120 53.714-120 120 0 9.143 0.571 18.857 2.857 27.429-100-5.143-188.571-52.571-248-125.714-10.286 17.714-16.571 38.857-16.571 60.571 0 41.714 19.429 78.286 52 100-20-0.571-38.857-6.286-57.143-14.857v1.143c0 58.286 44 106.857 98.857 117.714-10.286 2.857-18.286 4.571-29.143 4.571-7.429 0-14.857-1.143-22.286-2.286 15.429 47.429 59.429 82.286 112 83.429-41.143 32-92.571 51.429-149.143 51.429-9.714 0-19.429-0.571-28.571-1.714 53.143 33.714 116 53.714 184 53.714 220.571 0 341.714-182.857 341.714-341.714 0-5.143 0-10.286-0.571-15.429 23.429-16.571 44-37.714 60-62.286zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z" />
+                    </svg>
+                    <span>Twitter</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="copy navbar-content">
+            <span><a target="_blank" href="https://github.com/CoDing114">HUKE</a> &copy; 2030</span>
+          </div>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="content-inner main">
+          <div  id="grid">
+            <section id="section_1">
+              <h2>JavaScript</h2>
+              <div>첫째:자바스크립트는 사용자와 상호작용하는 언어다.</div>
+              <div>둘째:웹브라우저는 한번 화면에 출력되면 가기 자신을 바꿀수 없다</div>
+              <div>셋째:자바스크립트는 HTML위에서 동작하는 언어다.</div>
+        
+              <h4>Console에서 텍스트 글자수 구하기</h4>
+              alert('구하고자 하는 내용'.length)
+              <h4>
+                JavaScript Data types
+              </h4>
+              <ul>
+                <li>기본 자료형 (Primitive) 인 여섯가지 데이터 타입</li>
+                  <li>Boolean(연산자true&false)</li>
+                  <li>Null</li>
+                  <li>Undefined</li>
+                  <li>Number(숫자)</li>
+                  <li>String(문자)</li>
+                  <li>Symbol (ECMAScript 6 에 추가됨)</li>
+                  <li>별도로 Object 도 있음</li>
+              </ul>
+        
+              <div>
+              <pre class="snippet"><code>
+    var name = 'sung'
+  alert("variable, "+name+",mutable, changeable, "+name+", unsettled, fickle, "+name+",mobile")
+              </code></pre>
+              </div>
+              <div id=inlinebox>
+                <h3>야간모드 중복 제거  Refactoring  </h3>
+                <div> Night_Day Button v1</div>
+                <input id="night_day1" type="button"  value="Night" onclick="
+                  if(document.querySelector('#night_day1').value==='Night'){
+                    document.querySelector('body').style.backgroundColor='black';
+                    document.querySelector('body').style.backgroundImage='none';
+                    document.querySelector('body').style.color='white';
+                    document.querySelector('#night_day1').value='Day';
+                  } else{
+                    document.querySelector('body').style.backgroundColor='white';
+                    document.querySelector('body').style.backgroundImage='none';
+                    document.querySelector('body').style.color='black';
+                    document.querySelector('#night_day1').value='Night';
+                  }
+                  ">
+                <div> Night_Day Button v2</div>
+                <input type="button" class="button_night" style="font-size:medium;position: inherit;" value="Night" onclick="
+                  if(this.value==='Night'){
+                    document.querySelector('body').style.backgroundColor='black';
+                    document.querySelector('body').style.backgroundImage='none';
+                    document.querySelector('body').style.color='white';
+                    this.value='Day';
+                  } else{
+                    document.querySelector('body').style.backgroundColor='white';
+                    document.querySelector('body').style.backgroundImage='none';
+                    document.querySelector('body').style.color='black';
+                    this.value='Night';
+                  }
+                ">
+                <div> Night_Day Button v3</div>
+                <input type="button" class="button_night" style="font-size:xx-large;background-color: #f4511e;position: inherit;" value="Night" onclick="
+                  var night_day = document.querySelector('body') // night_day란 변수를 이용하여 중복제거
+                  if(this.value==='Night'){  // onclick이 소속되어있는 태그를 그르킨다 this를 사용하여 현재치로 대체가능
+                    night_day.style.backgroundColor='black';
+                    document.querySelector('body').style.backgroundImage='none';
+                    night_day.style.color='white'; // 중복 제거와 유지보수가 쉬워진다
+                    this.value='Day';
+                  } else{
+                    night_day.style.backgroundColor='white';
+                    document.querySelector('body').style.backgroundImage='none';
+                    night_day.style.color='black';
+                    this.value='Night';
+                  }
+                ">
+            </div>
+        <div id=inlinebox>
+          <h3>Night_Day function Refactoring</h3>
+              <pre class="snippet"><code>
+                
+        &ltscript>
+        function nightDayHandler(self) { nightDayHandler라는 펑션에 매개변수 추가:self
+    
+            var target = document.querySelector('body')  --target변수 = 'body'
+            if(self.value === 'Night'){ -- 매개변수self 가 Night랑 같을때
+            target.style.backgroundColor='black'; --target변수(body) 백그래운드컬러를 블랙으로 변경
+            target.style.color='white'; --target변수(body) 컬러를 화이트로 변경
+            self.value = 'Day';   --매개변수self 에 'Day'를 쓴다
+    
+            var alist = document.querySelectorAll('a'); --alist 변수 = 'a'
+            var i = 0;    --변수 i에 0을 쓴다
+            while(i &lt alist.length){ .length를 이용해 alist문자열의 길이를 확인하여 i보다 크면 참이다
+            alist[i].style.color = 'powderblue'; alist변수에 i의 인덱스 값에 해당하는 데이터 컬러변경 
+            i = i+1; i라는 변수에 1을 플러스한다
+        }
+          } else {    -- 거짓일때 --
+            target.style.backgroundColor='white'; --target변수(body) 백그래운드컬러를 화이트으로 변경
+            target.style.color='black';   --target변수(body) 컬러를 블랙으로 변경
+            self.value = 'Night';   --매개변수self 에 'Night'를 쓴다
+    
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i &lt alist.length){
+            alist[i].style.color = 'blue';
+            i = i+1;
+            }
+        }
+    }
+    &lt/script>
+          
+              </code></pre>
+              <h3>Function을 활용하여 중복제거 </h3>
+              <pre class="snippet"><code>
+                &ltscript>
+                -- linksetcolor라는 펑션 및 color라는 매개변수를 만들고 중복된 부분을 포함 시킨다 --
+                  function linksetcolor(color){   
+                    var alist = document.querySelectorAll('a');
+                      var i = 0;
+                      while(i &lt alist.length){
+                      alist[i].style.color = 'color';   --
+                      i = i+1;
+                    }
+                  }
+              
+              -- 중복 되거나 시간이 지나면 구분하기 어려운 부분은 명칭을 부여하여 관리하는것이 좋다--
+                  function badysetcolor(color){
+                    document.querySelector('body').style.color=color;
+                  }
+                  function badysetbackgroundcolor(color){
+                    document.querySelector('body').style.backgroundColor=color;
+                  }
+                  function nightDayHandler(self) {
+              
+                      var target = document.querySelector('body')
+                      if(self.value === 'Night'){
+                        badysetbackgroundcolor('black');
+                        badysetcolor('white');
+                        self.value = 'Day';
+              
+                      linksetcolor('powderblue')
+                    } else {
+                      badysetbackgroundcolor('white');
+                      badysetcolor('black');
+                      self.value = 'Night';
+              
+                      linksetcolor('blue')
+                  }
+              }
+                  &lt/script>
+                        </code></pre>
+                </div>
+              </section>
+          </div>
+        
+          <footer class="section" id="__footer" data-section="__footer">
+            <a id="__designed-by" href="../index.html">
+                "홈페이지 바로가기"
+                <i class="fa fa-code" id="footer_icon"></i>
+            </a>
+            <div class="uk-navbar-right scroll-to-section" >
+                <a id="__theme-btn" onclick="nightDayHandler(this);">
+                    "테마 바꾸기"
+                    <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+                </a>
+                <a id="__toTop" href="#__HUKE">
+                    "제일 위로"
+                    <i class="fa fa-chevron-up" id="footer_icon"></i>
+                </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    </div>
+
+</section>
+
+<!-- Scripts --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+<script src="../src/js/scroll.js"></script> <!-- scroll -->
+<script src="../src/js/nightBtn.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+<script src="../src/dist/js/clipboard.min.js"></script>     <!-- Clipboard -->
+<script src="../src/dist/js/clipboard/snippets.js"></script><!-- Clipboard -->
+<script src="../src/dist/js/clipboard/tooltips.js"></script><!-- Clipboard -->
+<script>  new ClipboardJS('.btn');</script>                 <!-- Clipboard -->
+<script src="../assets/patch/highlight/highlight.min.js"></script>      <!-- 코드 구문 강조 -->
+<script >hljs.highlightAll();</script>                                  <!-- 코드 구문 강조 호출 -->
+<script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+<script >hljs.initLineNumbersOnLoad();</script>                         <!-- 코드 줄 번호 호출 -->
+<script src="../src/js/navbar.es5.min.js"></script><!-- navbar js -->
+<script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+<script> // <!-- Start Google Analytics -->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-180336562-1');
+</script><!-- End Global Google Analytics -->
+  <script src="../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+
+    <script> // <!-- 야간모드 -->
+        function linksetcolor(color){
+          var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+            alist[i].style.color = 'color';
+            i = i+1;
+          }
+        }
+        function badysetcolor(color){
+          document.querySelector('body').style.color=color;
+        }
+        function badysetbackgroundcolor(color){
+          document.querySelector('body').style.backgroundColor=color;
+        }
+        function nightDayHandler(self) {
+    
+            var target = document.querySelector('body')
+            if(self.value === 'Night'){
+              badysetbackgroundcolor('black');
+              badysetcolor('white');
+              self.value = 'Day';
+    
+            linksetcolor('powderblue')
+         } else {
+            badysetbackgroundcolor('white');
+            badysetcolor('black');
+            self.value = 'Night';
+    
+            linksetcolor('blue')
+        }
+    }
+    </script><!-- End 야간모드 -->
+</body>
+</html>

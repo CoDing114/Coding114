@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 & 문법</title>
+    <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+          <a href="../../../index.html">
+            <img src="../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+         </div>
+         </nav>
+       </header>
+    <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+    <input type="button" class="button_night" value="Night" onclick=" 
+    nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+    
+    <h1 class="h1_title"><a href="../javascript.html">JavaScript ex2 배열&문법 </a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="../html.html">HTML</a></li>
+            <li><a href="../css.html">CSS</a></li>
+            <li><a href="../javascript.html">JavaScript</a></li>
+            <ul id="ulpd">
+                <li><a href="js ex1[연산자].html" class="saw">js ex1 연산자</a></li>
+                <li><a href="js ex2[배열&문법].html" class="saw" id="active">js ex2배열&문법</a></li>
+                <li><a href="js ex3[반복문].html" class="saw">js ex3반복문</a></li>
+                <li><a href="js ex4[배열과 반복문].html" class="saw">js ex4배열과 반복문</a></li>
+                <li><a href="js ex5[함수function].html" class="saw">js ex5함수function</a></li>
+                <li><a href="js ex6 야간모드.html" class="saw">js ex6야간모드</a></li>
+                <li><a href="js ex7 객체(object).html" class="saw">js ex7객체(object)</a></li>
+            </ul>
+            <li><a href="../html실용편.html">HTML 실용편 </a></li>
+            <li><a href="../domain.html">Domain </a></li>
+          </ol>
+
+        <div id="article">
+            <h2>배열 Array & 문법 Syntax</h1>
+            <div id="inlinebox">
+                <!-- 배열은 대괄호[]로 시작해서 대괄호로 끝난다, 값과 값 사이는 콤마로 구분한다[,]-->
+
+                <div>문자는 "따옴표로 시작해서 따옴표로 끝난다 "</div>
+                <div>배열은 [대괄호로 시작해서 대괄호로 끝난다. 
+                    "그리고 이안에 값들을 적는데" "여러개의 값을 적을수잇다"["egoing","leezche"]등
+                    "값과 값 사이는 ,콤마로 구분한다 " ]</div>
+                <h3> var coworkers=["egoing","leezche"]; </h3>
+                <div>coworkers라는 변수에 이 ["egoing","leezche"] 배열이라고 하는 데이터 타입이 담긴것이다.
+                    또한 데이터 타입에 coworkers라는 이름을 붙인거라 이해해도 된다 
+                </div>
+                <h3>가져오기 get</h3>
+                <div>document.write(coworkers[0]); egoing라는 값을 불로온다</div>
+                <div>document.write(coworkers[1]); leezche라는 값을 불러온다</div>
+
+                <script>
+                    var coworkers=["egoing","leezche"];
+                </script>
+                <div>get</div>
+                <script>
+                    document.write(coworkers[0]);
+                    document.write(coworkers[1]);
+                </script>
+            </div>
+            <div id="inlinebox">
+                <h3>배열 추가 add</h3>
+                <div>
+                    coworkers.push('sung')
+                    coworkers.push('miki')
+                    .push를 사용하여 sung,miki라는 배열이 추가됨
+                </div>
+                <script>
+                    coworkers.push('sung')
+                    coworkers.push('miki')
+                </script>
+            </div>
+            <div id="inlinebox">
+                <h3>개수확인 count</h3>
+                <div>document.write(coworkers.length) 
+                    length를 이용하여 coworkers라는 변수에 담겨잇는 배열개수를 구한다  
+                </div>
+                <script>
+                    document.write(coworkers.length)
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

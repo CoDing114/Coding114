@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야간모드 설정</title>
+        <!-- jquery/3.5.1 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-180336562-1');
+        </script>
+
+    <script> /*-- 야간모드 --*/
+        function linksetcolor(color){
+          var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+            alist[i].style.color = 'color';
+            i = i+1;
+          }
+        }
+        function badysetcolor(color){
+          document.querySelector('body').style.color=color;
+        }
+        function badysetbackgroundcolor(color){
+          document.querySelector('body').style.backgroundColor=color;
+        }
+        function nightDayHandler(self) {
+    
+            var target = document.querySelector('body')
+            if(self.value === 'Night'){
+              badysetbackgroundcolor('black');
+              badysetcolor('white');
+              self.value = 'Day';
+    
+            linksetcolor('powderblue')
+         } else {
+            badysetbackgroundcolor('white');
+            badysetcolor('black');
+            self.value = 'Night';
+    
+            linksetcolor('blue')
+        }
+    }
+    </script><!-- End 야간모드 -->
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../index.html">
+        <img src="../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+  <!-- 야간모드 -->
+  <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+  
+  <h1 class="h1_title"><a href="../javascript.html">JavaScript ex6 야간모드</a></h1>
+  <div id="grid">
+    <ol>
+      <li><a href="../html.html">HTML</a></li>
+      <li><a href="../css.html">CSS</a></li>
+      <li><a href="../javascript.html">JavaScript</a></li>
+      <ul id="ulpd">
+        <li><a href="js ex1[연산자].html" class="saw">js ex1 연산자</a></li>
+        <li><a href="js ex2[배열&문법].html" class="saw">js ex2배열&문법</a></li>
+        <li><a href="js ex3[반복문].html" class="saw">js ex3반복문</a></li>
+        <li><a href="js ex4[배열과 반복문].html" class="saw">js ex4배열과 반복문</a></li>
+        <li><a href="js ex5[함수function].html" class="saw">js ex5함수function</a></li>
+        <li><a href="js ex6 야간모드.html" class="saw" id="active">js ex6야간모드</a></li>
+        <li><a href="js ex7 객체(object).html" class="saw">js ex7객체(object)</a></li>
+      </ul>
+      <li><a href="../html실용편.html">HTML 실용편 </a></li>
+      <li><a href="../domain.html">Domain </a></li>
+    </ol>
+    <div id="article">
+
+      <h2>JavaScript</h2>
+      <div>첫째:자바스크립트는 사용자와 상호작용하는 언어다.</div>
+      <div>둘째:웹브라우저는 한번 화면에 출력되면 가기 자신을 바꿀수 없다</div>
+      <div>셋째:자바스크립트는 HTML위에서 동작하는 언어다.</div>
+
+      <h4>Console에서 텍스트 글자수 구하기</h4>
+      alert('구하고자 하는 내용'.length)
+      <h4>
+        JavaScript Data types
+      </h4>
+      <ul>
+        <li>기본 자료형 (Primitive) 인 여섯가지 데이터 타입</li>
+          <li>Boolean(연산자true&false)</li>
+          <li>Null</li>
+          <li>Undefined</li>
+          <li>Number(숫자)</li>
+          <li>String(문자)</li>
+          <li>Symbol (ECMAScript 6 에 추가됨)</li>
+          <li>별도로 Object 도 있음</li>
+      </ul>
+
+      <div>
+      var name = 'sung'
+      alert("variable, "+name+",mutable, changeable, "+name+", unsettled, fickle, "+name+",mobile")
+      </div>
+      <div id=inlinebox>
+        <h3>야간모드 중복 제거  Refactoring  </h3>
+        <div> Night_Day Button v1</div>
+        <input id="night_day1" type="button"  value="Night" onclick="
+          if(document.querySelector('#night_day1').value==='Night'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            document.querySelector('#night_day1').value='Day';
+          } else{
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#night_day1').value='Night';
+          }
+          ">
+        <div> Night_Day Button v2</div>
+        <input type="button" class="button_night" style="font-size:medium;" value="Night" onclick="
+          if(this.value==='Night'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            this.value='Day';
+          } else{
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            this.value='Night';
+          }
+        ">
+        <div> Night_Day Button v3</div>
+        <input type="button" class="button_night" style="font-size:xx-large;background-color: #f4511e;" value="Night" onclick="
+          var night_day = document.querySelector('body') // night_day란 변수를 이용하여 중복제거
+          if(this.value==='Night'){  // onclick이 소속되어있는 태그를 그르킨다 this를 사용하여 현재치로 대체가능
+            night_day.style.backgroundColor='black';
+            night_day.style.color='white'; // 중복 제거와 유지보수가 쉬워진다
+            this.value='Day';
+          } else{
+            night_day.style.backgroundColor='white';
+            night_day.style.color='black';
+            this.value='Night';
+          }
+        ">
+    </div>
+<div id=inlinebox>
+  <h3>Night_Day function Refactoring</h3>
+      <pre>
+&ltscript>
+    function nightDayHandler(self) { nightDayHandler라는 펑션에 매개변수 추가:self
+
+        var target = document.querySelector('body')  --target변수 = 'body'
+        if(self.value === 'Night'){ -- 매개변수self 가 Night랑 같을때
+        target.style.backgroundColor='black'; --target변수(body) 백그래운드컬러를 블랙으로 변경
+        target.style.color='white'; --target변수(body) 컬러를 화이트로 변경
+        self.value = 'Day';   --매개변수self 에 'Day'를 쓴다
+
+        var alist = document.querySelectorAll('a'); --alist 변수 = 'a'
+        var i = 0;    --변수 i에 0을 쓴다
+        while(i &lt alist.length){ .length를 이용해 alist문자열의 길이를 확인하여 i보다 크면 참이다
+        alist[i].style.color = 'powderblue'; alist변수에 i의 인덱스 값에 해당하는 데이터 컬러변경 
+        i = i+1; i라는 변수에 1을 플러스한다
+    }
+      } else {    -- 거짓일때 --
+        target.style.backgroundColor='white'; --target변수(body) 백그래운드컬러를 화이트으로 변경
+        target.style.color='black';   --target변수(body) 컬러를 블랙으로 변경
+        self.value = 'Night';   --매개변수self 에 'Night'를 쓴다
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i &lt alist.length){
+        alist[i].style.color = 'blue';
+        i = i+1;
+        }
+    }
+}
+&lt/script>
+      </pre>
+      <h3>Function을 활용하여 중복제거 </h3>
+      <pre>
+  &ltscript>
+  -- linksetcolor라는 펑션 및 color라는 매개변수를 만들고 중복된 부분을 포함 시킨다 --
+    function linksetcolor(color){   
+      var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i &lt alist.length){
+        alist[i].style.color = 'color';   --
+        i = i+1;
+      }
+    }
+
+-- 중복 되거나 시간이 지나면 구분하기 어려운 부분은 명칭을 부여하여 관리하는것이 좋다--
+    function badysetcolor(color){
+      document.querySelector('body').style.color=color;
+    }
+    function badysetbackgroundcolor(color){
+      document.querySelector('body').style.backgroundColor=color;
+    }
+    function nightDayHandler(self) {
+
+        var target = document.querySelector('body')
+        if(self.value === 'Night'){
+          badysetbackgroundcolor('black');
+          badysetcolor('white');
+          self.value = 'Day';
+
+        linksetcolor('powderblue')
+      } else {
+        badysetbackgroundcolor('white');
+        badysetcolor('black');
+        self.value = 'Night';
+
+        linksetcolor('blue')
+    }
+}
+    &lt/script>
+
+    <div id="inlinebox">
+      <h3>객체 도입</h3>
+      <pre>
+        
+      </pre>
+    </div>
+          </pre>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

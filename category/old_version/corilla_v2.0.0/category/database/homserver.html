@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> HomServer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+
+    <!-- google fonts Source Sans Pro  -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script><!-- jquery/3.5.1 -->
+    <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+  <nav class=".navbar"> 
+    <div class="navbar__logo">
+      <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+      <a href="../../index.html">DreamCoding</a>
+    </div>
+    </nav>
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+<h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+<div id="grid">
+  <ol>
+    <li><a href="../html/index.html">HTML</a></li>
+    <li><a href="./css/index.html">CSS</a></li>
+    <li><a href="./javascript/index.html">JavaScript</a></li>
+    <li><a href="./bootstrap/index.html">Bootstrap</a></li>
+    <li><a href="../html/html실용편.html">HTML 실용편 </a></li>
+    <li><a href="./domain.html">Domain </a></li>
+    <li><a href="./php/index.html">PHP </a></li> 
+    <li><a href="./index.html">DataBase</a></li>
+    <li><a href="./damoa/index.html"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
+  </ol>
+  <div id="article">
+    <h2>Hom Server</h2>
+    <div id=inlinebox>
+    <h3>공유기</h3>
+    <div>IP 종류:</div>
+    <ul>
+      <li>Public IP address : 59.6.66.238</li>
+      <li>Private IP address : 192.168.0.0~192.168.255.255 -65536ea</li>  
+      <li>10.0.0.0~10.255.255.255 -16777216ea</li>
+      <li>172.16.0.0~172.31.255.255 -1048576ea</li>
+    </ul>
+    <h3>Port</h3>
+    <div>Well-known Port</div>
+    <ul>
+      <li>0</li>
+      <li>22-SSH</li>  
+      <li>80-Http</li>
+      <li>1023</li>
+      <li>WEB Server: 80,8080</li>
+    </ul>
+   
+
+
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

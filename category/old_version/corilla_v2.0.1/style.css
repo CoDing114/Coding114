@@ -1,0 +1,362 @@
+:root {
+  --text-color: rgb(powderblue);
+  --background-color: rgb(23, 35, 58);
+  --accent-color: #d49466;
+  --Logo-color: chocolate;
+  --navbar-color: rgb(4, 207, 92);
+}
+
+a {
+  text-decoration: none;
+  color: powderblue;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0 0 5px 0;
+  margin: 20px 0 -10px;
+  border-bottom: 1px none #ddd;
+}
+.h1_title {
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 1px solid #ccb2da94;
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 0px;
+}
+.text_title {
+  font-size: 150%;
+}
+body {
+  margin: 0px;
+  font-family: "Source Sans Pro";
+  background-color: #263343;
+  color: #ffffff;
+  background-image: url(./assets/img/choosing-bg.jpg);
+}
+section {
+  margin: 3%;
+  border-bottom: 1px solid #ddd;
+}
+blockquote {
+  margin: 1em 0;
+  padding: 15px 20px;
+  border-left: 4px solid #e96900;
+  background: #263343;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  position: relative;
+}
+blockquote ::before {
+  content: "";
+  background-color: #e96900;
+  background-image: url(./assets/img/blockquote.png);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 40%;
+  left: -12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+p code {
+  background-color: #263343;
+  color: #e96900;
+  padding: 3px 5px;
+  margin: 0 2px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+#grid .navbar {
+  display: flex; /* 한줄에 나란히 */
+  border-right: 1px solid #ccb2da94;
+  justify-content: space-between; /* 사이사이에 넣는다 */
+  /* align-items: center; */ /* 줄 간격 맞추기 */
+  /* background-color: var(--background-color); */
+  padding: 8px 12px;
+}
+
+.navbar__logo {
+  margin: 1%;
+  font-size: 24px;
+  color: var(--text-color);
+}
+.navbar__logo i,
+.navbar__logo a {
+  color: var(--Logo-color);
+}
+
+.navbar__logo img {
+  width: 5em;
+}
+
+.navbar__menu {
+  display: flexbox;
+  list-style: none;
+  padding-left: 0px;
+}
+.navbar__menu ul {
+  list-style: none;
+}
+.navbar__menu li {
+  font-size: 120%;
+}
+
+.navbar__menu li:hover {
+  /* background-color: var(--accent-color); */
+  border-radius: 4px;
+}
+.navbar__icons {
+  list-style: none;
+  color: var(--text-color);
+  display: flex;
+  padding-left: 0;
+}
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+.navbar__toogleBtn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 150%;
+  color: var(--Logo-color);
+  display: none;
+}
+
+section a {
+  color: #f5a425;
+}
+
+#__footer {
+  display: flex;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 20px;
+  font-size: 0.92rem;
+  z-index: 9996;
+}
+
+.uk-navbar-right {
+  display: flex;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+#__Night #footer_icon {
+  position: absolute;
+}
+#__footer #__designed-by,
+#__footer #__toTop,
+#__footer #__theme-btn {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  width: 35px;
+  height: 35px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0 !important;
+}
+#__footer #__designed-by,
+#__footer #__theme-btn {
+  display: none;
+}
+
+#footer_icon {
+  font-size: 0.9rem !important;
+  line-height: 35px;
+}
+
+#__footer #__designed-by:hover,
+#__footer #__toTop:hover,
+#__footer #__theme-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#__footer #__toTop {
+  margin-left: 12px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+}
+#grid #article {
+  padding-left: 0px;
+}
+.navbar__menu > ul,
+#grid > ol {
+  flex-direction: row;
+  border-right: 1px solid #ccb2da94;
+  width: 150px;
+  margin: 0;
+  padding: 20px;
+  padding-left: 33px;
+}
+
+#grid a:hover {
+  color: aquamarine;
+  background-color: #263343;
+  transition: all 1s ease-out;
+}
+
+#inlinebox {
+  border: 3px solid hsl(180, 92%, 44%);
+  padding: 5px;
+  margin: 5px;
+}
+#growth_diary {
+  text-align: center;
+}
+#sub_list {
+  padding: 0;
+}
+#active {
+  border: 2px solid #d98f07;
+  /* color: red; */
+  text-decoration: underline;
+}
+/* .saw {
+  color: powderblue;
+} */
+.button_night {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button_night:hover {
+  opacity: 1;
+}
+
+/* screen width > 768px */
+@media (min-width: 768px) {
+  #sub-menu {
+    position: absolute;
+    display: -webkit-box;
+    left: -20px;
+    top: 100px;
+    border: none;
+  }
+  #sub-menu li {
+    padding: 5%;
+  }
+  #sub-menu li a {
+    padding: 3px;
+  }
+  .navbar__menu > li {
+    padding: 5%;
+  }
+  .navbar__menu > li > a {
+    padding: 5%;
+  }
+  #side-nav {
+    position: fixed;
+    top: 400px;
+    left: -10px;
+  }
+}
+/* screen width < 768px */
+@media screen and (max-width: 768px) {
+  #grid {
+    display: block;
+  }
+  #grid ol {
+    /* id뒤에 태그를 쓰므로 id에 포함되어 잇는 태그에한해 효과적용  */
+    border-right: none;
+  }
+  #grid .navbar {
+    border-right: none;
+  }
+
+  .navbar {
+    flex-direction: column; /* 아이템 떨어지게 만든다  */
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar__logo {
+    padding: 1px;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+  }
+  .navbar__menu li {
+    width: 100%;
+    text-align: end;
+  }
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar__toogleBtn {
+    display: block;
+  }
+  .navbar__menu.active,
+  .navbar__icons.active {
+    position: fixed;
+    right: 40px;
+    top: 26px;
+    padding-left: 0px;
+    display: flex;
+    background: #162238;
+    box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 25%),
+      1px 1px 0 0 rgb(0 0 0 / 15%) inset;
+  }
+  #sub-menu {
+    position: absolute;
+    right: 100%;
+    border-right: none;
+    background: #162238;
+    box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 25%),
+      1px 1px 0 0 rgb(0 0 0 / 15%) inset;
+  }
+}
+/* 메뉴선택 컬러변경 */
+.selected {
+  color: rgb(0, 0, 0);
+}
+.selected {
+  background-color: #3c9;
+}
+.selected {
+  padding: left 10px;
+}
+.selected {
+  padding: right 100%;
+}
+.selected {
+  width: 150px;
+}
+.depth_0 {
+  background-color: #3c9;
+}

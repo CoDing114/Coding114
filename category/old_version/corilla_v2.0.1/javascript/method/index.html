@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="section" data-section="__HUKE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Method </title>
+  <link rel="shortcut icon" href="../../assets/img/favicon.ico"><!-- icon Star -->
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png"><!-- icon End -->
+  <link rel="stylesheet" href="../../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- highlight End -->
+  <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+  <script> // <!-- Start Google Analytics -->
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-180336562-1');
+  </script><!-- End Global Google Analytics -->
+  <script src="../../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+</head>
+<body>
+  <!--header-->
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../index.html">
+        <img src="../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+    
+<h1 class="h1_title"><a href="../../index.html">WEB</a></h1>
+<div  id="grid">
+  <nav class="navbar" >
+    <ul class="navbar__menu" >
+      <li class="saw"><a href="../../html/index.html">HTML</a></li>
+      <li><a href="../../css/index.html">CSS</a></li>
+      <li><a href="../../javascript/index.html">JavaScript</a></li>
+      <li><a href="../../php/index.html">PHP </a></li> 
+      <li><a href="../../database/index.html">DataBase</a></li>
+      <li><a href="../../bootstrap/index.html">Bootstrap</a></li>
+      <li><a href="../../damoa/index.html"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
+    </ul>
+    <a href="#"class="navbar__toogleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+</nav>
+<div id="section_start" >
+  <section class="scroll-to-section section" data-section="DOM">
+    <div id="content">
+      <div class="post">
+        <h1>DOM</h1>
+        <div class="post-body md-theme">
+            <h2 id="개요">개요</h2>
+            <blockquote><p>문서 객체 모델(DOM; Document Object Model)은 객체 지향 모델로써 구조화된 문서를 표현하는 형식이다. DOM은 플랫폼/언어 중립적으로 구조화된 문서를 표현하는 W3C의 공식 표준이다.</p></blockquote>
+            <p>동적으로 <code>HTML</code> 문서의 내용, 구조, 스타일에 접근하고 변경하는 수단으로, 같은 코드가 여러 브라우저에서 동일하게 동작하도록 설립된 표준입니다.</p>
+            <ul>
+                <li><a href="#QuerySelector" >QuerySelector</a> (제어 대상 찾기)</li>
+                <li><a href="#문서-객체의-속성" >문서 객체의 속성</a></li>
+                <li><a href="#innerHTML-속성" >innerHTML 속성</a></li>
+                <li><a href="#style-속성" >style 속성</a></li>
+                <li><a href="#jQuery" >jQuery</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <section class="scroll-to-section section" data-section="QuerySelector">
+    <div id="content">
+      <div class="post">
+          <h1>QuerySelector</h1>
+          <div class="post-body md-theme">
+              <h2 id="개요">개요</h2>
+              <p>
+                  JavaScript에서 <strong>제어 대상</strong>(문서 객체)를 찾기 위해서 몇 가지 함수를 제공합니다.<br />
+                  적절한 제어 대상을 정하고 함수 호출을 하면 객체를 반환하게 되는데, 이 객체의 속성과 메소드를 통해 자바스크립트에서 문서를 동적으로 처리할 수 있습니다.
+              </p>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>함수 이름</th>
+                          <th>요약</th>
+                          <th>반환값</th>
+                          <th>IE 지원</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>
+                              <a href="#getelementbyid"><code>getElementById</code></a>
+                          </td>
+                          <td><code>id</code> 속성으로 검색</td>
+                          <td>객체(한개)</td>
+                          <td>IE 7+</td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <a href="#getelementsbyclassname"><code>getElementsByClassName</code></a>
+                          </td>
+                          <td><code>class</code> 속성으로 검색</td>
+                          <td>배열(여러개)</td>
+                          <td>IE 9+</td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <a href="#getelementsbytagname"><code>getElementsByTagName</code></a>
+                          </td>
+                          <td>태그 이름으로 검색</td>
+                          <td>배열(여러개)</td>
+                          <td>IE 7+</td>
+                      </tr>
+                      <tr>
+                          <td><code>querySelector</code></td>
+                          <td>jQuery-유사 셀렉터</td>
+                          <td>객체(한개)</td>
+                          <td>IE 8+</td>
+                      </tr>
+                      <tr>
+                          <td><code>querySelectorAll</code></td>
+                          <td>jQuery-유사 셀렉터</td>
+                          <td>배열(여러개)</td>
+                          <td>IE 8+</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <p>
+                  위 함수들은 글로벌 함수가 아닌 <code>객체 모델</code>에서 사용할 수 있는 함수입니다.<br />
+                  즉, <code>getElementById</code> 함수로 이미 찾은 객체 내부에서 다시 <code>getElementsByClassName</code> 함수를 사용하는 식이죠.
+              </p>
+              <p>문서 전체에서 객체를 찾을 시에는 <code>document</code> 전역 변수를 사용합니다.</p>
+              <p>querySelector 함수와 querySelectorAll 함수는 <a href="#jQuery" tppabs="https://ofcourse.kr/js-course/jQuery">jQuery 강의</a>를 참고 바랍니다.</p>
+              <h3 id="사용법">사용법</h3>
+              <pre><code class="language-javascript">var mytext1 = document.getElementById('mytext1');
+var containers = document.getElementsByClassName('container');
+var images = document.getElementsByTagName('img');
+var mytext1_1 = document.querySelector('#mytext1');
+var containers = document.querySelector('.container');
+</code></pre>
+              <h2 class="section" data-section="getelementbyid">getElementById</h2>
+              <h3 id="예제">예제</h3>
+              <pre><code class="language-html">&lt;input id="mytext1" type="text"&gt;
+
+&lt;script type="text/javascript"&gt;
+var myText1 = document.getElementById('mytext1');
+myText1.value = Math.random();
+&lt;/script&gt;
+</code></pre>
+              <h2 class="section" data-section="getelementsbyclassname">getElementsByClassName</h2>
+              <h3 id="예제-1">예제</h3>
+              <pre><code class="language-html">&lt;input class="rand-text" type="text"&gt;
+&lt;input class="rand-text" type="text"&gt;
+&lt;input class="rand-text" type="text"&gt;
+
+&lt;script type="text/javascript"&gt;
+var randTexts = document.getElementsByClassName('rand-text');
+
+for (var i = 0; i &lt; randTexts.length; i++)
+randTexts[i].value = Math.random();
+
+&lt;/script&gt;
+</code></pre>
+              <h2 class="section" data-section="getelementsbytagname">getElementsByTagName</h2>
+              <h3 id="예제-2">예제</h3>
+              <pre><code class="language-html">&lt;select id="my-selector"&gt;
+&lt;option&gt;&lt;/option&gt;
+&lt;option&gt;&lt;/option&gt;
+&lt;option&gt;&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;script type="text/javascript"&gt;
+var mySelector = document.getElementById('my-selector');
+var mOptions = mySelector.getElementsByTagName('option');
+
+for (var i = 0; i &lt; mOptions.length; i++)
+mOptions[i].innerHTML = Math.round(Math.random() * 10000);
+
+&lt;/script&gt;
+</code></pre>
+              </div>
+          </div>
+        </div>
+  </section>
+
+  <section class="scroll-to-section section " data-section="문서-객체의-속성">
+    <div id="content">
+      <div class="post">
+    <h1>문서 객체의 속성</h1>
+    <div class="post-body md-theme">
+<h2 id="개요">개요</h2>
+<p>
+    querySelector를 이용해 찾은 객체에서 몇 가지 속성을 통해<span>&nbsp;</span>DOM을 제어할 수 있습니다.<br />
+    대표적으로<span>&nbsp;</span>value<span>&nbsp;</span>속성을 사용하면<span>&nbsp;</span>HTML태그의 value 속성을 지정하는 것과 같은 효과를 냅니다.
+</p>
+<p>태그마다 사용할 수 있는 속성은 다르며 공통적이며 자주 사용되는 속성으로는 아래가 있습니다.</p>
+<p>속성설명예시</p>
+<table>
+    <tbody>
+        <tr>
+            <td>id</td>
+            <td>id값</td>
+            <td>if (myBox.id == &ldquo;my-box&rdquo;)</td>
+        </tr>
+        <tr>
+            <td>className</td>
+            <td>class값</td>
+            <td>myBox.className = &ldquo;box red-box&rdquo;</td>
+        </tr>
+        <tr>
+            <td>tagName</td>
+            <td>태그의 이름</td>
+            <td>if (myBox.tagName == &ldquo;div&rdquo;)</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>value값</td>
+            <td>nameInputArea = &ldquo;홍길동&rdquo;</td>
+        </tr>
+        <tr>
+            <td>style</td>
+            <td>style 오브젝트</td>
+            <td>myBox.style.color = &ldquo;red&rdquo;</td>
+        </tr>
+        <tr>
+            <td>innerHTML</td>
+            <td>태그 내부 HTML값</td>
+            <td>myBox.innerHTML = &ldquo;<span>ok</span>&rdquo;</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<h2 >사용자 정의 속성 제어</h2>
+<p>태그마다 특징적인 속성은 바로 제어할 수 있습니다.<span>&nbsp;</span>&lt;a&gt;<span>&nbsp;</span>태그의 경우<span>&nbsp;</span>href<span>&nbsp;</span>속성을 사용할 수 있죠.</p>
+<p>하지만 사용자가 임의로 태그에 속성을 부여하거나, 임의로 부여된 속성에 접근하기 위해서는 메소드를 통해 접근해야합니다.</p>
+<p>아래 4개 메소드를 사용하여 사용자 정의 속성을 제어할 수 있습니다.</p>
+<ul>
+    <li>getAttribute(name)</li>
+    <li>setAttribute(name, value)</li>
+    <li>hasAttribute(name)</li>
+    <li>removeAttribute(name)</li>
+</ul>
+<p>
+  <p>예제</p>
+  <pre>
+var user = document.getElementById("user");
+var monster = document.getElementById("monster");
+user.setAttribute("HP", 100);
+user.style.left = "50px";
+ 
+if (parseInt(user.style.left) &lt parseInt(monster.style.left))   
+  user.setAttribute("HP",  user.getAttribute("HP") - 10);
+  </pre>
+</p>
+    </div>
+  </div>  
+</div>
+  </section>
+
+  <section class="scroll-to-section section " data-section="innerHTML-속성">
+    <div id="content">
+      <div class="post">
+          <h1>innerHTML 속성</h1>
+          <div class="post-body md-theme">
+              <h2 id="개요">개요</h2>
+              <p><a href="#QuerySelector">QuerySelector</a>로 가져온 도큐먼트 오브젝트의 내용이나, 내부 HTML 코드를 JavaScript 코드에서 변경 할 수 있습니다.</p>
+              <h2 id="예제">예제</h2>
+              <pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+&lt;script type= "text/javascript"&gt;
+function innerHTMLTest(){
+var randValNode = document.getElementById("rand-val");
+randValNode.innerHTML = "&lt;b&gt;&lt;font color='red'&gt;"+Math.random()+"&lt;/font&gt;&lt;/b&gt;";
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="rand-val"&gt;Let's generate random Value&lt;/div&gt;
+&lt;button onclick="innerHTMLTest()"&gt;Generate&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+              <h2 id="outerhtml">outerHTML</h2>
+              <p><code>innerHTML</code>과 비슷하지만, 선택된 노드를 포함하여 HTML를 수정합니다.</p>
+              <h2 id="innertext--outertext">innerText &amp; outerText</h2>
+              <p><code>HTML</code> 코드가 그대로 입력되지 않으며, 텍스트로 입력됩니다.</p>
+              <h3 id="예제-1">예제</h3>
+              <pre><code class="language-html">&lt;script type="text/javascript"&gt;
+function innerTextTest(target) {
+target.innerText = '&lt;strong&gt;click&lt;/strong&gt;';
+}
+&lt;/script&gt;
+&lt;button onclick="innerTextTest(this)"&gt;Click This&lt;/button&gt;
+</code></pre>
+              <h2 id="기타">기타</h2>
+              <p>
+                  <code>HTML</code>문자열을 그대로 삽입하는 방법 대신 <code>createElement</code> 등의 함수로 도큐먼트 객체를 만들고 <code>insertBefore</code> 등의 함수로 노드 객체 안에 다른 노드 객체를 삽입하며
+                  <code>객체지향</code>처럼 사용하는 방법도 있습니다.
+              </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section " data-section="style-속성">
+    <div id="content">
+      <div class="post">
+          <h1>style 속성</h1>
+          <div class="post-body md-theme">
+              <h2 id="개요">개요</h2>
+              <p>
+                  HTML에서 <a href="../html-course/태그의-속성-1.htm#style-속성" >style 속성</a>을 이용하면 CSS의 속성을 태그에 직접 설정할 수 있었습니다.<br />
+                  JavaScript에서도 비슷하게 <span class="scroll-to-section"><a href="#QuerySelector" >QuerySelector</a></span>로 가져온 노드에서 <code>style</code>속성을 참조하며 CSS 속성을 적용시킬 수 있습니다.
+              </p>
+              <p>
+                  <code>CSS</code>에서 여러 단어로 이어진 속성은 <code>-</code>로 구분되었는데(ex. background-color), <code>JavaScript</code>에서는 <code>-</code>를 사용하지 않고 다음 단어를 대문자로 사용하며(Camel Case)
+                  접근합니다. (ex. backgroundColor)
+              </p>
+              <h2 id="사용법">사용법</h2>
+              <pre><code class="language-javascript">var box = document.getElementById("box");
+box.style.backgroundColor = "red";
+</code></pre>
+              <h2 id="예제">예제</h2>
+              <pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+&lt;script type="text/javascript"&gt;
+function changeColor() {
+var box = document.getElementById("box");
+var r = parseInt(Math.random() * 256);
+var g = parseInt(Math.random() * 256);
+var b = parseInt(Math.random() * 256);
+
+box.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+}
+&lt;/script&gt;
+&lt;style&gt;
+#box{
+cursor: pointer;
+width:80px;
+height:80px;
+background-color:#ccc;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;click to change color&lt;/div&gt;
+&lt;div id="box" onclick="changeColor()"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <section class="section " data-section="jQuery">
+    <div id="content">
+      <div class="post">
+          <h1>jQuery</h1>
+          <div class="post-body md-theme">
+              <h2 id="개요">개요</h2>
+              <p>
+                  <code>JavaScript</code>는 하나의 기업에서 혼자 만들고, 혼자 사용 환경까지 배포해주는 언어가 아닙니다.<br />
+                  표준과 규약이 있고 빠르게 발전하고 있기는 하지만 규약이 제대로 정해지기 전 나왔던 구형 브라우저 (Internet Explorer 9 이하)에서는 JavaScript 함수를 지원하지 않는 것이 있어 코드가 제대로 동작하지 않는 경우도
+                  많습니다.
+              </p>
+              <p>
+                  <code>jQuery</code>는, 이런 브라우저 <strong>호환성</strong>을 해결하고 자주 사용하는 코드를 <strong>재사용</strong>할 수 있도록 만들어진 라이브러리입니다.<br />
+                  상당히 많은 웹사이트가 현재도 <code>jQuery</code>를 사용하고 있습니다.
+              </p>
+              <p>
+                  <a href="https://jquery.com/"target="blank">
+                      jQuery 공식 홈페이지
+                  </a>
+              </p>
+              <p>이 강의에서 상세하게 다루진 않을 예정이며, JavaScript 작업이 많이 필요한 홈페이지에는 jQuery 사용을 권장드립니다.</p>
+              <h2 id="사용법">사용법</h2>
+              <pre><code class="language-javascript">var spans = $('span'); // 태그이름이 div인 객체 찾기
+var box = $('#my-box'); // id가 'my-box'인 객체 찾기
+var cb = $('.common-button'); // class가 'common-button'인 객체 찾기
+
+box.html('&lt;strong&gt;content&lt;/strong&gt;'); // innerHTML 속성 유사 함수
+box.css('background-color', '#ff3300'); // css 적용 (style 속성 유사)
+</code></pre>
+              <h2 id="예제">예제</h2>
+              <pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;
+&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(window).ready(function () {
+var box = $('#box');
+box.on('click', function () {
+box.css('width', box.innerWidth() + 20 + 'px');
+box.css('height', box.innerHeight() + 20 + 'px');
+});
+});
+
+&lt;/script&gt;
+&lt;style&gt;
+#box{
+cursor: pointer;
+width:80px;
+height:80px;
+background-color:#666;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;click to exapand&lt;/div&gt;
+&lt;div id="box"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+  </div>
+</div>
+  </section>
+
+  
+  <footer class="scroll-to-section" id="__footer">
+      <a id="__designed-by" href="../../index.html">
+        "홈페이지 바로가기"
+        <i class="fa fa-code" id="footer_icon"></i>
+      </a>
+    <div class="uk-navbar-right ">
+      <div id="__theme-btn">"테마 바꾸기"
+        <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+      </div>
+     <a id="__toTop" href="#__HUKE" >
+       "제일 위로"
+       <i class="fa fa-chevron-up" id="footer_icon"></i>
+      </a>
+    </div>
+  </footer>
+
+      <input type="button"  class="button_night" value="Night" onclick=" 
+        nightDayHandler(this); "> <!-- 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 -->  
+  </div>
+</div>
+
+<!-- Scripts --> 
+<script src="../../src/js/scroll.js"defer></script> <!-- scroll -->
+  
+
+  <!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+// const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+
+</body>
+</html>

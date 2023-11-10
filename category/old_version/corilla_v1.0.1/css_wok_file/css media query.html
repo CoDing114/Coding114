@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Query</title>
+    <style>
+
+        h1{
+            font-size: 45px;
+            text-align:center;
+            border-bottom:1px solid #ccb2da94;
+            margin:0;
+            padding:20px;
+            padding-bottom: 40px;
+            padding-top:0px;
+        }
+        div{
+            border:10px solid hsl(165, 33%, 55%);
+            font-size: 20px;
+            color:#d6780d;
+    }
+        /* screen width >800px min[초소값],max[최대값]*/
+        @media(min-width: 800px){
+            h1{
+                color:hsl(123, 89%, 45%);
+            }
+            #responsive{
+                display: none;
+            }
+    }
+        body{
+            background-color: hsl(0, 0%, 0%);
+    }
+        a {
+            color:powderblue;
+            text-decoration:none; /*decoration 꾸미다. none을 사용 함으로 밑줄 삭제*/
+    }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+          <a href="../../../index.html">
+            <img src="../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+         </div>
+         </nav>
+       </header>
+       
+    <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+    <h1>CSS Media Query</h1>
+    <div id="grid">
+        <ol>
+            <li><a href="../html.html">HTML</a></li>
+            <li><a href="../css.html">CSS</a></li>
+            <ul id="ulpd">
+                <li><a href="css box.html" class="saw">CSS BOX</a></li>
+                <li><a href="css grid.html"class="saw">CSS GRID</a></li>
+                <li><a href="css media query.html"class="saw" id="active">CSS Query</a></li>
+            </ul>
+            <li><a href="../javascript.html">JavaScript</a></li>
+            <li><a href="../html실용편.html">HTML 실용편 </a></li>
+            <li><a href="../domain.html">Domain </a></li>
+        </ol>
+        <div id="article">
+            <h4>반응형 디자인 Media Query</h4>
+            <div id="responsive">
+                Responsive
+            </div>
+            <div>
+                화면의 크기에 따라 웹 페이지의 각요소들이 반응하여동작하게 된다. <br>
+                /* screen width >800px min[초소값],max[최대값]*/<br>
+                @media(max-width: 800px){<br>
+                    h1{<br>
+                        color:hsl(123, 89%, 45%);<br>
+                    }<br>
+                    #responsive{<br>
+                        display: none;<br>
+                    }<br>
+            }
+            </div>
+            <div id="responsive">
+                Responsive
+            </div>
+        </div>
+    </div>
+</body>
+</html>

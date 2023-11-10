@@ -1,0 +1,18 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 호출 -->
+  <script>hljs.highlightAll();</script> <!-- 코드 줄 번호 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 호출 -->
+  <script>hljs.initLineNumbersOnLoad();</script>
+  <!-- <script> // 사용자 정의 사용
+    document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  });
+  </script> -->
+  <!-- highlight End -->
+<head>

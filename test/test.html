@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>使用HTML DOM操作表单及表单元素</title>
+<script type="text/javascript" src="test.js"></script>
+</head>
+<body>
+   <div class="bgm_action">
+      <a href="#" id="btn_bgm_control"><img src="../invitation/wedding/static/theme/theme_new_05/img/sound_on.gif" /></a>
+      <audio id="bgm" loop="loop" autoplay="autoplay"><source src="../invitation/wedding/wedding/static/resource/bgm/IU(아이유) _ Celebrity.mp3" type="audio/mp3" /></audio>
+  </div>
+
+  <h2>个人信息注册</h2>
+  <form id="form" name="form1">
+    <table border="1" width="630" cellpadding="5" cellspacing="0">
+      <tr><td>用户名</td><td><input type="text" name="username"/></td></tr>
+      <tr><td>密 码</td><td><input type="password" name="psw1"/></td></tr>
+      <tr><td>确认密码</td><td><input type="password" name="psw2"/></td></tr>
+      <tr><td>性 别</td><td>
+         <input type="radio" name="gender" value="女">女
+         <input type="radio" name="gender" value="男">男
+      </td></tr>
+      <tr><td>掌握的语言</td><td>
+         <input type="checkbox" name="lang" value="中文">中文
+         <input type="checkbox" name="lang" value="英文">英文    
+         <input type="checkbox" name="lang" value="法文">法文
+         <input type="checkbox" name="lang" value="日文">日文
+      </td></tr>
+      <tr><td>个人爱好</td><td><select name="hobby" size="4" multiple="miltiple">
+         <option value="旅游">旅游</option>
+         <option value="运动">运动</option>
+         <option value="阅读">阅读</option>
+         <option value="上网">上网</option>
+         <option value="游戏">游戏</option>
+         <option value="音乐">音乐</option>
+      </select></td></tr>
+      <tr><td>最高学历</td><td><select name="degree">
+         <option value="-1">--请选择学历--</option>
+         <option value="博士">博士</option>
+         <option value="硕士">硕士</option>
+         <option value="本科">本科</option>
+         <option value="专科">专科</option>
+         <option value="高中">高中</option>
+         <option value="初中">初中</option>
+         <option value="小学">小学</option>
+      </select></td></tr>
+      <tr><td>个人简介</td><td><textarea name="info" rows="6" cols="45"></textarea>
+       </td></tr>
+      <tr><td colspan="2" align="center">
+         <input type="button" value="注 册" id="regBtn">
+         <input type="reset" value="重 置">
+      </td></tr>
+    </table>
+  </form>
+</body>
+</html>

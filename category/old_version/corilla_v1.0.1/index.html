@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Welcome to Growth Diary </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <!-- Global site tag (gtag.js) - Google Analytics [구글 분석기] -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script>
+    <script src="colors.js"> // 야간모드 </script>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../index.html">
+        <img src="../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+  <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+
+<h1 class="h1_title"><a href="index.html">WEB</a></h1>
+<div id="grid">
+  <ol>
+    <li><a href="html.html">HTML</a></li>
+    <li><a href="css.html">CSS</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="html실용편.html">HTML 실용편 </a></li>
+    <li><a href="domain.html">Domain </a></li>
+  </ol>
+  <div id="article">
+    <div id="growth_diary">  
+      <h2>Welcome To Growth Diary</h2>
+      <h3>코린이의 성장 일기</h3>
+      <img src="./img/original_1.png" width="30%">
+      
+      <pre>  
+안녕하세요. 
+다들 코딩에 관심 있으신가요?
+코딩해보셨나요?
+코딩.. 잘 하시나요?... 부럽...
+제1 목표는 WEB 뿌시기입니다.
+-저만의 포트폴리오가 담긴 웹페이지 구축!!!
+제2 목표는 파이썬 뿌시기입니다.
+-파이썬으로 시작하는 데이터 분석~
+제대로 배운 게 없어서 
+기초를 쌓아보고자 합니다.
+원래 기초공사가 중요하다고들 하잖아요?!
+정말 갈길이 멀죠?ㅎㅎ
+      </pre>
+      <h3>지켜봐주세요!</h3>
+
+      <h3>앞으로 열심히 해보도록 하겠습니다!</h3>
+      <img src="./img/pasted image 0.png" width="20%">
+    </div>
+    <div> <!-- 댓글 및 실시간 대화 -->
+      <p><!-- 라이브리 시티 설치 코드 댓글 기능 활용 -->
+        <div id="lv-container" data-id="city" data-uid="MTAyMC81MTczMy8yODIxNA==">
+          <script type="text/javascript">
+            (function(d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+          
+                if (typeof LivereTower === 'function') { return; }
+          
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+          
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+          </script>
+          <noscript>라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+          </div>
+        </p> <!-- 라이브리 시티 설치 코드 끝 -->
+      <P>
+        <!--Start of Tawk.to Script 실시간 대화-->
+        <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5f843adb4704467e89f6af36/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+        <!--End of Tawk.to Script-->
+      </P>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

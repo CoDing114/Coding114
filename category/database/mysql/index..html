@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> DataBase</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+
+    <!-- google fonts Source Sans Pro  -->
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script><!-- jquery/3.5.1 -->
+    <script src="colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+  <nav class=".navbar"> 
+    <div class="navbar__logo">
+      <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+      <a href="../index.html">DreamCoding</a>
+    </div>
+    </nav>
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+<h1 class="h1_title"><a href="./index.html">WEB</a></h1>
+<div id="grid">
+  <ol>
+    <li><a href="../../html/index.html">HTML</a></li>
+    <li><a href="../../css/index.html">CSS</a></li>
+    <li><a href="../../javascript/index.html">JavaScript</a></li>
+    <li><a href="../../bootstrap/index.html">Bootstrap</a></li>
+    <li><a href="../../html실용편.html">HTML 실용편 </a></li>
+    <li><a href="../.../database/domain.html">Domain </a></li>
+    <li><a href="../../php/index.html">PHP </a></li> 
+    <li><a href="../database/index.html"class="saw" id="active">DataBase</a></li>
+    <li><a href="../../damoa/index.html"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
+  </ol>
+  <div id="article">
+    <div>
+        <h3>데이터 베이스 핵심작업 CRUD </h3>
+        <ul><h3>데이터 모델링 </h3>
+            <li>Create</li>
+            <li>Read</li>
+            <li>Update</li>
+            <li>Delete</li>
+        </ul>
+    </div>
+    <div>
+      <h3>자주 쓰는 명령어 </h3>
+      <ul> 수정중 WHERE문을 빼먹으면 재앙이 올수잇다!!!
+          <li>Create;   생성</li>
+          <li>Drop;     삭제</li>
+          <li>SHOW ***; 데이터 베이스 조회</li>
+          <li>USE ***;  데이터 베이스 선택</li>
+          <li>DESC ***; 구조확인</li>
+          <li>SELECT *  FROM topic;추가한 데이터 확인</li>
+          <li>ORDER BY id DESC; 높은 값 부터 정렬</li>
+          <li>LIMIT 2;  보이기 수량 설정가능</li>
+          <li>RENAME TABLE topic TO topic_backup; 이름 변경</li>
+          <li>UPDATE topic SET description='Oracle is...',title='Oracle' WHERE id=2; 수정</li>
+          <LI>DELETE FROM topic WHERE id=5; 데이터 삭제</LI>
+      </ul>
+    </div>
+    <div>
+      <h3>자주 쓰는 용어 </h3>
+      <ul>
+          <li>Table:표</li>
+          <li>Row,record:행</li>
+          <li>column:열</li>
+          <li></li>
+      </ul>
+    </div>
+    <div>
+
+    <img src="../IMG/20210711_071528.png" width="60%">
+
+  </div>
+
+    <pre> <h3>실습내용</h3>
+  경로선택    1:CD C:\Bitnami\wampstack-8.0.8-0\mariadb\bin   
+  MYSQL실행   2:C:\Bitnami\wampstack-8.0.8-0\mariadb\bin  >mysql -uroot -p(비밀번호입력가능)
+  DB생성      3:MariaDB [opentutorials]> create table topic( --입력후 ';'없이 Enter를 누르면 줄바꿈이된다
+                -> id INT(11) NOT null AUto_increment, --INT(11)[인티저(보이기수량)],NOT null[공백 비허용],AUto_increment[자동으로 1씩 추가 중복을 회피]
+  DB선택      4:USE opentutorials; 
+  TABLE생성   5:CREATE TABLE topic(
+                id INT(11)NOT NULL AUTO_INCREMENT, 
+                title VARCHAR(100)NOT NULL, 
+                description TEXT NULL, 
+                created DATETIME NOT NULL, 
+                author VARCHAR(30)NULL, 
+                profile VARCHAR(100)NULL,
+                PRIMARY KEY(id));
+  TABLE확인   6:SHOW TABLES;
+  TB구조 확인 7:DESC topic;
+  데이터 추가 8:INSERT INTO topic_backup (title,description,created,author,profile) VALUES('DOGE','DOGE is....',NOW(),'Elon','Musk');
+  데이터 확인 9:SELECT * FROM topic;
+  데이터 변경10:UPDATE topic SET description='Oracle is...',title='Oracle' WHERE id=2;
+
+  <h3>관계형 데이터</h3>
+  -- Table structure for table `author`
+--
+CREATE TABLE `author` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `profile` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+ 
+--
+-- Dumping data for table `author`
+--
+INSERT INTO `author` VALUES (1,'egoing','developer');
+INSERT INTO `author` VALUES (2,'duru','database administrator');
+INSERT INTO `author` VALUES (3,'taeho','data scientist, developer');
+ 
+--
+-- Table structure for table `topic`
+--
+CREATE TABLE `topic` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(30) NOT NULL,
+  `description` text,
+  `created` datetime NOT NULL,
+  `author_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+ 
+--
+-- Dumping data for table `topic`
+--
+INSERT INTO `topic` VALUES (1,'MySQL','MySQL is...','2018-01-01 12:10:11',1);
+INSERT INTO `topic` VALUES (2,'Oracle','Oracle is ...','2018-01-03 13:01:10',1);
+INSERT INTO `topic` VALUES (3,'SQL Server','SQL Server is ...','2018-01-20 11:01:10',2);
+INSERT INTO `topic` VALUES (4,'PostgreSQL','PostgreSQL is ...','2018-01-23 01:03:03',3);
+INSERT INTO `topic` VALUES (5,'MongoDB','MongoDB is ...','2018-01-30 12:31:03',1);
+    
+데이터 조인: topic.author_id & author.id
+SELECT * FROM topic LEFT JOIN author ON topic.author_id = author.id;
+
+중복제거:
+SELECT topic.id,title,description,created,name,profile FROM topic LEFT JOIN author ON topic.author_id = author.id;
+
+AS를 활용하여 id데이터 출처를 나타냄:
+SELECT topic.id As topic_id,title,description,created,name,profile FROM topic LEFT JOIN author ON topic.author_id = author.id;
+<img src="../IMG/database_JOIN.png" width="60%">
+<img src="../IMG/database_JOIN_AS.png" width="60%">
+
+</pre>
+
+<div> <h3>Data Type</h3>
+  &lt Data Type >
+TABLE 에 column 을 추가할때, column 이 보유할 수 있는 데이터의 타입을 명시해야 한다.
+대표적으로 많이 쓰이는 타입들만 정리했다. https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+
+Text types
+
+Data type	Description
+CHAR(size)	고정 길이 문자열을 보유한다. (문자, 숫자 및 특수 문자를 포함 할 수 있음). 고정 크기는 괄호 안에 지정되며, 최대 255자를 저장할 수 있다.
+VARCHAR(size)	가변 길이 문자열을 보유한다 (문자, 숫자 및 특수 문자를 포함 할 수 있음). 최대 크기는 괄호 안에 지정되어 있으며, 최대 255자를 저장할 수 있다. 참고 : 255보다 큰 값을 입력하면 TEXT 유형으로 변환된다.
+TEXT	최대 길이가 65,535자인 문자열을 보유한다.
+BLOB	BLOB (Binary Large OBjects)를 보유한다. 최대 65,535 바이트의 데이터를 저장할 수 있다.
+ 
+
+Number types
+
+Data type	Description
+INT(size)	-2147483648 에서 2147483647 사이의 숫자를 보유할 수 있다. 최대 자릿수는 괄호 안에 지정한다.
+FLOAT(size,d)	부동 소수점이있는 작은 숫자이다. 최대 자릿수는 size 매개 변수에 지정 될 수 있다. 소수점 오른쪽의 최대 자릿수는 d 매개 변수에 지정된다.
+ 
+
+Data types
+
+Data type	Description
+DATE()	날짜. Format: YYYY-MM-DD
+DATETIME()	날짜와 시간 조합, Format: YYYY-MM-DD HH:MM:SS
+ 
+
+&lt Attributes >
+데이터 타입의 명시 뒤에는 column 에 대한 속성(attribute)을 설정할 수 있다.
+
+NOT NULL - 해당 column 에 대한 row 는 null 값을 가질 수 없다.
+DEFAULT value - 해당 column 에 대한 row 에 값이 전달되지 않을 때 추가되는 기본값이다.
+UNSIGNED - 숫자형 자료 타입에 사용되며, 저장된 데이터를 양수와 0 으로 제한한다.
+
+ 
+AUTO INCREMENT - 새 레코드가 추가될때마다 필드 값을 1씩 자동으로 증가시킨다.
+PRIMARY KEY - 테이블에서 행을 고유하게 식별하는데 사용된다. PRIMARY KEY 설정이 있는 열은 대부분 ID 번호이며, AUTO INCREMENT 와 함께 사용되는 경우가 있다.
+ 
+
+&lt여기서 테이블이란?>
+
+관계형 데이터베이스에서 테이블이란, column 과 row 로 이루어진 데이터 요소들의 집합이다.
+column 은 열(기둥) 이라는 뜻으로, 세로로 이루어져 특정 필드를 나타낸다.
+row 는 행이라는 뜻으로, 가로로 이루어져 가각의 레코드를 나타낸다.
+행과 열의 교차는 테이블의 각 셀을 정의 한다.
+첫번째 열에는 ID 와 같은 고유 식별자(ID)가 포함되는 경우가 많다.
+각 레코드(행) 들을 고유 식별자로 식별할 수 있으며, 다른 테이블에서 해당 레코드의 고유 식별자 값을 참조하여 사용할 수가 있는데, 이 경우를 두고 테이블끼리 관계가 있다고 말한다(관계형 데이터베이스).
+
+테이블에 대한 참고 링크1 : https://www.techopedia.com/definition/1247/table
+
+
+ 
+테이블에 대한 참고 링크2 : https://www.ntchosting.com/encyclopedia/databases/mysql/database-table/
+
+테이블에 대한 참고 링크3 : https://database.guide/what-is-a-table/
+</div>
+  </div>
+</div>
+
+
+</body>
+</html>

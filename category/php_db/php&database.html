@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> DataBase</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+
+   <!-- google fonts Source Sans Pro  -->
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script>
+    <!-- jquery/3.5.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-180336562-1');
+    </script><!-- jquery/3.5.1 -->
+    <link rel="stylesheet" href="style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <script src="colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+  <nav class=".navbar"> 
+    <div class="navbar__logo">
+      <i class="fab fa-skyatlas"style="color:#d49466;"></i>
+      <a href="../index.html">DreamCoding</a>
+    </div>
+    </nav>
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+
+<h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+<div id="grid">
+  <ol>
+    <li><a href="html.html">HTML</a></li>
+    <li><a href="css.html">CSS</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
+    <li><a href="html실용편.html">HTML 실용편 </a></li>
+    <li><a href="domain.html">Domain </a></li>
+    <li><a href="php.html">PHP </a></li> 
+    <li><a href="bootstrap/bootstrap.html">BootStrap</a></li>
+    <li><a href="database.html"class="saw" id="active">DataBase</a></li>
+    <li><a href="damoa.html"target="_blank">damoa </a></li> <!-- "_blank"를 이용하여 새창에 열기 -->
+  </ol>
+  <div id="article">
+    <div>
+        <h3>데이터 베이스 핵심작업 CRUD </h3>
+        <ul><h3>데이터 모델링 </h3>
+            <li>Create</li>
+            <li>Read</li>
+            <li>Update</li>
+            <li>Delete</li>
+        </ul>
+    </div>
+    <div>
+      <h3>자주 쓰는 명령어 </h3>
+      <ul> 수정중 WHERE문을 빼먹으면 재앙이 올수잇다!!!
+          <li>Create;   생성</li>
+          <li>Drop;     삭제</li>
+          <li>SHOW ***; 데이터 베이스 조회</li>
+          <li>USE ***;  데이터 베이스 선택</li>
+          <li>DESC ***; 구조확인</li>
+          <li>SELECT *  FROM topic;추가한 데이터 확인</li>
+          <li>ORDER BY id DESC; 높은 값 부터 정렬</li>
+          <li>LIMIT 2;  보이기 수량 설정가능</li>
+          <li>RENAME TABLE topic TO topic_backup; 이름 변경</li>
+          <li>UPDATE topic SET description='Oracle is...',title='Oracle' WHERE id=2; 수정</li>
+          <LI>DELETE FROM topic WHERE id=5; 데이터 삭제</LI>
+      </ul>
+    </div>
+    <div>
+      <h3>자주 쓰는 용어 </h3>
+      <ul>
+          <li>Table:표</li>
+          <li>Row,record:행</li>
+          <li>column:열</li>
+          <li></li>
+      </ul>
+    </div>
+    <div>
+
+    <img src="IMG/20210711_071528.png" width="60%">
+
+  </div>
+
+    <pre> <H3>실습내용</H3>
+  경로선택    1:CD C:\Bitnami\wampstack-8.0.8-0\mariadb\bin   
+  MYSQL실행   2:C:\Bitnami\wampstack-8.0.8-0\mariadb\bin  >mysql -uroot -p(비밀번호입력가능)
+  DB생성      3:MariaDB [opentutorials]> create table topic( --입력후 ';'없이 Enter를 누르면 줄바꿈이된다
+                -> id INT(11) NOT null AUto_increment, --INT(11)[인티저(보이기수량)],NOT null[공백 비허용],AUto_increment[자동으로 1씩 추가 중복을 회피]
+  DB선택      4:USE opentutorials; 
+  TABLE생성   5:
+CREATE TABLE topic(
+id INT(11)NOT NULL AUTO_INCREMENT,
+title VARCHAR(45)NOT NULL,
+description TEXT,
+created DATETIME NOT NULL,
+PRIMARY KEY(id))
+ENGINE=InnoDB;
+  TABLE확인   6:SHOW TABLES;
+  TB구조 확인 7:DESC topic;
+  데이터 추가 8:INSERT INTO topic_backup (title,description,created,author,profile) VALUES('DOGE','DOGE is....',NOW(),'Elon','Musk');
+  데이터 확인 9:SELECT * FROM topic;
+  데이터 변경10:UPDATE topic SET description='Oracle is...',title='Oracle' WHERE id=2;
+
+
+<!---
+  TABLE생성   5:CREATE TABLE topic(   --테이블이름 토픽
+  id INT(11)NOT NULL AUTO_INCREMENT,  --id 값은 정수,11글자까지 보여준다,id값은 식별자 기땜에 없으면 안됨 NOT NULL,INSERT문에서 언급하지않으면 자동으로 1씩증가시키는 AUTO_INCREMENT,
+  title VARCHAR(45)NOT NULL,          --TITLE은 긴문장이 올필요 없으니45자만 쓰도록 설정, 상황에 맞게 판단하면 된다.
+  description TEXT,                   --긴 텍스트가 올수잇으므로 TEXT로 설정
+  created DATETIME NOT NULL,          --날자시간 
+  PRIMARY KEY(id)),                   --PRIMARY KEY가 되면 중복 거절,색인 기능:id값을 기반으로 해서 데이터를 순식간에 가져올수잇다.
+  ENGINE=InnoDB;                      --디비 설정,(InnoDB가 디폴트 변경필요 없을땐 구지 안써도 InnoDB가 된다)
+  -->
+</pre>
+<div>
+  <h3>Mysql 접속 방벙</h3>
+  &lt?php
+  mysqli_connect("localhotst","root","password","opentutorials")
+  ?>
+  mysqli_connect:
+  -localhotst:호스트
+  -root:아이디
+  password:패스워드
+  opentutorials:데이터 베이스 선택
+</div>
+  </div>
+</div>
+
+</body>
+</html>

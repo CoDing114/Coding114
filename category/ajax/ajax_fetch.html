@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="./Ajax_fetch.html">WEB</a> </h1>
+    <div></div>
+    <pre><code>
+        function fetchPage(name){
+            fetch(name).then(function(response){ 
+                response.text().then(function(text){
+                document.getElementById('contents').innerHTML=text;
+                })
+            });
+        } 
+            if(location.hash){
+            fetchPage(location.hash.substr(2));
+        } else{
+            fetchPage('data/welcome');
+        } 
+            fetch('data/list_v2').then(function(response){
+            response.text().then(function(text){
+            var items=text.split(','); 
+            var i=0; 
+            var tags=''; 
+            while(i&ltitems. length){
+                var item=items[i]; 
+                item=item.trim(); 
+                var tag='&ltli>&lta href="#data/'+item+'"onclick="fetchPage(\'data/'+item+'\')">'+item+'&lt/a>&lt/li>'; 
+                tags=tags+tag; 
+                i=i+1; 
+            }
+            document.getElementById('nav').innerHTML=tags;
+            })
+        });
+    </code></pre>
+    <ol id="nav"></oL>
+    <article id="contents"></article>
+<script>
+        function fetchPage(name){
+        fetch(name).then(function(response){ 
+            response.text().then(function(text){
+            document.getElementById('contents').innerHTML=text;
+            })
+        });
+    } 
+        if(location.hash){
+        fetchPage(location.hash.substr(2));
+    } else{
+        fetchPage('data/welcome');
+    } 
+        fetch('data/list_v2').then(function(response){
+        response.text().then(function(text){
+        var items=text.split(','); 
+        var i=0; 
+        var tags=''; 
+        while(i<items. length){
+            var item=items[i]; 
+            item=item.trim(); 
+            // var tag='<li><a href="'+item+'.html"onclick="fetchPage(\''+item+'\')">'+item+'</a></li>'; 
+            var tag='<li><a href="#!data/'+item+'"onclick="fetchPage(\'data/'+item+'\')">'+item+'</a></li>'; 
+            tags=tags+tag; 
+            i=i+1; 
+        }
+        document.getElementById('nav').innerHTML=tags;
+        })
+    });
+    </script>
+</body>
+</html>

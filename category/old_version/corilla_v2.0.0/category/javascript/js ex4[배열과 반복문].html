@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop & Array</title>
+     <!-- google fonts Source Sans Pro  -->
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+     <!-- jquery/3.5.1 -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'UA-180336562-1');
+     </script>
+    <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+          <a href="../../../../index.html">
+            <img src="../../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+          <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+         </div>
+         </nav>
+       </header>
+       
+      <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+    
+      <div  id="grid">
+       <nav class="navbar" >
+       <ul class="navbar__menu" >
+        <li><a href="../html/index.html">HTML</a></li>
+          <li><a href="../css/index.html">CSS</a></li>
+          <li class="has-submenu"><a href="./index.html">JavaScript</a></li>
+          <ul id="sub-menu">
+            <li><a href="./js ex1[연산자].html" class="saw">연산자</a></li>
+            <li><a href="./js ex2[배열&문법].html" class="saw">배열&문법</a></li>
+            <li><a href="./js ex3[반복문].html" class="saw">반복문</a></li>
+            <li><a href="./js ex4[배열과 반복문].html" class="saw" id="active">배열과 반복문</a></li>
+            <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
+            <li><a href="./js ex6 야간모드.html" class="saw">야간모드</a></li>
+            <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
+          </ul>
+          <li><a href="../php/index.html">PHP </a></li> 
+          <li><a href="../database/index.html">DataBase</a></li>
+       </ul>
+     <a href="#"class="navbar__toogleBtn">
+         <i class="fas fa-bars"></i>
+     </a>
+     </nav>
+    
+    
+        <section id="section_1">
+            <h2>반복문 Loop & 배열 Array</h2>
+            <h3> 배열에서 각각의 항목들을 원소(element)라 부른다 </h3>
+            <h3>var coworkers = ['egoing','leezche','duru','mika','graphittie']</h3>
+            <pre id="inlinebox">
+                <h3>Co workers라는 배열에 잇는 원소들을 하나씩 불러와 나열한다</h3>
+    ((+coworkers[i]+ 배열에서 데이터를 가져올땐 대괄호[]를 쓴다,
+대괄호[] 안에는 가져오고자하는 데이터의 인덱스 값[i]을 넣는다))
+&ltul>
+    &ltscript>
+        var i = 0;      -i라는 변수에 0이란 값을 넣어준다 
+        while(i &lt 4){         -i의 값이 4보다 작을때 true
+            document.write('&ltli>'+coworkers[i]+'&lt/li>');
+            i = i + 1;      -Loop 돌때마다 i값에 1씩 플러스 해준다
+    }
+    &lt/script>
+&lt/ul>
+            </pre>
+            <pre id="inlinebox">
+<h3>데이터가 바뀐다구 로직이 바껴선 안된다</h3>
+(( -length를 이용하여 배열안에 잇는 원소의 개수를 불러온다 ))
+
+&ltul>
+    &ltscript>
+        var i = 0; 
+            while(i &lt coworkers.length){
+            document.write('&ltli>'+coworkers[i]+'&lt/li>');
+            i = i + 1; 
+        }
+    &lt/script>
+&lt/ul>
+            </pre>
+                <pre id="inlinebox">
+                    <h3>리스트에 링크 삽입</h3>
+      ((&lta href="http://baidu.com/'+coworkers[i]+'">를 추가하여
+    지정 링크뒤에 해당 닉네임 즉 인덱스 값이 붙는다))
+&ltul>
+    &ltscript>
+        var i = 0;
+        while(i &lt coworkers.length){
+            document.write('&ltli>&lta href="http://baidu.com/'+coworkers[i]+'">'+coworkers[i]+'&lt/li>');
+            i = i + 1;
+    }
+    &ltlt/script>
+&lt/ul>   
+            </pre>
+            <script>
+                var coworkers = ['egoing','leezche','duru','mika','graphittie']
+            </script>
+            <h3>Co workers program</h3>
+            <ul>
+                <script>
+                    var i = 0;
+                    while(i < coworkers.length){
+                        document.write('<li><a href="https://www.google.com/search?q='+coworkers[i]+'"target="_blank"">'+coworkers[i]+'</li>');
+                        i = i + 1;
+                }
+            </script>
+            </ul>
+        </section>
+    </div>
+
+<!-- script navbar__icons -->
+<script>
+    const toggleBtn = document.querySelector('.navbar__toogleBtn');
+  const menu = document.querySelector('.navbar__menu');
+  const icons = document.querySelector('.navbar__icons');
+  
+  toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      // icons.classList.toggle('active');
+  });
+  </script>
+  
+  <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+  <input type="button" class="button_night" value="Night" onclick=" 
+  nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+  </section>
+  
+</body>
+</html>

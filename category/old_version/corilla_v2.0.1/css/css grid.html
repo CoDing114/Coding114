@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="section" data-section="__HUKE" id="__HUKE">
+<head>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+    <!-- highlight Start -->
+    <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+    <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+    <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+    <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+    <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+    <!-- highlight End -->
+    <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+    <script> // <!-- Start Google Analytics -->
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-180336562-1');
+    </script><!-- End Global Google Analytics -->
+    <script src="../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+    <style>
+        h1{
+            font-size: 45px;
+            text-align:center;
+            border-bottom:1px solid #ccb2da94;
+            margin:0;
+            padding:20px;
+            padding-bottom: 40px;
+            padding-top:0px;
+        }
+       
+        #article{
+          margin-left: 20px;
+        }
+        
+        .container{
+            background: beige;
+            height: 100vh; /* vh를 활용해 원하는 만큼 height를 줄수잇다 */
+            flex-direction: row;  /*왼쪽에서 오른쪽 방향으로 정렬*/
+            flex-wrap: nowrap;  /*지정하지 않는다 한줄에 붙어 잇는다*/
+            /* flex-wrap: row nowrap; */
+            
+        }
+        .item{
+          width: 40px;
+          height: 40px;
+        }
+        td{
+          min-width: 0;
+          padding: 10px 20px;
+          font-size: .85em;
+          border: 1px solid #4d4b4b;
+        }
+        
+    </style>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+        <a href="../../../index.html">
+            <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+     </div>
+     </nav>
+   </header>
+   
+  <h1 class="h1_title"><a href="./index.html">CSS GRID</a></h1>
+
+  <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+    <li class="has-submenu"><a href="index.html" >CSS</a></li>
+    <ul id="sub-menu">
+      <li><a href="./css box.html" class="saw">CSS_BOX</a></li>
+      <li><a href="./css grid.html" class="saw" id="active">CSS_GRID</a></li>
+      <li><a href="./css media query.html" class="saw">CSS_Media_Query</a></li>
+    </ul>
+    <li><a href="../javascript/index.html">JavaScript</a></li>
+    <li><a href="../php/index.html">PHP </a></li> 
+    <li><a href="../database/index.html">DataBase</a></li>
+   </ul>
+  <a href="#"class="navbar__toogleBtn">
+      <i class="fas fa-bars"></i>
+  </a>
+ </nav>
+
+  <section id="section_1">
+    <h1>CSS Grid 완벽 가이드</h1>
+    <h3>개요</h3>    
+    <p>CSS Grid(그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공합니다.<br>Flexible Box도 훌륭하지만 비교적 단순한 1차원 레이아웃을 위하며, 좀 더 복잡한 레이아웃을 위해 우리는 CSS Grid를 사용할 수 있습니다.</p>
+    <blockquote>
+      <p>CSS Grid는 예전부터 핵(Hack)으로 불린 다양한 레이아웃 대체 방식들을 해결하기 위해 만들어진 특별한 CSS 모듈입니다.</p>
+    </blockquote>
+    <h2>CSS Grid Container Properties</h2>
+    <p>Grid Container를 위한 속성들은 다음과 같습니다.</p>
+    <div>
+      <table>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>의미</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>display</td>
+                <td>그리드 컨테이너(Container)를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-template-rows</td>
+                <td>명시적 행(Track)의 크기를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-template-columns</td>
+                <td>명시적 열(Track)의 크기를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-template-areas</td>
+                <td>영역(Area) 이름을 참조해 템플릿 생성</td>
+            </tr>
+            <tr>
+                <td>grid-template</td>
+                <td><code>grid-template-xxx</code>의 단축 속성</td>
+            </tr>
+            <tr>
+                <td>row-gap(grid-row-gap)</td>
+                <td>행과 행 사이의 간격(Line)을 정의</td>
+            </tr>
+            <tr>
+                <td>column-gap(grid-column-gap)</td>
+                <td>열과 열 사이의 간격(Line)을 정의</td>
+            </tr>
+            <tr>
+                <td>gap(grid-gap)</td>
+                <td><code>xxx-gap</code>의 단축 속성</td>
+            </tr>
+            <tr>
+                <td>grid-auto-rows</td>
+                <td>암시적인 행(Track)의 크기를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-auto-columns</td>
+                <td>암시적인 열(Track)의 크기를 정의</td>
+            </tr>
+            <tr>
+                <td>grid-auto-flow</td>
+                <td>자동 배치 알고리즘 방식을 정의</td>
+            </tr>
+            <tr>
+                <td>grid</td>
+                <td><code>grid-template-xxx</code>과 <code>grid-auto-xxx</code>의 단축 속성</td>
+            </tr>
+            <tr>
+                <td>align-content</td>
+                <td>그리드 콘텐츠(Grid Contents)를 수직(열 축) 정렬</td>
+            </tr>
+            <tr>
+                <td>justify-content</td>
+                <td>그리드 콘텐츠를 수평(행 축) 정렬</td>
+            </tr>
+            <tr>
+                <td>place-content</td>
+                <td><code>align-content</code>와 <code>justify-content</code>의 단축 속성</td>
+            </tr>
+            <tr>
+                <td>align-items</td>
+                <td>그리드 아이템(Items)들을 수직(열 축) 정렬</td>
+            </tr>
+            <tr>
+                <td>justify-items</td>
+                <td>그리드 아이템들을 수평(행 축) 정렬</td>
+            </tr>
+            <tr>
+                <td>place-items</td>
+                <td><code>align-items</code>와 <code>justify-items</code>의 단축 속성</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>grid-auto-flow</h2>
+    <p>배치하지 않은 아이템(Item)을 어떤 방식의 ‘자동 배치 알고리즘’으로 처리할지 정의합니다.</p>
+    <blockquote><p>배치한 아이템은 <code>grid-area</code>(이하 개별 속성 포함)를 사용한 아이템을 의미합니다.</p></blockquote>
+  </div>
+</section>
+
+<footer class="section scroll-to-section" id="__footer" data-section="__footer">
+    <a id="__designed-by" href="../../index.html">
+        "홈페이지 바로가기"
+        <i class="fa fa-code" id="footer_icon"></i>
+    </a>
+    <div class="uk-navbar-right">
+        <div id="__theme-btn">
+            "테마 바꾸기"
+            <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+        </div>
+        <a id="__toTop" href="#__HUKE">
+            "제일 위로"
+            <i class="fa fa-chevron-up" id="footer_icon"></i>
+        </a>
+    </div>
+  </footer>
+  
+  <!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+
+</body>
+</html>

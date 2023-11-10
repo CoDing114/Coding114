@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+
+    <!-- google fonts Source Sans Pro  -->
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- font   awesome  Logo font -->
+    <script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script>
+    <style>
+        h1{
+            font-size: 45px;
+            text-align:center;
+            border-bottom:1px solid #ccb2da94;
+            margin:0;
+            padding:20px;
+            padding-bottom: 40px;
+            padding-top:0px;
+        }
+        #grid{/* grid를 사용 하여 같은 컬러속에서 나눈다.*/
+            border:5px solid pink;
+            display: grid; 
+            grid-template-columns: 150px 1fr;/* 1fr은 화면의 1만큼 사용 */
+        }
+        #article{
+          margin-left: 20px;
+        }
+        
+        .container{
+            background: beige;
+            height: 100vh; /* vh를 활용해 원하는 만큼 height를 줄수잇다 */
+            flex-direction: row;  /*왼쪽에서 오른쪽 방향으로 정렬*/
+            flex-wrap: nowrap;  /*지정하지 않는다 한줄에 붙어 잇는다*/
+            /* flex-wrap: row nowrap; */
+            
+        }
+        .item{
+          width: 40px;
+          height: 40px;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../../index.html">
+        <img src="../../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <!-- <img src="./assets/img/ICO/corilla-logo-RG_v0.0.1.png"> -->
+     </div>
+     </nav>
+   </header>
+   
+  <h1 class="h1_title"><a href="./index.html">CSS GRID</a></h1>
+
+  <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+    <li class="has-submenu"><a href="index.html" >CSS</a></li>
+    <ul id="sub-menu">
+      <li><a href="./css box.html" class="saw">CSS_BOX</a></li>
+      <li><a href="./css grid.html" class="saw" id="active">CSS_GRID</a></li>
+      <li><a href="./css media query.html" class="saw">CSS_Media_Query</a></li>
+    </ul>
+    <li><a href="../javascript/index.html">JavaScript</a></li>
+    <li><a href="../php/index.html">PHP </a></li> 
+    <li><a href="../database//index.html">DataBase</a></li>
+   </ul>
+  <a href="#"class="navbar__toogleBtn">
+      <i class="fas fa-bars"></i>
+  </a>
+ </nav>
+
+  <section id="section_1">
+    <div id="grid_box">
+      <div>navigattion1</div>
+      <div>navigattion4</div>
+      <div>navigattion4</div>
+      <div>navigattion4</div>
+      <div>navigattion4</div>
+      <div>navigattion4</div>
+      <div>
+        <div>article1</div>
+        <div>article2</div>
+        <div>article3</div>
+        <img src="../../img/analytics.png" width="50%">
+      </div>
+    
+    </div>
+    <div>    
+        <span>navigattion</span>
+        <span>article1</span>
+        <span>article2</span>
+        <span>article3</span>
+        <span>article4</span>
+        <span>lorem</span>
+    </div>  
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+      <div class="item item9">9</div>
+      <div class="item item10">10</div>
+    </div>
+  </div>
+</section>
+<!-- script -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">  
+
+</body>
+</html>

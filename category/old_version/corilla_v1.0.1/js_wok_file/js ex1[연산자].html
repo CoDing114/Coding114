@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>연산자</title>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ex1[연산자]</title>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-180336562-1');
+      </script>
+      <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../index.html">
+        <img src="../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+    <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+    <input type="button" class="button_night" value="Night" onclick=" 
+    nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+    
+  <h1 class="h1_title"><a href="../javascript.html">JavaScript ex1[연산자]</a></h1>
+  <div id="grid">
+    <ol>
+      <li><a href="../html.html">HTML</a></li>
+      <li><a href="../css.html">CSS</a></li>
+      <li><a href="../javascript.html">JavaScript</a></li>
+      <ul id="ulpd">
+        <li><a href="js ex1[연산자].html" class="saw" id="active">js ex1 연산자</a></li>
+        <li><a href="js ex2[배열&문법].html" class="saw">js ex2배열&문법</a></li>
+        <li><a href="js ex3[반복문].html" class="saw">js ex3반복문</a></li>
+        <li><a href="js ex4[배열과 반복문].html" class="saw">js ex4배열과 반복문</a></li>
+        <li><a href="js ex5[함수function].html" class="saw">js ex5함수function</a></li>
+        <li><a href="js ex6 야간모드.html" class="saw">js ex6야간모드</a></li>
+        <li><a href="js ex7 객체(object).html" class="saw">js ex7객체(object)</a></li>
+      </ul>
+      <li><a href="../html실용편.html">HTML 실용편 </a></li>
+      <li><a href="../domain.html">Domain </a></li>
+    </ol>
+
+    <div id="article">
+      <script>
+          document.write('Hello World');
+      </script>
+      <input type="button" class="button_night" style="font-size:medium;background-color:tomato;" value="Hi" onclick="alert('Heloo')"> 클릭
+      <div>Console에서 텍스트 글자수 구하기</div>
+      <div>alert('구하고자 하는 내용'.length)</div>
+
+      <h3> Comparison operator & Boolean 연산자 </h3>
+      <div>===:동등연산자</div>
+      <div>1===1 true</div>
+      <script>
+          document.write(1===1);
+      </script>
+      <div>1===2 false</div>
+      <script>
+          document.write(1===2);
+      </script>
+      <h2>조건문 conditional statements</h2>
+      <h2>program if </h2>
+      <script>
+        document.write("1<br>");
+        document.write("2<br>");
+        document.write("3<br>");
+        document.write("4<br>");
+      </script>
+      <h2>IF-true</h2>
+      <script>
+        document.write("1<br>");
+        if(true){
+          document.write("2<br>");
+          
+        } else{
+          document.write("3<br>");
+        }
+        document.write("4<br>");
+      </script>
+      <h2>IF-false</h2>
+      <script>
+        document.write("1<br>");
+        if(false){
+          document.write("2<br>");
+          
+        } else{
+          document.write("3<br>");
+        }
+        document.write("4<br>");
+      </script>
+
+      <input id="night_day1" type="button" value="Night" onclick="
+        if(document.querySelector('#night_day1').value==='Night'){
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          document.querySelector('#night_day1').value='Day';
+        } else{
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='black';
+          document.querySelector('#night_day1').value='Night';
+        }
+        ">
+      <h2>Night_Day button Test</h2>
+    </div>
+  </div>
+</body>
+</html>

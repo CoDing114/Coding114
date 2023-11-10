@@ -1,0 +1,112 @@
+/** reset **/
+* {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+img {
+  border: medium none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 12px;
+  font-family: "microsoft yahei", "Gulim ", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+input,
+button,
+img {
+  border: none;
+  background: none;
+}
+button {
+  cursor: pointer;
+}
+input[type="text"],
+input[type="password"],
+button {
+  outline: none;
+  -webkit-appearance: none;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(247, 242, 242);
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  text-decoration: none;
+}
+img {
+  border: 0px;
+  outline-width: 0px;
+  vertical-align: top;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}

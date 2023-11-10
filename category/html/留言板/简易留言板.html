@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>留言板</title>
+  <link rel="stylesheet" href="message_style.css">
+</head>
+
+<body>
+  <form class="comment" id="comment">
+    <label for="content">请留言:</label>
+    <textarea class="content" name="content" id="content" cols="30" rows="5" placeholder="不要超过100个字符"></textarea>
+    <button class="submit" type="button" name="submit">提交</button>
+  </form>
+  <!-- <button class="reg">事件注册</button> -->
+  <ul class="list"></ul>
+  <script>
+    // reg.forEach(function (an){     console.log(an.classList);  });
+    // reg.forEach(an => {      an.addEventListener('click',() => {
+    // console.log(an.className)          console.log(an.classList)      })  }); 留言板
+    const btn = document.querySelector('button');
+    const ul = document.querySelector('ul');
+    const tx = document.querySelector('.content');
+    btn.addEventListener('click', () => {
+      if (tx.value.length > 0 && tx.value.length <= 100) {
+        //提交留言
+        let li = document.createElement('li');
+        li.style.borderBottom = '1px solid white';
+        li.style.minHeight = '3em'
+        li.textContent = tx.value;
+        //删除留言
+        const delbtn = document.createElement('button');
+        delbtn.textContent = "删除留言";
+        delbtn.style.float = 'right'
+        delbtn
+          .classList
+          .add('del-btn');
+        delbtn.onclick = function () {
+          if (confirm('是否删除该留言？')) {
+            this
+              .parentNode
+              .remove();
+            alert('删除成功！')
+            return false;
+          }
+        };
+        ul.prepend(li);
+        li.append(delbtn);
+        tx.value = null;
+      } else {
+        alert("留言字符至少1个字符，最大100个字符")
+      }
+    });
+  </script>
+</body>
+
+</html>

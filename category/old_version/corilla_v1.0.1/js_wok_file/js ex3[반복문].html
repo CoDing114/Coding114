@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 </title>
+    <script src="../colors.js"> // 야간모드 jQuery 설치 필요 </script>
+</head>
+<body>
+    <header>
+        <nav class=".navbar"> 
+         <div class="navbar__logo">
+          <a href="../../../index.html">
+            <img src="../../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+          </a>
+         </div>
+         </nav>
+       </header>
+    <!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+    <input type="button" class="button_night" value="Night" onclick=" 
+    nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+    
+    <h1 class="h1_title"><a href="../javascript.html">JavaScript ex3 반복문 </a></h1>
+    <div id="grid">
+        <ol>
+          <li><a href="../html.html">HTML</a></li>
+          <li><a href="../css.html">CSS</a></li>
+          <li><a href="../javascript.html">JavaScript</a></li>
+          <ul id="ulpd">
+            <li><a href="js ex1[연산자].html" class="saw">js ex1 연산자</a></li>
+            <li><a href="js ex2[배열&문법].html" class="saw">js ex2배열&문법</a></li>
+            <li><a href="js ex3[반복문].html" class="saw" id="active">js ex3반복문</a></li>
+            <li><a href="js ex4[배열과 반복문].html" class="saw">js ex4배열과 반복문</a></li>
+            <li><a href="js ex5[함수function].html" class="saw">js ex5함수function</a></li>
+            <li><a href="js ex6 야간모드.html" class="saw">js ex6야간모드</a></li>
+            <li><a href="js ex7 객체(object).html" class="saw">js ex7객체(object)</a></li>
+          </ul>
+          <li><a href="../html실용편.html">HTML 실용편 </a></li>
+          <li><a href="../domain.html">Domain </a></li>
+        </ol>
+        <div id="article">
+            <div id="inlinebox">
+                <h2>반복문 Loop</h1>
+                <h3>List 만들기</h3>
+                    <pre> 
+    &ltscript>
+    document.write('&ltli>1&it/li>');
+    document.write('&ltli>2&it/li>');
+    document.write('&ltli>1&it/li>');
+    document.write('&ltli>2&it/li>');
+    document.write('&ltli>1&it/li>');
+    document.write('&ltli>2&it/li>');
+    &lt/script>  
+                    </pre>
+                    <h4>Program:</h4>
+                    <ul>
+                        <script>    
+                            document.write('<li>1</li>');
+                            document.write('<li>2</li>');
+                            document.write('<li>1</li>');
+                            document.write('<li>2</li>');
+                            document.write('<li>1</li>');
+                            document.write('<li>2</li>');     
+                        </script>
+                    </ul>
+                    <h3>반복제거 Refactoring</h3>
+                    <pre> 
+    &ltscript>
+    var i = 0; -변수 생성 :i
+    while(i &lt 3){ -반복문의 기본 문법:while(true/false)
+    document.write('&ltli>1&lt/li>') i의 값이 3보다 작을때 반복문을 실행한다;
+    document.write('&ltli>2&lt/li>');
+    i = i + 1; Loop 돌때마다 i값에 1씩 플러스 해준다
+    }
+    &ltscript>
+                    </pre>
+                    <h4>Program:</h4>
+                    <ul>
+                        <script>
+                            var i = 0;
+                            while(i < 3){
+                            document.write('<li>1</li>');
+                            document.write('<li>2</li>');
+                            i = i + 1;
+                        }
+                        </script>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

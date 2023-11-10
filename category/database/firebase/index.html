@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="section" data-section="__HUKE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Method </title>
+  <link rel="shortcut icon" href="../../assets/img/favicon.ico"><!-- icon Star -->
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png"><!-- icon End -->
+  <link rel="stylesheet" href="../../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link rel="stylesheet" href="../../src/dist/css/clipboard.css"> <!-- Clipboard -->
+  <link href="../../src/css/navbar.min.css" rel="stylesheet"><!-- navbar style -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+
+</head>
+<body>
+
+<div class="content-wrapper">
+  <div class="container">
+    <nav class="navbar navigation" data-function="navbar">
+      <a class="navbar__logo" href="../../index.html">
+        <img src="../../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+      <button class="navbar-toggle">
+        <svg class="menu-icon" viewBox="0 0 1024 1024">
+          <path d="M896.876 319.65h-768.751c-14.152 0-25.625-11.473-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.473 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z m0 256.25h-768.751c-14.152 0-25.625-11.472-25.625-25.625s11.473-25.625 25.625-25.625h768.751c14.153 0 25.625 11.472 25.625 25.625s-11.472 25.625-25.625 25.625z" />
+        </svg>
+      </button>
+
+      <div>
+        <ul class="nav">
+          <li>
+            <a style="background:none;" href="../../index.html">Home
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+            <ul class="subnav">
+              <li><a href="../../index.html">Main</a></li>
+              <li>
+                <a href="../../html/index.html#old_version">
+                  OLD Version List
+                  <svg class="parent-icon" viewBox="0 0 1024 1024">
+                    <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                  </svg>
+                  <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                    <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                  </svg>
+                </a>
+                <ul class="subnav">
+                  <li><a href="../../OLD_Version/CoRilla_v0.0.1/index.html">CoRilla v.0.0.1</a></li>
+              <li><a href="../../OLD_Version/CoRilla_v1.0.1/index.html">CoRilla v.1.0.1</a></li>
+              <li><a href="../../OLD_Version/CoRilla_v2.0.0/category/index.html">CoRilla v.2.0.0</a></li>
+              <li><a href="../../OLD_Version/CoRilla_v2.0.1/index.html">CoRilla v.2.0.1</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <a href="#">
+              Navigate
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+
+            <div class="subnav">
+              <ul class="row nomargin">
+                <li class='col-4'>
+                  <ul class="">
+                    <li>
+                      <a href="../../html/index.html">
+                        HTML
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                          <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                        </svg>
+                        <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                          <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                        </svg>
+                      </a>
+                      <ul class="subnav">
+                        <li><a href="../../html/html실용편.html">HTML 실용편</a></li>
+                      <li><a href="../../html/clipboard.html">클립보드</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="../../css/index.html">CSS
+                      <svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li><a href="../../css/css box.html">CSS_BOX</a></li>
+                    <li><a href="../../css/css grid.html">CSS_GRID</a></li>
+                    <li><a href="../../css/css media query.html">CSS_Media_Query</a></li>
+                  </ul></li>
+                    <li class="active"><a href="../../javascript/index.html">JavaScript
+                      <svg class="parent-icon" viewBox="0 0 1024 1024">
+                      <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                    </svg>
+                    <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                      <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                    </svg>
+                  </a>
+                  <ul class="subnav">
+                    <li class="active">
+                      <a href="#">
+                        Method
+                        <svg class="parent-icon" viewBox="0 0 1024 1024">
+                          <path d="M366 698l196-196-196-196 60-60 256 256-256 256z" />
+                        </svg>
+                        <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                          <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+                        </svg>
+                      </a>
+                      <ul class="subnav">
+                        <li class="active"><a href="../../javascript/method/index.html">&lt/> JavaScript Code</a></li>
+                        <li><a href="#">Corporate</a></li>
+                        <li><a href="#">Industrial</a></li>
+                        <li><a href="#">Government</a></li>
+                      </ul>
+                    </li>
+                        <li><a href="../../javascript/js ex1[연산자].html">연산자</a></li>
+                        <li><a href="../../javascript/js ex2[배열&문법].html">배열&문법</a></li>
+                        <li><a href="../../javascript/js ex3[반복문].html">반복문</a></li>
+                        <li><a href="../../javascript/js ex4[배열과 반복문].html">배열과&반복문</a></li>
+                        <li><a href="../../javascript/js ex5[함수function].html">함수Function</a></li>
+                        <li><a href="../../javascript/js ex6 야간모드.html">야간모드</a></li>
+                        <li><a href="../../javascript/js ex7 객체(object).html">객체(object)</a></li>
+                        <li><a href="../../javascript/json.html">JSON</a></li>
+                  </ul>
+                </li>
+                    <li><a href="../../php/index.html">PHP</a></li>
+                    <li><a href="../../database/index.html">DataBase</a></li>
+                    <li><a href="../../bootstrap/index.html">Bootstrap</a></li>
+                    <li><a href="../../damoa/index.html">damoa</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">Share
+              <svg class="parent-icon" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+              <svg class="parent-toggle" viewBox="0 0 1024 1024">
+                <path d="M316 334l196 196 196-196 60 60-256 256-256-256z" />
+              </svg>
+            </a>
+            <ul class="subnav">
+              <li>
+                <a target="_blank" href="#" title="Share Navbar.js on Facebook">
+                  <svg class="menu-icon" viewBox="0 0 1024 1024">
+                    <path d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="#" title="Share Navbar.js on Twitter">
+                  <svg class="menu-icon" viewBox="0 0 1024 1024">
+                    <path d="M731.429 348.571c-21.714 9.714-44.571 16-69.143 19.429 25.143-14.857 44-38.857 53.143-66.857-23.429 13.714-49.143 24-76.571 29.143-21.714-23.429-53.143-37.714-87.429-37.714-66.286 0-120 53.714-120 120 0 9.143 0.571 18.857 2.857 27.429-100-5.143-188.571-52.571-248-125.714-10.286 17.714-16.571 38.857-16.571 60.571 0 41.714 19.429 78.286 52 100-20-0.571-38.857-6.286-57.143-14.857v1.143c0 58.286 44 106.857 98.857 117.714-10.286 2.857-18.286 4.571-29.143 4.571-7.429 0-14.857-1.143-22.286-2.286 15.429 47.429 59.429 82.286 112 83.429-41.143 32-92.571 51.429-149.143 51.429-9.714 0-19.429-0.571-28.571-1.714 53.143 33.714 116 53.714 184 53.714 220.571 0 341.714-182.857 341.714-341.714 0-5.143 0-10.286-0.571-15.429 23.429-16.571 44-37.714 60-62.286zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z" />
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="copy navbar-content">
+          <span><a target="_blank" href="https://github.com/CoDing114">HUKE</a> &copy; 2030</span>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="content-inner main">
+        <div  id="grid">
+            <div id="section_start" >
+                <h1>Firebase CLI 설치</h1>
+                <section class="scroll-to-section section" data-section="CLI_Install">
+                    <devsite-selector scope="code-sample" active="npm" ready=""><devsite-tabs role="tablist" connected=""><div class="devsite-tabs-wrapper"><tab role="tab" aria-selected="false" aria-controls="tabpanel-독립-실행형-바이너리" tab="독립-실행형-바이너리" id="windows-standalone-binary"><a id="aria-tab-독립-실행형-바이너리" role="button" href="#독립-실행형-바이너리"> 독립 실행형 바이너리 </a></tab><tab role="tab" aria-selected="true" aria-controls="tabpanel-npm" tab="npm" id="windows-npm" active=""><a id="aria-tab-npm" role="button" href="#npm" aria-selected="true">npm</a></tab><tab overflow-tab="" hidden=""><a href="#" class="devsite-icon devsite-icon-arrow-drop-down">더보기</a><div class="devsite-tabs-overflow-menu" scrollbars="" hidden=""></div></tab></div></devsite-tabs>
+                        <section tab="독립-실행형-바이너리" role="tabpanel" aria-labelledby="aria-tab-독립-실행형-바이너리" tabindex="0" id="tabpanel-독립-실행형-바이너리"><p>Firebase CLI용 바이너리를 다운로드하고 실행하려면 다음 단계를 따르세요.</p>
+                        
+                        <ol>
+                        <li><p><a href="https://firebase.tools/bin/win/instant/latest" class="external">Windows용 Firebase CLI 바이너리</a>를 다운로드합니다.</p></li>
+                        <li><p>바이너리에 액세스하여 셸을 열고 <code translate="no" dir="ltr">firebase</code> 명령어를 실행할 수 있습니다.</p></li>
+                        <li><p>계속해서 <a href="#sign-in-test-cli">로그인하여 CLI를 테스트</a>합니다.</p></li>
+                        </ol></section>
+                        <section tab="npm" role="tabpanel" aria-labelledby="aria-tab-npm" tabindex="0" id="tabpanel-npm" active=""><p><code translate="no" dir="ltr">npm</code>(노드 패키지 관리자)을 사용하여 Firebase CLI를 설치하려면 다음 단계를 따르세요.</p>
+                        
+                        <ol>
+                        <li><p><a href="https://github.com/coreybutler/nvm-windows" class="external">nvm-windows</a>(노드 버전 관리자)를 사용하여 <a href="https://www.nodejs.org/" class="external">Node.js</a>를 설치합니다. Node.js를 설치하면 <code translate="no" dir="ltr">npm</code> 명령어 도구가 자동으로 설치됩니다.</p>
+                        <aside class="note"><strong>참고:</strong><span> Firebase CLI에는 <strong>Node.js v10.13.0 이상</strong>이 필요합니다. 일부 Firebase 기능에는 특정 버전의 Node.js가 필요할 수 있으므로 각 Firebase 제품의 시작 페이지에서 구체적인 Node.js 요구사항을 확인하세요.</span></aside></li>
+                        <li><p>다음 명령어를 실행하여 <code translate="no" dir="ltr">npm</code>으로 Firebase CLI를 설치합니다.</p>
+                        
+                       <pre class="snippet"><code>npm install -g firebase-tools </code></pre>
+                        
+                        <p>이 명령어는 디렉터리에 관계없이 사용할 수 있는 <code translate="no" dir="ltr">firebase</code> 명령어를 사용 설정합니다.</p><aside class="note"><strong>참고:</strong><span> <code translate="no" dir="ltr">npm install -g firebase-tools</code> 명령어가 작동하지 않으면 <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions" class="external">npm 권한을 변경</a>해야 할 수도 있습니다.</span></aside></li>
+                        <li><p>계속해서 <a href="#sign-in-test-cli">로그인하여 CLI를 테스트</a>합니다.</p></li>
+                        </ol></section>
+                        </devsite-selector>
+                        <h3 id="sign-in-test-cli" data-text="로그인하여 Firebase CLI 테스트" role="presentation"><span class="devsite-heading" role="heading" aria-level="3">로그인하여 Firebase CLI 테스트</span><button type="button" class="devsite-heading-link button-flat material-icons" aria-label="이 섹션에 대한 링크 복사. 로그인하여 Firebase CLI 테스트" data-title="이 섹션에 대한 링크 복사. 로그인하여 Firebase CLI 테스트" data-id="sign-in-test-cli"></button></h3>
+                        <p>CLI를 설치한 후에는 인증해야 합니다. 그러면 Firebase 프로젝트를 나열하여 인증을 확인할 수 있습니다.</p>
+                        <ol>
+                            <li><p>다음 명령어를 실행하여 Google 계정으로 Firebase에 로그인합니다.</p>
+                            <pre class="snippet"><code>firebase login</code></pre>
+                            
+                            <p>이 명령어는 로컬 머신을 Firebase에 연결하고 Firebase 프로젝트에 대한 액세스 권한을 부여합니다.</p>
+                            <aside class="note"><strong>참고:</strong><span> <code translate="no" dir="ltr">firebase login</code> 명령어는 머신에서 <code translate="no" dir="ltr">localhost</code>에 연결되는 웹페이지를 엽니다. 원격 머신을 사용 중이며 <code translate="no" dir="ltr">localhost</code>에 액세스할 수 없는 경우 <code translate="no" dir="ltr">--no-localhost</code> 플래그를 사용하여 명령어를 실행합니다.</span></aside><aside class="note"><strong>참고:</strong><span> <a href="#cli-ci-systems">CI 시스템과 함께 Firebase CLI를 사용</a>할 수도 있습니다.</span></aside></li>
+                            <li><p>Firebase 프로젝트를 나열하여 CLI가 올바르게 설치되었고 사용자 계정에 액세스하는지 테스트합니다. 다음 명령어를 실행합니다.</p>
+                            
+                            <pre class="snippet"><code>firebase projects:list</code></pre>
+                            <p>표시된 목록은 <a href="//console.firebase.google.com/?authuser=0" class="link external gc-analytics-event" data-category="console" data-action="linkClick">Firebase Console</a>에 나열된 Firebase 프로젝트와 같아야 합니다.</p></li>
+                            </ol>
+                </section>
+
+                <h1>명령어 참조</h1>
+                <section class="scroll-to-section section" data-section="CLI_command">
+                    <h2>CLI 관리 명령어</h2>
+                    <div class="devsite-table-wrapper"><table>
+                        <tbody><tr>
+                        <th style="width:30%">명령어</th>
+                        <th>설명</th>
+                        </tr>
+                        <tr>
+                        <td><strong>help</strong></td>
+                        <td>CLI 또는 특정 명령어에 대한 도움말 정보를 표시합니다.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>init</strong></td>
+                        <td>현재 디렉터리에 새 Firebase 프로젝트를 연결하고 설정합니다.
+                            이 명령어는 현재 디렉터리에 <a href="https://firebase.google.com/docs/cli/?authuser=0#the_firebasejson_file"><code translate="no" dir="ltr">firebase.json</code></a> 구성 파일을 만듭니다.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>login</strong></td>
+                        <td>Firebase 계정에 대해 CLI를 인증합니다. 웹브라우저에 액세스할 수 있어야 합니다.<br>
+                            <code translate="no" dir="ltr">localhost</code> 액세스를 허용하지 않는 원격 환경에서 CLI에 로그인하려면 <nobr><code translate="no" dir="ltr">--no-localhost</code></nobr> 플래그를 사용합니다.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>login:ci</strong></td>
+                        <td>비대화형 환경에서 사용할 인증 토큰을 생성합니다.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>logout</strong></td>
+                        <td>Firebase 계정에서 CLI를 로그아웃 처리합니다.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>open</strong></td>
+                        <td>브라우저를 열어 관련 프로젝트 리소스를 엽니다.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>projects:list</strong></td>
+                        <td>액세스 권한이 있는 모든 Firebase 프로젝트를 나열합니다.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>use</strong></td>
+                        <td>CLI의 활성 Firebase 프로젝트를 설정합니다.<br>
+                            <a href="#project_aliases">프로젝트 별칭</a>을 관리합니다.</td>
+                        </tr>
+                    </tbody></table></div>
+                </section>
+                <section class="scroll-to-section section" data-section="Proj_command">
+                    <h2 class="devsite-heading" role="heading" aria-level="3">프로젝트 관리 명령어</h2>
+                    <div class="devsite-table-wrapper"><table>
+                    <tbody><tr>
+                        <th style="width:30%">명령어</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr class="alt">
+                        <td colspan="3">Firebase 프로젝트 관리</td>
+                    </tr>
+                    <tr>
+                        <td><strong>projects:addfirebase</strong></td>
+                        <td>Firebase 리소스를 기존 Google Cloud 프로젝트에 추가합니다.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>projects:create</strong></td>
+                        <td>새 Google Cloud 프로젝트를 만든 다음 Firebase 리소스를 새 프로젝트에 추가합니다.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>projects:list</strong></td>
+                        <td>액세스 권한이 있는 모든 Firebase 프로젝트를 나열합니다.</td>
+                    </tr>
+                    <tr class="alt">
+                        <td colspan="3">Firebase 앱 관리(iOS, Android, 웹)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>apps:create</strong></td>
+                        <td>활성 프로젝트에 새 Firebase 앱을 만듭니다.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>apps:list</strong></td>
+                        <td>활성 프로젝트에 등록된 Firebase 앱을 나열합니다.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>apps:sdkconfig</strong></td>
+                        <td>Firebase 앱의 Google 서비스 구성을 출력합니다.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>setup:web</strong></td>
+                        <td><strong><em>지원이 중단되었습니다. 대신 <code translate="no" dir="ltr">apps:sdkconfig</code>를 사용하고 플랫폼 인수로 <code translate="no" dir="ltr">web</code>을 지정합니다.</em></strong><br>Firebase 웹 앱의 Google 서비스 구성을 출력합니다.</td>
+                    </tr>
+                    <tr class="alt">
+                        <td colspan="3">SHA 인증서 해시 관리(Android만 해당)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>apps:android:sha:create \<br>
+                        <var translate="no">FIREBASE_APP_ID</var> <var translate="no">SHA_HASH</var></strong></td>
+                        <td>지정된 SHA 인증서 해시를 지정된 Firebase Android 앱에 추가합니다.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>apps:android:sha:delete \<br>
+                        <var translate="no">FIREBASE_APP_ID</var> <var translate="no">SHA_HASH</var></strong></td>
+                        <td>지정된 Firebase Android 앱에서 지정된 SHA 인증서 해시를 삭제합니다.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>apps:android:sha:list \<br>
+                        <var translate="no">FIREBASE_APP_ID</var></strong></td>
+                        <td>지정된 Firebase Android 앱의 SHA 인증서 해시를 나열합니다.</td>
+                    </tr>
+                    </tbody></table></div>
+                </section>
+        
+          
+          <footer id="__footer">
+              <a id="__designed-by" href="../../index.html">
+                "홈페이지 바로가기"
+                <i class="fa fa-code" id="footer_icon"></i>
+              </a>
+            <div class="scroll-to-section uk-navbar-right ">
+              <a id="__theme-btn" onclick="nightDayHandler(this);">"테마 바꾸기"
+                <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+              </a>
+             <a id="__toTop" href="#__HUKE" >
+               "제일 위로"
+               <i class="fa fa-chevron-up" id="footer_icon"></i>
+              </a>
+            </div>
+          </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Scripts --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+<script src="../../src/js/scroll.js"></script> <!-- scroll -->
+<script src="../../src/js/nightBtn.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+<script src="../../src/dist/js/clipboard.min.js"></script>     <!-- Clipboard -->
+<script src="../../src/dist/js/clipboard/snippets.js"></script><!-- Clipboard -->
+<script src="../../src/dist/js/clipboard/tooltips.js"></script><!-- Clipboard -->
+<script>  new ClipboardJS('.btn');</script>                 <!-- Clipboard -->
+<script src="../../assets/patch/highlight/highlight.min.js"></script>      <!-- 코드 구문 강조 -->
+<script >hljs.highlightAll();</script>                                  <!-- 코드 구문 강조 호출 -->
+<script src="../../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+<script >hljs.initLineNumbersOnLoad();</script>                         <!-- 코드 줄 번호 호출 -->
+<script src="../../src/js/navbar.es5.min.js"></script><!-- navbar js -->
+<script src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+<script> // <!-- Start Google Analytics -->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-180336562-1');
+</script><!-- End Global Google Analytics -->
+
+
+</body>
+</html>

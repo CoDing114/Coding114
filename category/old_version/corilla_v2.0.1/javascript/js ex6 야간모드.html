@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko" class="section" data-section="__HUKE" id="__HUKE">
+<head>
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>야간모드 설정</title>
+  <link rel="shortcut icon" href="../assets/img/favicon.ico"><!-- icon Star -->
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"><!-- icon End -->
+  <link rel="stylesheet" href="../style.css"> <!-- 스타일 태그를 링크하여 사용하여 중복삭제 -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"><!-- google fonts Source Sans Pro  -->
+  <!-- highlight Start -->
+  <link rel="stylesheet" href="../assets/patch/highlight/styles/atom-one-dark-reasonable.min.css"> <!-- 코드 구문 강조 -->
+  <script src="../assets/patch/highlight/highlight.min.js"></script>  <!-- 코드 구문 강조 -->
+  <script >hljs.highlightAll();</script> <!-- 코드 구문 강조 호출 -->
+  <script src="../assets/patch/highlightjs-line-numbers.min.js"></script> <!-- 코드 줄 번호 -->
+  <script >hljs.initLineNumbersOnLoad();</script><!-- 코드 줄 번호 호출 -->
+  <!-- highlight End -->
+  <script defer src="https://kit.fontawesome.com/950e45060a.js" crossorigin="anonymous"></script><!-- font   awesome  Logo font -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jquery/3.5.1 --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180336562-1"></script><!-- - Google Analytics Global site tag (gtag.js) -->
+  <script> // <!-- Start Google Analytics -->
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-180336562-1');
+  </script><!-- End Global Google Analytics -->
+  <script src="../colors.js"></script> <!-- 야간모드 jQuery 설치 필요  -->
+
+    <script> // <!-- 야간모드 -->
+        function linksetcolor(color){
+          var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+            alist[i].style.color = 'color';
+            i = i+1;
+          }
+        }
+        function badysetcolor(color){
+          document.querySelector('body').style.color=color;
+        }
+        function badysetbackgroundcolor(color){
+          document.querySelector('body').style.backgroundColor=color;
+        }
+        function nightDayHandler(self) {
+    
+            var target = document.querySelector('body')
+            if(self.value === 'Night'){
+              badysetbackgroundcolor('black');
+              badysetcolor('white');
+              self.value = 'Day';
+    
+            linksetcolor('powderblue')
+         } else {
+            badysetbackgroundcolor('white');
+            badysetcolor('black');
+            self.value = 'Night';
+    
+            linksetcolor('blue')
+        }
+    }
+    </script><!-- End 야간모드 -->
+</head>
+<body>
+  <header>
+    <nav class=".navbar"> 
+     <div class="navbar__logo">
+      <a href="../../../index.html">
+        <img src="../assets/img/corilla-logo-RG_text_v0.0.1.png" alt="CoRilla" class="img-responsive" loading="lazy">
+      </a>
+     </div>
+     </nav>
+   </header>
+   
+  <h1 class="h1_title"><a href="../index.html">WEB</a></h1>
+
+  <div  id="grid">
+   <nav class="navbar" >
+   <ul class="navbar__menu" >
+    <li><a href="../html/index.html">HTML</a></li>
+      <li><a href="../css/index.html">CSS</a></li>
+      <li class="has-submenu"><a href="./index.html">JavaScript</a></li>
+      <ul id="sub-menu">
+        <li><a href="./js ex1[연산자].html" class="saw">연산자</a></li>
+        <li><a href="./js ex2[배열&문법].html" class="saw">배열&문법</a></li>
+        <li><a href="./js ex3[반복문].html" class="saw">반복문</a></li>
+        <li><a href="./js ex4[배열과 반복문].html" class="saw">배열과 반복문</a></li>
+        <li><a href="./js ex5[함수function].html" class="saw">함수Function</a></li>
+        <li><a href="./js ex6 야간모드.html" class="saw" id="active">야간모드</a></li>
+        <li><a href="./js ex7 객체(object).html" class="saw">객체(object)</a></li>
+        <li><a href="./json.html" class="saw">JSON</a></li>
+      </ul>
+      <li><a href="../php/index.html">PHP </a></li> 
+      <li><a href="../database/index.html">DataBase</a></li>
+   </ul>
+ <a href="#"class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+ </a>
+ </nav>
+
+
+    <section id="section_1">
+      <h2>JavaScript</h2>
+      <div>첫째:자바스크립트는 사용자와 상호작용하는 언어다.</div>
+      <div>둘째:웹브라우저는 한번 화면에 출력되면 가기 자신을 바꿀수 없다</div>
+      <div>셋째:자바스크립트는 HTML위에서 동작하는 언어다.</div>
+
+      <h4>Console에서 텍스트 글자수 구하기</h4>
+      alert('구하고자 하는 내용'.length)
+      <h4>
+        JavaScript Data types
+      </h4>
+      <ul>
+        <li>기본 자료형 (Primitive) 인 여섯가지 데이터 타입</li>
+          <li>Boolean(연산자true&false)</li>
+          <li>Null</li>
+          <li>Undefined</li>
+          <li>Number(숫자)</li>
+          <li>String(문자)</li>
+          <li>Symbol (ECMAScript 6 에 추가됨)</li>
+          <li>별도로 Object 도 있음</li>
+      </ul>
+
+      <div>
+      <pre><code>
+        var name = 'sung'
+      alert("variable, "+name+",mutable, changeable, "+name+", unsettled, fickle, "+name+",mobile")
+      </code></pre>
+      </div>
+      <div id=inlinebox>
+        <h3>야간모드 중복 제거  Refactoring  </h3>
+        <div> Night_Day Button v1</div>
+        <input id="night_day1" type="button"  value="Night" onclick="
+          if(document.querySelector('#night_day1').value==='Night'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.backgroundImage='none';
+            document.querySelector('body').style.color='white';
+            document.querySelector('#night_day1').value='Day';
+          } else{
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.backgroundImage='none';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#night_day1').value='Night';
+          }
+          ">
+        <div> Night_Day Button v2</div>
+        <input type="button" class="button_night" style="font-size:medium;position: inherit;" value="Night" onclick="
+          if(this.value==='Night'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.backgroundImage='none';
+            document.querySelector('body').style.color='white';
+            this.value='Day';
+          } else{
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.backgroundImage='none';
+            document.querySelector('body').style.color='black';
+            this.value='Night';
+          }
+        ">
+        <div> Night_Day Button v3</div>
+        <input type="button" class="button_night" style="font-size:xx-large;background-color: #f4511e;position: inherit;" value="Night" onclick="
+          var night_day = document.querySelector('body') // night_day란 변수를 이용하여 중복제거
+          if(this.value==='Night'){  // onclick이 소속되어있는 태그를 그르킨다 this를 사용하여 현재치로 대체가능
+            night_day.style.backgroundColor='black';
+            document.querySelector('body').style.backgroundImage='none';
+            night_day.style.color='white'; // 중복 제거와 유지보수가 쉬워진다
+            this.value='Day';
+          } else{
+            night_day.style.backgroundColor='white';
+            document.querySelector('body').style.backgroundImage='none';
+            night_day.style.color='black';
+            this.value='Night';
+          }
+        ">
+    </div>
+<div id=inlinebox>
+  <h3>Night_Day function Refactoring</h3>
+      <pre>
+&ltscript>
+    function nightDayHandler(self) { nightDayHandler라는 펑션에 매개변수 추가:self
+
+        var target = document.querySelector('body')  --target변수 = 'body'
+        if(self.value === 'Night'){ -- 매개변수self 가 Night랑 같을때
+        target.style.backgroundColor='black'; --target변수(body) 백그래운드컬러를 블랙으로 변경
+        target.style.color='white'; --target변수(body) 컬러를 화이트로 변경
+        self.value = 'Day';   --매개변수self 에 'Day'를 쓴다
+
+        var alist = document.querySelectorAll('a'); --alist 변수 = 'a'
+        var i = 0;    --변수 i에 0을 쓴다
+        while(i &lt alist.length){ .length를 이용해 alist문자열의 길이를 확인하여 i보다 크면 참이다
+        alist[i].style.color = 'powderblue'; alist변수에 i의 인덱스 값에 해당하는 데이터 컬러변경 
+        i = i+1; i라는 변수에 1을 플러스한다
+    }
+      } else {    -- 거짓일때 --
+        target.style.backgroundColor='white'; --target변수(body) 백그래운드컬러를 화이트으로 변경
+        target.style.color='black';   --target변수(body) 컬러를 블랙으로 변경
+        self.value = 'Night';   --매개변수self 에 'Night'를 쓴다
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i &lt alist.length){
+        alist[i].style.color = 'blue';
+        i = i+1;
+        }
+    }
+}
+&lt/script>
+      </pre>
+      <h3>Function을 활용하여 중복제거 </h3>
+      <pre>
+  &ltscript>
+  -- linksetcolor라는 펑션 및 color라는 매개변수를 만들고 중복된 부분을 포함 시킨다 --
+    function linksetcolor(color){   
+      var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i &lt alist.length){
+        alist[i].style.color = 'color';   --
+        i = i+1;
+      }
+    }
+
+-- 중복 되거나 시간이 지나면 구분하기 어려운 부분은 명칭을 부여하여 관리하는것이 좋다--
+    function badysetcolor(color){
+      document.querySelector('body').style.color=color;
+    }
+    function badysetbackgroundcolor(color){
+      document.querySelector('body').style.backgroundColor=color;
+    }
+    function nightDayHandler(self) {
+
+        var target = document.querySelector('body')
+        if(self.value === 'Night'){
+          badysetbackgroundcolor('black');
+          badysetcolor('white');
+          self.value = 'Day';
+
+        linksetcolor('powderblue')
+      } else {
+        badysetbackgroundcolor('white');
+        badysetcolor('black');
+        self.value = 'Night';
+
+        linksetcolor('blue')
+    }
+}
+    &lt/script>
+          </pre>
+        </div>
+      </section>
+  </div>
+
+  <footer class="section scroll-to-section" id="__footer" data-section="__footer">
+    <a id="__designed-by" href="../../index.html">
+        "홈페이지 바로가기"
+        <i class="fa fa-code" id="footer_icon"></i>
+    </a>
+    <div class="uk-navbar-right" >
+        <div id="__theme-btn">
+            "테마 바꾸기"
+            <i class="fa fa-moon-o" aria-hidden="true" id="footer_icon"></i>
+        </div>
+        <a id="__toTop" href="#__HUKE">
+            "제일 위로"
+            <i class="fa fa-chevron-up" id="footer_icon"></i>
+        </a>
+    </div>
+  </footer>
+
+<!-- script navbar__icons -->
+<script>
+  const toggleBtn = document.querySelector('.navbar__toogleBtn');
+const menu = document.querySelector('.navbar__menu');
+const icons = document.querySelector('.navbar__icons');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    // icons.classList.toggle('active');
+});
+</script>
+
+<!-- 값(value)가 "Night"인온클릭 야간모드 버튼 생성-->
+<input type="button" class="button_night" value="Night" onclick=" 
+nightDayHandler(this); /* 야간모드 펑션불러오기 (this)는 현재 조건을 가르킨다 */">
+</section>
+
+</body>
+</html>
